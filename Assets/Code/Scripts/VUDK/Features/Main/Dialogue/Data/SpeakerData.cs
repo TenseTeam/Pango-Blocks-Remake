@@ -9,8 +9,8 @@
         public string SpeakerName;
         public Sprite SpeakerImage;
 
-        [Header("Audio")]
-        public AudioClip SpeakerLetterAudio;
-        public Range<float> PitchVariation;
+        //[Header("Audio")]
+        //public AudioClip SpeakerLetterAudio;
+        //public Range<float> PitchVariation;
     }
 }

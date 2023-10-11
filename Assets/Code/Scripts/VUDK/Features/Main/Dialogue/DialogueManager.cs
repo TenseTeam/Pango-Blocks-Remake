@@ -6,9 +6,7 @@ namespace VUDK.Features.Main.DialogueSystem
     using UnityEngine.Events;
     using UnityEngine.UI;
     using VUDK.Features.Main.DialogueSystem.Data;
-    using VUDK.Generic.Managers;
-    using VUDK.Features.Main.EventsSystem;
-    using VUDK.Features.Main.EventsSystem.Events;
+    using VUDK.Generic.Managers.Main;
 
     public class DialogueManager : MonoBehaviour
     {
@@ -36,17 +34,17 @@ namespace VUDK.Features.Main.DialogueSystem
 
         private void OnEnable()
         {
-            GameManager.Instance.EventManager.AddListener<Dialogue>(EventKeys.DialogueEvents.OnTriggeredDialouge, StartDialogue);
+            MainManager.Ins.EventManager.AddListener<Dialogue>(EventKeys.DialogueEvents.OnTriggeredDialouge, StartDialogue);
         }
 
         private void OnDisable()
         {
-            GameManager.Instance.EventManager.RemoveListener<Dialogue>(EventKeys.DialogueEvents.OnTriggeredDialouge, StartDialogue);
+            MainManager.Ins.EventManager.RemoveListener<Dialogue>(EventKeys.DialogueEvents.OnTriggeredDialouge, StartDialogue);
         }
 
         public void StartDialogue(Dialogue dialogue)
         {
-            GameManager.Instance.EventManager.TriggerEvent(EventKeys.DialogueEvents.OnStartDialogue);
+            MainManager.Ins.EventManager.TriggerEvent(EventKeys.DialogueEvents.OnStartDialogue);
             _dialogue = dialogue;
             _dialoguePanel.gameObject.SetActive(true);
             DisplayNextSentence();
@@ -78,7 +76,7 @@ namespace VUDK.Features.Main.DialogueSystem
         private void EndDialogue()
         {
             OnEndDialogue?.Invoke();
-            GameManager.Instance.EventManager.TriggerEvent(EventKeys.DialogueEvents.OnEndDialogue);
+            MainManager.Ins.EventManager.TriggerEvent(EventKeys.DialogueEvents.OnEndDialogue);
             _dialoguePanel.gameObject.SetActive(false);
             _sentenceText.text = "";
         }
@@ -89,7 +87,7 @@ namespace VUDK.Features.Main.DialogueSystem
             IsTalking = true;
             foreach (char letter in sentence.Phrase.ToCharArray())
             {
-                GameManager.Instance.EventManager.TriggerEvent(EventKeys.DialogueEvents.OnDialougeTypedLetter, _currentSpeaker);
+                MainManager.Ins.EventManager.TriggerEvent(EventKeys.DialogueEvents.OnDialougeTypedLetter, _currentSpeaker);
                 _sentenceText.text += letter;
                 yield return new WaitForSeconds(_displayLetterTime);
             }

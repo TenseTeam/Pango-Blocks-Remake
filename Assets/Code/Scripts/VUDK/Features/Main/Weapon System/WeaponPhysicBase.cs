@@ -1,7 +1,6 @@
 namespace VUDK.Features.Main.WeaponSystem
 {
     using UnityEngine;
-    using VUDK.Generic.Managers;
     using VUDK.Features.Main.WeaponSystem.Bullets;
 
     public abstract class WeaponPhysicBase : WeaponBase

@@ -1,12 +1,14 @@
 ﻿namespace VUDK.Features.Main.InputSysten.MobileInputs
 {
     using UnityEngine;
-    using VUDK.Features.Main.InputSystem.MobileInputs.Controls;
+    using VUDK.Generic.Serializable;
+    using VUDK.Features.Main.Inputs.MobileInputs.MobileInputActions;
+    using VUDK.Features.Main.Inputs.MobileInputs.Keys;
 
-    public class MobileInputsManager : MonoBehaviour
+    [DefaultExecutionOrder(-500)]
+    public sealed class MobileInputsManager : MonoBehaviour
     {
-        // Adds more controls here if necessary, the default controls must be the controls most used tho
-        [field: SerializeField, Header("Default Controls")]
-        public MobileControlBase MobileDefaultControls { get; private set; }
+        [field: SerializeField, Header("Mobile Inputs")]
+        public SerializableDictionary<MobileInputActionKeys, InputTouchBase> MobileInputsActions { get; private set; }
     }
 }

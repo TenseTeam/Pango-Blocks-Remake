@@ -9,7 +9,8 @@
         Down,
         Left,
         Right,
-        Forward
+        Forward,
+        Backward
     }
 
     public static class Vector3Extension
@@ -32,6 +33,9 @@
 
                 case Vector3Direction.Forward:
                     return Vector3.forward;
+                
+                case Vector3Direction.Backward:
+                    return Vector3.back;
             }
 
             return Vector3.zero;

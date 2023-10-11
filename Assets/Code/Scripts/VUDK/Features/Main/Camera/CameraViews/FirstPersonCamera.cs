@@ -4,12 +4,12 @@
     using UnityEngine;
     using UnityEngine.Windows;
     using VUDK.Extensions.Transform;
-    using CharacterController = VUDK.Features.Main.CharacterController.CharacterController;
+    using CharacterControllerBase = VUDK.Features.Main.CharacterController.CharacterControllerBase;
 
     public class FirstPersonCamera : CameraFreeLookBase
     {
         [SerializeField, Header("First Person Settings"), Tooltip("Target Character Controller")]
-        private CharacterController _targetCharacter;
+        private CharacterControllerBase _targetCharacter;
         [SerializeField]
         private Vector3 _offset;
         [SerializeField, Min(0f), Tooltip("Lock to target position smooth time value")]

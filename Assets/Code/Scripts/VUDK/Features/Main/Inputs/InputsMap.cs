@@ -184,7 +184,7 @@ public partial class @InputsMap: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""StartSpeak"",
                     ""type"": ""Button"",
-                    ""id"": ""46a76595-fb55-4218-84bc-f9e74480c050"",
+                    ""id"": ""581d4f52-2951-4dcb-94fe-79a488b104a5"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -216,7 +216,7 @@ public partial class @InputsMap: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""2c7c73bd-e304-4d43-847f-4e2ffa3d7467"",
+                    ""id"": ""bf55e1be-48c8-428a-9eb2-82cca26f8a4c"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -378,19 +378,46 @@ public partial class @InputsMap: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""MultiTouch"",
-                    ""type"": ""Button"",
-                    ""id"": ""4c8c6531-20ad-4442-b98f-2f5996ff1ce8"",
-                    ""expectedControlType"": ""Button"",
+                    ""name"": ""DeltaSwipe"",
+                    ""type"": ""Value"",
+                    ""id"": ""664e2d74-92e0-4af3-8305-29f88430725b"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""TouchPosition"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""6fcc8a1c-70ad-4c7f-86e4-11fdc1abedb1"",
+                    ""name"": ""TouchPosition #0"",
+                    ""type"": ""Value"",
+                    ""id"": ""32c0078e-c175-474f-8c13-371fe1e30847"",
                     ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""TouchPosition #1"",
+                    ""type"": ""Value"",
+                    ""id"": ""9d727ee0-197d-4445-a49b-2bae858f5906"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""TouchDelta #1"",
+                    ""type"": ""Value"",
+                    ""id"": ""46b78e55-5830-4363-91fd-ac1dffe4a5ce"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Touch #1"",
+                    ""type"": ""Button"",
+                    ""id"": ""d01dd9bf-9567-4f0c-8d71-4bc38293c59a"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -410,23 +437,56 @@ public partial class @InputsMap: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""1808f61c-d79b-44a3-b475-04769cac304f"",
-                    ""path"": ""<Touchscreen>/position"",
+                    ""id"": ""3d41fcdc-9b1e-4319-97ca-76ba0984ba67"",
+                    ""path"": ""<Touchscreen>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Touch"",
-                    ""action"": ""TouchPosition"",
+                    ""action"": ""DeltaSwipe"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""4ca2750a-7c80-4a4d-8762-6a8338643c9f"",
-                    ""path"": ""<Touchscreen>/touch*/Press"",
+                    ""id"": ""41de6ed8-7a21-481b-ba4f-52f4e9591ef5"",
+                    ""path"": ""<Touchscreen>/touch0/position"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Touch"",
-                    ""action"": ""MultiTouch"",
+                    ""action"": ""TouchPosition #0"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2bee2d84-6e17-4157-a85c-7613a10562f2"",
+                    ""path"": ""<Touchscreen>/touch1/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""TouchDelta #1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3430f63e-4e5d-421c-8e71-9854141362f6"",
+                    ""path"": ""<Touchscreen>/touch1/tap"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""Touch #1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fc12ec67-cc0f-425f-811a-d5d1a7b6984e"",
+                    ""path"": ""<Touchscreen>/touch1/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""TouchPosition #1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -478,8 +538,11 @@ public partial class @InputsMap: IInputActionCollection2, IDisposable
         // Touches
         m_Touches = asset.FindActionMap("Touches", throwIfNotFound: true);
         m_Touches_SingleTouch = m_Touches.FindAction("SingleTouch", throwIfNotFound: true);
-        m_Touches_MultiTouch = m_Touches.FindAction("MultiTouch", throwIfNotFound: true);
-        m_Touches_TouchPosition = m_Touches.FindAction("TouchPosition", throwIfNotFound: true);
+        m_Touches_DeltaSwipe = m_Touches.FindAction("DeltaSwipe", throwIfNotFound: true);
+        m_Touches_TouchPosition0 = m_Touches.FindAction("TouchPosition #0", throwIfNotFound: true);
+        m_Touches_TouchPosition1 = m_Touches.FindAction("TouchPosition #1", throwIfNotFound: true);
+        m_Touches_TouchDelta1 = m_Touches.FindAction("TouchDelta #1", throwIfNotFound: true);
+        m_Touches_Touch1 = m_Touches.FindAction("Touch #1", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -804,15 +867,21 @@ public partial class @InputsMap: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Touches;
     private List<ITouchesActions> m_TouchesActionsCallbackInterfaces = new List<ITouchesActions>();
     private readonly InputAction m_Touches_SingleTouch;
-    private readonly InputAction m_Touches_MultiTouch;
-    private readonly InputAction m_Touches_TouchPosition;
+    private readonly InputAction m_Touches_DeltaSwipe;
+    private readonly InputAction m_Touches_TouchPosition0;
+    private readonly InputAction m_Touches_TouchPosition1;
+    private readonly InputAction m_Touches_TouchDelta1;
+    private readonly InputAction m_Touches_Touch1;
     public struct TouchesActions
     {
         private @InputsMap m_Wrapper;
         public TouchesActions(@InputsMap wrapper) { m_Wrapper = wrapper; }
         public InputAction @SingleTouch => m_Wrapper.m_Touches_SingleTouch;
-        public InputAction @MultiTouch => m_Wrapper.m_Touches_MultiTouch;
-        public InputAction @TouchPosition => m_Wrapper.m_Touches_TouchPosition;
+        public InputAction @DeltaSwipe => m_Wrapper.m_Touches_DeltaSwipe;
+        public InputAction @TouchPosition0 => m_Wrapper.m_Touches_TouchPosition0;
+        public InputAction @TouchPosition1 => m_Wrapper.m_Touches_TouchPosition1;
+        public InputAction @TouchDelta1 => m_Wrapper.m_Touches_TouchDelta1;
+        public InputAction @Touch1 => m_Wrapper.m_Touches_Touch1;
         public InputActionMap Get() { return m_Wrapper.m_Touches; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -825,12 +894,21 @@ public partial class @InputsMap: IInputActionCollection2, IDisposable
             @SingleTouch.started += instance.OnSingleTouch;
             @SingleTouch.performed += instance.OnSingleTouch;
             @SingleTouch.canceled += instance.OnSingleTouch;
-            @MultiTouch.started += instance.OnMultiTouch;
-            @MultiTouch.performed += instance.OnMultiTouch;
-            @MultiTouch.canceled += instance.OnMultiTouch;
-            @TouchPosition.started += instance.OnTouchPosition;
-            @TouchPosition.performed += instance.OnTouchPosition;
-            @TouchPosition.canceled += instance.OnTouchPosition;
+            @DeltaSwipe.started += instance.OnDeltaSwipe;
+            @DeltaSwipe.performed += instance.OnDeltaSwipe;
+            @DeltaSwipe.canceled += instance.OnDeltaSwipe;
+            @TouchPosition0.started += instance.OnTouchPosition0;
+            @TouchPosition0.performed += instance.OnTouchPosition0;
+            @TouchPosition0.canceled += instance.OnTouchPosition0;
+            @TouchPosition1.started += instance.OnTouchPosition1;
+            @TouchPosition1.performed += instance.OnTouchPosition1;
+            @TouchPosition1.canceled += instance.OnTouchPosition1;
+            @TouchDelta1.started += instance.OnTouchDelta1;
+            @TouchDelta1.performed += instance.OnTouchDelta1;
+            @TouchDelta1.canceled += instance.OnTouchDelta1;
+            @Touch1.started += instance.OnTouch1;
+            @Touch1.performed += instance.OnTouch1;
+            @Touch1.canceled += instance.OnTouch1;
         }
 
         private void UnregisterCallbacks(ITouchesActions instance)
@@ -838,12 +916,21 @@ public partial class @InputsMap: IInputActionCollection2, IDisposable
             @SingleTouch.started -= instance.OnSingleTouch;
             @SingleTouch.performed -= instance.OnSingleTouch;
             @SingleTouch.canceled -= instance.OnSingleTouch;
-            @MultiTouch.started -= instance.OnMultiTouch;
-            @MultiTouch.performed -= instance.OnMultiTouch;
-            @MultiTouch.canceled -= instance.OnMultiTouch;
-            @TouchPosition.started -= instance.OnTouchPosition;
-            @TouchPosition.performed -= instance.OnTouchPosition;
-            @TouchPosition.canceled -= instance.OnTouchPosition;
+            @DeltaSwipe.started -= instance.OnDeltaSwipe;
+            @DeltaSwipe.performed -= instance.OnDeltaSwipe;
+            @DeltaSwipe.canceled -= instance.OnDeltaSwipe;
+            @TouchPosition0.started -= instance.OnTouchPosition0;
+            @TouchPosition0.performed -= instance.OnTouchPosition0;
+            @TouchPosition0.canceled -= instance.OnTouchPosition0;
+            @TouchPosition1.started -= instance.OnTouchPosition1;
+            @TouchPosition1.performed -= instance.OnTouchPosition1;
+            @TouchPosition1.canceled -= instance.OnTouchPosition1;
+            @TouchDelta1.started -= instance.OnTouchDelta1;
+            @TouchDelta1.performed -= instance.OnTouchDelta1;
+            @TouchDelta1.canceled -= instance.OnTouchDelta1;
+            @Touch1.started -= instance.OnTouch1;
+            @Touch1.performed -= instance.OnTouch1;
+            @Touch1.canceled -= instance.OnTouch1;
         }
 
         public void RemoveCallbacks(ITouchesActions instance)
@@ -924,7 +1011,10 @@ public partial class @InputsMap: IInputActionCollection2, IDisposable
     public interface ITouchesActions
     {
         void OnSingleTouch(InputAction.CallbackContext context);
-        void OnMultiTouch(InputAction.CallbackContext context);
-        void OnTouchPosition(InputAction.CallbackContext context);
+        void OnDeltaSwipe(InputAction.CallbackContext context);
+        void OnTouchPosition0(InputAction.CallbackContext context);
+        void OnTouchPosition1(InputAction.CallbackContext context);
+        void OnTouchDelta1(InputAction.CallbackContext context);
+        void OnTouch1(InputAction.CallbackContext context);
     }
 }

@@ -7,10 +7,12 @@
     {
         private StateMachine _relatedStateMachine;
 
+        public Enum StateKey { get; protected set; }
         protected Context Context { get; private set; }
 
-        protected State(StateMachine relatedStateMachine, Context context)
+        protected State(Enum stateKey, StateMachine relatedStateMachine, Context context)
         {
+            StateKey = stateKey;
             _relatedStateMachine = relatedStateMachine;
             Context = context;
         }
@@ -33,7 +35,7 @@
         /// <summary>
         /// Called to process the state's logic each fixed frame.
         /// </summary>
-        public abstract void PhysicsProcess();
+        public abstract void FixedProcess();
 
         /// <summary>
         /// Changes the state of its related state machine.
@@ -55,11 +57,11 @@
         }
     }
 
-    public abstract class State<T> : State, IContextConverter<T> where T : Context
+    public abstract class State<T> : State, ICastContext<T> where T : Context
     {
         public new T Context => (T)base.Context;
 
-        protected State(StateMachine relatedStateMachine, Context context) : base(relatedStateMachine, context)
+        protected State(Enum stateKey, StateMachine relatedStateMachine, Context context) : base(stateKey, relatedStateMachine, context)
         {
         }
     }
