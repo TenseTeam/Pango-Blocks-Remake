@@ -2,7 +2,6 @@
 {
     using System;
     using UnityEngine;
-    using ProjectPK.Managers;
     using VUDK.Features.Main.InputSysten.MobileInputs;
     using VUDK.Generic.Managers.Main;
 
@@ -13,8 +12,8 @@
         //[SerializeField, Range(0f, 1f)]
         //private float _maxDistanceFromLocation;
 
+        //protected MobileInputsManager MobileInputs => (MainManager.Ins.GameManager).MobileInputsManager;
         protected Vector2 ReferenceResolution => MainManager.Ins.GameConfig.ReferenceResolution;
-        protected MobileInputsManager MobileInputs => (MainManager.Ins.GameManager as PKGameManager).MobileInputsManager;
 
         public Action OnInputPerformed;
         public Action OnInputCancelled;

@@ -173,7 +173,7 @@
                 {
                     "name": "",
                     "id": "45cbb8b2-69bf-41c1-acad-669ecb6ad319",
-                    "path": "<Keyboard>/e",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -188,6 +188,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "596303c4-6c29-4323-9008-c42a3d864496",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Touch",
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -372,33 +383,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "TouchPosition #1",
-                    "type": "Value",
-                    "id": "9d727ee0-197d-4445-a49b-2bae858f5906",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "TouchDelta #1",
-                    "type": "Value",
-                    "id": "46b78e55-5830-4363-91fd-ac1dffe4a5ce",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Touch #1",
-                    "type": "Button",
-                    "id": "d01dd9bf-9567-4f0c-8d71-4bc38293c59a",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -432,39 +416,6 @@
                     "processors": "",
                     "groups": "Touch",
                     "action": "TouchPosition #0",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2bee2d84-6e17-4157-a85c-7613a10562f2",
-                    "path": "<Touchscreen>/touch1/delta",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touch",
-                    "action": "TouchDelta #1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3430f63e-4e5d-421c-8e71-9854141362f6",
-                    "path": "<Touchscreen>/touch1/tap",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touch",
-                    "action": "Touch #1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "fc12ec67-cc0f-425f-811a-d5d1a7b6984e",
-                    "path": "<Touchscreen>/touch1/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touch",
-                    "action": "TouchPosition #1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

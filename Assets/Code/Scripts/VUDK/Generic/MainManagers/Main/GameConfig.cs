@@ -6,6 +6,9 @@
     [DefaultExecutionOrder(-800)]
     public sealed class GameConfig : MonoBehaviour
     {
+        [field: SerializeField, Header("Main Camera")]
+        public Camera MainCamera { get; private set; }
+
         [SerializeField, Header("Screen")]
         private CanvasScaler _canvasScaler;
 

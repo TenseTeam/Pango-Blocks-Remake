@@ -7,7 +7,7 @@
 
     public class GameStatesFactory
     {
-        public static State<GameStateMachineContext> Create(DefaultGameStateKeys gameStateKey, GameStateMachine stateMachine, GameStateMachineContext context) 
+        public static State<GameStateMachineContext> Create(DefaultGameStateKeys gameStateKey, GameMachine stateMachine, GameStateMachineContext context) 
         {
             switch (gameStateKey)
             {

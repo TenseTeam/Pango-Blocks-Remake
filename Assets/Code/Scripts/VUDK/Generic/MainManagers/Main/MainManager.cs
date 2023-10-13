@@ -1,6 +1,7 @@
 ﻿namespace VUDK.Generic.Managers.Main
 {
     using UnityEngine;
+    using VUDK.Patterns.ObjectPool;
     using VUDK.Patterns.Singleton;
 
     /// <summary>
@@ -9,7 +10,7 @@
     /// Extensible managers:
     /// - GameManager: Orchestrates game-specific managers for precise game control; extensible.
     /// - EventManager: Governs all in-game events, providing centralized event handling; extensible.
-    /// - GameStateMachine: Manages the game's state through a versatile state machine; extensible.
+    /// - GameMachine: Manages the game's state through a versatile state machine; extensible.
     /// Not extensible managers:
     /// - GameConfig: Manages all the possible game's configurations; not extensible.
     /// </summary>
@@ -17,13 +18,13 @@
     public sealed class MainManager : Singleton<MainManager>
     {
         [field: SerializeField, Header("Game Manager")]
-        public GameManager GameManager;
+        public GameManager GameManager { get; private set; }
         [field: SerializeField, Header("Event Manager")]
-        public EventManager EventManager;
+        public EventManager EventManager { get; private set; }
         [field: SerializeField, Header("Game Config")]
         public GameConfig GameConfig { get; private set; }
         [field: SerializeField, Header("Game State Machine")]
-        public GameStateMachine GameStateMachine { get; private set; }
+        public GameMachine GameStateMachine { get; private set; }
 
         protected override void Awake()
         {
@@ -45,5 +46,17 @@
             if (GameStateMachine == null)
                 Debug.LogError("GameStateMachine missing reference.");
         }
+
+//#if DEBUG && UNITY_EDITOR
+//        [System.Obsolete("This method should only be used for specific purposes. Do not use casually.", true)]
+//        public void AssignReferences(GameManager gameManager, PoolsManager pools, EventManager eventManager, GameConfig config, GameStateMachine machine)
+//        {
+//            GameManager = gameManager;
+//            gameManager.AssignReferences(pools);
+//            EventManager = eventManager;
+//            GameConfig = config;
+//            GameStateMachine = machine;
+//        }
+//#endif
     }
 }
