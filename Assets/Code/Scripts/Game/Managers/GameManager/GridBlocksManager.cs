@@ -1,17 +1,19 @@
 ﻿namespace ProjectPBR.Managers
 {
     using UnityEngine;
+    using UnityEngine.InputSystem;
     using ProjectPBR.Level.Grid;
     using ProjectPBR.Player.PlayerHandler.Blocks;
     using VUDK.Features.Main.InputSystem;
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Managers.Main.Interfaces;
-    using UnityEngine.InputSystem;
-    using ProjectPBR.Level.Player.PlayerHandler;
-    using static Unity.Collections.AllocatorManager;
+    using System.Collections.Generic;
 
     public class GridBlocksManager : MonoBehaviour, ICastGameManager<PBRGameManager>
     {
+        [field: SerializeField, Header("Grid")]
+        public LevelGrid Grid { get; private set; }
+
         [SerializeField, Header("Layer Masks")]
         private LayerMask _blocksLayerMask;
 
@@ -115,7 +117,6 @@
             RaycastHit2D hit = RaycastFromTouch(~0);
             if (hit)
             {
-                Debug.Log(hit.transform.name);
                 return hit.transform.TryGetComponent(out tile); // OR If is the player hand box
             }
 
@@ -135,5 +136,42 @@
             float maxDistance = Mathf.Abs(MainManager.Ins.GameConfig.MainCamera.transform.position.z);
             return Physics2D.Raycast(origin, direction, maxDistance, layerMask);
         }
+
+        //private bool IsBlockMultipleOverlapping(LevelTile tile)
+        //{
+        //    //// Verifica se la cella è già occupata da un altro blocco
+        //    //foreach (PlaceableBlock block in GetAllBlocksOnGrid())
+        //    //{
+        //    //    if (block != _currentDraggedBlock && block.IsOccupyingTile(tile))
+        //    //    {
+        //    //        return true; // La cella è occupata da un altro blocco
+        //    //    }
+        //    //}
+        //    //return false; // La cella non è occupata da altri blocchi
+        //}
+
+        //private List<LevelTile> GetTilesWillOccupyBlock(PlaceableBlock block)
+        //{
+        //    List<LevelTile> tiles = new List<LevelTile>();
+
+        //    switch (block.BlockData.Type)
+        //    {
+        //        case Level.Player.PlayerHandler.Blocks.BlockType.Square:
+
+        //            break;
+
+        //        case Level.Player.PlayerHandler.Blocks.BlockType.Rectangle:
+
+        //            break;
+
+        //        case Level.Player.PlayerHandler.Blocks.BlockType.Triangle:
+
+        //            break;
+
+        //        case Level.Player.PlayerHandler.Blocks.BlockType.Trapezoid:
+
+        //            break;
+        //    }
+        //}
     }
 }

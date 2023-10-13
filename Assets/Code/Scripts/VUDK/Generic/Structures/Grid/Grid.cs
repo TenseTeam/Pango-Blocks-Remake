@@ -6,9 +6,6 @@
     public class Grid<T> : MonoBehaviour where T : GridTileBase
     {
         [field: SerializeField]
-        public T[,] GridTiles { get; set; }
-
-        [field: SerializeField]
         public GridLayoutGroup GridLayout { get; private set; }
 
         [field: SerializeField, Header("Tile")]
@@ -16,6 +13,8 @@
 
         [field: SerializeField]
         public Vector2Int Size { get; private set; }
+
+        public T[,] GridTiles { get; private set; }
 
         /// <summary>
         /// Generates a grid of T components.
@@ -54,14 +53,15 @@
         /// <param name="grid">Grid of T components.</param>
         /// <param name="position">Grid cell position.</param>
         /// <returns>T generated tile's component.</returns>
-        protected virtual T GenerateTile(T[,] grid, Vector2Int position)
+        protected virtual GridTileBase GenerateTile(GridTileBase[,] grid, Vector2Int position)
         {
-            if (Instantiate(TilePrefab, GridLayout.transform.position, Quaternion.identity, GridLayout.transform).TryGetComponent(out T component))
+            if (Instantiate(TilePrefab, GridLayout.transform.position, Quaternion.identity, GridLayout.transform).TryGetComponent(out GridTileBase tileBase))
             {
-                grid[position.x, position.y] = component;
+                tileBase.Init(position);
+                grid[position.x, position.y] = tileBase;
             }
 
-            return component;
+            return tileBase;
         }
 
         /// <summary>
