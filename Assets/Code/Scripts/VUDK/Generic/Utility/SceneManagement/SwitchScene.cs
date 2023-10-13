@@ -3,9 +3,7 @@ namespace VUDK.Generic.Utility
     using UnityEngine.SceneManagement;
     using UnityEngine;
     using System.Collections;
-    using VUDK.Features.Main.EventsSystem;
-    using VUDK.Features.Main.EventsSystem.Events;
-    using VUDK.Generic.Managers;
+    using VUDK.Generic.Managers.Main;
 
     public class SwitchScene : MonoBehaviour
     {
@@ -27,7 +25,7 @@ namespace VUDK.Generic.Utility
         /// <param name="sceneToLoad">Build index of the scene to load.</param>
         public void ChangeScene(int sceneToLoadBuildIndex)
         {
-            GameManager.Instance.EventManager.TriggerEvent(EventKeys.SceneEvents.OnBeforeChangeScene);
+            MainManager.Ins.EventManager.TriggerEvent(EventKeys.SceneEvents.OnBeforeChangeScene);
             SceneManager.LoadScene(sceneToLoadBuildIndex, LoadSceneMode.Single);
         }
 

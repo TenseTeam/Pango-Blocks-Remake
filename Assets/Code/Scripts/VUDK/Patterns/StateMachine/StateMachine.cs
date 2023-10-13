@@ -3,6 +3,7 @@ namespace VUDK.Patterns.StateMachine
     using System;
     using System.Collections;
     using System.Collections.Generic;
+    using System.Linq;
     using UnityEngine;
 
     public abstract class StateMachine : MonoBehaviour
@@ -25,7 +26,7 @@ namespace VUDK.Patterns.StateMachine
 
         protected virtual void FixedUpdate()
         {
-            CurrentState?.PhysicsProcess();
+            CurrentState?.FixedProcess();
         }
 
         /// <summary>
@@ -34,7 +35,7 @@ namespace VUDK.Patterns.StateMachine
         public abstract void Init();
 
         /// <summary>
-        /// Changes the state to a state in the dictionary by its key.
+        /// Changes the current state to a state in the dictionary by its key.
         /// </summary>
         /// <param name="stateKey">State key.</param>
         public void ChangeState(Enum stateKey)

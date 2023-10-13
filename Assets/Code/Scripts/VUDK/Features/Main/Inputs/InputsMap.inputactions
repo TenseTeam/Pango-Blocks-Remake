@@ -162,7 +162,7 @@
                 {
                     "name": "StartSpeak",
                     "type": "Button",
-                    "id": "46a76595-fb55-4218-84bc-f9e74480c050",
+                    "id": "581d4f52-2951-4dcb-94fe-79a488b104a5",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -173,7 +173,7 @@
                 {
                     "name": "",
                     "id": "45cbb8b2-69bf-41c1-acad-669ecb6ad319",
-                    "path": "<Keyboard>/e",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -194,7 +194,18 @@
                 },
                 {
                     "name": "",
-                    "id": "2c7c73bd-e304-4d43-847f-4e2ffa3d7467",
+                    "id": "596303c4-6c29-4323-9008-c42a3d864496",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Touch",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bf55e1be-48c8-428a-9eb2-82cca26f8a4c",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
@@ -356,22 +367,22 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "MultiTouch",
-                    "type": "Button",
-                    "id": "4c8c6531-20ad-4442-b98f-2f5996ff1ce8",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "TouchPosition",
-                    "type": "PassThrough",
-                    "id": "6fcc8a1c-70ad-4c7f-86e4-11fdc1abedb1",
+                    "name": "DeltaSwipe",
+                    "type": "Value",
+                    "id": "664e2d74-92e0-4af3-8305-29f88430725b",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "TouchPosition #0",
+                    "type": "Value",
+                    "id": "32c0078e-c175-474f-8c13-371fe1e30847",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -388,23 +399,23 @@
                 },
                 {
                     "name": "",
-                    "id": "1808f61c-d79b-44a3-b475-04769cac304f",
-                    "path": "<Touchscreen>/position",
+                    "id": "3d41fcdc-9b1e-4319-97ca-76ba0984ba67",
+                    "path": "<Touchscreen>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "Touch",
-                    "action": "TouchPosition",
+                    "action": "DeltaSwipe",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "4ca2750a-7c80-4a4d-8762-6a8338643c9f",
-                    "path": "<Touchscreen>/touch*/Press",
+                    "id": "41de6ed8-7a21-481b-ba4f-52f4e9591ef5",
+                    "path": "<Touchscreen>/touch0/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "Touch",
-                    "action": "MultiTouch",
+                    "action": "TouchPosition #0",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

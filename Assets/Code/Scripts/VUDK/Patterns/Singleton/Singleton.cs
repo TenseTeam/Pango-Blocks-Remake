@@ -5,6 +5,7 @@ namespace VUDK.Patterns.Singleton
     public abstract class Singleton<T> : MonoBehaviour where T : Component
     {
         public static T Instance;
+        public static T Ins => Instance;
 
         protected virtual void Awake()
         {

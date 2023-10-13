@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea4cd2f69eabb046865a109014a85eb, type: 3}
+  m_Name: so_Triangle_0c
+  m_EditorClassIdentifier: 
+  Type: 2
+  UnitLength: 1
+  zRotation: 90
+  Sprite: {fileID: 21300000, guid: ea514465375947f4b89d99479ad5a3e9, type: 3}
+  BlockPrefabBase: {fileID: 7681274566397636888, guid: 551040f59f2d3ae40becfecfbf66c925, type: 3}
