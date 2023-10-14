@@ -20,11 +20,8 @@
 
         private void GenerateBlocks()
         {
-            foreach(BlockData blockData in _playerBlocks)
-            {
-                PlaceableBlock block = BlocksFactory.Create(blockData) as PlaceableBlock;
-                _playerHandLayout.Insert(block);
-            }
+            foreach (BlockData blockData in _playerBlocks)
+                _playerHandLayout.InsertInRow(BlocksFactory.Create(blockData) as PlaceableBlock);
         }
     }
 }

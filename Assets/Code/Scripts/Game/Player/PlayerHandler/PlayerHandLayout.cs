@@ -2,14 +2,16 @@
 {
     using UnityEngine;
     using ProjectPBR.Level.Blocks;
+    using System.Collections.Generic;
+    using static Unity.Collections.AllocatorManager;
 
     [RequireComponent(typeof(Collider2D))]
     public class PlayerHandLayout : MonoBehaviour
     {
-        [SerializeField, Header("Box Settings")]
+        [SerializeField, Header("Layout Settings")]
         private float _spacing;
-        private float _currentWidth;
 
+        private float _usedLayoutWidth;
         private Collider2D _collider;
 
         private void Awake()
@@ -17,36 +19,40 @@
             TryGetComponent(out _collider);
         }
 
-        public void Insert(PlaceableBlock block)
+        /// <summary>
+        /// Inserts a block in the layout, aligned in a row.
+        /// </summary>
+        /// <param name="block">Block to insert.</param>
+        public void InsertInRow(PlaceableBlock block)
         {
-            SetBlock(block);
+            block.transform.position = transform.position;
+            block.transform.position += block.BlockData.UnitLength * Vector3.right * (_usedLayoutWidth + _spacing);
+            _usedLayoutWidth += block.BlockData.UnitLength + _spacing;
+            block.transform.SetParent(transform);
+            block.SetResetPosition();
         }
 
-        public void ReplaceBlockInHand(PlaceableBlock block)
+        /// <summary>
+        /// Inserts a block in the layout, not aligned, if it is inside the layout bounds.
+        /// </summary>
+        /// <param name="block">Block to insert.</param>
+        public void InsertInBounds(PlaceableBlock block)
         {
             block.transform.position = new Vector2(block.transform.position.x, transform.position.y);
-
-            if(!IsBlockInsideBounds(block))
+            if (!IsBlockInsideBounds(block))
                 return;
 
-            block.SetResetPosition(block.transform.position);
+            block.transform.SetParent(transform);
+            block.SetResetPosition();
         }
 
-        private void SetBlock(PlaceableBlock block)
+        public void ResetRow()
         {
-            //block.transform.parent = null;
-            block.transform.position = transform.position;
-            block.transform.position += block.BlockData.UnitLength * Vector3.right * (_currentWidth + _spacing);
-
-            _currentWidth += block.BlockData.UnitLength + _spacing;
-            //block.transform.SetParent(transform, true);
-            block.SetResetPosition(block.transform.position);
+            _usedLayoutWidth = 0;
         }
 
         private bool IsBlockInsideBounds(PlaceableBlock block)
         {
-            Debug.Log(_collider.bounds);
-
             foreach (Vector2 point in block.Collider.points)
             {
                 Vector2 pos = block.transform.TransformPoint(point);

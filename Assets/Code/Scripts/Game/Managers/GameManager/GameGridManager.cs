@@ -24,6 +24,7 @@
 
         private PlaceableBlock _currentDraggedBlock;
         private bool _isDragging;
+        //private Vector3 _dragOffset;
 
         public PBRGameManager GameManager => MainManager.Ins.GameManager as PBRGameManager;
         private MobileInputsManager MobInputs => GameManager.MobileInputsManager;
@@ -44,6 +45,7 @@
             {
                 if (TryGetBlockFromTouch(out PlaceableBlock block))
                 {
+                    //_dragOffset = MobInputs.ScreenTouchPosition - (Vector2)block.transform.position;
                     StartDrag(block);
                 }
             }
@@ -54,9 +56,8 @@
 
         public void StartDrag(PlaceableBlock block)
         {
-            block.Collider.enabled = false;
+            block.DisableCollider();
             _currentDraggedBlock = block;
-            block.transform.parent = null;
             _isDragging = true;
         }
 
@@ -82,8 +83,8 @@
 
         private void PlaceBlock(LevelTile tile)
         {
-            _currentDraggedBlock.Collider.enabled = true;
             _isDragging = false;
+            _currentDraggedBlock.EnableCollider();
             tile.InsertBlock(_currentDraggedBlock);
         }
 
@@ -91,9 +92,9 @@
         {
             if (!_isDragging) return;
 
-            if(MobInputs.IsTouchOn(out PlayerHandLayout hand))
+            if(MobInputs.IsTouchOn(out PlayerHandLayout layout))
             {
-                hand.ReplaceBlockInHand(_currentDraggedBlock);
+                layout.InsertInBounds(_currentDraggedBlock);
                 ResetBlock(_currentDraggedBlock);
             }
 
@@ -105,10 +106,9 @@
 
         private void ResetBlock(PlaceableBlock block)
         {
-            block.Collider.enabled = true;
-            block.transform.position = block.ResetPosition;
-            //block.transform.parent = _playerHandBox.transform;
             _isDragging = false;
+            block.EnableCollider();
+            block.ResetPosition();
         }
 
         private void DragBlock()

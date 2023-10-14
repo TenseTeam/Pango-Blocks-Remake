@@ -4,11 +4,26 @@
 
     public class PlaceableBlock : BlockBase
     {
-        public Vector2 ResetPosition { get; private set; }
+        private Vector2 _resetPosition;
 
-        public void SetResetPosition(Vector2 resetPosition)
+        public void SetResetPosition()
         {
-            ResetPosition = resetPosition;
+            _resetPosition = transform.position;
+        }
+
+        public void ResetPosition()
+        {
+            transform.position = _resetPosition;
+        }
+
+        public void EnableCollider()
+        {
+            Collider.enabled = true;
+        }
+
+        public void DisableCollider()
+        {
+            Collider.enabled = false;
         }
     }
 }
