@@ -2,9 +2,9 @@
 {
     public static class Constants 
     {
-        public static class Pools
-        {
-            public const string AudioSFXPool = "AudioSFXPool";
-        }
+        //public static class Pools
+        //{
+        //    public const string AudioSFXPool = "AudioSFXPool";
+        //}
     }
 }

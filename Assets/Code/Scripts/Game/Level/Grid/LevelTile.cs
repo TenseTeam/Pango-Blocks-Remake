@@ -1,14 +1,11 @@
 ﻿namespace ProjectPBR.Level.Grid
 {
-    using ProjectPBR.Level.Player.PlayerHandler.Blocks;
-    using ProjectPBR.Player.PlayerHandler.Blocks;
     using UnityEngine;
-    using VUDK.Extensions.Transform;
     using VUDK.Generic.Structures.Grid;    
+    using ProjectPBR.Level.Blocks;
 
     public class LevelTile : GridTileBase
     {
-        public BlockBase Block { get; private set; }
         public bool IsOccupied { get; private set; }
 
         public void InsertBlock(PlaceableBlock block)
@@ -21,11 +18,7 @@
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.TryGetComponent(out BlockBase block))
-            {
-                Block = block;
-                IsOccupied = true;
-            }
+            IsOccupied = true; // Because the tile will be occupied whatever if it's a block or not
         }
 
         private void OnTriggerExit2D(Collider2D other)

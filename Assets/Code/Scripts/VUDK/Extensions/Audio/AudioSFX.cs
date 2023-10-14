@@ -2,8 +2,8 @@
 {
     using UnityEngine;
     using VUDK.Extensions.Audio.Interfaces;
-    using VUDK.Patterns.ObjectPool;
-    using VUDK.Patterns.ObjectPool.Interfaces;
+    using VUDK.Patterns.Pooling;
+    using VUDK.Patterns.Pooling.Interfaces;
     using VUDK.Extensions.Transform;
 
     [RequireComponent(typeof(AudioSource))]

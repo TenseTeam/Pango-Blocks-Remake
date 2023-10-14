@@ -10,6 +10,6 @@
         public MobileInputsManager MobileInputsManager { get; private set; }
 
         [field: SerializeField, Header("Grid Blocks Manager")]
-        public GridBlocksManager GridBlocksManager { get; private set; }
+        public GameGridManager GridBlocksManager { get; private set; }
     }
 }

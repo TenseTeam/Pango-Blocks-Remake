@@ -1,7 +1,6 @@
-﻿namespace VUDK.Patterns.ObjectPool.Interfaces
+﻿namespace VUDK.Patterns.Pooling.Interfaces
 {
-    using UnityEngine;
-    using VUDK.Patterns.ObjectPool;
+    using VUDK.Patterns.Pooling;
 
     public interface IPooledObject
     {

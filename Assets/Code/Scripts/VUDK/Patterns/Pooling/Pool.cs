@@ -1,29 +1,33 @@
-namespace VUDK.Patterns.ObjectPool
+namespace VUDK.Patterns.Pooling
 {
     using System.Collections.Generic;
     using UnityEngine;
     using VUDK.Extensions.Transform;
-    using VUDK.Patterns.ObjectPool.Interfaces;
+    using VUDK.Patterns.Pooling.Interfaces;
 
-    public class Pool : MonoBehaviour
+    public sealed class Pool : MonoBehaviour
     {
+        [Tooltip("The prefab to be pooled.")]
         [SerializeField]
         private GameObject _pooledObject;
 
-        [SerializeField, Min(0)]
+        [Tooltip("The initial number of instances to create in the pool.")]
+        [SerializeField]
+        [Min(0)]
         private int _instancesAtStart = 1;
 
+        [Tooltip("Whether the pool has a maximum capacity.")]
         [SerializeField]
         private bool _isCapped = false;
 
         private Queue<GameObject> _instances;
 
-        protected void Awake()
+        private void Awake()
         {
             _instances = new Queue<GameObject>();
         }
 
-        protected void Start()
+        private void Start()
         {
             Instantiate(_instancesAtStart);
         }

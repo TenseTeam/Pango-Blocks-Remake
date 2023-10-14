@@ -4,15 +4,16 @@ namespace VUDK.Patterns.Singleton
 
     public abstract class Singleton<T> : MonoBehaviour where T : Component
     {
-        public static T Instance;
-        public static T Ins => Instance;
+        private static T s_instance;
+
+        public static T Ins => s_instance;
 
         protected virtual void Awake()
         {
-            if (!Instance)
+            if (!s_instance)
             {
-                if (!TryGetComponent(out Instance))
-                    Instance = gameObject.AddComponent<T>();
+                if (!TryGetComponent(out s_instance))
+                    s_instance = gameObject.AddComponent<T>();
             }
             else
                 Destroy(gameObject);

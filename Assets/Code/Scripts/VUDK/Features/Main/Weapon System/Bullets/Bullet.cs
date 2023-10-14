@@ -3,8 +3,8 @@
     using System;
     using UnityEngine;
     using VUDK.Features.Main.EntitySystem.Interfaces;
-    using VUDK.Patterns.ObjectPool;
-    using VUDK.Patterns.ObjectPool.Interfaces;
+    using VUDK.Patterns.Pooling;
+    using VUDK.Patterns.Pooling.Interfaces;
 
     [RequireComponent(typeof(Collider), typeof(Rigidbody))]
     public class Bullet : MonoBehaviour, IPooledObject

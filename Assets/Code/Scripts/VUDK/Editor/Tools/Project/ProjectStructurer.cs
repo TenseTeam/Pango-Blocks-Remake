@@ -4,7 +4,7 @@ namespace VUDK.Editor.Tools.Project
     using UnityEditor;
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
-    using VUDK.Patterns.ObjectPool;
+    using VUDK.Patterns.Pooling;
 
     public class ProjectStructurer : EditorWindow
     {
@@ -109,7 +109,7 @@ namespace VUDK.Editor.Tools.Project
 
             GameObject poolsManagerObj = new GameObject(nameof(PoolsManager));
             PoolsManager poolsManager = poolsManagerObj.AddComponent<PoolsManager>();
-            poolsManagerObj.transform.parent = gameManagerObj.transform;
+            poolsManagerObj.transform.parent = mainManagerObj.transform;
 
             GameObject eventManagerObj = new GameObject(nameof(EventManager));
             EventManager eventManager = eventManagerObj.AddComponent<EventManager>();
@@ -122,14 +122,6 @@ namespace VUDK.Editor.Tools.Project
             GameObject gameStateMachineObj = new GameObject(nameof(GameMachine));
             GameMachine gameStateMachine = gameStateMachineObj.AddComponent<GameMachine>();
             gameStateMachineObj.transform.parent = mainManagerObj.transform;
-
-            //AssignReferences(mainManager, gameManager, poolsManager, eventManager, gameConfig, gameStateMachine);
         }
-
-        //[System.Obsolete]
-        //private void AssignReferences(MainManager main, GameManager gameManager, PoolsManager pools, EventManager eventManager, GameConfig config, GameStateMachine machine)
-        //{
-        //    main.AssignReferences(gameManager, pools, eventManager, config, machine);
-        //}
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace ProjectPBR.Managers
 {
-    using ProjectPBR.Factories;
+    using ProjectPBR.Patterns.Factories;
     using ProjectPBR.Managers.GameStateMachine;
     using ProjectPBR.Managers.GameStateMachine.States;
     using VUDK.Generic.Managers.Main;
