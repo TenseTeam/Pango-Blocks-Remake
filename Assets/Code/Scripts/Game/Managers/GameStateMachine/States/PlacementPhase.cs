@@ -32,43 +32,42 @@
         {
             if (Context.Inputs.Interaction.Interact.IsInProgress()) 
             {
-                if (!Context.Dragger.IsDragging && TryGetBlockFromTouch(out PlaceableBlock block))
+                if (!Context.BlocksController.Dragger.IsDragging && TryGetBlockFromTouch(out PlaceableBlock block))
                 {
-                    Context.Dragger.StartDrag(block);
+                    Context.BlocksController.Dragger.StartDrag(block);
                 }
             }
         }
 
         private void TryToPlaceBlock(InputAction.CallbackContext context)
         {
-            if (!Context.Dragger.IsDragging) return;
+            if (!Context.BlocksController.Dragger.IsDragging) return;
 
-            if (Context.MobileInputs.IsTouchOn(out PlayerHandLayout layout))
+            if (Context.GameManager.MobileInputsManager.IsTouchOn(out PlayerHandLayout layout))
             {
-                layout.InsertInBounds(Context.Dragger.CurrentDraggedBlock);
-                ResetBlockInHand(Context.Dragger.CurrentDraggedBlock);
+                layout.InsertInBounds(Context.GameManager.BlocksController.Dragger.CurrentDraggedBlock);
+                ResetBlockInHand(Context.GameManager.BlocksController.Dragger.CurrentDraggedBlock);
                 return;
             }
 
-            if (Context.MobileInputs.IsTouchOn(out LevelTile tile) && 
-                Context.Grid.AreTilesFreeForBlock(tile, Context.Dragger.CurrentDraggedBlock))
+            if (Context.GameManager.MobileInputsManager.IsTouchOn(out LevelTile tile) && 
+                Context.GameManager.GridBlocksManager.AreTilesFreeForBlock(tile, Context.BlocksController.Dragger.CurrentDraggedBlock))
             {
-                Context.Grid.PlaceBlockInGrid(tile, Context.Dragger.CurrentDraggedBlock);
-                Context.Dragger.StopDrag();
+                PlaceBlockOnGrid(Context.BlocksController.Dragger.CurrentDraggedBlock, tile);
                 return;
             }
 
             // If nothing happens, reset the block in hand
-            ResetBlockInHand(Context.Dragger.CurrentDraggedBlock);
+            ResetBlockInHand(Context.BlocksController.Dragger.CurrentDraggedBlock);
         }
 
         private bool TryGetBlockFromTouch(out PlaceableBlock block)
         {
-            RaycastHit2D hit = Context.MobileInputs.Raycast2DFromTouch(Context.Grid.BlocksLayerMask);
+            RaycastHit2D hit = Context.GameManager.MobileInputsManager.Raycast2DFromTouch(Context.GameManager.GridBlocksManager.BlocksLayerMask);
 
             if (hit && hit.transform.TryGetComponent(out PlaceableBlock bl))
             {
-                block = Context.HandLayout.GetAndRemoveFromHand(bl);
+                block = Context.BlocksController.PlayerHand.Layout.GetAndRemoveFromHand(bl);
                 return true;
             }
 
@@ -76,12 +75,28 @@
             return false;
         }
 
+        //private void PlaceBlockInHand(PlaceableBlock block)
+        //{
+        //    Context.GameManager.BlocksController.PlaceBlockInHand(block);
+        //    ChangeToFallPhase();
+        //}
+
         private void ResetBlockInHand(PlaceableBlock block)
         {
-            block.EnableCollider();
-            block.ResetPosition();
-            Context.HandLayout.ResetBlockInLayout(block);
-            Context.Dragger.StopDrag();
+            Context.GameManager.BlocksController.ResetBlockInHand(block);
+            ChangeToFallPhase();
+        }
+
+        private void PlaceBlockOnGrid(PlaceableBlock block, LevelTile tile)
+        {
+            Context.GameManager.BlocksController.PlaceBlockOnGrid(block, tile);
+            ChangeToFallPhase();
+        }
+
+        private void ChangeToFallPhase()
+        {
+            Context.BlocksController.Dragger.StopDrag();
+            ChangeState(GamePhaseKeys.FallPhase);
         }
     }
 }

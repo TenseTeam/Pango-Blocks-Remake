@@ -2,9 +2,9 @@
 {
     using VUDK.Patterns.StateMachine;
 
-    public class GameStateMachineContext : InputContext
+    public abstract class GameMachineContext : InputContext
     {
-        public GameStateMachineContext(InputsMap inputs) : base(inputs)
+        public GameMachineContext(InputsMap inputs) : base(inputs)
         {
         }
     }

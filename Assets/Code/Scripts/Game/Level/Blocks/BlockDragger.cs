@@ -5,7 +5,7 @@
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Managers.Main.Interfaces;
 
-    public class BlockDragger : MonoBehaviour, ICastGameManager<PBRGameManager>
+    public class BlockDragger : MonoBehaviour, ICastGameManager<GameManager>
     {
         [SerializeField]
         private float _followSpeed = 10f;
@@ -14,7 +14,7 @@
 
         public PlaceableBlock CurrentDraggedBlock { get; private set; }
         public bool IsDragging => CurrentDraggedBlock != null;
-        public PBRGameManager GameManager => MainManager.Ins.GameManager as PBRGameManager;
+        public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
 
         private void Update()
         {

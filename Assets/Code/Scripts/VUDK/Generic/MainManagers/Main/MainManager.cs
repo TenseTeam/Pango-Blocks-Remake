@@ -19,7 +19,7 @@
     public sealed class MainManager : Singleton<MainManager>
     {
         [field: SerializeField, Header("Game Manager")]
-        public GameManager GameManager { get; private set; }
+        public GameManagerBase GameManager { get; private set; }
 
         [field: SerializeField, Header("Event Manager")]
         public EventManager EventManager { get; private set; }
@@ -28,7 +28,7 @@
         public GameConfig GameConfig { get; private set; }
 
         [field: SerializeField, Header("Game State Machine")]
-        public GameMachine GameStateMachine { get; private set; }
+        public GameMachineBase GameStateMachine { get; private set; }
 
         [field: SerializeField, Header("Pooling")]
         public PoolsManager PoolsManager { get; private set; }

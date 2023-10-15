@@ -48,8 +48,7 @@
 
         public PlaceableBlock GetAndRemoveFromHand(PlaceableBlock block)
         {
-            block.transform.SetParent(null);
-            block.transform.SetLossyScale(Vector3.one);
+            RemoveFromLayout(block);
             return block;
         }
 

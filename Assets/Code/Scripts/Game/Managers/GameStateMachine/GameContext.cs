@@ -1,26 +1,15 @@
 ﻿namespace ProjectPBR.Managers.GameStateMachine
 {
-    using ProjectPBR.Level.Blocks;
-    using ProjectPBR.Level.Grid;
-    using ProjectPBR.Player;
-    using ProjectPBR.Player.PlayerHandler;
-    using VUDK.Features.Main.InputSysten.MobileInputs;
     using VUDK.Generic.MainManagers.Main.GameStateMachine.Contexts;
-    using VUDK.Generic.Managers.Main;
 
-    public class GameContext : GameStateMachineContext
+    public class GameContext : GameMachineContext
     {
-        public MobileInputsManager MobileInputs { get; private set; }
-        public GameGridManager Grid { get; private set; } 
-        public BlockDragger Dragger { get; private set; }
-        public PlayerHandLayout HandLayout { get; private set; }
+        public GameManager GameManager { get; private set; }
+        public BlocksController BlocksController => GameManager.BlocksController;
 
-        public GameContext(InputsMap inputs, MobileInputsManager mobileInputs, GameGridManager grid, GameContextData contextData) : base(inputs)
+        public GameContext(InputsMap inputs, GameManager gameManager) : base(inputs)
         {
-            MobileInputs = mobileInputs;
-            Grid = grid;
-            Dragger = contextData.dragger;
-            HandLayout = contextData.handLayout;
+            GameManager = gameManager;
         }
     }
 }

@@ -10,29 +10,24 @@
     {
         [SerializeField, Header("Blocks")]
         private List<BlockData> _playerBlocks;
-        [SerializeField]
-        private PlayerHandLayout _playerHandLayout;
 
-        //private List<PlaceableBlock> _currentPlayerBlocks;
+        [field: SerializeField]
+        public PlayerHandLayout Layout { get; private set; }
+
+        //public List<PlaceableBlock> PlaceableBlocks { get; private set; } = new List<PlaceableBlock>();
 
         private void Start()
         {
             GenerateBlocks();
         }
 
-        //public PlaceableBlock GetBlockFromCurrentHand(PlaceableBlock block)
-        //{
-        //    _currentPlayerBlocks.Remove(block);
-        //    return block;
-        //}
-
         private void GenerateBlocks()
         {
             foreach (BlockData blockData in _playerBlocks)
             {
                 PlaceableBlock block = BlocksFactory.Create(blockData) as PlaceableBlock;
-                _playerHandLayout.InsertInRow(block);
-                //_currentPlayerBlocks.Add(block);
+                block.transform.name = blockData.name.Replace("so_", "");
+                Layout.InsertInRow(block);
             }
         }
     }

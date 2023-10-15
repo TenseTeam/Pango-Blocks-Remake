@@ -4,6 +4,8 @@
     using UnityEngine;
     using ProjectPBR.Level.Grid;
     using ProjectPBR.Level.Blocks;
+    using System.Collections.Generic;
+    using System.Linq;
 
     public class GameGridManager : MonoBehaviour
     {
@@ -13,10 +15,34 @@
         [field: SerializeField, Header("Layer Masks")]
         public LayerMask BlocksLayerMask { get; private set; }
 
-        public void PlaceBlockInGrid(LevelTile tile, PlaceableBlock blockToPlace)
+        public List<PlaceableBlock> BlocksOnGrid { get; private set; } = new List<PlaceableBlock>();
+
+        public void PlaceBlockOnGrid(LevelTile tile, PlaceableBlock blockToPlace)
         {
             blockToPlace.EnableCollider();
+            AddBlockToGrid(blockToPlace);
             tile.InsertBlock(blockToPlace);
+        }
+
+        public void RemoveBlockFromGrid(PlaceableBlock block)
+        {
+            BlocksOnGrid.Remove(block);
+        }
+
+        // TO DO: Adjust the position of the blocks on the grid based on the tiles they occupy
+        //public void AdjustBlocksPositionOnGrid()
+        //{
+        //    foreach(LevelTile tile in Grid.GridTiles)
+        //    {
+        //        if (tile.IsOccupied)
+        //            tile.Block.transform.position = tile.transform.position; 
+        //    }
+        //}
+
+        private void AddBlockToGrid(PlaceableBlock block)
+        {
+            if (!BlocksOnGrid.Contains(block))
+                BlocksOnGrid.Add(block);
         }
 
         public bool AreTilesFreeForBlock(LevelTile fromTile, PlaceableBlock block)

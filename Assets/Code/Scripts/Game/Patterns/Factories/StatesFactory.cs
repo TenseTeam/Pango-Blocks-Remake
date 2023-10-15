@@ -14,9 +14,8 @@
                     return new PlacementPhase(stateKey, relatedStateMachine, context);
                 case GamePhaseKeys.ObjectivePhase:
                     return new ObjectivePhase(stateKey, relatedStateMachine, context);
-
                 case GamePhaseKeys.FallPhase:
-                    break;
+                    return new FallPhase(stateKey, relatedStateMachine, context);
                 case GamePhaseKeys.GameOverPhase:
                     break;
                 case GamePhaseKeys.GameWinPhase:
