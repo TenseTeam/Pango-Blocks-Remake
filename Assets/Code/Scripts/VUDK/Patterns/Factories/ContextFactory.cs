@@ -4,9 +4,5 @@
     
     public static class ContextFactory
     {
-        public static GameStateMachineContext Create()
-        {
-            return new GameStateMachineContext();
-        }
     }
 }

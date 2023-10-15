@@ -1,7 +1,7 @@
 ﻿namespace ProjectPBR.Player.PlayerHandler
 {
-    using System.Collections.Generic;
     using UnityEngine;
+    using System.Collections.Generic;
     using ProjectPBR.ScriptableObjects;
     using ProjectPBR.Patterns.Factories;
     using ProjectPBR.Level.Blocks;
@@ -13,15 +13,27 @@
         [SerializeField]
         private PlayerHandLayout _playerHandLayout;
 
+        //private List<PlaceableBlock> _currentPlayerBlocks;
+
         private void Start()
         {
             GenerateBlocks();
         }
 
+        //public PlaceableBlock GetBlockFromCurrentHand(PlaceableBlock block)
+        //{
+        //    _currentPlayerBlocks.Remove(block);
+        //    return block;
+        //}
+
         private void GenerateBlocks()
         {
             foreach (BlockData blockData in _playerBlocks)
-                _playerHandLayout.InsertInRow(BlocksFactory.Create(blockData) as PlaceableBlock);
+            {
+                PlaceableBlock block = BlocksFactory.Create(blockData) as PlaceableBlock;
+                _playerHandLayout.InsertInRow(block);
+                //_currentPlayerBlocks.Add(block);
+            }
         }
     }
 }

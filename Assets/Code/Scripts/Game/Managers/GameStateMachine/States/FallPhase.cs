@@ -3,9 +3,9 @@
     using System;
     using VUDK.Patterns.StateMachine;
 
-    public class ObjectiveState : State<GameContext>
+    public class FallPhase : State<GameContext>
     {
-        public ObjectiveState(Enum stateKey, StateMachine relatedStateMachine, Context context) : base(stateKey, relatedStateMachine, context)
+        public FallPhase(Enum stateKey, StateMachine relatedStateMachine, Context context) : base(stateKey, relatedStateMachine, context)
         {
         }
 

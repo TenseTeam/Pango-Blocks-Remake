@@ -152,6 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0bb6f40f0ab6ea4ab3a57d1edb7a93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <GameContextData>k__BackingField:
+    dragger: {fileID: 507903137}
+    handLayout: {fileID: 1348621928}
 --- !u!4 &106301607
 Transform:
   m_ObjectHideFlags: 0
@@ -541,6 +544,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 230366095}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &507903135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 507903136}
+  - component: {fileID: 507903137}
+  m_Layer: 0
+  m_Name: BlockDragger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &507903136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507903135}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 625747956}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &507903137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507903135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e37002d5333a64f9ede258327e7404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _followSpeed: 10
+  _handLayout: {fileID: 1348621928}
 --- !u!1 &625747955
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +620,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 918524894}
+  - {fileID: 507903136}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &896878857
@@ -894,6 +944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spacing: 0.5
+  _blockSizeInHand: {x: 0.8, y: 0.8}
 --- !u!61 &1348621929
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -984,10 +1035,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Grid>k__BackingField: {fileID: 896878858}
-  _blocksLayerMask:
+  <BlocksLayerMask>k__BackingField:
     serializedVersion: 2
     m_Bits: 128
-  _followSpeed: 100
 --- !u!1 &1911943933
 GameObject:
   m_ObjectHideFlags: 0

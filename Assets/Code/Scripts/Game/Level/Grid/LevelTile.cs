@@ -12,8 +12,6 @@
         {
             block.transform.parent = null;
             block.transform.position = transform.position;
-            //block.transform.parent = transform;
-            //block.transform.localPosition = Vector3.zero;
         }
 
         private void OnTriggerEnter2D(Collider2D other)

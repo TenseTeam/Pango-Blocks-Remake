@@ -6,14 +6,21 @@
 
     public static class StatesFactory
     {
-        public static State<GameContext> Create(StateKeys stateKey, StateMachine relatedStateMachine, GameContext context)
+        public static State<GameContext> Create(GamePhaseKeys stateKey, StateMachine relatedStateMachine, GameContext context)
         {
             switch (stateKey)
             {
-                case StateKeys.Check:
-                    return new CheckState(stateKey, relatedStateMachine, context);
-                case StateKeys.Objective:
-                    return new ObjectiveState(stateKey, relatedStateMachine, context);
+                case GamePhaseKeys.PlacementPhase:
+                    return new PlacementPhase(stateKey, relatedStateMachine, context);
+                case GamePhaseKeys.ObjectivePhase:
+                    return new ObjectivePhase(stateKey, relatedStateMachine, context);
+
+                case GamePhaseKeys.FallPhase:
+                    break;
+                case GamePhaseKeys.GameOverPhase:
+                    break;
+                case GamePhaseKeys.GameWinPhase:
+                    break;
             }
 
             return null;

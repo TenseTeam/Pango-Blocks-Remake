@@ -6,8 +6,6 @@
     using VUDK.Features.Main.Inputs.MobileInputs.Keys;
     using VUDK.Features.Main.InputSystem;
     using VUDK.Generic.Managers.Main;
-    using ProjectPBR.Level.Grid;
-    using ProjectPBR.Player.PlayerHandler;
 
     [DefaultExecutionOrder(-500)]
     public sealed class MobileInputsManager : MonoBehaviour
@@ -20,6 +18,11 @@
         /// </summary>
         public Vector2 ScreenTouchPosition => MainManager.Ins.GameConfig.MainCamera.ScreenToWorldPoint(InputsManager.Inputs.Touches.TouchPosition0.ReadValue<Vector2>());
 
+        /// <summary>
+        /// Raycast2Ds from the touch position to the world.
+        /// </summary>
+        /// <param name="layerMask">Layers to ingnore.</param>
+        /// <returns><see cref="RaycastHit2D"/> of the hit.</returns>
         public RaycastHit2D Raycast2DFromTouch(LayerMask layerMask)
         {
             Vector2 origin = ScreenTouchPosition;
@@ -28,6 +31,12 @@
             return Physics2D.Raycast(origin, direction, maxDistance, layerMask);
         }
 
+        /// <summary>
+        /// Checks with <see cref="Raycast2DFromTouch(LayerMask)"/> if the touch is on a T Component.
+        /// </summary>
+        /// <typeparam name="T">T Component to check.</typeparam>
+        /// <param name="component">Found T component.</param>
+        /// <returns>True if the T component is found, False if not.</returns>
         public bool IsTouchOn<T>(out T component) where T : Component
         {
             RaycastHit2D hit = Raycast2DFromTouch(~0);

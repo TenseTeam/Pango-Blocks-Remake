@@ -4,12 +4,15 @@
     using ProjectPBR.Level.Blocks;
     using System.Collections.Generic;
     using static Unity.Collections.AllocatorManager;
+    using VUDK.Extensions.Transform;
 
     [RequireComponent(typeof(Collider2D))]
     public class PlayerHandLayout : MonoBehaviour
     {
         [SerializeField, Header("Layout Settings")]
         private float _spacing;
+        [SerializeField]
+        private Vector2 _blockSizeInHand;
 
         private float _usedLayoutWidth;
         private Collider2D _collider;
@@ -28,8 +31,7 @@
             block.transform.position = transform.position;
             block.transform.position += block.BlockData.UnitLength * Vector3.right * (_usedLayoutWidth + _spacing);
             _usedLayoutWidth += block.BlockData.UnitLength + _spacing;
-            block.transform.SetParent(transform);
-            block.SetResetPosition();
+            ResetBlockInLayout(block);
         }
 
         /// <summary>
@@ -41,9 +43,20 @@
             block.transform.position = new Vector2(block.transform.position.x, transform.position.y);
             if (!IsBlockInsideBounds(block))
                 return;
+            ResetBlockInLayout(block);
+        }
 
-            block.transform.SetParent(transform);
-            block.SetResetPosition();
+        public PlaceableBlock GetAndRemoveFromHand(PlaceableBlock block)
+        {
+            block.transform.SetParent(null);
+            block.transform.SetLossyScale(Vector3.one);
+            return block;
+        }
+
+        public void RemoveFromLayout(PlaceableBlock block)
+        {
+            block.transform.SetParent(null);
+            block.transform.SetLossyScale(Vector3.one);
         }
 
         public void ResetRow()
@@ -58,13 +71,17 @@
                 Vector2 pos = block.transform.TransformPoint(point);
 
                 if (!_collider.bounds.Contains(pos))
-                {
-                    Debug.Log(pos);
                     return false;
-                }
             }
 
             return true;
+        }
+
+        public void ResetBlockInLayout(PlaceableBlock block)
+        {
+            block.transform.SetParent(transform);
+            block.transform.SetLossyScale(_blockSizeInHand);
+            block.SetResetPosition();
         }
     }
 }
