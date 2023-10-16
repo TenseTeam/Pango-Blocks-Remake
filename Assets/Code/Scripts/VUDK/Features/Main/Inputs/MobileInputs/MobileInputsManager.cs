@@ -16,7 +16,8 @@
         /// <summary>
         /// Returns the position of the touch in the screen already converted with ScreenToWorldPoint.
         /// </summary>
-        public Vector2 ScreenTouchPosition => MainManager.Ins.GameConfig.MainCamera.ScreenToWorldPoint(InputsManager.Inputs.Touches.TouchPosition0.ReadValue<Vector2>());
+        public Vector2 ScreenTouchPosition => MainManager.Ins.GameConfig.MainCamera.ScreenToWorldPoint(RawTouchPosition);
+        public Vector2 RawTouchPosition => InputsManager.Inputs.Touches.TouchPosition0.ReadValue<Vector2>();
 
         /// <summary>
         /// Raycast2Ds from the touch position to the world.
@@ -37,7 +38,7 @@
         /// <typeparam name="T">T Component to check.</typeparam>
         /// <param name="component">Found T component.</param>
         /// <returns>True if the T component is found, False if not.</returns>
-        public bool IsTouchOn<T>(out T component) where T : Component
+        public bool IsTouchOn<T>(out T component/*, LayerMask layerMask*/) where T : Component
         {
             RaycastHit2D hit = Raycast2DFromTouch(~0);
             if (hit)

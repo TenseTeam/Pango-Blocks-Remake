@@ -43,14 +43,14 @@
         {
             if (!Context.BlocksController.Dragger.IsDragging) return;
 
-            if (Context.GameManager.MobileInputsManager.IsTouchOn(out PlayerHandLayout layout))
+            if (Context.GameManager.MobileInputsManager.IsTouchOn(out PlayerHandLayout layout)/*, ~0/*(1 << Context.GameManager.GridBlocksManager.BlocksLayerMask)*/)
             {
                 layout.InsertInBounds(Context.GameManager.BlocksController.Dragger.CurrentDraggedBlock);
                 ResetBlockInHand(Context.GameManager.BlocksController.Dragger.CurrentDraggedBlock);
                 return;
             }
 
-            if (Context.GameManager.MobileInputsManager.IsTouchOn(out LevelTile tile) && 
+            if (Context.GameManager.MobileInputsManager.IsTouchOn(out LevelTile tile)/*, Context.GameManager.GridBlocksManager.BlocksLayerMask)*/ && 
                 Context.GameManager.GridBlocksManager.AreTilesFreeForBlock(tile, Context.BlocksController.Dragger.CurrentDraggedBlock))
             {
                 PlaceBlockOnGrid(Context.BlocksController.Dragger.CurrentDraggedBlock, tile);

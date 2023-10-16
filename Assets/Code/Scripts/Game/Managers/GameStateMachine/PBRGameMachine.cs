@@ -5,7 +5,6 @@
     using ProjectPBR.Managers.GameStateMachine;
     using ProjectPBR.Managers.GameStateMachine.States;
 
-
     public class PBRGameMachine : GameMachineBase
     {
         public override void Init()

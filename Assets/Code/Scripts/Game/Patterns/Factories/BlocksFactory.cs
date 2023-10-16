@@ -10,7 +10,7 @@
     {
         public static BlockBase Create(BlockData blockData)
         {
-            GameObject goBlock = MainManager.Ins.PoolsManager.Pools[PoolKeys.SquareBase].Get();
+            GameObject goBlock = MainManager.Ins.PoolsManager.Pools[PoolKeys.BlockBase].Get();
 
             if (goBlock.TryGetComponent(out BlockBase blockBase))
                 blockBase.Init(blockData);

@@ -1,23 +1,29 @@
 ﻿namespace ProjectPBR.Managers.GameStateMachine.States
 {
     using System;
-    using UnityEngine;
-    using ProjectPBR.Level.Blocks;
-    using VUDK.Patterns.StateMachine;
     using System.Collections.Generic;
+    using UnityEngine;
+    using VUDK.Patterns.StateMachine;
+    using VUDK.Generic.Serializable;
+    using ProjectPBR.Level.Blocks;
 
     public class FallPhase : State<GameContext>
     {
-        private float delayBeforeCheck = 1.0f;
-        private float currentTime = 0.0f;
+        private TimeDelay _delayForCheck;
 
         public FallPhase(Enum stateKey, StateMachine relatedStateMachine, GameContext context) : base(stateKey, relatedStateMachine, context)
         {
+            _delayForCheck = new TimeDelay(0.2f);
         }
 
         public override void Enter()
         {
-            currentTime = 0.0f;
+            if(Context.GameManager.GridBlocksManager.IsGridEmpty())
+            {
+                ChangeState(GamePhaseKeys.PlacementPhase);
+                return;
+            }
+
             EnableGravity();
         }
 
@@ -32,9 +38,9 @@
 
         public override void Process()
         {
-            currentTime += Time.deltaTime;
+            _delayForCheck.AddDeltaTime();
 
-            if (currentTime >= delayBeforeCheck)
+            if (_delayForCheck.IsReady())
             {
                 if (AreAllBlocksStopped())
                 {

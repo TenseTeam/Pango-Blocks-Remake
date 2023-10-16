@@ -8,8 +8,6 @@
         private Vector2 _resetPosition;
         private Rigidbody2D _rb;
 
-        //public bool IsPlaced { get; private set; }
-
         public bool IsMoving => _rb.velocity.magnitude > 0.1f;
         public bool IsTilted => Mathf.Abs(transform.rotation.z) > 0.1f + Mathf.Abs(BlockData.zRotation);
 
@@ -43,7 +41,6 @@
 
         public void EnableGravity()
         {
-            Debug.Log("Enabling gravity at " + transform.name);
             _rb.bodyType = RigidbodyType2D.Dynamic;
         }
 

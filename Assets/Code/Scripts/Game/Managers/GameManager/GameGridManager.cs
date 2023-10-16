@@ -14,6 +14,8 @@
 
         [field: SerializeField, Header("Layer Masks")]
         public LayerMask BlocksLayerMask { get; private set; }
+        //[field: SerializeField]
+        //public LayerMask LayoutLayerMask { get; private set; }
 
         public List<PlaceableBlock> BlocksOnGrid { get; private set; } = new List<PlaceableBlock>();
 
@@ -63,6 +65,16 @@
             }
 
             return true;
+        }
+
+        public bool IsGridEmpty()
+        {
+            return BlocksOnGrid.Count == 0;
+        }
+
+        public bool IsGridFull()
+        {
+            return BlocksOnGrid.Count == Grid.GridTiles.Length;
         }
     }
 }
