@@ -34,7 +34,6 @@
             MoveUpdateVelocity();
         }
 
-
         /// <summary>
         /// Moves the character in the specified direction at the setted speed using rigidbody velocity.
         /// </summary>

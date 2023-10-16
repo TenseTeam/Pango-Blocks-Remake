@@ -1,11 +1,10 @@
 ﻿namespace ProjectPBR.Managers
 {
     using System;
+    using System.Collections.Generic;
     using UnityEngine;
     using ProjectPBR.Level.Grid;
     using ProjectPBR.Level.Blocks;
-    using System.Collections.Generic;
-    using System.Linq;
 
     public class GameGridManager : MonoBehaviour
     {
