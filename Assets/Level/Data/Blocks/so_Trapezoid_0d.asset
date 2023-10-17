@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea4cd2f69eabb046865a109014a85eb, type: 3}
+  m_Name: so_Trapezoid_0d
+  m_EditorClassIdentifier: 
+  Type: 3
+  UnitLength: 2
+  zRotation: 0
+  Sprite: {fileID: 21300000, guid: a23de9455f9dc914bbad6eea14951536, type: 3}
+  BlockPrefabBase: {fileID: 8141217156061810008, guid: 826441533b0f2bf40acd20a2a9bb6a0f, type: 3}
