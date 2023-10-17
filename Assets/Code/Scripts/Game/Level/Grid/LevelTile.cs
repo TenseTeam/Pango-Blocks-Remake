@@ -2,12 +2,16 @@
 {
     using UnityEngine;
     using VUDK.Generic.Structures.Grid;    
+    using VUDK.Extensions.Vectors;
+    using VUDK.Generic.Managers.Main;
+    using VUDK.Generic.Managers.Main.Interfaces;
+    using ProjectPBR.Managers;
     using ProjectPBR.Level.Blocks;
 
-    public class LevelTile : GridTileBase
+    public class LevelTile : GridTileBase, ICastGameManager<GameManager>
     {
-        public PlaceableBlock Block { get; private set; }
-        public bool IsOccupied { get; private set; }
+        public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
+        public bool IsOccupied => Physics2D.OverlapBox(transform.position, transform.localScale.Sum(-.2f), 0f, GameManager.GridBlocksManager.BlocksLayerMask);
 
         public void InsertBlock(PlaceableBlock block)
         {
@@ -15,19 +19,12 @@
             block.transform.position = transform.position;
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+#if DEBUG
+        private void OnDrawGizmos()
         {
-            IsOccupied = true; // Because the tile will be occupied whatever if it's a placeable block or not
-
-            if (other.TryGetComponent(out PlaceableBlock block))
-                Block = block;
+            Gizmos.color = IsOccupied ? Color.red : Color.green;
+            Gizmos.DrawWireCube(transform.position, transform.localScale);
         }
-
-        private void OnTriggerExit2D(Collider2D other)
-        {
-            IsOccupied = false;
-            if (other.TryGetComponent(out PlaceableBlock block))
-                Block = null;
-        }
+#endif
     }
 }

@@ -49,7 +49,7 @@
         /// <param name="block">Block to insert.</param>
         public void InsertInBounds(PlaceableBlock block)
         {
-            block.transform.SetLossyScale(_layoutblockSize);
+            block.transform.SetLossyScale(_layoutblockSize); // Set the block size to the layout size
             block.transform.position = new Vector2(block.transform.position.x, transform.position.y);
             if (!IsBlockInsideBounds(block))
             {

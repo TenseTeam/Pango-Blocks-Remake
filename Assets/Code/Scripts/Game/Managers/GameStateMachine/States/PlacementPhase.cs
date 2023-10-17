@@ -45,7 +45,6 @@
 
             if (Context.GameManager.MobileInputsManager.IsTouchOn2D(out PlayerHandLayout layout, Context.GameManager.BlocksController.PlayerHand.Layout.LayoutMask))
             {
-                Debug.Log("Place block in layout");
                 layout.InsertInBounds(Context.GameManager.BlocksController.Dragger.CurrentDraggedBlock);
                 ResetBlockInHand(Context.GameManager.BlocksController.Dragger.CurrentDraggedBlock);
                 return;

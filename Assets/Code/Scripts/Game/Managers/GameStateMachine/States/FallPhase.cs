@@ -44,7 +44,7 @@
             {
                 if (AreAllBlocksStopped())
                 {
-                    ReturnInHandTiltedBlocks();
+                    ReturnInHandInvalidBlocks();
                     ChangeState(GamePhaseKeys.PlacementPhase);
                 }
             }
@@ -60,17 +60,25 @@
             return true;
         }
 
-        private void ReturnInHandTiltedBlocks()
+        private void ReturnInHandInvalidBlocks()
         {
             List<PlaceableBlock> blocks = Context.GameManager.GridBlocksManager.BlocksOnGrid;
 
-            for(int i = 0; i < blocks.Count; i++)
-            {
-                if (blocks[i].IsTilted)
-                {
-                    Context.BlocksController.ResetBlockInHand(blocks[i]);
-                }
-            }
+            List<PlaceableBlock> invalidBlocks = blocks.FindAll(block => block.IsTilted || !block.IsInsideGrid());
+
+            foreach (PlaceableBlock block in invalidBlocks)
+                Context.BlocksController.ResetBlockInHand(block);
+
+            //for(int i = 0; i < blocks.Count; i++)
+            //{
+            //    if (blocks[i].IsTilted || !blocks[i].IsInsideGrid())
+            //    {
+            //        Context.BlocksController.ResetBlockInHand(blocks[i]);
+            //        i--;
+            //    }
+
+            //    Debug.Log(blocks[i] + " is Valid? " + !(blocks[i].IsTilted || !blocks[i].IsInsideGrid()));
+            //}
         }
 
         private void EnableGravity()

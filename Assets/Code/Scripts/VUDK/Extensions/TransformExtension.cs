@@ -19,7 +19,7 @@
         }
 
         /// <summary>
-        /// Checks if the path is clear between to Transforms.
+        /// Checks if the path is clear between two Transforms.
         /// </summary>
         /// <param name="source">From.</param>
         /// <param name="target">To.</param>
@@ -29,19 +29,11 @@
         public static bool IsPathClear(this Transform source, Transform target, LayerMask mask, float maxDistance = Mathf.Infinity)
         {
             Vector3 direction = target.position - source.position;
-            bool isClear = false;
 
-            RaycastHit hit;
-            if (Physics.Raycast(source.position, direction, out hit, maxDistance, mask))
-            {
-                isClear = (hit.transform == target);
-            }
-            else
-            {
-                isClear = true;
-            }
+            if (Physics.Raycast(source.position, direction, out RaycastHit hit, maxDistance, mask))
+                return (hit.transform == target);
 
-            return isClear;
+            return true;
         }
 
         /// <summary>
