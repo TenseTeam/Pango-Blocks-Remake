@@ -24,7 +24,7 @@
         /// </summary>
         /// <param name="layerMask">Layers to ingnore.</param>
         /// <returns><see cref="RaycastHit2D"/> of the hit.</returns>
-        public RaycastHit2D Raycast2DFromTouch(LayerMask layerMask)
+        public RaycastHit2D RaycastFromTouch2D(LayerMask layerMask)
         {
             Vector2 origin = ScreenTouchPosition;
             Vector2 direction = Vector2.zero;
@@ -33,16 +33,18 @@
         }
 
         /// <summary>
-        /// Checks with <see cref="Raycast2DFromTouch(LayerMask)"/> if the touch is on a T Component.
+        /// Checks with <see cref="RaycastFromTouch2D(LayerMask)"/> if the touch is on a T Component.
         /// </summary>
         /// <typeparam name="T">T Component to check.</typeparam>
         /// <param name="component">Found T component.</param>
         /// <returns>True if the T component is found, False if not.</returns>
-        public bool IsTouchOn<T>(out T component/*, LayerMask layerMask*/) where T : Component
+        public bool IsTouchOn2D<T>(out T component, LayerMask layerMask) where T : Component
         {
-            RaycastHit2D hit = Raycast2DFromTouch(~0);
+            RaycastHit2D hit = RaycastFromTouch2D(layerMask);
             if (hit)
+            {
                 return hit.transform.TryGetComponent(out component);
+            }
 
             component = null;
             return false;

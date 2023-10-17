@@ -12,14 +12,23 @@
         [SerializeField, Header("Layout Settings")]
         private float _spacing;
         [SerializeField]
-        private Vector2 _blockSizeInHand;
+        private Vector2 _layoutblockSize;
 
         private float _usedLayoutWidth;
         private Collider2D _collider;
+        
+        [field: SerializeField]
+        public LayerMask LayoutMask { get; private set; }
 
         private void Awake()
         {
             TryGetComponent(out _collider);
+        }
+
+        private void OnValidate()
+        {
+            if (_layoutblockSize.magnitude <= .01f)
+                Debug.LogWarning($"Layout blocks size in {transform.name} is zero.");
         }
 
         /// <summary>
@@ -28,9 +37,9 @@
         /// <param name="block">Block to insert.</param>
         public void InsertInRow(PlaceableBlock block)
         {
-            block.transform.position = transform.position;
-            block.transform.position += block.BlockData.UnitLength * Vector3.right * (_usedLayoutWidth + _spacing);
-            _usedLayoutWidth += block.BlockData.UnitLength + _spacing;
+            _usedLayoutWidth += _spacing;
+            block.transform.position = new Vector2(transform.position.x + _usedLayoutWidth, transform.position.y);
+            _usedLayoutWidth += block.BlockData.UnitLength;
             ResetBlockInLayout(block);
         }
 
@@ -40,9 +49,13 @@
         /// <param name="block">Block to insert.</param>
         public void InsertInBounds(PlaceableBlock block)
         {
+            block.transform.SetLossyScale(_layoutblockSize);
             block.transform.position = new Vector2(block.transform.position.x, transform.position.y);
             if (!IsBlockInsideBounds(block))
+            {
+                block.transform.SetLossyScale(Vector3.one);
                 return;
+            }
             ResetBlockInLayout(block);
         }
 
@@ -79,7 +92,7 @@
         public void ResetBlockInLayout(PlaceableBlock block)
         {
             block.transform.SetParent(transform);
-            block.transform.SetLossyScale(_blockSizeInHand);
+            block.transform.SetLossyScale(_layoutblockSize);
             block.SetResetPosition();
         }
     }

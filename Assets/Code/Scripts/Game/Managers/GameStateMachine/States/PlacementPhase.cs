@@ -43,14 +43,15 @@
         {
             if (!Context.BlocksController.Dragger.IsDragging) return;
 
-            if (Context.GameManager.MobileInputsManager.IsTouchOn(out PlayerHandLayout layout)/*, ~0/*(1 << Context.GameManager.GridBlocksManager.BlocksLayerMask)*/)
+            if (Context.GameManager.MobileInputsManager.IsTouchOn2D(out PlayerHandLayout layout, Context.GameManager.BlocksController.PlayerHand.Layout.LayoutMask))
             {
+                Debug.Log("Place block in layout");
                 layout.InsertInBounds(Context.GameManager.BlocksController.Dragger.CurrentDraggedBlock);
                 ResetBlockInHand(Context.GameManager.BlocksController.Dragger.CurrentDraggedBlock);
                 return;
             }
 
-            if (Context.GameManager.MobileInputsManager.IsTouchOn(out LevelTile tile)/*, Context.GameManager.GridBlocksManager.BlocksLayerMask)*/ && 
+            if (Context.GameManager.MobileInputsManager.IsTouchOn2D(out LevelTile tile, ~Context.GameManager.GridBlocksManager.BlocksLayerMask) && 
                 Context.GameManager.GridBlocksManager.AreTilesFreeForBlock(tile, Context.BlocksController.Dragger.CurrentDraggedBlock))
             {
                 PlaceBlockOnGrid(Context.BlocksController.Dragger.CurrentDraggedBlock, tile);
@@ -63,7 +64,7 @@
 
         private bool TryGetBlockFromTouch(out PlaceableBlock block)
         {
-            RaycastHit2D hit = Context.GameManager.MobileInputsManager.Raycast2DFromTouch(Context.GameManager.GridBlocksManager.BlocksLayerMask);
+            RaycastHit2D hit = Context.GameManager.MobileInputsManager.RaycastFromTouch2D(Context.GameManager.GridBlocksManager.BlocksLayerMask);
 
             if (hit && hit.transform.TryGetComponent(out PlaceableBlock bl))
             {
