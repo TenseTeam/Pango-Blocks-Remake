@@ -1,7 +1,7 @@
 ﻿namespace VUDK.Features.Main.Inputs.MobileInputs.MobileInputActions
 {
-    using VUDK.Features.Main.Inputs.MobileInputs.MobileInputActions.Interfaces;
     using UnityEngine.EventSystems;
+    using VUDK.Features.Main.Inputs.MobileInputs.Interfaces;
 
     public class TouchButtonInput : InputTouchBase, ITouchHandler
     {

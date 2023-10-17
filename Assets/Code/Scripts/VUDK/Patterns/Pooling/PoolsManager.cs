@@ -1,12 +1,12 @@
-﻿namespace VUDK.Patterns.ObjectPool
+﻿namespace VUDK.Patterns.Pooling
 {
     using UnityEngine;
     using VUDK.Generic.Serializable;
 
     [DefaultExecutionOrder(-100)]
-    public class PoolsManager : MonoBehaviour
+    public sealed class PoolsManager : MonoBehaviour
     {
         [field: SerializeField]
-        public SerializableDictionary<string, Pool> Pools { get; private set; }
+        public SerializableDictionary<PoolKeys, Pool> Pools { get; private set; }
     }
 }

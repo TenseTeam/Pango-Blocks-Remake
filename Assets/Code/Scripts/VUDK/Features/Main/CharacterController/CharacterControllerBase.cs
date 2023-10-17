@@ -13,8 +13,8 @@
 
         [SerializeField, Header("Ground")]
         protected Vector3 GroundedOffset;
-        [SerializeField]
-        protected LayerMask GroundLayers;
+        //[SerializeField]
+        //protected LayerMask GroundLayers;
         [SerializeField]
         protected float GroundedRadius;
 
@@ -33,7 +33,6 @@
         {
             MoveUpdateVelocity();
         }
-
 
         /// <summary>
         /// Moves the character in the specified direction at the setted speed using rigidbody velocity.

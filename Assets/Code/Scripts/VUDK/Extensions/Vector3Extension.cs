@@ -56,7 +56,7 @@
         }
 
         /// <summary>
-        /// Sums to the coordinates of the vector a number.
+        /// Sums to the coordinates of the vector to a number.
         /// </summary>
         /// <param name="vector">Vector.</param>
         /// <param name="n">number to sum.</param>

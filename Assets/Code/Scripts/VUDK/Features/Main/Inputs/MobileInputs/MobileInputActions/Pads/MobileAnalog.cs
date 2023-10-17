@@ -2,7 +2,7 @@ namespace VUDK.Features.Main.InputSystem.MobileInputs
 {
     using UnityEngine;
     using UnityEngine.EventSystems;
-    using VUDK.Features.Main.Inputs.MobileInputs.MobileInputActions.Interfaces;
+    using VUDK.Features.Main.Inputs.MobileInputs.Interfaces;
     using VUDK.Features.Main.InputSystem.MobileInputs.MobileInputActions.Pads;
 
     public class MobileAnalog : MobilePadBase, ITouchHandler

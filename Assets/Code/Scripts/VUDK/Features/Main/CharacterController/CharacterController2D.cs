@@ -1,13 +1,14 @@
 ﻿namespace VUDK.Features.Main.CharacterController
 {
     using UnityEngine;
+    using VUDK.Generic.Managers.Main;
 
     [RequireComponent(typeof(Rigidbody2D))]
     public abstract class CharacterController2D : CharacterControllerBase
     {
         protected Rigidbody2D Rigidbody;
 
-        public override bool IsGrounded => Physics2D.OverlapCircle(transform.position + GroundedOffset, GroundedRadius, GroundLayers);
+        public override bool IsGrounded => Physics2D.OverlapCircle(transform.position + GroundedOffset, GroundedRadius, MainManager.Ins.GameConfig.GroundLayerMask);
 
         protected virtual void Awake()
         {

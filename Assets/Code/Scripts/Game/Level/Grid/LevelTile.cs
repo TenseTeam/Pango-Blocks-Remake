@@ -1,36 +1,30 @@
 ﻿namespace ProjectPBR.Level.Grid
 {
-    using ProjectPBR.Level.Player.PlayerHandler.Blocks;
-    using ProjectPBR.Player.PlayerHandler.Blocks;
     using UnityEngine;
-    using VUDK.Extensions.Transform;
     using VUDK.Generic.Structures.Grid;    
+    using VUDK.Extensions.Vectors;
+    using VUDK.Generic.Managers.Main;
+    using VUDK.Generic.Managers.Main.Interfaces;
+    using ProjectPBR.Managers;
+    using ProjectPBR.Level.Blocks;
 
-    public class LevelTile : GridTileBase
+    public class LevelTile : GridTileBase, ICastGameManager<GameManager>
     {
-        public BlockBase Block { get; private set; }
-        public bool IsOccupied { get; private set; }
+        public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
+        public bool IsOccupied => Physics2D.OverlapBox(transform.position, transform.localScale.Sum(-.2f), 0f, GameManager.GridBlocksManager.BlocksLayerMask | MainManager.Ins.GameConfig.PlayerLayerMask);
 
         public void InsertBlock(PlaceableBlock block)
         {
             block.transform.parent = null;
             block.transform.position = transform.position;
-            //block.transform.parent = transform;
-            //block.transform.localPosition = Vector3.zero;
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+#if DEBUG
+        private void OnDrawGizmos()
         {
-            if (other.TryGetComponent(out BlockBase block))
-            {
-                Block = block;
-                IsOccupied = true;
-            }
+            Gizmos.color = IsOccupied ? Color.red : Color.green;
+            Gizmos.DrawCube(transform.position, transform.localScale);
         }
-
-        private void OnTriggerExit2D(Collider2D other)
-        {
-            IsOccupied = false;
-        }
+#endif
     }
 }
