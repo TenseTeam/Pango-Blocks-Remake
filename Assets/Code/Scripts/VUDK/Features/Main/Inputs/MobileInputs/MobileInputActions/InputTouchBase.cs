@@ -2,7 +2,7 @@
 {
     using System;
     using UnityEngine;
-    using VUDK.Features.Main.InputSysten.MobileInputs;
+    using VUDK.Features.Main.InputSystem.MobileInputs;
     using VUDK.Generic.Managers.Main;
 
     public abstract class InputTouchBase : MonoBehaviour

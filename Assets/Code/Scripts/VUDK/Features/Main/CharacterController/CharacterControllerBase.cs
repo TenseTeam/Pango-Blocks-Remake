@@ -13,8 +13,8 @@
 
         [SerializeField, Header("Ground")]
         protected Vector3 GroundedOffset;
-        [SerializeField]
-        protected LayerMask GroundLayers;
+        //[SerializeField]
+        //protected LayerMask GroundLayers;
         [SerializeField]
         protected float GroundedRadius;
 

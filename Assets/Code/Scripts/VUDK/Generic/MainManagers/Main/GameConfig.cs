@@ -9,6 +9,11 @@
         [field: SerializeField, Header("Main Camera")]
         public Camera MainCamera { get; private set; }
 
+        [field: SerializeField, Header("Layer Masks")]
+        public LayerMask GroundLayerMask { get; private set; }
+        [field: SerializeField]
+        public LayerMask PlayerLayerMask { get; private set; }
+
         [SerializeField, Header("Screen")]
         private CanvasScaler _canvasScaler;
 

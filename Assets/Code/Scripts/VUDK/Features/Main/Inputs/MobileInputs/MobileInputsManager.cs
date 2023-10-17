@@ -1,4 +1,4 @@
-﻿namespace VUDK.Features.Main.InputSysten.MobileInputs
+﻿namespace VUDK.Features.Main.InputSystem.MobileInputs
 {
     using UnityEngine;
     using VUDK.Generic.Serializable;

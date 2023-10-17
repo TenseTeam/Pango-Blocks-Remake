@@ -2,7 +2,7 @@
 {
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
-    using VUDK.Features.Main.InputSysten.MobileInputs;
+    using VUDK.Features.Main.InputSystem.MobileInputs;
 
     public class GameManager : GameManagerBase
     {

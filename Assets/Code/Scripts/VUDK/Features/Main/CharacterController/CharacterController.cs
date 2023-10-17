@@ -1,13 +1,14 @@
 ﻿namespace VUDK.Features.Main.CharacterController
 {
     using UnityEngine;
+    using VUDK.Generic.Managers.Main;
 
     [RequireComponent(typeof(Rigidbody))]
     public abstract class CharacterController : CharacterControllerBase
     {
         protected Rigidbody Rigidbody;
 
-        public override bool IsGrounded => Physics.CheckSphere(transform.position + GroundedOffset, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
+        public override bool IsGrounded => Physics.CheckSphere(transform.position + GroundedOffset, GroundedRadius, MainManager.Ins.GameConfig.GroundLayerMask, QueryTriggerInteraction.Ignore);
         
         protected virtual void Awake()
         {

@@ -1,4 +1,4 @@
-﻿namespace VUDK.Features.Main.Inputs.MobileInputs.MobileInputActions.Interfaces
+﻿namespace VUDK.Features.Main.Inputs.MobileInputs.Interfaces
 {
     using UnityEngine.EventSystems;
 

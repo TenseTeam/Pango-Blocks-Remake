@@ -4,9 +4,11 @@
     using UnityEngine;
     using UnityEngine.InputSystem;
     using VUDK.Patterns.StateMachine;
+    using VUDK.Generic.Managers.Main;
     using ProjectPBR.Player.PlayerHandler;
     using ProjectPBR.Level.Grid;
     using ProjectPBR.Level.Blocks;
+    using ProjectPBR.Config.Constants;
 
     public class PlacementPhase : State<GameContext>
     {
@@ -16,11 +18,13 @@
 
         public override void Enter()
         {
+            MainManager.Ins.EventManager.AddListener(Constants.Events.OnObjeciveTouched, ChangeToObjectivePhase);
             Context.Inputs.Interaction.Interact.canceled += TryToPlaceBlock;
         }
 
         public override void Exit()
         {
+            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnObjeciveTouched, ChangeToObjectivePhase);
             Context.Inputs.Interaction.Interact.canceled -= TryToPlaceBlock;
         }
 
@@ -75,12 +79,6 @@
             return false;
         }
 
-        //private void PlaceBlockInHand(PlaceableBlock block)
-        //{
-        //    Context.GameManager.BlocksController.PlaceBlockInHand(block);
-        //    ChangeToFallPhase();
-        //}
-
         private void ResetBlockInHand(PlaceableBlock block)
         {
             Context.GameManager.BlocksController.ResetBlockInHand(block);
@@ -97,6 +95,11 @@
         {
             Context.BlocksController.Dragger.StopDrag();
             ChangeState(GamePhaseKeys.FallPhase);
+        }
+
+        private void ChangeToObjectivePhase()
+        {
+            ChangeState(GamePhaseKeys.ObjectivePhase);
         }
     }
 }

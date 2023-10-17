@@ -11,7 +11,7 @@
     public class LevelTile : GridTileBase, ICastGameManager<GameManager>
     {
         public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
-        public bool IsOccupied => Physics2D.OverlapBox(transform.position, transform.localScale.Sum(-.2f), 0f, GameManager.GridBlocksManager.BlocksLayerMask);
+        public bool IsOccupied => Physics2D.OverlapBox(transform.position, transform.localScale.Sum(-.2f), 0f, GameManager.GridBlocksManager.BlocksLayerMask | MainManager.Ins.GameConfig.PlayerLayerMask);
 
         public void InsertBlock(PlaceableBlock block)
         {
@@ -23,7 +23,7 @@
         private void OnDrawGizmos()
         {
             Gizmos.color = IsOccupied ? Color.red : Color.green;
-            Gizmos.DrawWireCube(transform.position, transform.localScale);
+            Gizmos.DrawCube(transform.position, transform.localScale);
         }
 #endif
     }
