@@ -1,0 +1,80 @@
+
+Procionebasic copia 2.png
+size: 2052,2056
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Immagine inserita
+  rotate: true
+  xy: 2, 2
+  size: 1026, 2048
+  orig: 1026, 2048
+  offset: 0, 0
+  index: -1
+nose
+  rotate: true
+  xy: 2, 1030
+  size: 1024, 2048
+  orig: 1024, 2048
+  offset: 0, 0
+  index: -1
+
+Procionebasic copia 22.png
+size: 2058,2054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Livello 8
+  rotate: false
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+Livello 9
+  rotate: false
+  xy: 1030, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+
+Procionebasic copia 23.png
+size: 2058,2054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Livello 12
+  rotate: false
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+Livello 13
+  rotate: false
+  xy: 1030, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+
+Procionebasic copia 24.png
+size: 2058,2054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Livello 15
+  rotate: false
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 1030, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1

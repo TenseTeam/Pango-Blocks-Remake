@@ -1,0 +1,93 @@
+
+Opera_senza_titolo.png
+size: 2058,2054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bocca
+  rotate: false
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+braccio dx
+  rotate: false
+  xy: 1030, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+
+Opera_senza_titolo2.png
+size: 2058,2054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+braccio sx
+  rotate: false
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+coda
+  rotate: false
+  xy: 1030, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+
+Opera_senza_titolo3.png
+size: 2058,2054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+corpo
+  rotate: false
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+gamba dx
+  rotate: false
+  xy: 1030, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+
+Opera_senza_titolo4.png
+size: 2058,2054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+occhi
+  rotate: false
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+pupille
+  rotate: false
+  xy: 1030, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+
+Opera_senza_titolo5.png
+size: 1030,2054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+testa
+  rotate: false
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
