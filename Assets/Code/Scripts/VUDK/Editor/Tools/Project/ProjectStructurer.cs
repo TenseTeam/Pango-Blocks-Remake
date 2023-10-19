@@ -103,7 +103,7 @@ namespace VUDK.Editor.Tools.Project
             GameObject mainManagerObj = new GameObject(nameof(MainManager));
             MainManager mainManager = mainManagerObj.AddComponent<MainManager>();
 
-            GameObject gameManagerObj = new GameObject(nameof(GameManagerBase));
+            GameObject gameManagerObj = new GameObject("GameManager");
             GameManagerBase gameManager = gameManagerObj.AddComponent<GameManagerBase>();
             gameManagerObj.transform.parent = mainManagerObj.transform;
 
@@ -119,7 +119,7 @@ namespace VUDK.Editor.Tools.Project
             GameConfig gameConfig = gameConfigObj.AddComponent<GameConfig>();
             gameConfigObj.transform.parent = mainManagerObj.transform;
 
-            GameObject gameStateMachineObj = new GameObject(nameof(GameMachineBase));
+            GameObject gameStateMachineObj = new GameObject("GameMachine");
             GameMachineBase gameStateMachine = gameStateMachineObj.AddComponent<GameMachineBase>();
             gameStateMachineObj.transform.parent = mainManagerObj.transform;
         }
