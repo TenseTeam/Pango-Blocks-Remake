@@ -1,0 +1,40 @@
+
+Procionespaventato.png
+size: 2054,1751
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+braccio dx
+  rotate: true
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+gamba e corpo
+  rotate: false
+  xy: 2, 1375
+  size: 659, 374
+  orig: 659, 374
+  offset: 0, 0
+  index: -1
+testa
+  rotate: false
+  xy: 663, 1030
+  size: 885, 719
+  orig: 885, 719
+  offset: 0, 0
+  index: -1
+
+Procionespaventato2.png
+size: 1030,2054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+braccio sx
+  rotate: false
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
