@@ -9,7 +9,7 @@
 
     public class FallPhase : State<GameContext>
     {
-        private TimeDelay _delayForCheck;
+        private TimeDelay _delayForCheck; // Necessary delay to make the rigidbody pick up speed
 
         public FallPhase(Enum stateKey, StateMachine relatedStateMachine, GameContext context) : base(stateKey, relatedStateMachine, context)
         {
@@ -18,7 +18,7 @@
 
         public override void Enter()
         {
-            if(Context.GameManager.GridBlocksManager.IsGridEmpty())
+            if(Context.GameManager.GameGridManager.IsGridEmpty())
             {
                 ChangeState(GamePhaseKeys.PlacementPhase);
                 return;
@@ -52,7 +52,7 @@
 
         private bool AreAllBlocksStopped()
         {
-            foreach (PlaceableBlock block in Context.GameManager.GridBlocksManager.BlocksOnGrid)
+            foreach (PlaceableBlock block in Context.GameManager.GameGridManager.BlocksOnGrid)
             {
                 if (block.IsMoving)
                     return false;
@@ -62,34 +62,22 @@
 
         private void ReturnInHandInvalidBlocks()
         {
-            List<PlaceableBlock> blocks = Context.GameManager.GridBlocksManager.BlocksOnGrid;
-
+            List<PlaceableBlock> blocks = Context.GameManager.GameGridManager.BlocksOnGrid;
             List<PlaceableBlock> invalidBlocks = blocks.FindAll(block => block.IsTilted || !block.IsInsideGrid());
 
             foreach (PlaceableBlock block in invalidBlocks)
                 Context.BlocksController.ResetBlockInHand(block);
-
-            //for(int i = 0; i < blocks.Count; i++)
-            //{
-            //    if (blocks[i].IsTilted || !blocks[i].IsInsideGrid())
-            //    {
-            //        Context.BlocksController.ResetBlockInHand(blocks[i]);
-            //        i--;
-            //    }
-
-            //    Debug.Log(blocks[i] + " is Valid? " + !(blocks[i].IsTilted || !blocks[i].IsInsideGrid()));
-            //}
         }
 
         private void EnableGravity()
         {
-            foreach (PlaceableBlock block in Context.GameManager.GridBlocksManager.BlocksOnGrid)
+            foreach (PlaceableBlock block in Context.GameManager.GameGridManager.BlocksOnGrid)
                 block.EnableGravity();
         }
 
         private void DisableGravity()
         {
-            foreach (PlaceableBlock block in Context.GameManager.GridBlocksManager.BlocksOnGrid)
+            foreach (PlaceableBlock block in Context.GameManager.GameGridManager.BlocksOnGrid)
                 block.DisableGravity();
         }
     }

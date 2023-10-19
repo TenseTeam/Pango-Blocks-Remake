@@ -39,7 +39,7 @@
         {
             _usedLayoutWidth += _spacing;
             block.transform.position = new Vector2(transform.position.x + _usedLayoutWidth, transform.position.y);
-            _usedLayoutWidth += block.BlockData.UnitLength;
+            _usedLayoutWidth += block.Data.UnitLength;
             ResetBlockInLayout(block);
         }
 

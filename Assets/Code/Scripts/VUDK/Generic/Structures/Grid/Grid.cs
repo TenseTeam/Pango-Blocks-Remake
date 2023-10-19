@@ -64,6 +64,19 @@
             return tileBase;
         }
 
+        //public Vector2Int WorldPointToGridPosition(Vector3 worldPoint)
+        //{
+        //    Vector3 localPosition = GridLayout.transform.InverseTransformPoint(worldPoint);
+
+        //    int x = Mathf.FloorToInt(localPosition.x / GridLayout.cellSize.x);
+        //    int y = Mathf.FloorToInt(localPosition.y / GridLayout.cellSize.y);
+
+        //    x = Mathf.Clamp(x, 0, Size.x - 1);
+        //    y = Mathf.Clamp(y, 0, Size.y - 1);
+
+        //    return new Vector2Int(x, y);
+        //}
+
         /// <summary>
         /// Checks if the grid is full.
         /// </summary>

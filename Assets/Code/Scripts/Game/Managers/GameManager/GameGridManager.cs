@@ -50,7 +50,7 @@
         {
             LevelTile[,] tiles = Grid.GridTiles;
 
-            for(int i = 0; i < block.BlockData.UnitLength; i++)
+            for(int i = 0; i < block.Data.UnitLength; i++)
             {
                 try
                 {

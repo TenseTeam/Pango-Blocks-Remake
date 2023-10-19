@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b62892ba1ba9f24a9f04a1cec9df0e2, type: 3}
-  m_Name: so_RTrapezoid_2x
+  m_Name: so_R_Trapezoid_3x
   m_EditorClassIdentifier: 
   Points: []

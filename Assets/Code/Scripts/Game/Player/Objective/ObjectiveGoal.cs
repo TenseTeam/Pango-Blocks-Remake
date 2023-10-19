@@ -15,12 +15,12 @@
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnObjeciveTouched, EnableTrigger);
+            MainManager.Ins.EventManager.AddListener(Constants.Events.OnObjectiveTouched, EnableTrigger);
         }
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnObjeciveTouched, EnableTrigger);
+            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnObjectiveTouched, EnableTrigger);
         }
 
         private void EnableTrigger()
@@ -31,7 +31,10 @@
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.TryGetComponent(out CharacterRunner character))
+            {
+                Debug.Log("Objective achieved!");
                 MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnObjectiveAchieved);
+            }
         }
     }
 }

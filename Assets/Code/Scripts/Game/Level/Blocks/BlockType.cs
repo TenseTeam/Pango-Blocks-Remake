@@ -2,9 +2,8 @@
 {
     public enum BlockType
     {
-        Square,
-        Rectangle,
-        Triangle,
-        Trapezoid
+        Flat,
+        Climbable,
+        Slideable
     }
 }

@@ -8,11 +8,11 @@
 
     public static class BlocksFactory
     {
-        public static BlockBase Create(BlockData blockData)
+        public static PlaceableBlock Create(PlaceableBlockData blockData)
         {
             GameObject goBlock = MainManager.Ins.PoolsManager.Pools[PoolKeys.BlockBase].Get();
 
-            if (goBlock.TryGetComponent(out BlockBase blockBase))
+            if (goBlock.TryGetComponent(out PlaceableBlock blockBase))
                 blockBase.Init(blockData);
 
             return blockBase;

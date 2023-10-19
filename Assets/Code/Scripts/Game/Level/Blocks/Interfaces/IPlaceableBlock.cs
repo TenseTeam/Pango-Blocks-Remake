@@ -2,8 +2,8 @@
 {
     using ProjectPBR.ScriptableObjects;
 
-    public interface IBlock
+    public interface IPlaceableBlock
     {
-        public void Init(BlockData data);
+        public void Init(PlaceableBlockData data);
     }
 }

@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aea4cd2f69eabb046865a109014a85eb, type: 3}
-  m_Name: so_Rectangle_0a
+  m_Name: so_Square_0a
   m_EditorClassIdentifier: 
-  BlockType: 0
-  ColliderData: {fileID: 11400000, guid: 93b5d5a2b3a6f534991971f66043f3b0, type: 2}
-  UnitLength: 2
-  Sprite: {fileID: 21300000, guid: cbdbea461983ab541adf4c9ad1abd9ca, type: 3}
+  Type: 0
+  ColliderData: {fileID: 11400000, guid: e040a230023cb844f814663e010252d9, type: 2}
+  UnitLength: 1
+  zRotation: 0
+  Sprite: {fileID: 21300000, guid: 24bf3b5ad5df6a94db49b978cdd87714, type: 3}

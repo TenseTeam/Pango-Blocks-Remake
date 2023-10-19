@@ -25,6 +25,7 @@
         public void StartDrag(PlaceableBlock block)
         {
             CurrentDraggedBlock = block;
+            block.transform.rotation = Quaternion.identity;
             block.DisableCollider();
         }
 

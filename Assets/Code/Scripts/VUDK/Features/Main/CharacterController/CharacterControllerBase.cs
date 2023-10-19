@@ -71,6 +71,16 @@
             StopCharacter();
         }
 
+        public virtual void StopCharacterOnXPosition()
+        {
+            StopCharacter();
+        }
+
+        public virtual void StopCharacterOnYPosition()
+        {
+            StopCharacter();
+        }
+
         public void Sprint()
         {
             IsRunning = true;

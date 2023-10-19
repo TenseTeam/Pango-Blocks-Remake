@@ -1,16 +1,15 @@
 ﻿namespace ProjectPBR.ScriptableObjects
 {
-    using UnityEngine;
     using ProjectPBR.Level.Blocks;
+    using UnityEngine;
 
     [CreateAssetMenu(menuName = "Level/Block")]
-    public class BlockData : ScriptableObject
+    public class PlaceableBlockData : ScriptableObject
     {
-        public BlockType Type;
+        public BlockType BlockType;
         public BlockColliderData ColliderData;
         [Min(1)]
         public int UnitLength;
-        public float zRotation;
         public Sprite Sprite;
     }
 }

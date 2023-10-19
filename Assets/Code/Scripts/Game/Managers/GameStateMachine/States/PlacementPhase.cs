@@ -9,6 +9,7 @@
     using ProjectPBR.Level.Grid;
     using ProjectPBR.Level.Blocks;
     using ProjectPBR.Config.Constants;
+    using ProjectPBR.Player.Objective;
 
     public class PlacementPhase : State<GameContext>
     {
@@ -18,29 +19,42 @@
 
         public override void Enter()
         {
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnObjeciveTouched, ChangeToObjectivePhase);
+#if DEBUG
+            Debug.Log("Placement Phase");
+#endif
             Context.Inputs.Interaction.Interact.canceled += TryToPlaceBlock;
+            MainManager.Ins.EventManager.AddListener(Constants.Events.OnObjectiveTouched, ChangeToObjectivePhase);
         }
 
         public override void Exit()
         {
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnObjeciveTouched, ChangeToObjectivePhase);
             Context.Inputs.Interaction.Interact.canceled -= TryToPlaceBlock;
+            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnObjectiveTouched, ChangeToObjectivePhase);
         }
-
+        
         public override void FixedProcess()
         {
         }
 
         public override void Process()
         {
-            if (Context.Inputs.Interaction.Interact.IsInProgress()) 
+            if (Context.Inputs.Interaction.Interact.IsInProgress() && !Context.BlocksController.Dragger.IsDragging) 
             {
-                if (!Context.BlocksController.Dragger.IsDragging && TryGetBlockFromTouch(out PlaceableBlock block))
+                CheckObjectiveTouch(); // Did it this way due to a Unity's bug causing false events triggering
+
+                if (TryGetBlockFromTouch(out PlaceableBlock block))
                 {
                     Context.BlocksController.Dragger.StartDrag(block);
                 }
             }
+        }
+
+        private void CheckObjectiveTouch()
+        {
+            RaycastHit2D hit = Context.GameManager.MobileInputsManager.RaycastFromTouch2D(MainManager.Ins.GameConfig.PlayerLayerMask);
+
+            if (hit && hit.transform.TryGetComponent(out ObjectiveTrigger objective))
+                objective.Trigger();
         }
 
         private void TryToPlaceBlock(InputAction.CallbackContext context)
@@ -54,8 +68,8 @@
                 return;
             }
 
-            if (Context.GameManager.MobileInputsManager.IsTouchOn2D(out LevelTile tile, ~Context.GameManager.GridBlocksManager.BlocksLayerMask) && 
-                Context.GameManager.GridBlocksManager.AreTilesFreeForBlock(tile, Context.BlocksController.Dragger.CurrentDraggedBlock))
+            if (Context.GameManager.MobileInputsManager.IsTouchOn2D(out LevelTile tile, ~Context.GameManager.GameGridManager.BlocksLayerMask) && 
+                Context.GameManager.GameGridManager.AreTilesFreeForBlock(tile, Context.BlocksController.Dragger.CurrentDraggedBlock))
             {
                 PlaceBlockOnGrid(Context.BlocksController.Dragger.CurrentDraggedBlock, tile);
                 return;
@@ -67,7 +81,7 @@
 
         private bool TryGetBlockFromTouch(out PlaceableBlock block)
         {
-            RaycastHit2D hit = Context.GameManager.MobileInputsManager.RaycastFromTouch2D(Context.GameManager.GridBlocksManager.BlocksLayerMask);
+            RaycastHit2D hit = Context.GameManager.MobileInputsManager.RaycastFromTouch2D(Context.GameManager.GameGridManager.BlocksLayerMask);
 
             if (hit && hit.transform.TryGetComponent(out PlaceableBlock bl))
             {

@@ -10,7 +10,13 @@
         public MobileInputsManager MobileInputsManager { get; private set; }
 
         [field: SerializeField, Header("Grid Blocks Manager")]
-        public GameGridManager GridBlocksManager { get; private set; }
+        public GameGridManager GameGridManager { get; private set; }
+
+        [field: SerializeField, Header("Path Manager")]
+        public PathManager PathManager { get; private set; }
+
+        [field: SerializeField, Header("Gameover Manager")]
+        public GameoverManager GameoverManager { get; private set; }
 
         [field: SerializeField, Header("Blocks Controller")]
         public BlocksController BlocksController { get; private set; }

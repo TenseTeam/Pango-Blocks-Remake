@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aea4cd2f69eabb046865a109014a85eb, type: 3}
-  m_Name: so_Square_0b
+  m_Name: so_Trapezoid_1a
   m_EditorClassIdentifier: 
-  Type: 0
-  ColliderData: {fileID: 11400000, guid: e040a230023cb844f814663e010252d9, type: 2}
-  UnitLength: 1
-  zRotation: 0
-  Sprite: {fileID: 21300000, guid: 24bf3b5ad5df6a94db49b978cdd87714, type: 3}
+  BlockType: 1
+  ColliderData: {fileID: 11400000, guid: 801474f3940770c48b9406d520bccfa3, type: 2}
+  UnitLength: 2
+  Sprite: {fileID: 21300000, guid: 947fed7b410fd1c44ba01840fc9fa794, type: 3}

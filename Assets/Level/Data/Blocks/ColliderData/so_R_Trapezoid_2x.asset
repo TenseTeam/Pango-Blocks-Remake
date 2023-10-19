@@ -10,12 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b62892ba1ba9f24a9f04a1cec9df0e2, type: 3}
-  m_Name: so_L_Trapezoid_2x
+  m_Name: so_R_Trapezoid_2x
   m_EditorClassIdentifier: 
-  Points:
-  - {x: 1.5, y: 0.5}
-  - {x: 0.45, y: 0.5}
-  - {x: 0, y: 0.06}
-  - {x: -0.5043348, y: -0.43962836}
-  - {x: -0.4797089, y: -0.4928069}
-  - {x: 1.4782648, y: -0.5}
+  Points: []
