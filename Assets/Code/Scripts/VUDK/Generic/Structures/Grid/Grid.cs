@@ -2,15 +2,12 @@
 {
     using UnityEngine;
     using UnityEngine.UI;
+    using VUDK.Extensions.Vectors;
 
     public class Grid<T> : MonoBehaviour where T : GridTileBase
     {
-        [field: SerializeField]
-        public GridLayoutGroup GridLayout { get; private set; }
-
         [field: SerializeField, Header("Tile")]
         public GameObject TilePrefab { get; private set; }
-
         [field: SerializeField]
         public Vector2Int Size { get; private set; }
 
@@ -55,27 +52,24 @@
         /// <returns>T generated tile's component.</returns>
         protected virtual GridTileBase GenerateTile(GridTileBase[,] grid, Vector2Int position)
         {
-            if (Instantiate(TilePrefab, GridLayout.transform.position, Quaternion.identity, GridLayout.transform).TryGetComponent(out GridTileBase tileBase))
+            GameObject tile = Instantiate(TilePrefab, transform.position, Quaternion.identity, transform);
+
+            if (tile.TryGetComponent(out GridTileBase tileBase))
             {
                 tileBase.Init(position);
                 grid[position.x, position.y] = tileBase;
+                SetTileWorldPosition(tileBase);
             }
 
             return tileBase;
         }
 
-        //public Vector2Int WorldPointToGridPosition(Vector3 worldPoint)
-        //{
-        //    Vector3 localPosition = GridLayout.transform.InverseTransformPoint(worldPoint);
-
-        //    int x = Mathf.FloorToInt(localPosition.x / GridLayout.cellSize.x);
-        //    int y = Mathf.FloorToInt(localPosition.y / GridLayout.cellSize.y);
-
-        //    x = Mathf.Clamp(x, 0, Size.x - 1);
-        //    y = Mathf.Clamp(y, 0, Size.y - 1);
-
-        //    return new Vector2Int(x, y);
-        //}
+        protected virtual void SetTileWorldPosition(GridTileBase tile)
+        {
+            Vector3 gridPos = new Vector3(tile.GridPosition.x, tile.GridPosition.y, 0f);
+            tile.transform.position = transform.position + gridPos;
+            //tile.transform.SetParent(transform, true);
+        }
 
         /// <summary>
         /// Checks if the grid is full.

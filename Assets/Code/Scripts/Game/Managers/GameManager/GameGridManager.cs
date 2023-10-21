@@ -48,12 +48,19 @@
 
         public bool AreTilesFreeForBlock(LevelTile fromTile, PlaceableBlock block)
         {
-            LevelTile[,] tiles = Grid.GridTiles;
+            if (block is SinglePlaceableBlock) return !fromTile.IsOccupied;
 
-            for(int i = 0; i < block.Data.UnitLength; i++)
+            Debug.Log("Is complex block");
+            LevelTile[,] tiles = Grid.GridTiles;
+            ComplexPlaceableBlock complexPlaceableBlock = block as ComplexPlaceableBlock;
+
+            for (int i = 0; i < complexPlaceableBlock.Data.ComposedBlocks.Count; i++)
             {
                 try
                 {
+                    //LevelTile nextTile = tiles[fromTile.GridPosition.x + i, fromTile.GridPosition.y];
+                    //if(nextTile.InsertedBlock.transform.parent != complexPlaceableBlock.transform)
+
                     if (tiles[fromTile.GridPosition.x + i, fromTile.GridPosition.y].IsOccupied) // Checks if the tiles are occupied
                         return false;
                 }

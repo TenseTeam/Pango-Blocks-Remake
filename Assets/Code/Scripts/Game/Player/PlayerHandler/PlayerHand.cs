@@ -9,7 +9,7 @@
     public class PlayerHand : MonoBehaviour
     {
         [SerializeField, Header("Blocks")]
-        private List<PlaceableBlockData> _playerBlocks;
+        private List<BlockData> _playerBlocks;
 
         [field: SerializeField]
         public PlayerHandLayout Layout { get; private set; }
@@ -23,9 +23,9 @@
 
         private void GenerateBlocks()
         {
-            foreach (PlaceableBlockData blockData in _playerBlocks)
+            foreach (BlockData blockData in _playerBlocks)
             {
-                PlaceableBlock block = BlocksFactory.Create(blockData) as PlaceableBlock;
+                PlaceableBlock block = BlocksFactory.Create(blockData, false) as PlaceableBlock;
                 block.transform.name = blockData.name.Replace("so_", "");
                 Layout.InsertInRow(block);
             }

@@ -1,14 +1,24 @@
 ﻿namespace ProjectPBR.Managers
 {
+    using System.Collections.Generic;
     using UnityEngine;
-    using ProjectPBR.Level.Grid;
     using VUDK.Generic.Managers.Main.Interfaces;
-    using ProjectPBR.Managers;
     using VUDK.Generic.Managers.Main;
-    using ProjectPBR.Player.Objective;
-    using ProjectPBR.Config.Constants;
+    using ProjectPBR.Level.Grid;
     using ProjectPBR.Level.Blocks;
-    using VUDK.Extensions.Vectors;
+
+    [System.Serializable]
+    public class Node
+    {
+        public BlockType BlockType;
+        public Vector3 Position { get; private set; }
+
+        public Node(Vector3 position, BlockType blockType)
+        {
+            Position = position;
+            BlockType = blockType;
+        }
+    }
 
     public class PathManager : MonoBehaviour, ICastGameManager<GameManager>
     {
@@ -16,131 +26,85 @@
         private Vector2Int _fromTile;
         [SerializeField]
         private Vector2Int _toTile;
-        [SerializeField, Header("Fail Trigger")]
-        private ObjectiveFailTrigger _failTrigger;
+
+        private List<Node> _pathNodes = new List<Node>();
 
         public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
         private LevelGrid _grid => GameManager.GameGridManager.Grid;
 
-        private void Awake()
+        /// <summary>
+        /// Gets the path nodes from the start tile to the end tile.
+        /// </summary>
+        /// <param name="nodes">List of nodes positions to get.</param>
+        /// <returns>True if the end tile is reachable, False if not.</returns>
+        public bool GetPathNodes(out List<Node> nodes)
         {
-            _failTrigger.gameObject.SetActive(false);
+            bool isPathValid = CalculatePath();
+            nodes = _pathNodes;
+            return isPathValid;
         }
 
-        private void OnEnable()
+        /// <summary>
+        /// Calculates the path from the start tile to the end tile.
+        /// </summary>
+        /// <returns>True if the end tile is reachable, False if not.</returns>
+        private bool CalculatePath()
         {
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginObjectivePhase, StartPathing);
-        }
-
-        private void OnDisable()
-        {
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginObjectivePhase, StartPathing);
-        }
-
-        private void StartPathing()
-        {
-            if (!IsPathValid(out Vector3 interruptPosition))
-            {
-                _failTrigger.gameObject.SetActive(true);
-                _failTrigger.transform.position = interruptPosition;
-            }
-        }
-
-        private bool IsPathValid(out Vector3 interruptPosition)
-        {
+            _pathNodes.Clear();
+            List<Node> path = _pathNodes;
             LevelTile[,] tiles = _grid.GridTiles;
-
             LevelTile fromTile = tiles[_fromTile.x, _fromTile.y];
             LevelTile toTile = tiles[_toTile.x, _toTile.y];
 
-            Vector2Int currentTilePosition = fromTile.GridPosition;
-            interruptPosition = Vector3.zero;
-
-            while (currentTilePosition.x <= toTile.GridPosition.x)
+            for (Vector2Int currTilePos = fromTile.GridPosition; currTilePos.x <= toTile.GridPosition.x; currTilePos.x++)
             {
-                currentTilePosition.x++;
+                LevelTile currTile = tiles[currTilePos.x, currTilePos.y];
 
-                if (currentTilePosition == toTile.GridPosition)
+                if (currTile == toTile)
                     return true;
 
-                if (currentTilePosition.x >= _grid.Size.x || currentTilePosition.y >= _grid.Size.y)
-                {
-                    Debug.LogError("Path out of grid");
-                    return false;
-                }
+                LevelTile nextTile = tiles[currTilePos.x + 1, currTilePos.y];
+                LevelTile nextAboveTile;
+                LevelTile nextUnderTile;
 
-                LevelTile currentTile = tiles[currentTilePosition.x, currentTilePosition.y];
+                Node node = new Node(nextTile.LeftVertex, BlockType.Flat);
 
-                if (currentTile.IsOccupied)
-                {
-                    if (currentTile.InsertedBlock.IsClimbable && !CheckSurface(currentTile, Vector2.up, out bool isBlock, out bool isFlat))
-                    {
-                        currentTilePosition.y++;
-                    }
-                    else
-                    {
-                        interruptPosition = currentTile.transform.position;
-                        return false;
-                    }
-                }
+                if (currTilePos.y + 1 < _grid.Size.y)
+                    nextAboveTile = tiles[currTilePos.x + 1, currTilePos.y + 1];
                 else
-                {
-                    if (CheckSurface(currentTile, Vector2.down, out bool isBlock, out bool isFlat))
-                    {
-                        if (!isFlat)
-                        {
-                            if (isBlock)
-                            {
-                                LevelTile underTile = tiles[currentTilePosition.x, currentTilePosition.y - 1];
+                    nextAboveTile = null;
 
-                                if (underTile.InsertedBlock.IsSlideable)
-                                {
-                                    currentTilePosition.y--;
-                                }
-                                else
-                                {
-                                    interruptPosition = currentTile.transform.position;
-                                    return false;
-                                }
-                            }
-                        }
-                    }
-                    else
+                if(currTilePos.y - 1 >= 0)
+                    nextUnderTile = tiles[currTilePos.x + 1, currTilePos.y - 1];
+                else
+                    nextUnderTile = null;
+
+                path.Add(node);
+
+                if (nextTile.IsOccupied)
+                {
+                    if (nextTile.InsertedBlock.IsSlideable) return false;
+                    if (nextTile.InsertedBlock.IsFlat) return false;
+                    if (!nextTile.InsertedBlock.IsClimbable) return false;
+                    if (!nextAboveTile) return false;
+                    if (nextAboveTile.IsOccupied) return false;
+
+                    currTilePos.y++;
+                    node.BlockType = BlockType.Climbable;
+                }
+                else if (nextUnderTile) // That means there is the terrain below
+                {
+                    if (!nextUnderTile.IsOccupied) return false;
+                    if (nextUnderTile.InsertedBlock.IsClimbable) return false;
+
+                    if (nextUnderTile.InsertedBlock.IsSlideable)
                     {
-                        interruptPosition = currentTile.transform.position;
-                        return false;
+                        currTilePos.y--;
+                        node.BlockType = BlockType.Slideable;
                     }
                 }
             }
 
-            return false;
-        }
-
-        private bool CheckSurface(LevelTile fromTile, Vector2 direction, out bool isBlock, out bool isFlatSurface)
-        {
-            Vector3 position = fromTile.transform.position + (Vector3.left * .15f); // To avoid raycast hitting the same tile when checking up, TO DO: Optimize this
-            RaycastHit2D hit = Physics2D.Raycast(position, direction, 1.25f, MainManager.Ins.GameConfig.GroundLayerMask);
-            isBlock = false;
-
-            if (hit)
-            {
-                Vector2 hitNormal = hit.normal;
-                Vector2 downDirection = Vector2.down;
-                float angle = Vector2.Angle(hitNormal, downDirection);
-                float flatAngleThreshold = 10f;
-                //Debug.Log("-Hitted: " + hit.transform.name);
-                //Debug.Log("-Calculating angle: " + Mathf.Abs(angle - 180f));
-                //Debug.Log("-Treshold: " + flatAngleThreshold);
-
-                isFlatSurface = Mathf.Abs(angle - 180f) < flatAngleThreshold;
-
-                if(hit.transform.TryGetComponent(out BlockBase block))
-                    isBlock = true;
-
-                return true;
-            }
-
-            isFlatSurface = false;
             return false;
         }
     }

@@ -68,9 +68,14 @@
                 return;
             }
 
+
+            //Debug.Log(Context.GameManager.MobileInputsManager.IsTouchOn2D(out LevelTile debtile, ~Context.GameManager.GameGridManager.BlocksLayerMask));
+            //Debug.Log(Context.GameManager.GameGridManager.AreTilesFreeForBlock(debtile, Context.BlocksController.Dragger.CurrentDraggedBlock));
+
             if (Context.GameManager.MobileInputsManager.IsTouchOn2D(out LevelTile tile, ~Context.GameManager.GameGridManager.BlocksLayerMask) && 
                 Context.GameManager.GameGridManager.AreTilesFreeForBlock(tile, Context.BlocksController.Dragger.CurrentDraggedBlock))
             {
+                Debug.Log("Can");
                 PlaceBlockOnGrid(Context.BlocksController.Dragger.CurrentDraggedBlock, tile);
                 return;
             }
@@ -82,7 +87,6 @@
         private bool TryGetBlockFromTouch(out PlaceableBlock block)
         {
             RaycastHit2D hit = Context.GameManager.MobileInputsManager.RaycastFromTouch2D(Context.GameManager.GameGridManager.BlocksLayerMask);
-
             if (hit && hit.transform.TryGetComponent(out PlaceableBlock bl))
             {
                 block = Context.BlocksController.PlayerHand.Layout.GetAndRemoveFromHand(bl);

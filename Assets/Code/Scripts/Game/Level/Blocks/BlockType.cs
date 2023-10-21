@@ -2,6 +2,7 @@
 {
     public enum BlockType
     {
+        None = 0,
         Flat,
         Climbable,
         Slideable

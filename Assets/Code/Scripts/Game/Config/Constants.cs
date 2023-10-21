@@ -5,12 +5,13 @@
         public static class Events
         {
             public const string OnObjectiveTouched = "OnObjeciveTouched";
-            public const string OnObjectiveAchieved = "OnObjectiveAchieved";
-            public const string OnCantReachObjective = "OnCantReachObjective";
 
             public const string OnBeginObjectivePhase = "OnBeginObjectivePhase";
             public const string OnBeginGameWonPhase = "OnGamewon";
             public const string OnBeginGameoverPhase = "OnGameover";
+
+            public const string OnCharacterChangedTile = "OnCharacterMoved";
+            public const string OnCharacterReachedDestination = "OnCharacterReachedDestination";
         }
     }
 }

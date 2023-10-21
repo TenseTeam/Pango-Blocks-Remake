@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: so_R_Triangle
   m_EditorClassIdentifier: 
   Points:
-  - {x: 0.5, y: -0.425}
-  - {x: -0.425, y: 0.5}
-  - {x: -0.5, y: 0.5}
-  - {x: -0.5, y: -0.5}
-  - {x: 0.5, y: -0.5}
+  - {x: 0.45, y: -0.5}
+  - {x: -0.45, y: -0.5}
+  - {x: -0.4, y: 0.48}
+  - {x: 0.45, y: -0.37}

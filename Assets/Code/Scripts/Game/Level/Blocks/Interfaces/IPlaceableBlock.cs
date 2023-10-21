@@ -4,6 +4,6 @@
 
     public interface IPlaceableBlock
     {
-        public void Init(PlaceableBlockData data);
+        public void Init(BlockData data);
     }
 }

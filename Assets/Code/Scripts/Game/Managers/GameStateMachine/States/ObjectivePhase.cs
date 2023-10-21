@@ -17,17 +17,13 @@
 #if DEBUG
             Debug.Log("Objective Phase");
 #endif
-
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnObjectiveAchieved, ChangeToGamewon);
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnCantReachObjective, ChangeToGameover);
-
+            MainManager.Ins.EventManager.AddListener<bool>(Constants.Events.OnCharacterReachedDestination, CheckWin);
             MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnBeginObjectivePhase);
         }
 
         public override void Exit()
         {
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnObjectiveAchieved, ChangeToGamewon);
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnCantReachObjective, ChangeToGameover);
+            MainManager.Ins.EventManager.RemoveListener<bool>(Constants.Events.OnCharacterReachedDestination, CheckWin);
         }
 
         public override void FixedProcess()
@@ -38,14 +34,12 @@
         {
         }
 
-        private void ChangeToGameover()
+        private void CheckWin(bool hasReachedDestination)
         {
-            ChangeState(GamePhaseKeys.GameOverPhase);
-        }
-
-        private void ChangeToGamewon()
-        {
-            ChangeState(GamePhaseKeys.GameWonPhase);
+            if (hasReachedDestination)
+                ChangeState(GamePhaseKeys.GameWonPhase);
+            else
+                ChangeState(GamePhaseKeys.GameOverPhase);
         }
     }
 }
