@@ -68,10 +68,6 @@
                 return;
             }
 
-
-            //Debug.Log(Context.GameManager.MobileInputsManager.IsTouchOn2D(out LevelTile debtile, ~Context.GameManager.GameGridManager.BlocksLayerMask));
-            //Debug.Log(Context.GameManager.GameGridManager.AreTilesFreeForBlock(debtile, Context.BlocksController.Dragger.CurrentDraggedBlock));
-
             if (Context.GameManager.MobileInputsManager.IsTouchOn2D(out LevelTile tile, ~Context.GameManager.GameGridManager.BlocksLayerMask) && 
                 Context.GameManager.GameGridManager.AreTilesFreeForBlock(tile, Context.BlocksController.Dragger.CurrentDraggedBlock))
             {

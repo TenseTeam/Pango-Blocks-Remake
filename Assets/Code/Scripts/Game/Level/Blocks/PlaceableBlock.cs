@@ -8,7 +8,7 @@
     using ProjectPBR.Level.Blocks.Interfaces;
 
     //[RequireComponent(typeof(Rigidbody2D))]
-    [RequireComponent(typeof(Collider2D))]
+    //[RequireComponent(typeof(Collider2D))]
     public abstract class PlaceableBlock : PooledBlock, ICastGameManager<GameManager>, IPlaceableBlock
     {
         private Vector2 _resetPosition;
@@ -45,6 +45,10 @@
         public abstract void EnableCollider();
 
         public abstract void DisableCollider();
+
+        public abstract void IncreaseRender();
+
+        public abstract void DecreaseRender();
 
         public void EnableGravity()
         {

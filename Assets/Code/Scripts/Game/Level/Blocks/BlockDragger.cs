@@ -26,11 +26,13 @@
         {
             CurrentDraggedBlock = block;
             block.transform.rotation = Quaternion.identity;
+            block.IncreaseRender();
             block.DisableCollider();
         }
 
         public void StopDrag()
         {
+            CurrentDraggedBlock.DecreaseRender();
             CurrentDraggedBlock = null;
         }
         

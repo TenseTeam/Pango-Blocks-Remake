@@ -43,5 +43,15 @@
             _sprite.sprite = null;
             Collider.points = null;
         }
+
+        public override void IncreaseRender()
+        {
+            _sprite.sortingOrder++;
+        }
+
+        public override void DecreaseRender()
+        {
+            _sprite.sortingOrder--;
+        }
     }
 }

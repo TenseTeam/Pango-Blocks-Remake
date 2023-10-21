@@ -2,11 +2,10 @@
 {
     using UnityEngine;
     using System.Collections.Generic;
-    using ProjectPBR.Config.Constants;
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Managers.Main.Interfaces;
     using ProjectPBR.Managers;
-    using ProjectPBR.Level.Grid;
+    using ProjectPBR.Config.Constants;
 
     public class CharacterPathRunner : MonoBehaviour, ICastGameManager<GameManager>
     {

@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aea4cd2f69eabb046865a109014a85eb, type: 3}
-  m_Name: so_Trapezoid_1a
+  m_Script: {fileID: 11500000, guid: 3ddf634b92fe2ef41a66c7219c63fcaf, type: 3}
+  m_Name: so_R_TrapSquare_0a
   m_EditorClassIdentifier: 
   BlockType: 1
-  ColliderData: {fileID: 11400000, guid: 801474f3940770c48b9406d520bccfa3, type: 2}
-  UnitLength: 2
-  Sprite: {fileID: 21300000, guid: 947fed7b410fd1c44ba01840fc9fa794, type: 3}
+  ColliderData: {fileID: 11400000, guid: e040a230023cb844f814663e010252d9, type: 2}
+  Sprite: {fileID: -743598229, guid: 947fed7b410fd1c44ba01840fc9fa794, type: 3}

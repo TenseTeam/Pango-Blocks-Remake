@@ -6,6 +6,6 @@
     [CreateAssetMenu(menuName = "Level/Blocks/Complex Block")]
     public class ComplexBlockData : BlockData
     {
-        public List<BlockData> ComposedBlocks;
+        public List<SingleBlockData> ComposedBlocks;
     }
 }

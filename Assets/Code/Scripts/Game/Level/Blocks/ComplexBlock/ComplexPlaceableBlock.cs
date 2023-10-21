@@ -6,11 +6,9 @@
     using ProjectPBR.ScriptableObjects;
     using ProjectPBR.Level.Blocks.ComplexBlock;
 
-    [RequireComponent(typeof(CompositeCollider2D))]
     public class ComplexPlaceableBlock : PlaceableBlock
     {
         public new ComplexBlockData Data { get; private set; }
-        private new CompositeCollider2D Collider;
 
         public List<SinglePlaceableBlock> ComposedBlocks { get; private set; } = new List<SinglePlaceableBlock>();
 
@@ -28,14 +26,12 @@
 
         public override void DisableCollider()
         {
-            Collider.enabled = false;
             foreach (ComposedBlock block in ComposedBlocks)
                 block.DisableCollider();
         }
 
         public override void EnableCollider()
         {
-            Collider.enabled = true;
             foreach (ComposedBlock block in ComposedBlocks)
                 block.EnableCollider();
         }
@@ -58,6 +54,18 @@
             base.Dispose();
             foreach (ComposedBlock block in ComposedBlocks)
                 block.Dispose();
+        }
+
+        public override void IncreaseRender()
+        {
+            foreach (ComposedBlock block in ComposedBlocks)
+                block.IncreaseRender();
+        }
+
+        public override void DecreaseRender()
+        {
+            foreach (ComposedBlock block in ComposedBlocks)
+                block.DecreaseRender();
         }
     }
 }
