@@ -6,6 +6,8 @@
         AudioSFX,
         
         // Game
-        BlockBase,
+        SingleBlockBase,
+        ComplexBlockBase,
+        ComposedBlockBase,
     }
 }

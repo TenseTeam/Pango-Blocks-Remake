@@ -2,9 +2,9 @@
 {
     using UnityEngine;
     using ProjectPBR.Level.Blocks;
-    using System.Collections.Generic;
-    using static Unity.Collections.AllocatorManager;
     using VUDK.Extensions.Transform;
+    using ProjectPBR.ScriptableObjects;
+    using static Unity.Collections.AllocatorManager;
 
     [RequireComponent(typeof(Collider2D))]
     public class PlayerHandLayout : MonoBehaviour
@@ -39,7 +39,10 @@
         {
             _usedLayoutWidth += _spacing;
             block.transform.position = new Vector2(transform.position.x + _usedLayoutWidth, transform.position.y);
-            _usedLayoutWidth += block.BlockData.UnitLength;
+            if(block is ComplexPlaceableBlock)
+                _usedLayoutWidth += (block as ComplexPlaceableBlock).ComposedBlocks.Count;
+            else
+                _usedLayoutWidth++;
             ResetBlockInLayout(block);
         }
 
@@ -76,24 +79,41 @@
             _usedLayoutWidth = 0;
         }
 
+        public void ResetBlockInLayout(PlaceableBlock block)
+        {
+            block.transform.SetParent(transform);
+            block.transform.SetLossyScale(_layoutblockSize);
+            block.SetResetPosition();
+        }
+
+
         private bool IsBlockInsideBounds(PlaceableBlock block)
         {
-            foreach (Vector2 point in block.Collider.points)
+            if (block is SinglePlaceableBlock)
             {
-                Vector2 pos = block.transform.TransformPoint(point);
+                return IsColliderInsideBounds((block.Collider as PolygonCollider2D));
+            }
 
-                if (!_collider.bounds.Contains(pos))
+            foreach (SinglePlaceableBlock singleBlock in (block as ComplexPlaceableBlock).ComposedBlocks)
+            {
+                if (!IsColliderInsideBounds(singleBlock.Collider as PolygonCollider2D))
                     return false;
             }
 
             return true;
         }
 
-        public void ResetBlockInLayout(PlaceableBlock block)
+        private bool IsColliderInsideBounds(PolygonCollider2D coll)
         {
-            block.transform.SetParent(transform);
-            block.transform.SetLossyScale(_layoutblockSize);
-            block.SetResetPosition();
+            foreach (Vector2 point in coll.points)
+            {
+                Vector2 pos = coll.transform.TransformPoint(point);
+
+                if (!_collider.bounds.Contains(pos))
+                    return false;
+            }
+
+            return true;
         }
     }
 }

@@ -5,7 +5,7 @@
     public class GameContext : GameMachineContext
     {
         public GameManager GameManager { get; private set; }
-        public BlocksController BlocksController => GameManager.BlocksController;
+        public BlocksManager BlocksManager => GameManager.BlocksManager;
 
         public GameContext(InputsMap inputs, GameManager gameManager) : base(inputs)
         {

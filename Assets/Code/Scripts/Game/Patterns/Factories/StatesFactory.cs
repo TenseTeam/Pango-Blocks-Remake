@@ -16,10 +16,10 @@
                     return new ObjectivePhase(stateKey, relatedStateMachine, context);
                 case GamePhaseKeys.FallPhase:
                     return new FallPhase(stateKey, relatedStateMachine, context);
-                //case GamePhaseKeys.GameOverPhase:
-                //    break;
-                //case GamePhaseKeys.GameWinPhase:
-                //    break;
+                case GamePhaseKeys.GameOverPhase:
+                    return new GameoverPhase(stateKey, relatedStateMachine, context);
+                case GamePhaseKeys.GameWonPhase:
+                    return new GamewonPhase(stateKey, relatedStateMachine, context);
             }
 
             return null;

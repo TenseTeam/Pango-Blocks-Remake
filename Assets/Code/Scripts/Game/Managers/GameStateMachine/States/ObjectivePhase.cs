@@ -14,11 +14,16 @@
 
         public override void Enter()
         {
+#if DEBUG
+            Debug.Log("Objective Phase");
+#endif
+            MainManager.Ins.EventManager.AddListener<bool>(Constants.Events.OnCharacterReachedDestination, CheckWin);
             MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnBeginObjectivePhase);
         }
 
         public override void Exit()
         {
+            MainManager.Ins.EventManager.RemoveListener<bool>(Constants.Events.OnCharacterReachedDestination, CheckWin);
         }
 
         public override void FixedProcess()
@@ -27,6 +32,14 @@
 
         public override void Process()
         {
+        }
+
+        private void CheckWin(bool hasReachedDestination)
+        {
+            if (hasReachedDestination)
+                ChangeState(GamePhaseKeys.GameWonPhase);
+            else
+                ChangeState(GamePhaseKeys.GameOverPhase);
         }
     }
 }

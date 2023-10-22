@@ -2,16 +2,21 @@
 {
     using UnityEngine;
     using VUDK.Generic.Structures.Grid;    
-    using VUDK.Extensions.Vectors;
-    using VUDK.Generic.Managers.Main;
-    using VUDK.Generic.Managers.Main.Interfaces;
-    using ProjectPBR.Managers;
     using ProjectPBR.Level.Blocks;
+    using ProjectPBR.Level.Blocks.ComplexBlock;
 
-    public class LevelTile : GridTileBase, ICastGameManager<GameManager>
+    public class LevelTile : GridTileBase
     {
-        public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
-        public bool IsOccupied => Physics2D.OverlapBox(transform.position, transform.localScale.Sum(-.2f), 0f, GameManager.GridBlocksManager.BlocksLayerMask | MainManager.Ins.GameConfig.PlayerLayerMask);
+        public BlockBase Block { get; private set; }
+        public Vector2 LeftVertex => new Vector2(transform.position.x - 0.5f, transform.position.y - 0.5f);
+        public bool IsOccupied => Block;
+
+        private Collider2D _coll;
+
+        private void Awake()
+        {
+            TryGetComponent(out _coll);
+        }
 
         public void InsertBlock(PlaceableBlock block)
         {
@@ -19,11 +24,29 @@
             block.transform.position = transform.position;
         }
 
+        private void OnTriggerStay2D(Collider2D collision)
+        {
+            if (IsOccupied) return;
+
+            if (collision.TryGetComponent(out BlockBase block))
+            {
+                if (block is SinglePlaceableBlock || block is StaticBlock)
+                    Block = block;
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            // No needs to check for static blocks because they cannot be moved
+            Block = null;
+        }
+
 #if DEBUG
         private void OnDrawGizmos()
         {
-            Gizmos.color = IsOccupied ? Color.red : Color.green;
+            Gizmos.color = IsOccupied ? new Color(1f, 0, 0, 0.35f) : new Color(0, 1f, 0, 0.35f);
             Gizmos.DrawCube(transform.position, transform.localScale);
+            Gizmos.DrawWireSphere(LeftVertex, 0.1f);
         }
 #endif
     }

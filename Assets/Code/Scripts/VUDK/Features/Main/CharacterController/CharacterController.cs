@@ -18,7 +18,25 @@
         public override void StopCharacterOnPosition()
         {
             base.StopCharacterOnPosition();
-            Rigidbody.velocity = new Vector3(0f, Rigidbody.velocity.y, 0f);
+            Rigidbody.velocity = Vector3.zero;
+        }
+
+        public override void StopCharacterOnXPosition()
+        {
+            base.StopCharacterOnXPosition();
+            Rigidbody.velocity = new Vector3(0f, Rigidbody.velocity.y, Rigidbody.velocity.z);
+        }
+
+        public override void StopCharacterOnYPosition()
+        {
+            base.StopCharacterOnYPosition();
+            Rigidbody.velocity = new Vector3(Rigidbody.velocity.x, 0f, Rigidbody.velocity.z);
+        }
+
+        public virtual void StopCharacterOnZPosition()
+        {
+            StopCharacter();
+            Rigidbody.velocity = new Vector3(Rigidbody.velocity.x, Rigidbody.velocity.y, 0f);
         }
 
         public override void Jump(Vector3 direction)

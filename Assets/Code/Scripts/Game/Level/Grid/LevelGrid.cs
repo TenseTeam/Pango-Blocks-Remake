@@ -1,7 +1,6 @@
 namespace ProjectPBR.Level.Grid
 {
     using UnityEngine;
-    using VUDK.Extensions.Vectors;
     using VUDK.Generic.Structures.Grid;
 
     public class LevelGrid : Grid<LevelTile>
