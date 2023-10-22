@@ -5,7 +5,7 @@
         PlacementPhase,
         FallPhase,
         ObjectivePhase,
-        //GameOverPhase,
-        //GameWinPhase
+        GameOverPhase,
+        GameWonPhase
     }
 }

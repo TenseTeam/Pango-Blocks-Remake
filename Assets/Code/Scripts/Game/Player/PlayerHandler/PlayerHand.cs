@@ -25,7 +25,7 @@
         {
             foreach (BlockData blockData in _playerBlocks)
             {
-                PlaceableBlock block = BlocksFactory.Create(blockData) as PlaceableBlock;
+                PlaceableBlock block = BlocksFactory.Create(blockData, false) as PlaceableBlock;
                 block.transform.name = blockData.name.Replace("so_", "");
                 Layout.InsertInRow(block);
             }

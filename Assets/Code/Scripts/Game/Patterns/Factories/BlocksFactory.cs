@@ -8,11 +8,22 @@
 
     public static class BlocksFactory
     {
-        public static BlockBase Create(BlockData blockData)
+        public static PlaceableBlock Create(BlockData blockData, bool isPartOfComplex)
         {
-            GameObject goBlock = MainManager.Ins.PoolsManager.Pools[PoolKeys.BlockBase].Get();
+            GameObject goBlock = null;
 
-            if (goBlock.TryGetComponent(out BlockBase blockBase))
+            if (blockData is ComplexBlockData)
+                goBlock = MainManager.Ins.PoolsManager.Pools[PoolKeys.ComplexBlockBase].Get();
+
+            if (blockData is SingleBlockData)
+            {
+                if (isPartOfComplex)
+                    goBlock = MainManager.Ins.PoolsManager.Pools[PoolKeys.ComposedBlockBase].Get();
+                else
+                    goBlock = MainManager.Ins.PoolsManager.Pools[PoolKeys.SingleBlockBase].Get();
+            }
+
+            if (goBlock.TryGetComponent(out PlaceableBlock blockBase))
                 blockBase.Init(blockData);
 
             return blockBase;
