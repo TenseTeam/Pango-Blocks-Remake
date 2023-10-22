@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/Scenes/Levels/Stages/Stage 1/scn_Level_1_1.unity
     guid: 17695c3b495092548a18386519679aa4
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 1/scn_Level_1_2.unity
+    guid: 4fe0707a2859c56488a279735a9f97cb
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 1/scn_Level_1_3.unity
+    guid: 4530af97d2e8f704f88200d575ee173c
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 1/scn_Level_1_4.unity
+    guid: af8cef2d0c001064580451977d455236
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 8172eb888cd0d75488fc398487e8abcc, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: cda0337a31271984a829d9e579b5977b, type: 2}
