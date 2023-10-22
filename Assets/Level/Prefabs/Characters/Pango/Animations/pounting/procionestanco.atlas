@@ -1,0 +1,73 @@
+
+procionestanco.png
+size: 2058,2054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bocca
+  rotate: false
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+braccia
+  rotate: false
+  xy: 1030, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+
+procionestanco2.png
+size: 2058,2054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+coda
+  rotate: false
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+corpo
+  rotate: false
+  xy: 1030, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+
+procionestanco3.png
+size: 2058,2054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+occhi
+  rotate: false
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+pupille
+  rotate: false
+  xy: 1030, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+
+procionestanco4.png
+size: 1030,2054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+testa
+  rotate: false
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1

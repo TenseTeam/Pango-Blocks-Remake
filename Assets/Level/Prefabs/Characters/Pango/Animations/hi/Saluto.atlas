@@ -1,0 +1,33 @@
+
+Saluto.png
+size: 2054,1943
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Immagine inserita
+  rotate: true
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+bocca
+  rotate: true
+  xy: 2, 1030
+  size: 911, 1083
+  orig: 911, 1083
+  offset: 0, 0
+  index: -1
+
+Saluto2.png
+size: 1030,2054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+braccjo dx
+  rotate: false
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1

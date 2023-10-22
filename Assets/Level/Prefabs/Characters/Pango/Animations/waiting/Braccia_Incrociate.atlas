@@ -1,0 +1,20 @@
+
+Braccia_Incrociate.png
+size: 2058,2054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bocca
+  rotate: false
+  xy: 1030, 963
+  size: 1026, 1089
+  orig: 1026, 1089
+  offset: 0, 0
+  index: -1
+pupille
+  rotate: false
+  xy: 2, 2
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
