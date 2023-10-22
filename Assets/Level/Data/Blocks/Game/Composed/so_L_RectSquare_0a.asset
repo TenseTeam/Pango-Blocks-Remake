@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b62892ba1ba9f24a9f04a1cec9df0e2, type: 3}
-  m_Name: so_L_Triangle
+  m_Script: {fileID: 11500000, guid: 3ddf634b92fe2ef41a66c7219c63fcaf, type: 3}
+  m_Name: so_L_RectSquare_0a
   m_EditorClassIdentifier: 
-  Points:
-  - {x: -0.49, y: -0.5}
-  - {x: -0.49, y: -0.41}
-  - {x: 0.41, y: 0.5}
-  - {x: 0.49, y: 0.5}
-  - {x: 0.49, y: -0.5}
+  BlockType: 1
+  ColliderData: {fileID: 11400000, guid: e040a230023cb844f814663e010252d9, type: 2}
+  Sprite: {fileID: -3022208, guid: cbdbea461983ab541adf4c9ad1abd9ca, type: 3}
