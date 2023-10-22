@@ -83,9 +83,9 @@
 
                 if (nextTile.IsOccupied)
                 {
-                    if (nextTile.InsertedBlock.IsSlideable) return false;
-                    if (nextTile.InsertedBlock.IsFlat) return false;
-                    if (!nextTile.InsertedBlock.IsClimbable) return false;
+                    if (nextTile.Block.IsSlideable) return false;
+                    if (nextTile.Block.IsFlat) return false;
+                    if (!nextTile.Block.IsClimbable) return false;
                     if (!nextAboveTile) return false;
                     if (nextAboveTile.IsOccupied) return false;
 
@@ -95,9 +95,9 @@
                 else if (nextUnderTile) // That means there is the terrain below
                 {
                     if (!nextUnderTile.IsOccupied) return false;
-                    if (nextUnderTile.InsertedBlock.IsClimbable) return false;
+                    if (nextUnderTile.Block.IsClimbable) return false;
 
-                    if (nextUnderTile.InsertedBlock.IsSlideable)
+                    if (nextUnderTile.Block.IsSlideable)
                     {
                         currTilePos.y--;
                         node.BlockType = BlockType.Slideable;

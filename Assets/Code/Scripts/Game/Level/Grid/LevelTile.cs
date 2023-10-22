@@ -7,9 +7,16 @@
 
     public class LevelTile : GridTileBase
     {
-        public BlockBase InsertedBlock { get; private set; }
+        public BlockBase Block { get; private set; }
         public Vector2 LeftVertex => new Vector2(transform.position.x - 0.5f, transform.position.y - 0.5f);
-        public bool IsOccupied => InsertedBlock;
+        public bool IsOccupied => Block;
+
+        private Collider2D _coll;
+
+        private void Awake()
+        {
+            TryGetComponent(out _coll);
+        }
 
         public void InsertBlock(PlaceableBlock block)
         {
@@ -17,22 +24,21 @@
             block.transform.position = transform.position;
         }
 
-        private void OnTriggerStay2D(Collider2D collision) // TO DO: Optimize this
+        private void OnTriggerStay2D(Collider2D collision)
         {
             if (IsOccupied) return;
 
             if (collision.TryGetComponent(out BlockBase block))
             {
-                if(block is SinglePlaceableBlock || block is StaticBlock)
-                    InsertedBlock = block;
+                if (block is SinglePlaceableBlock || block is StaticBlock)
+                    Block = block;
             }
         }
 
         private void OnTriggerExit2D(Collider2D collision)
         {
             // No needs to check for static blocks because they cannot be moved
-            if (collision.TryGetComponent(out SinglePlaceableBlock block)) 
-                InsertedBlock = null;
+            Block = null;
         }
 
 #if DEBUG

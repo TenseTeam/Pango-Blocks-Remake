@@ -30,13 +30,12 @@
             BlocksOnGrid.Remove(block);
         }
 
-        // TO DO: Adjust the position of the blocks on the grid based on the tiles they occupy
-        //public void AdjustBlocksPositionOnGrid()
+        //public void AdjustBlocksPositionOnGrid() TO DO: Complex code needed for this
         //{
-        //    foreach(LevelTile tile in Grid.GridTiles)
+        //    foreach (LevelTile tile in Grid.GridTiles)
         //    {
         //        if (tile.IsOccupied)
-        //            tile.Block.transform.position = tile.transform.position; 
+        //            tile.Block.transform.position = tile.transform.position;
         //    }
         //}
 
@@ -58,9 +57,6 @@
             {
                 try
                 {
-                    //LevelTile nextTile = tiles[fromTile.GridPosition.x + i, fromTile.GridPosition.y];
-                    //if(nextTile.InsertedBlock.transform.parent != complexPlaceableBlock.transform)
-
                     if (tiles[fromTile.GridPosition.x + i, fromTile.GridPosition.y].IsOccupied) // Checks if the tiles are occupied
                         return false;
                 }

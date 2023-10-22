@@ -5,7 +5,7 @@
     using ProjectPBR.Level.Grid;
     using ProjectPBR.Player.PlayerHandler;
 
-    public class BlocksController : MonoBehaviour
+    public class BlocksManager : MonoBehaviour
     {
         [field: SerializeField, Header("Blocks Dragger")]
         public BlockDragger Dragger { get; private set; }

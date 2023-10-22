@@ -10,7 +10,7 @@
     {
         public new ComplexBlockData Data { get; private set; }
 
-        public List<SinglePlaceableBlock> ComposedBlocks { get; private set; } = new List<SinglePlaceableBlock>();
+        public List<ComposedBlock> ComposedBlocks { get; private set; } = new List<ComposedBlock>();
 
         protected override void Awake()
         {

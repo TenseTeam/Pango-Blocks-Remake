@@ -1677,6 +1677,7 @@ MonoBehaviour:
   _playerBlocks:
   - {fileID: 11400000, guid: 68953fca680dd6646909cff878dd9d3b, type: 2}
   - {fileID: 11400000, guid: 1defe675bd4e08b4fb9c7054c78e8571, type: 2}
+  - {fileID: 11400000, guid: eea651ecb2d9cf84293989a70be9533b, type: 2}
   <Layout>k__BackingField: {fileID: 1348621928}
 --- !u!1 &938341784
 GameObject:
@@ -3130,7 +3131,7 @@ GameObject:
   - component: {fileID: 1537859580}
   - component: {fileID: 1537859581}
   m_Layer: 0
-  m_Name: BlocksController
+  m_Name: BlocksManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4050,10 +4051,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2000949860}
+  - {fileID: 1537859580}
   - {fileID: 1760795748}
   - {fileID: 1771694771}
   - {fileID: 704299185}
-  - {fileID: 1537859580}
   m_Father: {fileID: 230366095}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2031134131
@@ -4070,9 +4071,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MobileInputsManager>k__BackingField: {fileID: 2000949861}
   <GameGridManager>k__BackingField: {fileID: 1760795749}
+  <BlocksManager>k__BackingField: {fileID: 1537859581}
   <PathManager>k__BackingField: {fileID: 1771694772}
   <GameoverManager>k__BackingField: {fileID: 704299186}
-  <BlocksController>k__BackingField: {fileID: 1537859581}
 --- !u!1 &2070340658
 GameObject:
   m_ObjectHideFlags: 0

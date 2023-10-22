@@ -15,4 +15,3 @@ MonoBehaviour:
   ComposedBlocks:
   - {fileID: 11400000, guid: f7f6a65ca115da6409c8cceda2f96abf, type: 2}
   - {fileID: 11400000, guid: 2d1f721c4af100445944975f97905558, type: 2}
-  - {fileID: 11400000, guid: 7f30efd87450cdc4bbdbc1f45d1ea218, type: 2}

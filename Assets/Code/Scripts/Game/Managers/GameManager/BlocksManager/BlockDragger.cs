@@ -1,9 +1,9 @@
-﻿namespace ProjectPBR.Level.Blocks
+﻿namespace ProjectPBR.Managers
 {
     using UnityEngine;
-    using ProjectPBR.Managers;
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Managers.Main.Interfaces;
+    using ProjectPBR.Level.Blocks;
 
     public class BlockDragger : MonoBehaviour, ICastGameManager<GameManager>
     {
