@@ -272,7 +272,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -457137617
   m_SortingLayer: 2
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1259,7 +1259,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -457137617
   m_SortingLayer: 2
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1766,6 +1766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerBlocks:
   - {fileID: 11400000, guid: 187d16c28eb4c5841b70f2267a011776, type: 2}
+  - {fileID: 11400000, guid: 057f62db10f649e40ab5fce122d0ab6a, type: 2}
   <Layout>k__BackingField: {fileID: 1348621928}
 --- !u!1001 &969684327
 PrefabInstance:
@@ -2949,6 +2950,10 @@ PrefabInstance:
       propertyPath: _pooledObject
       value: 
       objectReference: {fileID: 8386044007858057063, guid: 062507bfd83631f4ab566bbe7da3a834, type: 3}
+    - target: {fileID: 7135350831645924964, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _resetBlockTime
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7135350831645924964, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: <PlayerHand>k__BackingField
       value: 

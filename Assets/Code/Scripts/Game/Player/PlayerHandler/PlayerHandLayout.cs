@@ -30,34 +30,35 @@
         }
 
         /// <summary>
-        /// Inserts a block in the layout, aligned in a row.
+        /// Set the <see cref="PlaceableBlock"/> position, aligned in a row.
         /// </summary>
         /// <param name="block">Block to insert.</param>
-        public void InsertInRow(PlaceableBlock block)
+        public void SetBlockPositionInLayoutRow(PlaceableBlock block)
         {
+            block.transform.SetLossyScale(_layoutblockSize); // Set the block size to the layout size
             _usedLayoutWidth += _spacing;
             block.transform.position = new Vector2(transform.position.x + _usedLayoutWidth, transform.position.y);
             if(block is ComplexPlaceableBlock)
                 _usedLayoutWidth += (block as ComplexPlaceableBlock).ComposedBlocks.Count;
             else
                 _usedLayoutWidth++;
-            ResetBlockInLayout(block);
+            block.SetResetPosition();
         }
 
         /// <summary>
-        /// Inserts a block in the layout, not aligned, if it is inside the layout bounds.
+        /// Set the reset position of a <see cref="PlaceableBlock"/> in the layout position, not aligned, if it is inside the layout bounds.
         /// </summary>
         /// <param name="block">Block to insert.</param>
-        public void InsertInBounds(PlaceableBlock block)
+        public void SetResetPositionInLayoutBounds(PlaceableBlock block)
         {
             block.transform.SetLossyScale(_layoutblockSize); // Set the block size to the layout size
-            block.transform.position = new Vector2(block.transform.position.x, transform.position.y);
+            block.transform.position = new Vector2(block.transform.position.x, transform.position.y); // Momentarily align the block to the layout
             if (!IsBlockInsideBounds(block))
             {
                 block.transform.SetLossyScale(Vector3.one);
                 return;
             }
-            ResetBlockInLayout(block);
+            block.SetResetPosition(); // If the block is inside the layout, set the reset position
         }
 
         public PlaceableBlock GetAndRemoveFromHand(PlaceableBlock block)
@@ -68,7 +69,6 @@
 
         public void RemoveFromLayout(PlaceableBlock block)
         {
-            block.transform.SetParent(null);
             block.transform.SetLossyScale(Vector3.one);
         }
 
@@ -77,11 +77,10 @@
             _usedLayoutWidth = 0;
         }
 
-        public void ResetBlockInLayout(PlaceableBlock block)
+        public void LerpPutItBackInHand(PlaceableBlock block, float resetDuration)
         {
-            block.transform.SetParent(transform);
             block.transform.SetLossyScale(_layoutblockSize);
-            block.SetResetPosition();
+            block.StartLerpResettingPosition(resetDuration);
         }
 
         private bool IsBlockInsideBounds(PlaceableBlock block)

@@ -8,6 +8,9 @@
         public float Delay { get; private set; }
         public float CurrentTime { get; private set; }
 
+        public float ClampTime => Mathf.Clamp(CurrentTime, 0, Delay);
+        public float ClampNormalizedTime => Mathf.Clamp01(CurrentTime / Delay);
+
         public TimeDelay(float delay)
         {
             Delay = delay;
@@ -26,6 +29,11 @@
                 return true;
             }
             return false;
+        }
+
+        public void Reset()
+        {
+            CurrentTime = 0;
         }
     }
 }

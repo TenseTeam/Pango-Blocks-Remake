@@ -16,24 +16,25 @@
         [SerializeField]
         private GameGridManager _grid;
 
-        public void ResetBlockInHand(PlaceableBlock block)
+        [SerializeField, Min(0f)]
+        private float _resetBlockTime;
+
+        /// <summary>
+        /// Reset the block in the player hand layout by starting its lerp.
+        /// </summary>
+        /// <param name="block"><see cref="PlaceableBlock"/> to reset.</param>
+        public void LerpResetBlockInHand(PlaceableBlock block)
         {
             block.EnableCollider();
-            block.ResetPosition();
+            block.DisableGravity();
             block.SetIsInvalid(false);
             _grid.RemoveBlockFromGrid(block);
-            PlayerHand.Layout.ResetBlockInLayout(block);
+            PlayerHand.Layout.LerpPutItBackInHand(block, _resetBlockTime);
         }
 
         public void PlaceBlockOnGrid(PlaceableBlock block, LevelTile tile)
         {
             _grid.PlaceBlockOnGrid(tile, block);
-        }
-
-        public void PlaceBlockInHand(PlaceableBlock block)
-        {
-            _grid.RemoveBlockFromGrid(block);
-            PlayerHand.Layout.ResetBlockInLayout(block);
         }
     }
 }
