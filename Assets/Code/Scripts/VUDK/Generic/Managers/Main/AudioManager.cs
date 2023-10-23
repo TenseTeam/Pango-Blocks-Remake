@@ -5,19 +5,18 @@
     using VUDK.Extensions.Audio;
     using VUDK.Generic.Serializable;
 
-    public abstract class AudioManager : MonoBehaviour
+    public sealed class AudioManager : MonoBehaviour
     {
         [SerializeField, Header("Uncuncurrent AudioSources")]
-        protected AudioSource Music;
+        [Tooltip("Uncuncurrent audio source for music")]
+        private AudioSource _music;
         [field: SerializeField]
-        protected AudioSource StereoSourceEffect;
+        [Tooltip("Uncuncurrent audio source for effects")]
+        private AudioSource _source;
 
         [SerializeField, Header("Concurrent AudioSources")]
-        protected List<AudioSource> StereoSourceEffects;
-
-        protected abstract void OnEnable();
-
-        protected abstract void OnDisable();
+        [Tooltip("Concurrent audio sources for multiple effects")]
+        private List<AudioSource> _sources;
 
         public void PlaySpatialAudio(AudioClip clip, Vector3 position)
         {
@@ -40,8 +39,8 @@
                 audio = foundAudio;
             else
             {
-                audio = StereoSourceEffects[0].gameObject.AddComponent<AudioSource>();
-                StereoSourceEffects.Add(audio);
+                audio = _sources[0].gameObject.AddComponent<AudioSource>();
+                _sources.Add(audio);
             }
 
             PlayAudio(audio, clip);
@@ -49,7 +48,7 @@
 
         public void PlayUncuncurrentEffectAudio(AudioClip clip, Range<float> pitchVariation = null)
         {
-            PlayAudio(StereoSourceEffect, clip, pitchVariation);
+            PlayAudio(_source, clip, pitchVariation);
         }
 
         /// <summary>
@@ -59,7 +58,7 @@
         /// <param name="clip">Audio clip.</param>
         /// <param name="pitchVariation">Pitch variation.</param>
         /// <returns>True if played, false otherwise.</returns>
-        protected void PlayAudio(AudioSource source, AudioClip clip, Range<float> pitchVariation = null)
+        private void PlayAudio(AudioSource source, AudioClip clip, Range<float> pitchVariation = null)
         {
             if(pitchVariation != null)
                 source.pitch = pitchVariation.Random();
@@ -75,7 +74,7 @@
         /// <returns>True if found, false otherwise.</returns>
         private bool TryFindFreeAudioSource(out AudioSource audio)
         {
-            foreach (AudioSource effect in StereoSourceEffects)
+            foreach (AudioSource effect in _sources)
             {
                 if (!effect.isPlaying)
                 {
