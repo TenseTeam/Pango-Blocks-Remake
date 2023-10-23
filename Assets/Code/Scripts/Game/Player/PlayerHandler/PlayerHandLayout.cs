@@ -3,8 +3,6 @@
     using UnityEngine;
     using ProjectPBR.Level.Blocks;
     using VUDK.Extensions.Transform;
-    using ProjectPBR.ScriptableObjects;
-    using static Unity.Collections.AllocatorManager;
 
     [RequireComponent(typeof(Collider2D))]
     public class PlayerHandLayout : MonoBehaviour
@@ -86,17 +84,16 @@
             block.SetResetPosition();
         }
 
-
         private bool IsBlockInsideBounds(PlaceableBlock block)
         {
             if (block is SinglePlaceableBlock)
             {
-                return IsColliderInsideBounds((block.Collider as PolygonCollider2D));
+                return IsColliderInsideBounds((block as SinglePlaceableBlock).Collider);
             }
 
             foreach (SinglePlaceableBlock singleBlock in (block as ComplexPlaceableBlock).ComposedBlocks)
             {
-                if (!IsColliderInsideBounds(singleBlock.Collider as PolygonCollider2D))
+                if (!IsColliderInsideBounds(singleBlock.Collider))
                     return false;
             }
 

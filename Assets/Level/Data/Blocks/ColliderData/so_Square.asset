@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: so_Square
   m_EditorClassIdentifier: 
   Points:
-  - {x: 0.45, y: -0.5}
-  - {x: -0.45, y: -0.5}
-  - {x: -0.45, y: 0.5}
-  - {x: 0.45, y: 0.5}
+  - {x: 0.49, y: -0.5}
+  - {x: -0.49, y: -0.5}
+  - {x: -0.49, y: 0.5}
+  - {x: 0.49, y: 0.5}

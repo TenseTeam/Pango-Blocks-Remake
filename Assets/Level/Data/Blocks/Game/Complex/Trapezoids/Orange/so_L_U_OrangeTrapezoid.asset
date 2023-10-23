@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c8bf91d7f649447b230b00083daf58, type: 3}
+  m_Name: so_L_U_OrangeTrapezoid
+  m_EditorClassIdentifier: 
+  ComposedBlocks:
+  - {fileID: 11400000, guid: 7fbd0b4035c38054faa7a2330dce4efc, type: 2}
+  - {fileID: 11400000, guid: d40cef1b592e804478da8b9a76d6f2ec, type: 2}

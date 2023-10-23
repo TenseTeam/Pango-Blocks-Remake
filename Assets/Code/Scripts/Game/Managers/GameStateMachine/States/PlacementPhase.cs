@@ -71,7 +71,6 @@
             if (Context.GameManager.MobileInputsManager.IsTouchOn2D(out LevelTile tile, ~Context.GameManager.GameGridManager.BlocksLayerMask) && 
                 Context.GameManager.GameGridManager.AreTilesFreeForBlock(tile, Context.BlocksManager.Dragger.CurrentDraggedBlock))
             {
-                Debug.Log("Can");
                 PlaceBlockOnGrid(Context.BlocksManager.Dragger.CurrentDraggedBlock, tile);
                 return;
             }

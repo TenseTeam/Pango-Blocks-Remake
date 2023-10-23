@@ -1,11 +1,11 @@
 ﻿namespace ProjectPBR.Player.Character
 {
     using UnityEngine;
-    using System.Collections.Generic;
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Managers.Main.Interfaces;
     using ProjectPBR.Managers;
     using ProjectPBR.Config.Constants;
+    using ProjectPBR.Level.PathSystem.Data;
 
     public class CharacterPathRunner : MonoBehaviour, ICastGameManager<GameManager>
     {
@@ -13,9 +13,9 @@
         private float _speed = 1f;
 
         private bool _isRunningPath = false;
-        private bool _hasReachedDestination = false;
-        private int _currentIndex = 0;
-        private List<Node> _nodes;
+        private int _currentNodeIndex = 0;
+
+        private PathData _pathData;
 
         public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
 
@@ -33,27 +33,27 @@
 
         private void StartPath()
         {
-            _hasReachedDestination = GameManager.PathManager.GetPathNodes(out _nodes);
+            _pathData = GameManager.PathManager.GetPath();
             _isRunningPath = true;
         }
 
         private void RunPath()
         {
             if (!_isRunningPath) return;
-            if (_currentIndex >= _nodes.Count)
+            if (_currentNodeIndex >= _pathData.Nodes.Count)
             {
-                MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnCharacterReachedDestination, _hasReachedDestination);
+                MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnCharacterReachedDestination, _pathData);
                 _isRunningPath = false;
                 return;
             }
 
-            float distance = Vector3.Distance(transform.position, _nodes[_currentIndex].Position);
+            float distance = Vector3.Distance(transform.position, _pathData.Nodes[_currentNodeIndex].Position);
             float t = Time.deltaTime * _speed / distance;
-            transform.position = Vector3.Lerp(transform.position, _nodes[_currentIndex].Position, t);
+            transform.position = Vector3.Lerp(transform.position, _pathData.Nodes[_currentNodeIndex].Position, t);
             if (distance < 0.1f)
             {
-                MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnCharacterChangedTile, _nodes[_currentIndex].BlockType);
-                _currentIndex++;
+                MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnCharacterChangedTile, _pathData.Nodes[_currentNodeIndex].BlockType);
+                _currentNodeIndex++;
             }
         }
     }

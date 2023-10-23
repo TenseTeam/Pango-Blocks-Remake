@@ -8,19 +8,18 @@
 
     public class ComplexPlaceableBlock : PlaceableBlock
     {
-        public new ComplexBlockData Data { get; private set; }
+        public new ComplexBlockData Data => base.Data as ComplexBlockData;
 
         public List<ComposedBlock> ComposedBlocks { get; private set; } = new List<ComposedBlock>();
 
         protected override void Awake()
         {
             base.Awake();
-            Collider = base.Collider as CompositeCollider2D;
         }
 
         public override void Init(BlockData data)
         {
-            Data = data as ComplexBlockData;
+            base.Init(data);
             GenerateComposition();
         }
 
@@ -66,6 +65,23 @@
         {
             foreach (ComposedBlock block in ComposedBlocks)
                 block.DecreaseRender();
+        }
+
+        public override void SetIsInvalid(bool isInvalid)
+        {
+            base.SetIsInvalid(isInvalid);
+            foreach (ComposedBlock block in ComposedBlocks)
+                block.SetIsInvalid(isInvalid);
+        }
+
+        public override bool IsInvalid()
+        {
+            foreach (ComposedBlock block in ComposedBlocks)
+            {
+                if (block.IsInvalid())
+                    return true;
+            }
+            return false;
         }
     }
 }

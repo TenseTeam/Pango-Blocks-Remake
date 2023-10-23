@@ -7,21 +7,22 @@
     [RequireComponent(typeof(SpriteRenderer))]
     public class SinglePlaceableBlock : PlaceableBlock
     {
-        public new SingleBlockData Data { get; private set; }
-        protected new PolygonCollider2D Collider;
-
         private SpriteRenderer _sprite;
+
+        public new SingleBlockData Data => base.Data as SingleBlockData;
+        public PolygonCollider2D Collider { get; protected set; }
 
         protected override void Awake()
         {
             base.Awake();
-            Collider = base.Collider as PolygonCollider2D;
             TryGetComponent(out _sprite);
+            TryGetComponent(out PolygonCollider2D collider);
+            Collider = collider;
         }
 
         public override void Init(BlockData data)
         {
-            Data = data as SingleBlockData;
+            base.Init(data);
             _sprite.sprite = Data.Sprite;
             Collider.points = Data.ColliderData.Points;
             BlockType = Data.BlockType;
