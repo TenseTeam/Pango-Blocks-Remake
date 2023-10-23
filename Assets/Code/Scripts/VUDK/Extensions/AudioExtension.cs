@@ -1,13 +1,13 @@
 ﻿namespace VUDK.Extensions.Audio
 {
     using UnityEngine;
-    using VUDK.Extensions.Audio.Factory;
+    using VUDK.Factories;
 
     public static class AudioExtension
     {
         public static void PlayClipAtPoint(this AudioClip clip, Vector3 position)
         {
-            AudioSFXFactory.Create(clip).PlayClipAtPoint(position);
+            SFXFactory.Create(clip).PlayClipAtPoint(position);
         }
     }
 }

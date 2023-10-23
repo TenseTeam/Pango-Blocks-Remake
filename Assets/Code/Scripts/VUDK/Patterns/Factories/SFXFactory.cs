@@ -1,10 +1,11 @@
-namespace VUDK.Extensions.Audio.Factory
+namespace VUDK.Factories
 {
     using UnityEngine;
+    using VUDK.Features.AudioSFX;
     using VUDK.Generic.Managers.Main;
     using VUDK.Patterns.Pooling;
 
-    public static class AudioSFXFactory
+    public static class SFXFactory
     {
         public static AudioSFX Create(AudioClip clip)
         {

@@ -1,4 +1,4 @@
-﻿namespace VUDK.Extensions.Audio.Interfaces
+﻿namespace VUDK.Features.AudioSFX.Interfaces
 {
     using UnityEngine;
 

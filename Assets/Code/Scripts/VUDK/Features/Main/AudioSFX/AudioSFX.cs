@@ -1,10 +1,10 @@
-﻿namespace VUDK.Extensions.Audio
+﻿namespace VUDK.Features.AudioSFX
 {
     using UnityEngine;
-    using VUDK.Extensions.Audio.Interfaces;
     using VUDK.Patterns.Pooling;
     using VUDK.Patterns.Pooling.Interfaces;
     using VUDK.Extensions.Transform;
+    using VUDK.Features.AudioSFX.Interfaces;
 
     [RequireComponent(typeof(AudioSource))]
     public class AudioSFX : MonoBehaviour, IPooledObject, IAudioSFX

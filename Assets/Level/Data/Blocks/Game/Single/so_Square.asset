@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BlockType: 1
   ColliderData: {fileID: 11400000, guid: e040a230023cb844f814663e010252d9, type: 2}
-  Sprite: {fileID: 21300000, guid: 79d8eba4f4153e044b2159a2e7e90dbb, type: 3}
+  Sprite: {fileID: 21300000, guid: 231ceec81a41b43448495c06bd6c1a3e, type: 3}

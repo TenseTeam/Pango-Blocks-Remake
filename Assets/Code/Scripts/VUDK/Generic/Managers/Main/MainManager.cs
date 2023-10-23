@@ -27,6 +27,9 @@
         [field: SerializeField, Header("Game Config")]
         public GameConfig GameConfig { get; private set; }
 
+        [field: SerializeField, Header("Audio Manager")]
+        public AudioManager AudioManager { get; private set; }
+
         [field: SerializeField, Header("Game State Machine")]
         public GameMachineBase GameStateMachine { get; private set; }
 
