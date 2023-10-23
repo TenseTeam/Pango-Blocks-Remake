@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4617765197454862023}
   - component: {fileID: 2935656648474278519}
   m_Layer: 0
-  m_Name: VFX_stars
+  m_Name: VFX_Stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

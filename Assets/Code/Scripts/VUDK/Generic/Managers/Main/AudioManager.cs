@@ -1,4 +1,4 @@
-﻿namespace VUDK.Generic.Managers
+﻿namespace VUDK.Generic.Managers.Main
 {
     using System.Collections.Generic;
     using UnityEngine;
