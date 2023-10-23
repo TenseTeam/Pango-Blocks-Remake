@@ -180,6 +180,10 @@ PrefabInstance:
       propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 753444257387059134, guid: f0b257363c94bb24eb883e65b5040b95, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3664104246577006520, guid: f0b257363c94bb24eb883e65b5040b95, type: 3}
       propertyPath: m_Name
       value: pf_Flat
@@ -298,6 +302,10 @@ PrefabInstance:
       propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8250567854990483853, guid: 3d26dff6b03678843bbf9f3fc640597a, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -318,6 +326,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 105861020060107773, guid: 7a5be200195959f46bc123b4163871e1, type: 3}
       propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 105861020060107773, guid: 7a5be200195959f46bc123b4163871e1, type: 3}
+      propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3915252921207594067, guid: 7a5be200195959f46bc123b4163871e1, type: 3}
@@ -378,7 +390,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3915252921207594067, guid: 7a5be200195959f46bc123b4163871e1, type: 3}
   m_PrefabInstance: {fileID: 4027275510784920291}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2908424981480489855
+--- !u!114 &6536750289541577692
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
