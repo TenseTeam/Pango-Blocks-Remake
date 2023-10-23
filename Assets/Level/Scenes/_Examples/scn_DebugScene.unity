@@ -272,7 +272,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -457137617
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1259,7 +1259,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -457137617
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1764,7 +1764,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bbb040ffa8ee084aaef316390537e8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerBlocks: []
+  _playerBlocks:
+  - {fileID: 11400000, guid: 187d16c28eb4c5841b70f2267a011776, type: 2}
   <Layout>k__BackingField: {fileID: 1348621928}
 --- !u!1001 &969684327
 PrefabInstance:
@@ -2896,6 +2897,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1629796388240318885, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: <Pools>k__BackingField._dictionary.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629796388240318885, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: <Pools>k__BackingField._dictionary.Array.data[3].Key
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629796388240318885, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: <Pools>k__BackingField._dictionary.Array.data[3].Value
+      value: 
+      objectReference: {fileID: 8996969572099385718}
     - target: {fileID: 2220860461155247804, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2953,6 +2966,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+--- !u!114 &8996969572099385718 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1180829420685659064, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+  m_PrefabInstance: {fileID: 8996969572099385717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b2f9fd176ad9e4da329e5424fe1837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
