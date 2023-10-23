@@ -49,7 +49,6 @@
         {
             if (block is SinglePlaceableBlock) return !fromTile.IsOccupied;
 
-            Debug.Log("Is complex block");
             LevelTile[,] tiles = Grid.GridTiles;
             ComplexPlaceableBlock complexPlaceableBlock = block as ComplexPlaceableBlock;
 

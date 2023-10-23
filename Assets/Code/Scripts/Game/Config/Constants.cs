@@ -10,8 +10,21 @@
             public const string OnBeginGameWonPhase = "OnGamewon";
             public const string OnBeginGameoverPhase = "OnGameover";
 
+            public const string OnCharacterStartWalking = "OnCharacterStartWalking";
             public const string OnCharacterChangedTile = "OnCharacterMoved";
             public const string OnCharacterReachedDestination = "OnCharacterReachedDestination";
+        }
+
+        public static class Animations
+        {
+            public const int Idle = 0;
+            public const int Walk = 1;
+            public const int Slide = 2;
+            public const int Climb = 3;
+            public const string State = "State";
+            public const string GamewonAnimation = "Gamewon";
+            public const string GameoverFall = "GameoverFall";
+            public const string GameoverHit = "GameoverHit";
         }
     }
 }

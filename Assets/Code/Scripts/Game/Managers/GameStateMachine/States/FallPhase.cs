@@ -63,7 +63,7 @@
         private void ReturnInHandInvalidBlocks()
         {
             List<PlaceableBlock> blocks = Context.GameManager.GameGridManager.BlocksOnGrid;
-            List<PlaceableBlock> invalidBlocks = blocks.FindAll(block => block.IsTilted /*|| !block.IsInsideGrid()*/);
+            List<PlaceableBlock> invalidBlocks = blocks.FindAll(block => block.IsInvalid() || block.IsTilted());
 
             foreach (PlaceableBlock block in invalidBlocks)
                 Context.BlocksManager.ResetBlockInHand(block);

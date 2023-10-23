@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: so_Rectangle_0a
   m_EditorClassIdentifier: 
   ComposedBlocks:
-  - {fileID: 11400000, guid: f7f6a65ca115da6409c8cceda2f96abf, type: 2}
-  - {fileID: 11400000, guid: 2d1f721c4af100445944975f97905558, type: 2}
+  - {fileID: 11400000, guid: cf2dfebef6a922e4b95811c4a4d8cc1f, type: 2}
+  - {fileID: 11400000, guid: 40f738af60091d94481d72e0d0389efc, type: 2}

@@ -20,6 +20,7 @@
         {
             block.EnableCollider();
             block.ResetPosition();
+            block.SetIsInvalid(false);
             _grid.RemoveBlockFromGrid(block);
             PlayerHand.Layout.ResetBlockInLayout(block);
         }
