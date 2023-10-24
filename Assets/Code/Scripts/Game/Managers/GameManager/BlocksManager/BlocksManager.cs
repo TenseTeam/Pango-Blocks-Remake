@@ -28,7 +28,6 @@
         /// <param name="block"><see cref="PlaceableBlock"/> to reset.</param>
         public void LerpResetBlockInHand(PlaceableBlock block)
         {
-            block.EnableCollider();
             block.DisableGravity();
             block.SetIsInvalid(false);
             _grid.RemoveBlockFromGrid(block);

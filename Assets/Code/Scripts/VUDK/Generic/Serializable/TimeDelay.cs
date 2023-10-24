@@ -2,7 +2,7 @@
 {
     using UnityEngine;
 
-    [System.Serializable]
+    //[System.Serializable]
     public class TimeDelay
     {
         public float Delay { get; private set; }

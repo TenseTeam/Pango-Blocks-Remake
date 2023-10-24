@@ -1765,8 +1765,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerBlocks:
-  - {fileID: 11400000, guid: 187d16c28eb4c5841b70f2267a011776, type: 2}
-  - {fileID: 11400000, guid: 057f62db10f649e40ab5fce122d0ab6a, type: 2}
+  - {fileID: 11400000, guid: a349d8ce56359af429fcffe0731833e5, type: 2}
+  - {fileID: 11400000, guid: b1f8aba829219f845a0c57e769313cb7, type: 2}
   <Layout>k__BackingField: {fileID: 1348621928}
 --- !u!1001 &969684327
 PrefabInstance:
@@ -2114,7 +2114,7 @@ SpriteRenderer:
   m_SortingLayerID: -457137617
   m_SortingLayer: 2
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: e68f7081493ae2446becfb3f8a0ade8d, type: 3}
+  m_Sprite: {fileID: -1044377631, guid: fb0983d1192e5264d8b5b567ce310dce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2135,8 +2135,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.5, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 625747956}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2863,7 +2863,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -10473359
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.77647066, g: 0.59607846, b: 0.25490198, a: 1}
   m_FlipX: 0
@@ -2898,6 +2898,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 357102167866738416, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: <MobileInputsActions>k__BackingField._dictionary.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 357102167866738416, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: <MobileInputsActions>k__BackingField._dictionary.Array.data[0].Key
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2220860461155247804, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2944,12 +2952,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3793511967005305999, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: _timeToReloadScene
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3793511967005305999, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: _timeToLoadNextScene
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4679426333627143973, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 446315a24ad83ec4ba86df4d2b0ae408, type: 2}
     - target: {fileID: 4952031749192989740, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2973,6 +2985,30 @@ PrefabInstance:
     - target: {fileID: 7754776920317325807, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_Name
       value: MainManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380163339913947043, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_Color.r
+      value: 0.95686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380163339913947043, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380163339913947043, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -10473359
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385416626601443676, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385416626601443676, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -10473359
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168239045055623262, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _waitAfterGameIsEnded
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

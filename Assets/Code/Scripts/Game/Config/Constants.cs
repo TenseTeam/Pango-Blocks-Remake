@@ -28,6 +28,11 @@
             public const string GameoverHit = "GameoverHit";
         }
 
+        public static class GridAnimations
+        {
+            public const string FadeOut = "FadeOut";
+        }
+
         public static class UIAnimations
         {
             public const int Horizontal = 0;

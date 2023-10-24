@@ -48,6 +48,7 @@
             if (Vector2.Distance(transform.position, _resetPosition) < 0.05f)
             {
                 transform.position = _resetPosition;
+                EnableCollider();
                 SetResetPosition();
                 IsResettingPosition = false;
                 _resetTimer.Reset();
