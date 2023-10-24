@@ -3,16 +3,22 @@
     using ProjectPBR.Level.Blocks.Interfaces;
     using ProjectPBR.Managers;
     using ProjectPBR.ScriptableObjects;
+    using System;
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Managers.Main.Interfaces;
+    using VUDK.Generic.Serializable;
 
     public abstract class PlaceableBlock : PooledBlock, ICastGameManager<GameManager>, IPlaceableBlock
     {
-        private Vector2 _resetPosition;
         private Rigidbody2D _rb;
         private bool _isInvalid;
+        
+        private Vector2 _resetPosition;
+        private Vector2 _startPosition;
+        private TimeDelay _resetTimer;
 
+        public bool IsResettingPosition { get; private set; }
         protected BlockData Data { get; private set; }
 
         public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
@@ -28,6 +34,27 @@
             Data = data;
         }
 
+        private void Update()
+        {
+            if (IsResettingPosition)
+                LerpPosition();
+        }
+
+        private void LerpPosition()
+        {
+            _resetTimer.AddDeltaTime();
+            transform.position = Vector2.Lerp(_startPosition, _resetPosition, _resetTimer.ClampNormalizedTime);
+
+            if (Vector2.Distance(transform.position, _resetPosition) < 0.05f)
+            {
+                transform.position = _resetPosition;
+                EnableCollider();
+                SetResetPosition();
+                IsResettingPosition = false;
+                _resetTimer.Reset();
+            }
+        }
+
         public void SetResetPosition()
         {
             _resetPosition = transform.position;
@@ -38,11 +65,13 @@
             _isInvalid = isInvalid;
         }
 
-        public void ResetPosition()
+        public void StartLerpResettingPosition(float resetDuration)
         {
             DisableGravity();
             transform.rotation = Quaternion.identity;
-            transform.position = _resetPosition;
+            IsResettingPosition = true;
+            _resetTimer = new TimeDelay(resetDuration);
+            _startPosition = transform.position;
         }
 
         public abstract void EnableCollider();

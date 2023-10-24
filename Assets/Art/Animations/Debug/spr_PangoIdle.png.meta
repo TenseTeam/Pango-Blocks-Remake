@@ -1,0 +1,1033 @@
+fileFormatVersion: 2
+guid: fb0983d1192e5264d8b5b567ce310dce
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1166
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_PangoIdle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229aefabac6c2424e8b0de047c0140f2
+      internalID: -1044377631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 8400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe93acf4f526a84383491b6eb6180c3
+      internalID: -39600425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 8400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3aed84dd16ec0e4d994b16f6c4b3c4d
+      internalID: -1591991725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 8400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd3656a05250944291784e174c3b6b2
+      internalID: 1249137340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_4
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 8400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e923b886d5abed4893395f60566a7ce
+      internalID: 290123537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310de1441502573448cca76b0df5e2ba
+      internalID: 1083234482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 7200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c8b487d8e9ad34d85f4ff541e9779e
+      internalID: -1459470223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_7
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 7200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6337ab3c62cec14ab3594a943671739
+      internalID: -1310418099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_8
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 7200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4683567995276634794d9a94f74c5553
+      internalID: 1873075609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_9
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 7200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990d72cffd4dc854895528d036c94c11
+      internalID: -1992799071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25662140c6a0b2349b020a313b62d37c
+      internalID: -1729276168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 6000
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11eabfdc2001c834e8c715c2e8e55180
+      internalID: -894154953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_12
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 6000
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed27532aef7c7e74695263a251631782
+      internalID: -227530653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_13
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 6000
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b53b0a7a3f45f4aa437df7b4051d37
+      internalID: -479442937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_14
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 6000
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7e4134eaf0ba147a1e5f1b45df07fd
+      internalID: -452413821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4800
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c324d9953adff646b557068f605f3cf
+      internalID: -1720891899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 4800
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada005fb3a8242b479bcf9a7a7eab3d6
+      internalID: 1238259096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_17
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 4800
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6f77a1f7dce464588d58b346b168db
+      internalID: -955818150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_18
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 4800
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6072ce55872d3459c49c0827cb0e59
+      internalID: 343792790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_19
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 4800
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c0ccb47e2494a4eae773db40b83a0f
+      internalID: -631962218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3600
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3598613ae16bbf14abe83bfbd692f12f
+      internalID: -189808882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_21
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3600
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4a61a8463f0ce4db3371e4f5df1bf9
+      internalID: -1034683867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_22
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3600
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33162338693d87048946c48fb9913779
+      internalID: 1800778634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_23
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3600
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c421881630429414ab07dc391f1aa5cb
+      internalID: -1133556956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_24
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3600
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0efa65dd03ec84a899183f184d1748
+      internalID: -1213220100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079b0a11cab6f4c4dbc4cd49c7673aca
+      internalID: 786548321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_26
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2117ad466cdb564b8b51ff02a06050e
+      internalID: 158763677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_27
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80898c3139428f4d8535b576444723a
+      internalID: -1406558828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_28
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c67026f41b601479ae9ce32d6b4325
+      internalID: 348680693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_29
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da55f2a3d35fb5848ab7a0fd63a469f1
+      internalID: 1291616234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6087139d7978ac4ab6258f010393500
+      internalID: -1031120495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_31
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558278116f762104a8499fb946c009a8
+      internalID: 1926249945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_32
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42359a85e7768644cb1bed32a8b8a90a
+      internalID: 1307876364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_33
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0881206f9600b904f8cf75e77af47a2a
+      internalID: -10901835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_34
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300e7b46fed1a1e438d3b8442534edfa
+      internalID: -1007119107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81600c94a2773c240a9f9548a41271b4
+      internalID: -215969400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_36
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b279b7292f7d1464a8d0e8f4d1010249
+      internalID: 133384330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_37
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3ebe48101aa84498dfbd8679a41e7e
+      internalID: -312058873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_38
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044459470eff33a40a69ed0396e36e1a
+      internalID: 1601002217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoIdle_39
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf033e313c5a9974499b5456451d9ffa
+      internalID: -1949844948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spr_PangoIdle_0: -1044377631
+      spr_PangoIdle_1: -39600425
+      spr_PangoIdle_10: -1729276168
+      spr_PangoIdle_11: -894154953
+      spr_PangoIdle_12: -227530653
+      spr_PangoIdle_13: -479442937
+      spr_PangoIdle_14: -452413821
+      spr_PangoIdle_15: -1720891899
+      spr_PangoIdle_16: 1238259096
+      spr_PangoIdle_17: -955818150
+      spr_PangoIdle_18: 343792790
+      spr_PangoIdle_19: -631962218
+      spr_PangoIdle_2: -1591991725
+      spr_PangoIdle_20: -189808882
+      spr_PangoIdle_21: -1034683867
+      spr_PangoIdle_22: 1800778634
+      spr_PangoIdle_23: -1133556956
+      spr_PangoIdle_24: -1213220100
+      spr_PangoIdle_25: 786548321
+      spr_PangoIdle_26: 158763677
+      spr_PangoIdle_27: -1406558828
+      spr_PangoIdle_28: 348680693
+      spr_PangoIdle_29: 1291616234
+      spr_PangoIdle_3: 1249137340
+      spr_PangoIdle_30: -1031120495
+      spr_PangoIdle_31: 1926249945
+      spr_PangoIdle_32: 1307876364
+      spr_PangoIdle_33: -10901835
+      spr_PangoIdle_34: -1007119107
+      spr_PangoIdle_35: -215969400
+      spr_PangoIdle_36: 133384330
+      spr_PangoIdle_37: -312058873
+      spr_PangoIdle_38: 1601002217
+      spr_PangoIdle_39: -1949844948
+      spr_PangoIdle_4: 290123537
+      spr_PangoIdle_5: 1083234482
+      spr_PangoIdle_6: -1459470223
+      spr_PangoIdle_7: -1310418099
+      spr_PangoIdle_8: 1873075609
+      spr_PangoIdle_9: -1992799071
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

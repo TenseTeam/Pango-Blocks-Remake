@@ -27,7 +27,7 @@
             {
                 PlaceableBlock block = BlocksFactory.Create(blockData, false) as PlaceableBlock;
                 block.transform.name = blockData.name.Replace("so_", "");
-                Layout.InsertInRow(block);
+                Layout.SetBlockPositionInLayoutRow(block);
             }
         }
     }

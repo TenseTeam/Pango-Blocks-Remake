@@ -1,0 +1,749 @@
+fileFormatVersion: 2
+guid: d7258ee70e4852345b49077571fd2623
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1194
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: a_PangoWalk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c704a720615a68d49b3e9a4c68e517fc
+      internalID: 1358060329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 6000
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf870edfc3af4674dafa207579f6bf48
+      internalID: -702742034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 6000
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263c77eb53edf454cb61e3cfd73e2da1
+      internalID: -295382962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 6000
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3326ada8dda7d6043b20c866b4540eb8
+      internalID: -304358666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_4
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 6000
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18cd78d40c7fac4e8ec76c05c937787
+      internalID: 1070120021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4800
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a5898353d49f14bb05fe25e980faed
+      internalID: 1733416865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 4800
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b642d23f231c0524c9682cfc1851296f
+      internalID: -1217309472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_7
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 4800
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b384cdc7f118e4daa7b9e140dfcf6d
+      internalID: -1400138775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_8
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 4800
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905a9c2d924d4ee4296ab2c513de05e9
+      internalID: -422642025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_9
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 4800
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99d6aa62f7322444affe6b1d7478f02
+      internalID: -28843587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3600
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f5f082e73a3e7140ad0fc43050c566b
+      internalID: 1113400631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3600
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786e3abf19ba2414fbf1bfd8224d3d59
+      internalID: -18360709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_12
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3600
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40c7ccce40b94947a4eaa92c3489339
+      internalID: 1844337182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_13
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3600
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bd670f22b08b74189b214b03e6d277
+      internalID: 2021526335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_14
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3600
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37683373e7702c34fa01725ca737b328
+      internalID: -782489464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd5e5cf5f2fe4249946faf98e519990
+      internalID: -728967548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1566f52a9fda9bf458f17a7194fbc0d2
+      internalID: -2070879852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_17
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df34e5d2e0377a8439e3083a94c0e87f
+      internalID: -843441583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_18
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebc57b8dc9904c41a21ca751d8415fd
+      internalID: 68150321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_19
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c24858a64face94eb9ad0ed9d072703
+      internalID: -1112993037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46cb1a4956ae44e4ab36637cdab8fb72
+      internalID: 2006227958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_21
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59930bf88892198408b380d109482fab
+      internalID: 1482712593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_22
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd383ac4afdbe6344b85266fa8980053
+      internalID: -1816987075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_23
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4fa5a2d74bf984fba8f2c2df56c20d
+      internalID: 426230092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_24
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f2aa8e03c928bd44a101c90fe731b80
+      internalID: -1350302733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ba8c3d79ab70545965914748cd54b1
+      internalID: -420597532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_PangoWalk_26
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a42a4616a3841cf4aa0574c772d6691e
+      internalID: 519679149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      a_PangoWalk_0: 1358060329
+      a_PangoWalk_1: -702742034
+      a_PangoWalk_10: 1113400631
+      a_PangoWalk_11: -18360709
+      a_PangoWalk_12: 1844337182
+      a_PangoWalk_13: 2021526335
+      a_PangoWalk_14: -782489464
+      a_PangoWalk_15: -728967548
+      a_PangoWalk_16: -2070879852
+      a_PangoWalk_17: -843441583
+      a_PangoWalk_18: 68150321
+      a_PangoWalk_19: -1112993037
+      a_PangoWalk_2: -295382962
+      a_PangoWalk_20: 2006227958
+      a_PangoWalk_21: 1482712593
+      a_PangoWalk_22: -1816987075
+      a_PangoWalk_23: 426230092
+      a_PangoWalk_24: -1350302733
+      a_PangoWalk_25: -420597532
+      a_PangoWalk_26: 519679149
+      a_PangoWalk_27: 1756652804
+      a_PangoWalk_28: 413264094
+      a_PangoWalk_3: -304358666
+      a_PangoWalk_4: 1070120021
+      a_PangoWalk_5: 1733416865
+      a_PangoWalk_6: -1217309472
+      a_PangoWalk_7: -1400138775
+      a_PangoWalk_8: -422642025
+      a_PangoWalk_9: -28843587
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

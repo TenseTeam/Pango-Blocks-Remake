@@ -66,7 +66,7 @@
             List<PlaceableBlock> invalidBlocks = blocks.FindAll(block => block.IsInvalid() || block.IsTilted());
 
             foreach (PlaceableBlock block in invalidBlocks)
-                Context.BlocksManager.ResetBlockInHand(block);
+                Context.BlocksManager.LerpResetBlockInHand(block);
         }
 
         private void EnableGravity()

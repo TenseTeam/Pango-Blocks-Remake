@@ -8,18 +8,23 @@
     /// Managers Structure:
     /// MainManager: Serves as the central hub for primary managers.
     /// Extensible managers:
-    /// - GameManager: Orchestrates game-specific managers for precise game control; extensible.
-    /// - EventManager: Governs all in-game events, providing centralized event handling; extensible.
-    /// - GameMachine: Manages the game's state through a versatile state machine; extensible.
+    /// - GameManager: Orchestrates game-specific managers for precise game control; ExecutionOrder(-900).
+    /// - UIManager: Manages the game's UIs; ExecutionOrder(-895).
+    /// - EventManager: Governs all in-game events, providing centralized event handling; ExecutionOrder(-850).
+    /// - GameMachine: Manages the game's state through a versatile state machine; ExecutionOrder(-990).
     /// Not extensible managers:
-    /// - GameConfig: Manages all the possible game's configurations; not extensible.
-    /// - PoolsManager: Manages all the possible game's pools; not extensible.
+    /// - AudioManager: Manages all the possible game's audio; ExecutionOrder(-890).
+    /// - GameConfig: Manages all the possible game's configurations; ExecutionOrder(-800).
+    /// - PoolsManager: Manages all the possible game's pools; ExecutionOrder(-100).
     /// </summary>
     [DefaultExecutionOrder(-999)]
     public sealed class MainManager : Singleton<MainManager>
     {
         [field: SerializeField, Header("Game Manager")]
         public GameManagerBase GameManager { get; private set; }
+
+        [field: SerializeField, Header("UI Manager")]
+        public UIManagerBase UIManager { get; private set; }
 
         [field: SerializeField, Header("Event Manager")]
         public EventManager EventManager { get; private set; }
@@ -40,24 +45,6 @@
         {
             base.Awake();
             GameStateMachine.Init();
-        }
-
-        private void OnValidate()
-        {
-            if (GameManager == null)
-                Debug.LogError("GameManager missing reference.");
-
-            if (EventManager == null)
-                Debug.LogError("EventManager missing reference.");
-
-            if (GameConfig == null)
-                Debug.LogError("GameConfig missing reference.");
-
-            if (GameStateMachine == null)
-                Debug.LogError("GameStateMachine missing reference.");
-
-            if (PoolsManager == null)
-                Debug.LogError("PoolsManager missing reference.");
         }
     }
 }
