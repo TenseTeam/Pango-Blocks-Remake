@@ -2898,10 +2898,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1629796388240318885, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: <Pools>k__BackingField._dictionary.Array.data[0].Key
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2220860461155247804, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2942,17 +2938,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3498170918530091167, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793511967005305999, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _timeToReloadScene
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793511967005305999, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _timeToLoadNextScene
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952031749192989740, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5403176040699830600, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: <MainCamera>k__BackingField
       value: 
       objectReference: {fileID: 236989290}
-    - target: {fileID: 5915099783625463180, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: _pooledObject
-      value: 
-      objectReference: {fileID: 8386044007858057063, guid: 062507bfd83631f4ab566bbe7da3a834, type: 3}
-    - target: {fileID: 7135350831645924964, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: _resetBlockTime
-      value: 0.2
+    - target: {fileID: 6753597487363825322, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753597487363825322, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 7135350831645924964, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: <PlayerHand>k__BackingField

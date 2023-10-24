@@ -35,7 +35,7 @@ namespace ProjectPBR.Player.Character
 
         private void Start()
         {
-            _anim.SetInteger(Constants.Animations.State, Constants.Animations.Idle);
+            _anim.SetInteger(Constants.CharacterAnimations.State, Constants.CharacterAnimations.Idle);
         }
 
         private void SetAnimation(BlockType blockType)
@@ -62,26 +62,26 @@ namespace ProjectPBR.Player.Character
         private void SetWalkAnimation()
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-            _anim.SetInteger(Constants.Animations.State, Constants.Animations.Walk);
+            _anim.SetInteger(Constants.CharacterAnimations.State, Constants.CharacterAnimations.Walk);
         }
 
         private void SetClimbAnimation()
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 45f);
-            _anim.SetInteger(Constants.Animations.State, Constants.Animations.Climb);
+            _anim.SetInteger(Constants.CharacterAnimations.State, Constants.CharacterAnimations.Climb);
         }
 
         private void SetSlideAnimation()
         {
             transform.rotation = Quaternion.Euler(0f, 0f, -45f);
-            _anim.SetInteger(Constants.Animations.State, Constants.Animations.Slide);
+            _anim.SetInteger(Constants.CharacterAnimations.State, Constants.CharacterAnimations.Slide);
         }
 
         private void SetEndGameAnimation(PathData pathData)
         {
-            _anim.SetBool(Constants.Animations.GamewonAnimation, pathData.HasReached);
-            _anim.SetBool(Constants.Animations.GameoverHit, pathData.IsGoingToCollide);
-            _anim.SetBool(Constants.Animations.GameoverFall, pathData.IsGoingToFall);
+            _anim.SetBool(Constants.CharacterAnimations.GamewonAnimation, pathData.HasReached);
+            _anim.SetBool(Constants.CharacterAnimations.GameoverHit, pathData.IsGoingToCollide);
+            _anim.SetBool(Constants.CharacterAnimations.GameoverFall, pathData.IsGoingToFall);
         }
     }
 }

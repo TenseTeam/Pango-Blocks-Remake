@@ -3,6 +3,8 @@
     using UnityEngine;
     using ProjectPBR.Level.Blocks;
     using VUDK.Extensions.Transform;
+    using VUDK.Generic.Managers.Main;
+    using ProjectPBR.Config.Constants;
 
     [RequireComponent(typeof(Collider2D))]
     public class PlayerHandLayout : MonoBehaviour

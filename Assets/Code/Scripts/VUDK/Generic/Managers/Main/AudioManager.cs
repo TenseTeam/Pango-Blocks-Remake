@@ -5,6 +5,7 @@
     using VUDK.Extensions.Audio;
     using VUDK.Generic.Serializable;
 
+    [DefaultExecutionOrder(-900)]
     public sealed class AudioManager : MonoBehaviour
     {
         [SerializeField, Header("Uncuncurrent AudioSources")]

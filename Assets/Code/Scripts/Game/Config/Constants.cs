@@ -4,6 +4,7 @@
     {
         public static class Events
         {
+            public const string OnBlockReset = "OnBlockReset";
             public const string OnObjectiveTouched = "OnObjeciveTouched";
 
             public const string OnBeginObjectivePhase = "OnBeginObjectivePhase";
@@ -15,7 +16,7 @@
             public const string OnCharacterReachedDestination = "OnCharacterReachedDestination";
         }
 
-        public static class Animations
+        public static class CharacterAnimations
         {
             public const int Idle = 0;
             public const int Walk = 1;
@@ -25,6 +26,17 @@
             public const string GamewonAnimation = "Gamewon";
             public const string GameoverFall = "GameoverFall";
             public const string GameoverHit = "GameoverHit";
+        }
+
+        public static class UIAnimations
+        {
+            public const int Horizontal = 0;
+            public const int Vertical = 1;
+            public const int Pyramid = 2;
+            public const int MaxAnimations = 3;
+            public const string OpenScreen = "Open";
+            public const string CloseScreen = "Close";
+            public const string ScreenState = "Screen";
         }
     }
 }
