@@ -5,18 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Level/Scenes/Levels/Stages/Stage 1/scn_Level_1_1.unity
-    guid: 17695c3b495092548a18386519679aa4
-  - enabled: 1
-    path: Assets/Level/Scenes/Levels/Stages/Stage 1/scn_Level_1_2.unity
-    guid: 4fe0707a2859c56488a279735a9f97cb
-  - enabled: 1
-    path: Assets/Level/Scenes/Levels/Stages/Stage 1/scn_Level_1_3.unity
-    guid: 4530af97d2e8f704f88200d575ee173c
-  - enabled: 1
-    path: Assets/Level/Scenes/Levels/Stages/Stage 1/scn_Level_1_4.unity
-    guid: af8cef2d0c001064580451977d455236
+  - enabled: 0
+    path: Assets/Level/Scenes/Levels/scn_Level_0a.unity
+    guid: 4c94b4318e7dc5c4d87f565b53bcdc9d
+  - enabled: 0
+    path: Assets/Level/Scenes/Levels/scn_Level_1a.unity
+    guid: e984b508d878a3a4dbfe6cc8b59d1494
+  - enabled: 0
+    path: Assets/Level/Scenes/Levels/scn_Level_2a.unity
+    guid: 03a5871973aa8f948a1be3578763ead1
+  - enabled: 0
+    path: Assets/Level/Scenes/Levels/scn_Level_3a.unity
+    guid: 47771ae66e55cad4bb593ed0f3ec7696
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 8172eb888cd0d75488fc398487e8abcc, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: cda0337a31271984a829d9e579b5977b, type: 2}

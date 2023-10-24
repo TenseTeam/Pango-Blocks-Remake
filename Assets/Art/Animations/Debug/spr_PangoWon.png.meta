@@ -1,0 +1,1033 @@
+fileFormatVersion: 2
+guid: 7a3441d6212bce042abe874629e6bcfb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 976
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_PangoWon_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816fe50819b5a0048a27290c844430b1
+      internalID: -1790941871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 8400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1c416b42975d1428cd12684a85ab62
+      internalID: -1103299283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 8400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c537f1d9ef40064418eb69be4f0d2e15
+      internalID: 590111707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 8400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20607b2dbc1bb064f97b24e69c4aedc5
+      internalID: -101063597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_4
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 8400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0715bca67b0044d82c99af7015165e
+      internalID: -1905584856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b52ffde5ca33314f98f81d6f1c53db7
+      internalID: -1740650945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 7200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d073e6033d3154940bf16a353adb4889
+      internalID: -1839792455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_7
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 7200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0c7af0fde7fa943a7eba6016c573c8
+      internalID: 76077611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_8
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 7200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74349644c4351f42bb01bd0b967db49
+      internalID: 1835879367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_9
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 7200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8aaf51ab9b44146aaf26257894ff92
+      internalID: 1988832752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9a8de75d7f77d479462f1d73732209
+      internalID: -1523664355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 6000
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45142baf287f89d47a0299bbd8aeee66
+      internalID: 1393876888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_12
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 6000
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1741f99dd973044c8e9744aeacd079c
+      internalID: 61852461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_13
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 6000
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f729e3e08cf9e024a8544ee9e4604c99
+      internalID: -248646977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_14
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 6000
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68daf3bbde9b884e86e419f35222291
+      internalID: 1029753276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4800
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6993d4ea43d1c6f4ea36d9923d91090b
+      internalID: 2109337423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 4800
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b510dd34b0da51b41b002b906284b490
+      internalID: 588886679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_17
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 4800
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd7e92a2d2cda6409ff2c78bba77527
+      internalID: -1214584920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_18
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 4800
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d3580b6d232a64f95de2cc5a9df324
+      internalID: 2056224592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_19
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 4800
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d473e6f1949805942abb40ef0cc63c4f
+      internalID: 606465754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3600
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a0cfaffddaa394088a7151ea0f7f27
+      internalID: -429155106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_21
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3600
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b0de7f15ffd08e42aa9c911d4fb8d38
+      internalID: 1282584057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_22
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3600
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e5b3f7713ad184bbfe9bbb31427f03
+      internalID: 793638586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_23
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3600
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef87dc420dc11c4695e41dcd60336c2
+      internalID: -975867117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_24
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3600
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed904573933f5c941aac2d7c22698a6d
+      internalID: 1611335944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9f48ed650fa1c49ae875a905880457
+      internalID: -1547969253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_26
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9519876d3c15ce4b9e3d43d25cd9f57
+      internalID: 276038854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_27
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c0c3c36758a9c40a376faa7bc17bec
+      internalID: 1759036769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_28
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea978396509f35e4c8bbbb8a8f703aae
+      internalID: -1898517241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_29
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2400
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed94767e46af23541a8076509ad61952
+      internalID: 122067318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353afa308e4eccd49911ac5dd5168e57
+      internalID: -1893406433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_31
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e98572038c54fb44fba642ca4e38ac8a
+      internalID: 1867744081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_32
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48084b1a7993ee9469cd5f67250bc61e
+      internalID: -2020887729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_33
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d43ba47672c1e5438257d7570b28f73
+      internalID: -89553038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_34
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1200
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd381a8ed8502443aa1684706ed8614
+      internalID: 1085470431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc33feea205f034caa2ead8c002f4e3
+      internalID: -223444181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_36
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8be0b86944f433429c10126a04d2bdd
+      internalID: 918555373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_37
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c5d0df44b906984893fcad6266584fb
+      internalID: -144135270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_38
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b367073a55b124c95ef3a81b02bfc9
+      internalID: -393797251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoWon_39
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 1024
+        height: 1200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b485a0a3af28b7847b3b6f56102fe882
+      internalID: 440266831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spr_PangoWon_0: -1790941871
+      spr_PangoWon_1: -1103299283
+      spr_PangoWon_10: -1523664355
+      spr_PangoWon_11: 1393876888
+      spr_PangoWon_12: 61852461
+      spr_PangoWon_13: -248646977
+      spr_PangoWon_14: 1029753276
+      spr_PangoWon_15: 2109337423
+      spr_PangoWon_16: 588886679
+      spr_PangoWon_17: -1214584920
+      spr_PangoWon_18: 2056224592
+      spr_PangoWon_19: 606465754
+      spr_PangoWon_2: 590111707
+      spr_PangoWon_20: -429155106
+      spr_PangoWon_21: 1282584057
+      spr_PangoWon_22: 793638586
+      spr_PangoWon_23: -975867117
+      spr_PangoWon_24: 1611335944
+      spr_PangoWon_25: -1547969253
+      spr_PangoWon_26: 276038854
+      spr_PangoWon_27: 1759036769
+      spr_PangoWon_28: -1898517241
+      spr_PangoWon_29: 122067318
+      spr_PangoWon_3: -101063597
+      spr_PangoWon_30: -1893406433
+      spr_PangoWon_31: 1867744081
+      spr_PangoWon_32: -2020887729
+      spr_PangoWon_33: -89553038
+      spr_PangoWon_34: 1085470431
+      spr_PangoWon_35: -223444181
+      spr_PangoWon_36: 918555373
+      spr_PangoWon_37: -144135270
+      spr_PangoWon_38: -393797251
+      spr_PangoWon_39: 440266831
+      spr_PangoWon_4: -1905584856
+      spr_PangoWon_5: -1740650945
+      spr_PangoWon_6: -1839792455
+      spr_PangoWon_7: 76077611
+      spr_PangoWon_8: 1835879367
+      spr_PangoWon_9: 1988832752
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

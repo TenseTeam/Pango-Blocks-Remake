@@ -63,7 +63,7 @@
 
             if (Context.GameManager.MobileInputsManager.IsTouchOn2D(out PlayerHandLayout layout, Context.GameManager.BlocksManager.PlayerHand.Layout.LayoutMask))
             {
-                layout.InsertInBounds(Context.GameManager.BlocksManager.Dragger.CurrentDraggedBlock);
+                layout.SetResetPositionInLayoutBounds(Context.GameManager.BlocksManager.Dragger.CurrentDraggedBlock);
                 ResetBlockInHand(Context.GameManager.BlocksManager.Dragger.CurrentDraggedBlock);
                 return;
             }
@@ -82,7 +82,7 @@
         private bool TryGetBlockFromTouch(out PlaceableBlock block)
         {
             RaycastHit2D hit = Context.GameManager.MobileInputsManager.RaycastFromTouch2D(Context.GameManager.GameGridManager.BlocksLayerMask);
-            if (hit && hit.transform.TryGetComponent(out PlaceableBlock bl))
+            if (hit && hit.transform.TryGetComponent(out PlaceableBlock bl) && !bl.IsResettingPosition)
             {
                 block = Context.BlocksManager.PlayerHand.Layout.GetAndRemoveFromHand(bl);
                 return true;
@@ -94,7 +94,7 @@
 
         private void ResetBlockInHand(PlaceableBlock block)
         {
-            Context.GameManager.BlocksManager.ResetBlockInHand(block);
+            Context.GameManager.BlocksManager.LerpResetBlockInHand(block);
             ChangeToFallPhase();
         }
 

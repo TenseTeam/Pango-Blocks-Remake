@@ -50,9 +50,10 @@
             float distance = Vector3.Distance(transform.position, _pathData.Nodes[_currentNodeIndex].Position);
             float t = Time.deltaTime * _speed / distance;
             transform.position = Vector3.Lerp(transform.position, _pathData.Nodes[_currentNodeIndex].Position, t);
-            if (distance < 0.1f)
+            if (distance < 0.01f)
             {
                 MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnCharacterChangedTile, _pathData.Nodes[_currentNodeIndex].BlockType);
+                transform.position = _pathData.Nodes[_currentNodeIndex].Position;
                 _currentNodeIndex++;
             }
         }
