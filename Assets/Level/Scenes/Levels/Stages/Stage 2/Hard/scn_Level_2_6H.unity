@@ -2171,18 +2171,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1629796388240318885, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: <Pools>k__BackingField._dictionary.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1629796388240318885, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: <Pools>k__BackingField._dictionary.Array.data[3].Key
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1629796388240318885, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: <Pools>k__BackingField._dictionary.Array.data[3].Value
-      value: 
-      objectReference: {fileID: 8996969572099385718}
     - target: {fileID: 2220860461155247804, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2223,18 +2211,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5403176040699830600, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: <MainCamera>k__BackingField
-      value: 
-      objectReference: {fileID: 236989290}
-    - target: {fileID: 6462402513473166065, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: _toTile.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6462402513473166065, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: _fromTile.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7135350831645924964, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: <PlayerHand>k__BackingField
       value: 
@@ -2248,17 +2224,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
---- !u!114 &8996969572099385718 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1180829420685659064, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-  m_PrefabInstance: {fileID: 8996969572099385717}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2b2f9fd176ad9e4da329e5424fe1837, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

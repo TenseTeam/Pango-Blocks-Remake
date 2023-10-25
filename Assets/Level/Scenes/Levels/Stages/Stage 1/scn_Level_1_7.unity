@@ -1372,8 +1372,8 @@ Tilemap:
   - first: {x: 2, y: -3, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 8
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 1
       m_TileColorIndex: 6
       m_TileObjectToInstantiateIndex: 65535
@@ -1382,8 +1382,8 @@ Tilemap:
   - first: {x: 3, y: -3, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 1
       m_TileColorIndex: 6
       m_TileObjectToInstantiateIndex: 65535
@@ -1461,13 +1461,13 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 4
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: d50b5b1628ed5bf4fa1eff8947dc6430, type: 2}
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 7561630f28301804e98ddb9e5af75aab, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: cffe736354f11934f891b00c335a1ec6, type: 2}
-  - m_RefCount: 15
+  - m_RefCount: 16
     m_Data: {fileID: 11400000, guid: a79f74c1b7bcb6d479972991f60c63d9, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -1480,13 +1480,13 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 4
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 722ed04181d030e4e861ba2c0345ecd9, type: 3}
+  - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: e8926f69958318845ba7cfd496fff71a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 9947fece44635c040b7d015f2daa95f8, type: 3}
-  - m_RefCount: 15
+  - m_RefCount: 16
     m_Data: {fileID: 21300000, guid: 875d489cb8da70f42b3c52f663200b69, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 0
@@ -1736,7 +1736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerBlocks:
   - {fileID: 11400000, guid: 8274b886e51de2242b117675184c5bbe, type: 2}
-  - {fileID: 11400000, guid: fec0d91f8b93e8a48aab09eb049d3a47, type: 2}
+  - {fileID: 11400000, guid: e2b770b1f34e2e240bec79d7e216ce46, type: 2}
   <Layout>k__BackingField: {fileID: 1348621928}
 --- !u!1001 &1006712062
 PrefabInstance:
@@ -2784,6 +2784,14 @@ PrefabInstance:
     - target: {fileID: 7754776920317325807, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_Name
       value: MainManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380163339913947043, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380163339913947043, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -10473359
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

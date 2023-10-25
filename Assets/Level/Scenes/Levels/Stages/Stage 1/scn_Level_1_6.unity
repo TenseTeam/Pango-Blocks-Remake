@@ -1623,7 +1623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerBlocks:
   - {fileID: 11400000, guid: a349d8ce56359af429fcffe0731833e5, type: 2}
-  - {fileID: 11400000, guid: 5b1bd8c9e75db604fa86c57ab4c2e54f, type: 2}
+  - {fileID: 11400000, guid: b1f8aba829219f845a0c57e769313cb7, type: 2}
   <Layout>k__BackingField: {fileID: 1348621928}
 --- !u!1001 &1018275769
 PrefabInstance:
@@ -2681,6 +2681,14 @@ PrefabInstance:
     - target: {fileID: 7754776920317325807, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_Name
       value: MainManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380163339913947043, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380163339913947043, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -10473359
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
