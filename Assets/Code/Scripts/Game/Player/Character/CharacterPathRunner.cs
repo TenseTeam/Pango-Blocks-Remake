@@ -5,7 +5,7 @@
     using VUDK.Generic.Managers.Main.Interfaces;
     using ProjectPBR.Managers;
     using ProjectPBR.Config.Constants;
-    using ProjectPBR.Level.PathSystem.Data;
+    using ProjectPBR.Level.PathSystem;
 
     public class CharacterPathRunner : MonoBehaviour, ICastGameManager<GameManager>
     {
@@ -15,7 +15,7 @@
         private bool _isRunningPath = false;
         private int _currentNodeIndex = 0;
 
-        private PathData _pathData;
+        private Path _pathData;
 
         public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
 

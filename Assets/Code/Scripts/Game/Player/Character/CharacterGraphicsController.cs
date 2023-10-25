@@ -1,12 +1,11 @@
 namespace ProjectPBR.Player.Character
 {
     using UnityEngine;
-    using VUDK.Generic.Managers.Main;
     using ProjectPBR.Config.Constants;
     using ProjectPBR.Level.Blocks;
-    using ProjectPBR.Level.PathSystem.Data;
+    using ProjectPBR.Level.PathSystem;
     using VUDK.Patterns.Pooling;
-    using System;
+    using VUDK.Generic.Managers.Main;
 
     [RequireComponent(typeof(Animator))]
     [RequireComponent(typeof(SpriteRenderer))]
@@ -26,7 +25,7 @@ namespace ProjectPBR.Player.Character
             MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginObjectivePhase, SetRender);
             MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginObjectivePhase, SetWalkAnimation); // Because it never starts on a climbable or slideable block
             MainManager.Ins.EventManager.AddListener<BlockType>(Constants.Events.OnCharacterChangedTile, SetAnimation);
-            MainManager.Ins.EventManager.AddListener<PathData>(Constants.Events.OnCharacterReachedDestination, SetEndGameAnimation);
+            MainManager.Ins.EventManager.AddListener<Path>(Constants.Events.OnCharacterReachedDestination, SetEndGameAnimation);
             MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginGameWonPhase, SpawnStarsVFX);
         }
 
@@ -35,7 +34,7 @@ namespace ProjectPBR.Player.Character
             MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginObjectivePhase, SetRender);
             MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginObjectivePhase, SetWalkAnimation);
             MainManager.Ins.EventManager.RemoveListener<BlockType>(Constants.Events.OnCharacterChangedTile, SetAnimation);
-            MainManager.Ins.EventManager.RemoveListener<PathData>(Constants.Events.OnCharacterReachedDestination, SetEndGameAnimation);
+            MainManager.Ins.EventManager.RemoveListener<Path>(Constants.Events.OnCharacterReachedDestination, SetEndGameAnimation);
             MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginGameWonPhase, SpawnStarsVFX);
         }
 
@@ -96,7 +95,7 @@ namespace ProjectPBR.Player.Character
             _anim.SetInteger(Constants.CharacterAnimations.State, Constants.CharacterAnimations.Slide);
         }
 
-        private void SetEndGameAnimation(PathData pathData)
+        private void SetEndGameAnimation(Path pathData)
         {
             _anim.SetBool(Constants.CharacterAnimations.GamewonAnimation, pathData.HasReached);
             _anim.SetBool(Constants.CharacterAnimations.GameoverHit, pathData.IsGoingToCollide);
