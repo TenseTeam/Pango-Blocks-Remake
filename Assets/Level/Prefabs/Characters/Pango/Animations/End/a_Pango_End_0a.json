@@ -1,0 +1,17 @@
+{ "skeleton": { "images": "C:/Users/Letizia/Desktop/Progetti/PangoBlock/a_Pango_End_0a/images/" },
+"PhotoshopToSpine": { "scale": 1, "padding": 1, "trim": true },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "Livello 7", "bone": "root", "attachment": "Livello 7" }
+],
+"skins": {
+	"default": {
+		"Livello 7": {
+			"Livello 7": { "x": 512, "y": -1561.5, "width": 1026, "height": 975 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}
