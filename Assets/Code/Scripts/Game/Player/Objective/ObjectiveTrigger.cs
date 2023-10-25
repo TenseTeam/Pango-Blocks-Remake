@@ -6,9 +6,9 @@
 
     public class ObjectiveTrigger : MonoBehaviour
     {
-        public void Trigger()
+        public virtual void Trigger()
         {
-            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnObjectiveTouched);
+            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnObjectiveTriggered);
         }
     }
 }

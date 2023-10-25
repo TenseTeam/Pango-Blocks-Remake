@@ -14,8 +14,6 @@
         [field: SerializeField]
         public PlayerHandLayout Layout { get; private set; }
 
-        //public List<PlaceableBlock> PlaceableBlocks { get; private set; } = new List<PlaceableBlock>();
-
         private void Start()
         {
             GenerateBlocks();

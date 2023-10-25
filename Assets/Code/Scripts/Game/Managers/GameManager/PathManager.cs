@@ -5,7 +5,6 @@
     using VUDK.Generic.Managers.Main;
     using ProjectPBR.Level.Grid;
     using ProjectPBR.Level.PathSystem;
-    using ProjectPBR.Level.PathSystem.Data;
 
     public class PathManager : MonoBehaviour, ICastGameManager<GameManager>
     {
@@ -20,8 +19,8 @@
         /// <summary>
         /// Gets the path from Tile to Tile.
         /// </summary>
-        /// <returns><see cref="PathData"/></returns>
-        public PathData GetPath()
+        /// <returns><see cref="Path"/></returns>
+        public Path GetPath()
         {
             return PathCalculator.CalculatePath(_grid, _grid.GridTiles[_fromTile.x, _fromTile.y], _grid.GridTiles[_toTile.x, _toTile.y]);
         }

@@ -7,7 +7,7 @@
     public class Node
     {
         public BlockType BlockType;
-        public Vector3 Position { get; private set; }
+        public Vector3 Position;
 
         public Node(Vector3 position, BlockType blockType)
         {

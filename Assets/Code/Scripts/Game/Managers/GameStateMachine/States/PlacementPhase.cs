@@ -23,13 +23,13 @@
             Debug.Log("Placement Phase");
 #endif
             Context.Inputs.Interaction.Interact.canceled += TryToPlaceBlock;
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnObjectiveTouched, ChangeToObjectivePhase);
+            MainManager.Ins.EventManager.AddListener(Constants.Events.OnObjectiveTriggered, ChangeToObjectivePhase);
         }
 
         public override void Exit()
         {
             Context.Inputs.Interaction.Interact.canceled -= TryToPlaceBlock;
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnObjectiveTouched, ChangeToObjectivePhase);
+            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnObjectiveTriggered, ChangeToObjectivePhase);
         }
         
         public override void FixedProcess()

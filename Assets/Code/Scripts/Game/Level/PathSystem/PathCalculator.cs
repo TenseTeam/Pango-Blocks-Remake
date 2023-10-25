@@ -4,7 +4,6 @@
     using UnityEngine;
     using ProjectPBR.Level.Blocks;
     using ProjectPBR.Level.Grid;
-    using ProjectPBR.Level.PathSystem.Data;
 
     public static class PathCalculator
     {
@@ -14,11 +13,10 @@
         /// <param name="grid">The grid to calculate the path.</param>
         /// <param name="tileA">The start tile.</param>
         /// <param name="tileB">The end tile.</param>
-        /// <returns><see cref="PathData"/></returns>
-        public static PathData CalculatePath(LevelGrid grid, LevelTile tileA, LevelTile tileB)
+        /// <returns><see cref="Path"/></returns>
+        public static Path CalculatePath(LevelGrid grid, LevelTile tileA, LevelTile tileB)
         {
-            PathData pathData = new PathData();
-            pathData.Nodes = new List<Node>();
+            Path pathData = new Path();
 
             LevelTile[,] tiles = grid.GridTiles;
 
@@ -27,7 +25,12 @@
                 LevelTile currTile = tiles[currTilePos.x, currTilePos.y];
 
                 if (currTile == tileB)
+                {
+                    Node endNode = pathData.Nodes[pathData.Nodes.Count - 1];
+                    Vector3 endPosition = endNode.Position + Vector3.right * 0.5f;
+                    pathData.Nodes.Add(new Node(endPosition, BlockType.Flat));
                     return pathData;
+                }
 
                 LevelTile nextTile = tiles[currTilePos.x + 1, currTilePos.y];
                 LevelTile nextAboveTile;

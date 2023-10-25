@@ -5,7 +5,8 @@
         public static class Events
         {
             public const string OnBlockReset = "OnBlockReset";
-            public const string OnObjectiveTouched = "OnObjeciveTouched";
+            public const string OnObjectiveTriggered = "OnObjectiveTriggered";
+            public const string OnObjectiveGoalTouched = "OnObjectiveGoalTouched";
 
             public const string OnBeginObjectivePhase = "OnBeginObjectivePhase";
             public const string OnBeginGameWonPhase = "OnGamewon";
@@ -31,6 +32,12 @@
         public static class GridAnimations
         {
             public const string FadeOut = "FadeOut";
+        }
+
+        public static class ObjectiveAnimations
+        {
+            public const string ObjectiveTouched = "Touched";
+            public const string ObjectiveWon = "Won";
         }
 
         public static class UIAnimations

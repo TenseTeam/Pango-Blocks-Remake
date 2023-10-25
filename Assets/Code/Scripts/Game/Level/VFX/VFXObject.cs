@@ -16,8 +16,9 @@
         private void Start()
         {
             _particles.Play();
+            CancelInvoke(nameof(Dispose));
 
-            if(!_particles.main.loop) // if the particle system is not looping, dispose it after the duration
+            if(!_particles.main.loop) // if the particle system is not looping, dispose it after the duratio
                 Invoke(nameof(Dispose), _particles.main.duration);
         }
     }

@@ -5,7 +5,7 @@
     using VUDK.Generic.Managers.Main;
     using VUDK.Patterns.StateMachine;
     using ProjectPBR.Config.Constants;
-    using ProjectPBR.Level.PathSystem.Data;
+    using ProjectPBR.Level.PathSystem;
 
     public class ObjectivePhase : State<GameContext>
     {
@@ -18,13 +18,13 @@
 #if DEBUG
             Debug.Log("Objective Phase");
 #endif
-            MainManager.Ins.EventManager.AddListener<PathData>(Constants.Events.OnCharacterReachedDestination, CheckWin);
+            MainManager.Ins.EventManager.AddListener<Path>(Constants.Events.OnCharacterReachedDestination, CheckWin);
             MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnBeginObjectivePhase);
         }
 
         public override void Exit()
         {
-            MainManager.Ins.EventManager.RemoveListener<PathData>(Constants.Events.OnCharacterReachedDestination, CheckWin);
+            MainManager.Ins.EventManager.RemoveListener<Path>(Constants.Events.OnCharacterReachedDestination, CheckWin);
         }
 
         public override void FixedProcess()
@@ -35,7 +35,7 @@
         {
         }
 
-        private void CheckWin(PathData pathData)
+        private void CheckWin(Path pathData)
         {
             if (pathData.HasReached)
                 ChangeState(GamePhaseKeys.GameWonPhase);
