@@ -1766,9 +1766,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerBlocks:
   - {fileID: 11400000, guid: a349d8ce56359af429fcffe0731833e5, type: 2}
-  - {fileID: 11400000, guid: b1f8aba829219f845a0c57e769313cb7, type: 2}
-  - {fileID: 11400000, guid: 8274b886e51de2242b117675184c5bbe, type: 2}
-  - {fileID: 11400000, guid: 057f62db10f649e40ab5fce122d0ab6a, type: 2}
   <Layout>k__BackingField: {fileID: 1348621928}
 --- !u!1001 &969684327
 PrefabInstance:
