@@ -1,8 +1,8 @@
 ﻿namespace ProjectPBR.Player.Objective.Goal
 {
-    using ProjectPBR.Config.Constants;
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
+    using ProjectPBR.Config.Constants;
 
     [RequireComponent(typeof(Animator))]
     public class ObjectiveGoalGraphicsController : MonoBehaviour

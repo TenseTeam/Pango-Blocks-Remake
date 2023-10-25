@@ -22,6 +22,12 @@
         [SerializeField, Min(0f)]
         private float _resetBlockTime;
 
+        private void OnValidate()
+        {
+            if(!PlayerHand)
+                PlayerHand = FindObjectOfType<PlayerHand>();
+        }
+
         /// <summary>
         /// Reset the block in the player hand layout by starting its lerp.
         /// </summary>
