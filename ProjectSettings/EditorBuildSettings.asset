@@ -6,11 +6,56 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Level/Scenes/_Examples/scn_DebugScene.unity
-    guid: 72e15f140972ec342a3b915149511dae
+    path: Assets/Level/Scenes/Menu/scn_MainMenu.unity
+    guid: 4da9b3676b5d89a47bd3469e20253f5f
   - enabled: 1
-    path: Assets/Level/Scenes/Levels/Stages/Stage 2/Hard/scn_Level_2_8H.unity
-    guid: a6f7f5cadc013493eb324e2803ff4971
+    path: Assets/Level/Scenes/Levels/Stages/Stage 1/scn_Level_1_1.unity
+    guid: 27f35c8a10280664bb284d1f0d658642
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 1/scn_Level_1_2.unity
+    guid: 715da3c70d63dc548a3b508deb4b3aab
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 1/scn_Level_1_3.unity
+    guid: 3a2e5a14a3a28c04aadd06453a93c6c9
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 1/scn_Level_1_4.unity
+    guid: b3ac2a3ffc1b3b548ac4148229230e27
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 1/scn_Level_1_5.unity
+    guid: 4125339d701dd4a81b80e57709748304
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 1/scn_Level_1_6.unity
+    guid: 461bbd5687b214f448643ffbf58c7ef8
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 1/scn_Level_1_7.unity
+    guid: 7d9a8df33bec746198b26fa2b085276c
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 1/scn_Level_1_8.unity
+    guid: 18d904db01daf456b9d382086d943c77
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 2/Easy/scn_Level_2_1.unity
+    guid: 8825a4940c9399b4b80b2fb1ddc4f8f7
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 2/Easy/scn_Level_2_2.unity
+    guid: 5b97d7aea1d9da545976041b10f90ade
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 2/Easy/scn_Level_2_3.unity
+    guid: 693ff365b7c775847b55fcd9a2226825
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 2/Easy/scn_Level_2_4.unity
+    guid: c4189eae648564b45ac792843dd0ec87
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 2/Easy/scn_Level_2_5.unity
+    guid: e98dd25559a834adcb719c93778bce49
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 2/Easy/scn_Level_2_6.unity
+    guid: d5f0db577979b48d8b3a3ba3d9db7ad2
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 2/Easy/scn_Level_2_7.unity
+    guid: b7858926023f943fda6271a94e03b9fa
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 2/Easy/scn_Level_2_8.unity
+    guid: dfc5d5de45ba0435bbc33f6ceb130ae4
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 8172eb888cd0d75488fc398487e8abcc, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: cda0337a31271984a829d9e579b5977b, type: 2}
