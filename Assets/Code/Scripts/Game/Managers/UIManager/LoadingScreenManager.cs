@@ -17,8 +17,8 @@
 
         private void Awake()
         {
-            TryGetComponent(out _image);
             TryGetComponent(out _anim);
+            TryGetComponent(out _image);
             _image.enabled = true;
         }
 
@@ -29,14 +29,18 @@
 
         private void OnEnable()
         {
+            MainManager.Ins.EventManager.AddListener(EventKeys.SceneEvents.OnBeforeChangeScene, RandomClose);
+            //MainManager.Ins.EventManager.AddListener(EventKeys.GameEvents.OnGameMachineStart, RandomOpen);
             MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginGameWonPhase, WaitRandomClose);
             MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginGameoverPhase, WaitRandomClose);
         }
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginGameWonPhase, RandomClose);
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginGameoverPhase, RandomClose);
+            MainManager.Ins.EventManager.RemoveListener(EventKeys.SceneEvents.OnBeforeChangeScene, RandomClose);
+            //MainManager.Ins.EventManager.RemoveListener(EventKeys.GameEvents.OnGameMachineStart, RandomOpen);
+            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginGameWonPhase, WaitRandomClose);
+            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginGameoverPhase, WaitRandomClose);
         }
 
         private void WaitRandomClose()

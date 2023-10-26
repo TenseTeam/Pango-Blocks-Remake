@@ -19,6 +19,11 @@
 
         public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
 
+        private void Start()
+        {
+            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnCharacterSendPosition, transform.position + Vector3.up * .5f);
+        }
+
         private void OnEnable()
         {
             MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginObjectivePhase, StartPath);

@@ -3,7 +3,6 @@
     using UnityEngine;
     using VUDK.Generic.Structures.Grid;    
     using ProjectPBR.Level.Blocks;
-    using ProjectPBR.Level.Blocks.ComplexBlock;
 
     public class LevelTile : GridTileBase
     {
