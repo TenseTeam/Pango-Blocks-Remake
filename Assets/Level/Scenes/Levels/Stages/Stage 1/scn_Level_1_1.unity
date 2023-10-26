@@ -2625,6 +2625,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3793511967005305999, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _sceneToLoadOnWin
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793511967005305999, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: _timeToReloadScene
       value: 5
       objectReference: {fileID: 0}

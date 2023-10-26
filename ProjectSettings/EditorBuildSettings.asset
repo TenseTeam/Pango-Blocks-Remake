@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/Scenes/_Examples/scn_DebugScene.unity
     guid: 72e15f140972ec342a3b915149511dae
+  - enabled: 1
+    path: Assets/Level/Scenes/Levels/Stages/Stage 2/Hard/scn_Level_2_8H.unity
+    guid: a6f7f5cadc013493eb324e2803ff4971
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 8172eb888cd0d75488fc398487e8abcc, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: cda0337a31271984a829d9e579b5977b, type: 2}
