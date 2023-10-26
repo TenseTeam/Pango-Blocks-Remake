@@ -1007,8 +1007,8 @@ RectTransform:
   m_GameObject: {fileID: 4952031749192989740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4980821856646982733}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1275,8 +1275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5019db11cc730304eb780f589c7d3e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fromTile: {x: 0, y: 2}
-  _toTile: {x: 7, y: 2}
 --- !u!1 &5166686400070394916
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,7 +2005,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a87fa8860842e642b2c159e35c2061c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneToLoadOnWin: 0
   _timeToLoadNextScene: 1
   _timeToReloadScene: 1
 --- !u!1 &7754776920317325807

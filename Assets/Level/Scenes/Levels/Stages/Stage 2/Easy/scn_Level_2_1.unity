@@ -934,6 +934,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d0bae83d0f03b49698d3ba91326757a7, type: 3}
+    - target: {fileID: 3482159866607051099, guid: adeaa1e5a443d4642862ed1fb72da41b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d0bae83d0f03b49698d3ba91326757a7, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2722,6 +2726,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3793511967005305999, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _sceneToLoadOnWin
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793511967005305999, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _timeToReloadScene
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793511967005305999, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _timeToLoadNextScene
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5403176040699830600, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: <MainCamera>k__BackingField
       value: 
@@ -2749,6 +2765,10 @@ PrefabInstance:
     - target: {fileID: 8380163339913947043, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_SortingLayerID
       value: -10473359
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168239045055623262, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _waitAfterGameIsEnded
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
