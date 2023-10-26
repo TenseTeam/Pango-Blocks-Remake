@@ -9,13 +9,17 @@
     public class GameoverManager : MonoBehaviour
     {
         [SerializeField, Header("Scenes")]
-        private int _sceneToLoadOnWin;
-        [SerializeField]
         private float _timeToLoadNextScene;
         [SerializeField]
         private float _timeToReloadScene;
 
+        private int _currentBuildIndex;
         private bool _isLoading;
+
+        private void Awake()
+        {
+            _currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
+        }
 
         private void OnEnable()
         {
@@ -41,12 +45,17 @@
 
         private void ReloadScene()
         {
-            LoadSceneWithDelay(SceneManager.GetActiveScene().buildIndex, _timeToReloadScene);
+            LoadSceneWithDelay(_currentBuildIndex, _timeToReloadScene);
         }
 
         private void LoadNextScene()
         {
-            LoadSceneWithDelay(_sceneToLoadOnWin, _timeToLoadNextScene);
+            if (_currentBuildIndex + 1 >= SceneManager.sceneCountInBuildSettings)
+            {
+                LoadSceneWithDelay(0, _currentBuildIndex); // Load the menu if there is not a next level scene
+                return;
+            }
+            LoadSceneWithDelay(_currentBuildIndex + 1, _timeToLoadNextScene);
         }
 
         private void LoadSceneWithDelay(int sceneIndex, float time)
