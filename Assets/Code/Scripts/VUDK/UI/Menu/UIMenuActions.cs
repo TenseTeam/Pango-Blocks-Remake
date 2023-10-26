@@ -1,5 +1,6 @@
 namespace VUDK.UI.Menu
 {
+    using ProjectPBR.Managers;
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Utility;
@@ -12,6 +13,11 @@ namespace VUDK.UI.Menu
         private void Awake()
         {
             TryGetComponent(out _sceneSwitcher);
+        }
+
+        private void Start()
+        {
+            MainManager.Ins.EventManager.TriggerEvent(EventKeys.SceneEvents.OnMainMenuLoaded);
         }
 
         public void ChangeScene(int sceneIndex)

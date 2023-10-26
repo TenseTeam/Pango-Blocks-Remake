@@ -23,6 +23,7 @@
             Debug.Log("Placement Phase");
 #endif
             Context.Inputs.Interaction.Interact.canceled += TryToPlaceBlock;
+            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnBeginPlacementPhase);
             MainManager.Ins.EventManager.AddListener(Constants.Events.OnObjectiveTriggered, ChangeToObjectivePhase);
         }
 

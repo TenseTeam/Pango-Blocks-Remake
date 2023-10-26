@@ -7,7 +7,10 @@
             public const string OnBlockReset = "OnBlockReset";
             public const string OnObjectiveTriggered = "OnObjectiveTriggered";
             public const string OnObjectiveGoalTouched = "OnObjectiveGoalTouched";
+            public const string OnObjectiveGoalSendPosition = "OnObjectiveGoalSendPosition";
 
+
+            public const string OnBeginPlacementPhase = "OnBeginPlacementPhase";
             public const string OnBeginObjectivePhase = "OnBeginObjectivePhase";
             public const string OnBeginGameWonPhase = "OnGamewon";
             public const string OnBeginGameoverPhase = "OnGameover";
@@ -15,6 +18,7 @@
             public const string OnCharacterStartWalking = "OnCharacterStartWalking";
             public const string OnCharacterChangedTile = "OnCharacterMoved";
             public const string OnCharacterReachedDestination = "OnCharacterReachedDestination";
+            public const string OnCharacterSendPosition = "OnCharacterSendPosition";
         }
 
         public static class CharacterAnimations

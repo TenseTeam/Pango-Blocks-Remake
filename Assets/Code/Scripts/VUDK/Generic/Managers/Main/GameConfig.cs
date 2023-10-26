@@ -34,6 +34,7 @@
                 Time.timeScale = _gameScaleTime;
             }
         }
+
         public int GameFPS
         {
             get
@@ -46,6 +47,7 @@
                 Application.targetFrameRate = _gameFPS;
             }
         }
+
         public Vector2 ReferenceResolution => _canvasScaler.referenceResolution;
 
         private void Awake()

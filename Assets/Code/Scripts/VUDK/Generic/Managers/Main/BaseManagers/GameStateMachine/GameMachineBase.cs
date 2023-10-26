@@ -11,6 +11,7 @@
 #if DEBUG
             Debug.Log("GameStateMachine initialized.");
 #endif
+            MainManager.Ins.EventManager.TriggerEvent(EventKeys.GameEvents.OnGameMachineStart);
         }
     }
 }

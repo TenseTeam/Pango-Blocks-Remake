@@ -16,6 +16,7 @@ namespace VUDK.Generic.Utility
         /// <param name="sceneToLoad">Scene to load in a string format.</param>
         public void ChangeScene(string sceneToLoad)
         {
+            MainManager.Ins.EventManager.TriggerEvent(EventKeys.SceneEvents.OnBeforeChangeScene);
             SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Single);
         }
 
@@ -35,6 +36,7 @@ namespace VUDK.Generic.Utility
         /// <param name="sceneToLoad">Name of the scene to load.</param>
         public void WaitChangeScene(string sceneToLoad)
         {
+            MainManager.Ins.EventManager.TriggerEvent(EventKeys.SceneEvents.OnBeforeChangeScene);
             StartCoroutine(ChangeSceneRoutine(sceneToLoad, _waitTime));
         }
 
@@ -44,6 +46,7 @@ namespace VUDK.Generic.Utility
         /// <param name="sceneToLoad">Scene build index of the scene to load.</param>
         public void WaitChangeScene(int sceneIndex)
         {
+            MainManager.Ins.EventManager.TriggerEvent(EventKeys.SceneEvents.OnBeforeChangeScene);
             StartCoroutine(ChangeSceneRoutine(sceneIndex, _waitTime));
         }
 

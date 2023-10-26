@@ -44,6 +44,19 @@
             return IsTileVerticallyAdjacent(positionTileA, positionTileB) || IsTileHorizontallyAdjacent(positionTileA, positionTileB);
         }
 
+        public Vector2Int WorldToGridPosition(Vector3 worldPosition)
+        {
+            Vector3 localPosition = worldPosition - transform.position;
+            int x = Mathf.FloorToInt(localPosition.x);
+            int y = Mathf.FloorToInt(localPosition.y);
+
+            // Assicurati che la posizione rientri all'interno della griglia
+            x = Mathf.Clamp(x, 0, Size.x - 1);
+            y = Mathf.Clamp(y, 0, Size.y - 1);
+
+            return new Vector2Int(x, y);
+        }
+
         /// <summary>
         /// Instantiates a TilePrefab GameObject and attempts to assign the T component to a grid cell.
         /// </summary>
@@ -68,7 +81,6 @@
         {
             Vector3 gridPos = new Vector3(tile.GridPosition.x, tile.GridPosition.y, 0f);
             tile.transform.position = transform.position + gridPos;
-            //tile.transform.SetParent(transform, true);
         }
 
         /// <summary>

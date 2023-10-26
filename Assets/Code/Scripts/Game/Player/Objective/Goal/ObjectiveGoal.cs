@@ -5,6 +5,11 @@ namespace ProjectPBR.Player.Objective.Goal
 
     public class ObjectiveGoal : ObjectiveTrigger
     {
+        private void Start()
+        {
+            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnObjectiveGoalSendPosition, transform.position);
+        }
+
         public override void Trigger()
         {
             base.Trigger();

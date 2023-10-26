@@ -33,8 +33,14 @@
             public const string OnPauseExit = "OnPuaseExit";
         }
 
+        public static class GameEvents
+        {
+            public const string OnGameMachineStart = "OnGameMachineStart";
+        }
+
         public static class SceneEvents
         {
+            public const string OnMainMenuLoaded = "OnMainMenuLoaded";
             public const string OnBeforeChangeScene = "OnBeforeChangeScene";
         }
 
