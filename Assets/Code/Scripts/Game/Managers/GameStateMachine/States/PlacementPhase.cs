@@ -5,8 +5,6 @@
     using UnityEngine.InputSystem;
     using VUDK.Patterns.StateMachine;
     using VUDK.Generic.Managers.Main;
-    using ProjectPBR.Player.PlayerHandler;
-    using ProjectPBR.Level.Grid;
     using ProjectPBR.Level.Blocks;
     using ProjectPBR.Config.Constants;
     using ProjectPBR.Player.Objective;
@@ -22,8 +20,9 @@
 #if DEBUG
             Debug.Log("Placement Phase");
 #endif
-            Context.Inputs.Interaction.Interact.canceled += TryToPlaceBlock;
             MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnBeginPlacementPhase);
+
+            Context.Inputs.Interaction.Interact.canceled += TryToPlaceBlock;
             MainManager.Ins.EventManager.AddListener(Constants.Events.OnObjectiveTriggered, ChangeToObjectivePhase);
         }
 
@@ -39,40 +38,39 @@
 
         public override void Process()
         {
-            if (Context.Inputs.Interaction.Interact.IsInProgress() && !Context.BlocksManager.Dragger.IsDragging) 
+            if (Context.Inputs.Interaction.Interact.IsInProgress())
             {
-                CheckObjectiveTouch(); // Did it this way due to a Unity's bug causing false events triggering
+                if (Context.BlocksManager.Dragger.IsDragging) return;
 
-                if (TryGetBlockFromTouch(out PlaceableBlock block))
-                {
-                    Context.BlocksManager.Dragger.StartDrag(block);
-                }
+                TryToGetBlock();
+                CheckObjectiveTouch();
             }
         }
 
         private void CheckObjectiveTouch()
         {
-            RaycastHit2D hit = Context.GameManager.MobileInputsManager.RaycastFromTouch2D(MainManager.Ins.GameConfig.PlayerLayerMask);
+            RaycastHit2D hit = (MainManager.Ins.GameManager as GameManager).MobileInputsManager.RaycastFromTouch2D(MainManager.Ins.GameConfig.PlayerLayerMask);
 
             if (hit && hit.transform.TryGetComponent(out ObjectiveTrigger objective))
                 objective.Trigger();
+        }
+
+        private void TryToGetBlock()
+        {
+            if (Context.BlocksManager.TryGetBlockFromTouch(out PlaceableBlock block, out Vector2 offset))
+            {
+                Context.BlocksManager.Dragger.StartDrag(block, offset);
+            }
         }
 
         private void TryToPlaceBlock(InputAction.CallbackContext context)
         {
             if (!Context.BlocksManager.Dragger.IsDragging) return;
 
-            if (Context.GameManager.MobileInputsManager.IsTouchOn2D(out PlayerHandLayout layout, Context.GameManager.BlocksManager.PlayerHand.Layout.LayoutMask))
+            if (Context.BlocksManager.TryToPlaceBlockInHand() ||
+                Context.BlocksManager.TryToPlaceBlockOnGrid())
             {
-                layout.SetResetPositionInLayoutBounds(Context.GameManager.BlocksManager.Dragger.CurrentDraggedBlock);
-                ResetBlockInHand(Context.GameManager.BlocksManager.Dragger.CurrentDraggedBlock);
-                return;
-            }
-
-            if (Context.GameManager.MobileInputsManager.IsTouchOn2D(out LevelTile tile, ~Context.GameManager.GameGridManager.BlocksLayerMask) && 
-                Context.GameManager.GameGridManager.AreTilesFreeForBlock(tile, Context.BlocksManager.Dragger.CurrentDraggedBlock))
-            {
-                PlaceBlockOnGrid(Context.BlocksManager.Dragger.CurrentDraggedBlock, tile);
+                ChangeToFallPhase();
                 return;
             }
 
@@ -80,35 +78,18 @@
             ResetBlockInHand(Context.BlocksManager.Dragger.CurrentDraggedBlock);
         }
 
-        private bool TryGetBlockFromTouch(out PlaceableBlock block)
-        {
-            RaycastHit2D hit = Context.GameManager.MobileInputsManager.RaycastFromTouch2D(Context.GameManager.GameGridManager.BlocksLayerMask);
-            if (hit && hit.transform.TryGetComponent(out PlaceableBlock bl) && !bl.IsResettingPosition)
-            {
-                block = Context.BlocksManager.PlayerHand.Layout.GetAndRemoveFromHand(bl);
-                return true;
-            }
-
-            block = null;
-            return false;
-        }
-
         private void ResetBlockInHand(PlaceableBlock block)
         {
-            Context.GameManager.BlocksManager.LerpResetBlockInHand(block);
-            ChangeToFallPhase();
-        }
-
-        private void PlaceBlockOnGrid(PlaceableBlock block, LevelTile tile)
-        {
-            Context.GameManager.BlocksManager.PlaceBlockOnGrid(block, tile);
+            Context.BlocksManager.LerpResetBlockInHand(block);
             ChangeToFallPhase();
         }
 
         private void ChangeToFallPhase()
         {
             Context.BlocksManager.Dragger.StopDrag();
-            ChangeState(GamePhaseKeys.FallPhase);
+
+            if(!Context.Grid.IsGridEmpty()) // No need to go the fall phase if the grid is empty
+                ChangeState(GamePhaseKeys.FallPhase);
         }
 
         private void ChangeToObjectivePhase()

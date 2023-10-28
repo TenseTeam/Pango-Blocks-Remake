@@ -51,7 +51,7 @@
         {
             if (!_isFading) return;
 
-            _fadeDelay.AddDeltaTime();
+            _fadeDelay.Process();
             _gridSprite.color = Color.Lerp(_gridSprite.color, _fadeOutColor,_fadeDelay.ClampNormalizedTime);
             if(_gridSprite.color.ColorEquals(Color.clear))
                 _isFading = false;

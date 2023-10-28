@@ -4,12 +4,15 @@
 
     public class GameContext : GameMachineContext
     {
-        public GameManager GameManager { get; private set; }
-        public BlocksManager BlocksManager => GameManager.BlocksManager;
+        public BlocksManager BlocksManager { get; private set; }
+        public GameGridManager Grid { get; private set; }
+        public GameSceneManager SceneManager { get; private set; }
 
-        public GameContext(InputsMap inputs, GameManager gameManager) : base(inputs)
+        public GameContext(InputsMap inputs, BlocksManager blocksManager, GameGridManager grid, GameSceneManager sceneManager) : base(inputs)
         {
-            GameManager = gameManager;
+            BlocksManager = blocksManager;
+            Grid = grid;
+            SceneManager = sceneManager;
         }
     }
 }

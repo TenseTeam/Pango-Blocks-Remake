@@ -1,6 +1,7 @@
 ﻿namespace VUDK.Generic.Managers.Main
 {
     using UnityEngine;
+    using VUDK.Generic.Managers.Main.BaseManagers;
     using VUDK.Patterns.Pooling;
     using VUDK.Patterns.Singleton;
 
@@ -29,14 +30,17 @@
         [field: SerializeField, Header("Event Manager")]
         public EventManager EventManager { get; private set; }
 
-        [field: SerializeField, Header("Game Config")]
-        public GameConfig GameConfig { get; private set; }
+        [field: SerializeField, Header("Game State Machine")]
+        public GameMachineBase GameStateMachine { get; private set; }
+
+        [field: SerializeField, Header("Scene Manager")]
+        public SceneManagerBase SceneManager { get; private set; }
 
         [field: SerializeField, Header("Audio Manager")]
         public AudioManager AudioManager { get; private set; }
 
-        [field: SerializeField, Header("Game State Machine")]
-        public GameMachineBase GameStateMachine { get; private set; }
+        [field: SerializeField, Header("Game Config")]
+        public GameConfig GameConfig { get; private set; }
 
         [field: SerializeField, Header("Pooling")]
         public PoolsManager PoolsManager { get; private set; }

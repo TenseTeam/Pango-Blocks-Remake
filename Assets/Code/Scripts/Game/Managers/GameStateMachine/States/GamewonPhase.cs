@@ -18,6 +18,7 @@
             Debug.Log("Gamewon Phase");
 #endif
             MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnBeginGameWonPhase);
+            Context.SceneManager.LoadNextScene();
         }
 
         public override void Exit()

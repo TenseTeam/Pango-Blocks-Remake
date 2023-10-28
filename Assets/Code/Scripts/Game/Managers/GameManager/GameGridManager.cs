@@ -5,6 +5,7 @@
     using UnityEngine;
     using ProjectPBR.Level.Grid;
     using ProjectPBR.Level.Blocks;
+    using static Unity.Collections.AllocatorManager;
 
     public class GameGridManager : MonoBehaviour
     {
@@ -18,11 +19,11 @@
 
         public List<PlaceableBlock> BlocksOnGrid { get; private set; } = new List<PlaceableBlock>();
 
-        public void PlaceBlockOnGrid(LevelTile tile, PlaceableBlock blockToPlace)
+        public void Insert(LevelTile tile, PlaceableBlock blockToPlace)
         {
             blockToPlace.EnableCollider();
-            AddBlockToGrid(blockToPlace);
-            tile.InsertBlock(blockToPlace);
+            AddBlockToGridList(blockToPlace);
+            tile.Insert(blockToPlace);
         }
 
         public void RemoveBlockFromGrid(PlaceableBlock block)
@@ -30,16 +31,24 @@
             BlocksOnGrid.Remove(block);
         }
 
-        //public void AdjustBlocksPositionOnGrid() TO DO: Complex code needed for this
-        //{
-        //    foreach (LevelTile tile in Grid.GridTiles)
-        //    {
-        //        if (tile.IsOccupied)
-        //            tile.Block.transform.position = tile.transform.position;
-        //    }
-        //}
+        public LevelTile GetClosestTile(Vector3 position)
+        {
+            Vector2Int tilePos = Grid.WorldToGridPosition(position);
+            return Grid.GridTiles[tilePos.x, tilePos.y];
+        }
 
-        private void AddBlockToGrid(PlaceableBlock block)
+        public void AdjustBlocksPositionOnGrid()
+        {
+            foreach (PlaceableBlock block in BlocksOnGrid)
+            {
+                LevelTile closestTile = GetClosestTile(block.transform.position);
+                //There is no need to check with AreTilesFreeForBlock because the block is already on the grid,
+                //so thanks to its colliders it won't overlap
+                closestTile.Insert(block);
+            }
+        }
+
+        private void AddBlockToGridList(PlaceableBlock block)
         {
             if (!BlocksOnGrid.Contains(block))
                 BlocksOnGrid.Add(block);

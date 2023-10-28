@@ -16,27 +16,28 @@
         private int _currentNodeIndex = 0;
 
         private Path _pathData;
+        private Vector3 _startPosition;
 
         public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
 
+        private void Awake()
+        {
+            _startPosition = transform.position;
+        }
+
         private void Start()
         {
-            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnCharacterSendPosition, transform.position + Vector3.up * .5f);
-        }
-
-        private void OnEnable()
-        {
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginObjectivePhase, StartPath);
-        }
-
-        private void OnDisable()
-        {
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginObjectivePhase, StartPath);
+            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnCharacterSendPosition, transform.position);
         }
 
         private void Update() => RunPath();
 
-        private void StartPath()
+        public void ResetPosition()
+        {
+            transform.position = _startPosition;
+        }
+
+        public void StartPath()
         {
             _pathData = GameManager.PathManager.GetPath();
             _isRunningPath = true;

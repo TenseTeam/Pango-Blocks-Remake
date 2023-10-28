@@ -7,10 +7,10 @@
 
     public class BlockDragger : MonoBehaviour, ICastGameManager<GameManager>
     {
-        [SerializeField]
+        [SerializeField, Header("Drag Settings")]
         private float _followSpeed = 10f;
 
-        //private Vector2 _dragOffset; TO DO: Implement this to drag the block from the point of touch of the block, not from the touch position.
+        private Vector3 _dragOffset;
 
         public PlaceableBlock CurrentDraggedBlock { get; private set; }
         public bool IsDragging => CurrentDraggedBlock != null;
@@ -22,9 +22,10 @@
                 DragBlock();
         }
 
-        public void StartDrag(PlaceableBlock block)
+        public void StartDrag(PlaceableBlock block, Vector2 blockDragOffset)
         {
             CurrentDraggedBlock = block;
+            _dragOffset = blockDragOffset;
             block.transform.rotation = Quaternion.identity;
             block.IncreaseRender();
             block.DisableCollider();
@@ -38,8 +39,9 @@
         
         private void DragBlock()
         {
-            Vector2 targetPosition = GameManager.MobileInputsManager.ScreenTouchPosition;
-            CurrentDraggedBlock.transform.position = Vector2.Lerp(CurrentDraggedBlock.transform.position, targetPosition, Time.deltaTime * _followSpeed);
+            Vector2 fromPosition = CurrentDraggedBlock.transform.position;
+            Vector2 targetPosition = GameManager.MobileInputsManager.ScreenTouchPosition - (Vector2)_dragOffset;
+            CurrentDraggedBlock.transform.position = Vector2.Lerp(fromPosition, targetPosition, Time.deltaTime * _followSpeed);
         }
     }
 }

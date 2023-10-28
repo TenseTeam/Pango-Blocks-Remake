@@ -6,19 +6,16 @@
 
     public class GameManager : GameManagerBase
     {
-        [field: SerializeField, Header(nameof(MobileInputsManager))]
+        [field: SerializeField, Header("Mobile Inputs")]
         public MobileInputsManager MobileInputsManager { get; private set; }
 
-        [field: SerializeField, Header(nameof(GameGridManager))]
+        [field: SerializeField, Header("Game Grid Manager")]
         public GameGridManager GameGridManager { get; private set; }
 
-        [field: SerializeField, Header(nameof(BlocksManager))]
+        [field: SerializeField, Header("Blocks Manager")]
         public BlocksManager BlocksManager { get; private set; }
 
-        [field: SerializeField, Header(nameof(PathManager))]
+        [field: SerializeField, Header("Path Manager")]
         public PathManager PathManager { get; private set; }
-
-        [field: SerializeField, Header(nameof(GameoverManager))]
-        public GameoverManager GameoverManager { get; private set; }
     }
 }

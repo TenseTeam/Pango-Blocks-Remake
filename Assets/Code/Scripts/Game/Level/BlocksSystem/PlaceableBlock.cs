@@ -42,7 +42,7 @@
 
         private void LerpPosition()
         {
-            _resetTimer.AddDeltaTime();
+            _resetTimer.Process();
             transform.position = Vector2.Lerp(_startPosition, _resetPosition, _resetTimer.ClampNormalizedTime);
 
             if (Vector2.Distance(transform.position, _resetPosition) < 0.05f)
@@ -70,8 +70,9 @@
             DisableGravity();
             transform.rotation = Quaternion.identity;
             IsResettingPosition = true;
-            _resetTimer = new TimeDelay(resetDuration);
             _startPosition = transform.position;
+            _resetTimer = new TimeDelay(resetDuration);
+            _resetTimer.Start();
         }
 
         public abstract void EnableCollider();

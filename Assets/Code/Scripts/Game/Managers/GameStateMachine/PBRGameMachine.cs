@@ -4,9 +4,20 @@
     using ProjectPBR.Patterns.Factories;
     using ProjectPBR.Managers.GameStateMachine;
     using ProjectPBR.Managers.GameStateMachine.States;
+    using ProjectPBR.Config.Constants;
 
     public class PBRGameMachine : GameMachineBase
     {
+        private void OnEnable()
+        {
+            MainManager.Ins.EventManager.AddListener(Constants.Events.OnResetLevel, ResetMachine);
+        }
+
+        private void OnDisable()
+        {
+            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnResetLevel, ResetMachine);
+        }
+
         public override void Init()
         {
             base.Init();
@@ -24,6 +35,11 @@
             AddState(GamePhaseKeys.ObjectivePhase, objectivePhase);
             AddState(GamePhaseKeys.FallPhase, fallPhase);
 
+            ChangeState(GamePhaseKeys.PlacementPhase);
+        }
+
+        private void ResetMachine()
+        {
             ChangeState(GamePhaseKeys.PlacementPhase);
         }
     }

@@ -1766,6 +1766,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerBlocks:
   - {fileID: 11400000, guid: a349d8ce56359af429fcffe0731833e5, type: 2}
+  - {fileID: 11400000, guid: 8274b886e51de2242b117675184c5bbe, type: 2}
+  - {fileID: 11400000, guid: 187d16c28eb4c5841b70f2267a011776, type: 2}
   <Layout>k__BackingField: {fileID: 1348621928}
 --- !u!1001 &969684327
 PrefabInstance:
@@ -2585,6 +2587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pf_Pango
       objectReference: {fileID: 0}
+    - target: {fileID: 9213554592578030076, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2642,22 +2648,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectiveGoal
       objectReference: {fileID: 0}
-    - target: {fileID: 3265478262879952895, guid: adeaa1e5a443d4642862ed1fb72da41b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: d0bae83d0f03b49698d3ba91326757a7, type: 3}
-    - target: {fileID: 3852951880316569054, guid: adeaa1e5a443d4642862ed1fb72da41b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743141890720139982, guid: adeaa1e5a443d4642862ed1fb72da41b, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743141890720139982, guid: adeaa1e5a443d4642862ed1fb72da41b, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2678,6 +2668,10 @@ PrefabInstance:
     - target: {fileID: 357102167866738416, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: <MobileInputsActions>k__BackingField._dictionary.Array.data[0].Key
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 791268561268634337, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: pos
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 791268561268634337, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: test
@@ -2727,6 +2721,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2878284362111026567, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498170918530091167, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498170918530091167, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5176471
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498170918530091167, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3498170918530091167, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2751,6 +2761,30 @@ PrefabInstance:
       propertyPath: <MainCamera>k__BackingField
       value: 
       objectReference: {fileID: 236989290}
+    - target: {fileID: 5529405804343258530, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_Size.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529405804343258530, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529405804343258530, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_Offset.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529405804343258530, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_Offset.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529405804343258530, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5762545395386250756, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _waitResetLevel.<Delay>k__BackingField
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6753597487363825322, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1
@@ -2763,6 +2797,10 @@ PrefabInstance:
       propertyPath: <PlayerHand>k__BackingField
       value: 
       objectReference: {fileID: 918524896}
+    - target: {fileID: 7745985251624203005, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _waitTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7754776920317325807, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_Name
       value: MainManager

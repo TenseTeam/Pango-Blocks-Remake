@@ -1,11 +1,11 @@
 namespace ProjectPBR.Player.Character
 {
-    using UnityEngine;
     using ProjectPBR.Config.Constants;
     using ProjectPBR.Level.Blocks;
     using ProjectPBR.Level.PathSystem;
-    using VUDK.Patterns.Pooling;
+    using UnityEngine;
     using VUDK.Generic.Managers.Main;
+    using VUDK.Patterns.Pooling;
 
     [RequireComponent(typeof(Animator))]
     [RequireComponent(typeof(SpriteRenderer))]
@@ -22,8 +22,6 @@ namespace ProjectPBR.Player.Character
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginObjectivePhase, SetRender);
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginObjectivePhase, SetWalkAnimation); // Because it never starts on a climbable or slideable block
             MainManager.Ins.EventManager.AddListener<BlockType>(Constants.Events.OnCharacterChangedTile, SetAnimation);
             MainManager.Ins.EventManager.AddListener<Path>(Constants.Events.OnCharacterReachedDestination, SetEndGameAnimation);
             MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginGameWonPhase, SpawnStarsVFX);
@@ -31,8 +29,6 @@ namespace ProjectPBR.Player.Character
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginObjectivePhase, SetRender);
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginObjectivePhase, SetWalkAnimation);
             MainManager.Ins.EventManager.RemoveListener<BlockType>(Constants.Events.OnCharacterChangedTile, SetAnimation);
             MainManager.Ins.EventManager.RemoveListener<Path>(Constants.Events.OnCharacterReachedDestination, SetEndGameAnimation);
             MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginGameWonPhase, SpawnStarsVFX);
@@ -51,6 +47,21 @@ namespace ProjectPBR.Player.Character
             MainManager.Ins.PoolsManager.Pools[PoolKeys.CloudVFX].Get().transform.position = transform.position;
         }
 
+        public void IncreaseRender()
+        {
+            _sprite.sortingOrder++;
+        }
+
+        public void SetStartAnimation()
+        {
+            SetWalkAnimation();
+        }
+
+        public void ResetGraphics()
+        {
+            SetIdleAnimation();
+        }
+
         private void SpawnStarsVFX()
         {
             MainManager.Ins.PoolsManager.Pools[PoolKeys.StarsVFX].Get().transform.position = transform.position;
@@ -63,18 +74,21 @@ namespace ProjectPBR.Player.Character
                 case BlockType.Flat:
                     SetWalkAnimation();
                     break;
+
                 case BlockType.Climbable:
                     SetClimbAnimation();
                     break;
+
                 case BlockType.Slideable:
                     SetSlideAnimation();
                     break;
             }
         }
 
-        private void SetRender()
+        private void SetIdleAnimation()
         {
-            _sprite.sortingOrder++;
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            _anim.SetInteger(Constants.CharacterAnimations.State, Constants.CharacterAnimations.Idle);
         }
 
         private void SetWalkAnimation()
@@ -97,9 +111,23 @@ namespace ProjectPBR.Player.Character
 
         private void SetEndGameAnimation(Path pathData)
         {
-            _anim.SetBool(Constants.CharacterAnimations.GamewonAnimation, pathData.HasReached);
-            _anim.SetBool(Constants.CharacterAnimations.GameoverHit, pathData.IsGoingToCollide);
-            _anim.SetBool(Constants.CharacterAnimations.GameoverFall, pathData.IsGoingToFall);
+            if (pathData.HasReached)
+            {
+                _anim.SetTrigger(Constants.CharacterAnimations.GamewonAnimation);
+                return;
+            }
+
+            if (pathData.IsGoingToCollide)
+            {
+                _anim.SetTrigger(Constants.CharacterAnimations.GameoverCollide);
+                return;
+            }
+
+            if(pathData.IsGoingToFall)
+            {
+                _anim.SetTrigger(Constants.CharacterAnimations.GameoverFall);
+                return;
+            }
         }
     }
 }

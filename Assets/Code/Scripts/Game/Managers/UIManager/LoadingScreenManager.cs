@@ -1,17 +1,14 @@
 ﻿namespace ProjectPBR.Managers
 {
     using UnityEngine;
-    using VUDK.Generic.Managers.Main;
-    using ProjectPBR.Config.Constants;
     using UnityEngine.UI;
-    using System.Collections;
+    using VUDK.Generic.Managers.Main;
+    using VUDK.Generic.Serializable;
+    using ProjectPBR.Config.Constants;
 
     [RequireComponent(typeof(Animator))]
     public class LoadingScreenManager : MonoBehaviour
     {
-        [SerializeField, Min(0f), Header("Loading Time")]
-        private float _waitAfterGameIsEnded;
-
         private Animator _anim;
         private Image _image;
 
@@ -22,30 +19,23 @@
             _image.enabled = true;
         }
 
-        private void Start()
-        {
-            RandomOpen();
-        }
+        private void Start() => RandomOpen();
 
         private void OnEnable()
         {
             MainManager.Ins.EventManager.AddListener(EventKeys.SceneEvents.OnBeforeChangeScene, RandomClose);
-            //MainManager.Ins.EventManager.AddListener(EventKeys.GameEvents.OnGameMachineStart, RandomOpen);
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginGameWonPhase, WaitRandomClose);
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginGameoverPhase, WaitRandomClose);
+            MainManager.Ins.EventManager.AddListener(Constants.Events.OnResetLevel, ResetScreen);
         }
 
         private void OnDisable()
         {
             MainManager.Ins.EventManager.RemoveListener(EventKeys.SceneEvents.OnBeforeChangeScene, RandomClose);
-            //MainManager.Ins.EventManager.RemoveListener(EventKeys.GameEvents.OnGameMachineStart, RandomOpen);
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginGameWonPhase, WaitRandomClose);
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginGameoverPhase, WaitRandomClose);
+            MainManager.Ins.EventManager.AddListener(Constants.Events.OnResetLevel, ResetScreen);
         }
 
-        private void WaitRandomClose()
+        private void ResetScreen()
         {
-            Invoke(nameof(RandomClose), _waitAfterGameIsEnded);
+            _anim.SetTrigger(Constants.UIAnimations.ResetScreen);
         }
 
         private void RandomOpen()

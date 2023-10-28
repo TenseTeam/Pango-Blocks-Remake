@@ -3,6 +3,7 @@
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
     using ProjectPBR.Config.Constants;
+    using ProjectPBR.Level.Blocks;
 
     public class ObjectiveTrigger : MonoBehaviour
     {

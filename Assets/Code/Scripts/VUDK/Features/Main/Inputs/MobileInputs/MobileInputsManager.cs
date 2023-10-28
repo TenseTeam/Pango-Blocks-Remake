@@ -20,7 +20,7 @@
         public Vector2 RawTouchPosition => InputsManager.Inputs.Touches.TouchPosition0.ReadValue<Vector2>();
 
         /// <summary>
-        /// Raycast2Ds from the touch position to the world.
+        /// Raycast2D from the finger touch position to the world.
         /// </summary>
         /// <param name="layerMask">Layers to ingnore.</param>
         /// <returns><see cref="RaycastHit2D"/> of the hit.</returns>

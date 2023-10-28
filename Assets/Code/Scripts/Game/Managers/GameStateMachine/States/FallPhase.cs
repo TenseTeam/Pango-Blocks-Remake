@@ -1,8 +1,6 @@
 ﻿namespace ProjectPBR.Managers.GameStateMachine.States
 {
     using System;
-    using System.Collections.Generic;
-    using UnityEngine;
     using VUDK.Patterns.StateMachine;
     using VUDK.Generic.Serializable;
     using ProjectPBR.Level.Blocks;
@@ -18,18 +16,15 @@
 
         public override void Enter()
         {
-            if(Context.GameManager.GameGridManager.IsGridEmpty())
-            {
-                ChangeState(GamePhaseKeys.PlacementPhase);
-                return;
-            }
-
-            EnableGravity();
+            _delayForCheck.Start();
+            Context.BlocksManager.EnableBlocksGravity();
         }
 
         public override void Exit()
         {
-            DisableGravity();
+            _delayForCheck.Reset();
+            CheckBlocks();
+            Context.BlocksManager.DisableBlocksGravity();
         }
 
         public override void FixedProcess()
@@ -38,21 +33,18 @@
 
         public override void Process()
         {
-            _delayForCheck.AddDeltaTime();
+            _delayForCheck.Process();
 
-            if (_delayForCheck.IsReady())
+            if (_delayForCheck.IsReady)
             {
                 if (AreAllBlocksStopped())
-                {
-                    ReturnInHandInvalidBlocks();
                     ChangeState(GamePhaseKeys.PlacementPhase);
-                }
             }
         }
 
         private bool AreAllBlocksStopped()
         {
-            foreach (PlaceableBlock block in Context.GameManager.GameGridManager.BlocksOnGrid)
+            foreach (PlaceableBlock block in Context.Grid.BlocksOnGrid)
             {
                 if (block.IsMoving)
                     return false;
@@ -60,25 +52,10 @@
             return true;
         }
 
-        private void ReturnInHandInvalidBlocks()
+        private void CheckBlocks()
         {
-            List<PlaceableBlock> blocks = Context.GameManager.GameGridManager.BlocksOnGrid;
-            List<PlaceableBlock> invalidBlocks = blocks.FindAll(block => block.IsInvalid() || block.IsTilted());
-
-            foreach (PlaceableBlock block in invalidBlocks)
-                Context.BlocksManager.LerpResetBlockInHand(block);
-        }
-
-        private void EnableGravity()
-        {
-            foreach (PlaceableBlock block in Context.GameManager.GameGridManager.BlocksOnGrid)
-                block.EnableGravity();
-        }
-
-        private void DisableGravity()
-        {
-            foreach (PlaceableBlock block in Context.GameManager.GameGridManager.BlocksOnGrid)
-                block.DisableGravity();
+            Context.BlocksManager.ReturnInHandInvalidBlocks();
+            Context.Grid.AdjustBlocksPositionOnGrid();
         }
     }
 }

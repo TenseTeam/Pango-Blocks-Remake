@@ -1,38 +1,54 @@
 ﻿namespace VUDK.Generic.Serializable
 {
+    using System;
     using UnityEngine;
 
-    //[System.Serializable]
+    [System.Serializable]
     public class TimeDelay
     {
+        [field: SerializeField, Min(0f)]
         public float Delay { get; private set; }
         public float CurrentTime { get; private set; }
 
         public float ClampTime => Mathf.Clamp(CurrentTime, 0, Delay);
         public float ClampNormalizedTime => Mathf.Clamp01(CurrentTime / Delay);
+        public bool IsReady => CurrentTime >= Delay;
+        public bool IsDelaying => !IsReady;
 
-        public TimeDelay(float delay)
+        public event Action OnCompleted;
+
+        private bool _isStarted = false;
+
+        public TimeDelay()
+        {
+            _isStarted = false;
+        }
+
+        public TimeDelay(float delay, bool startOnInitialization = false)
         {
             Delay = delay;
+            _isStarted = startOnInitialization;
         }
 
-        public void AddDeltaTime()
+        public void Start()
         {
-            CurrentTime += Time.deltaTime;
+            _isStarted = true;
         }
 
-        public bool IsReady()
+        public void Process()
         {
-            if (CurrentTime >= Delay)
+            if (!_isStarted) return;
+            if (IsReady) 
             {
-                CurrentTime = 0;
-                return true;
+                OnCompleted?.Invoke();
+                return;
             }
-            return false;
+            CurrentTime += Time.deltaTime;
         }
 
         public void Reset()
         {
+            _isStarted = false;
             CurrentTime = 0;
         }
     }

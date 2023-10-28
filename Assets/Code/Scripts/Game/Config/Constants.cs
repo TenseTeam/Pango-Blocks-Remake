@@ -15,6 +15,8 @@
             public const string OnBeginGameWonPhase = "OnGamewon";
             public const string OnBeginGameoverPhase = "OnGameover";
 
+            public const string OnResetLevel = "OnResetLevel";
+
             public const string OnCharacterStartWalking = "OnCharacterStartWalking";
             public const string OnCharacterChangedTile = "OnCharacterMoved";
             public const string OnCharacterReachedDestination = "OnCharacterReachedDestination";
@@ -30,7 +32,7 @@
             public const string State = "State";
             public const string GamewonAnimation = "Gamewon";
             public const string GameoverFall = "GameoverFall";
-            public const string GameoverHit = "GameoverHit";
+            public const string GameoverCollide = "GameoverCollide";
         }
 
         public static class GridAnimations
@@ -52,6 +54,7 @@
             public const int MaxAnimations = 3;
             public const string OpenScreen = "Open";
             public const string CloseScreen = "Close";
+            public const string ResetScreen = "Reset";
             public const string ScreenState = "Screen";
         }
     }

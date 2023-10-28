@@ -9,8 +9,8 @@
     {
         public static GameContext Create()
         {
-            GameManager gm = (MainManager.Ins.GameManager as GameManager);
-            return new GameContext( InputsManager.Inputs, gm);
+            GameManager gm = MainManager.Ins.GameManager as GameManager;
+            return new GameContext(InputsManager.Inputs, gm.BlocksManager, gm.GameGridManager, MainManager.Ins.SceneManager as GameSceneManager);
         }
     }
 }

@@ -1,14 +1,13 @@
 namespace VUDK.UI.Menu
 {
-    using ProjectPBR.Managers;
     using UnityEngine;
+    using VUDK.Features.Main.SceneManagement;
     using VUDK.Generic.Managers.Main;
-    using VUDK.Generic.Utility;
 
-    [RequireComponent(typeof(SwitchScene))]
+    [RequireComponent(typeof(SceneSwitcher))]
     public class UIMenuActions : MonoBehaviour
     {
-        private SwitchScene _sceneSwitcher;
+        private SceneSwitcher _sceneSwitcher;
 
         private void Awake()
         {
