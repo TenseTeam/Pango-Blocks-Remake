@@ -49,7 +49,6 @@
 
         private void ResetGraphicsGrid()
         {
-            Debug.Log("Color reset");
             _gridSprite.color = _startColor;
         }
 
