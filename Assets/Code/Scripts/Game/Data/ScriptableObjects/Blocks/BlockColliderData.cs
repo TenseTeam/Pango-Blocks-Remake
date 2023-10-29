@@ -1,4 +1,4 @@
-﻿namespace ProjectPBR.ScriptableObjects
+﻿namespace ProjectPBR.Data.ScriptableObjects.Blocks
 {
     using UnityEngine;
 

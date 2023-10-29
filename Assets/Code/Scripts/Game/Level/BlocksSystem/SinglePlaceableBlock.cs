@@ -1,6 +1,6 @@
 ﻿namespace ProjectPBR.Level.Blocks
 {
-    using ProjectPBR.ScriptableObjects;
+    using ProjectPBR.Data.ScriptableObjects.Blocks;
     using UnityEngine;
 
     [RequireComponent(typeof(PolygonCollider2D))]

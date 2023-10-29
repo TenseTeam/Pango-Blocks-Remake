@@ -1,6 +1,6 @@
 ﻿namespace ProjectPBR.Level.Blocks.Interfaces
 {
-    using ProjectPBR.ScriptableObjects;
+    using ProjectPBR.Data.ScriptableObjects.Blocks;
 
     public interface IPlaceableBlock
     {

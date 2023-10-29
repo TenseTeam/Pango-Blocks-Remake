@@ -5,8 +5,8 @@
     using VUDK.Generic.Managers.Main.Interfaces;
     using VUDK.Generic.Serializable;
     using ProjectPBR.Managers.GameManagers;
-    using ProjectPBR.ScriptableObjects;
     using ProjectPBR.Level.Blocks.Interfaces;
+    using ProjectPBR.Data.ScriptableObjects.Blocks;
 
     public abstract class PlaceableBlock : PooledBlock, ICastGameManager<GameManager>, IPlaceableBlock
     {

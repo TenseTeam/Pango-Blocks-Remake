@@ -3,8 +3,8 @@
     using System.Collections.Generic;
     using UnityEngine;
     using ProjectPBR.Patterns.Factories;
-    using ProjectPBR.ScriptableObjects;
     using ProjectPBR.Level.Blocks.ComplexBlock;
+    using ProjectPBR.Data.ScriptableObjects.Blocks;
 
     public class ComplexPlaceableBlock : PlaceableBlock
     {

@@ -2,7 +2,7 @@
 {
     using UnityEngine;
     using System.Collections.Generic;
-    using ProjectPBR.ScriptableObjects;
+    using ProjectPBR.Data.ScriptableObjects.Blocks;
     using ProjectPBR.Patterns.Factories;
     using ProjectPBR.Level.Blocks;
 

@@ -4,7 +4,7 @@
     using VUDK.Generic.Managers.Main;
     using VUDK.Patterns.Pooling;
     using ProjectPBR.Level.Blocks;
-    using ProjectPBR.ScriptableObjects;
+    using ProjectPBR.Data.ScriptableObjects.Blocks;
 
     public static class BlocksFactory
     {

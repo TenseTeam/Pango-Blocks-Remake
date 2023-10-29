@@ -1,4 +1,4 @@
-namespace VUDK.DataSave.MenuPreferences
+namespace VUDK.UI.Menu.MenuPreferences
 {
     using UnityEngine;
 
