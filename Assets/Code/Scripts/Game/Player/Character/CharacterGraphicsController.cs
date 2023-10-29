@@ -4,6 +4,7 @@ namespace ProjectPBR.Player.Character
     using ProjectPBR.Level.Blocks;
     using ProjectPBR.Level.PathSystem;
     using UnityEngine;
+    using VUDK.Extensions.CustomAttributes;
     using VUDK.Generic.Managers.Main;
     using VUDK.Patterns.Pooling;
 
@@ -42,7 +43,8 @@ namespace ProjectPBR.Player.Character
         /// <summary>
         /// Spawns a cloud VFX at the character's position.
         /// </summary>
-        public void SpawnCloudVFX() // Linked to the animation
+        [CalledByAnimationEvent]
+        public void SpawnCloudVFX() 
         {
             MainManager.Ins.PoolsManager.Pools[PoolKeys.CloudVFX].Get().transform.position = transform.position;
         }

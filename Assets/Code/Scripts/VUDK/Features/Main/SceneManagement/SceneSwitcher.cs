@@ -8,15 +8,15 @@ namespace VUDK.Features.Main.SceneManagement
     public class SceneSwitcher : MonoBehaviour
     {
         [field: SerializeField]
-        public TimeDelay WaitDelay { get; private set; }
+        protected TimeDelay WaitLoadingSceneDelay { get; private set; }
 
         private int _sceneToWaitLoad;
 
-        protected virtual void Update() => WaitDelay.Process();
+        protected virtual void Update() => WaitLoadingSceneDelay.Process();
 
-        protected virtual void OnEnable() => WaitDelay.OnCompleted += ChangeToWaitScene;
+        protected virtual void OnEnable() => WaitLoadingSceneDelay.OnCompleted += ChangeToWaitScene;
 
-        protected virtual void OnDisable() => WaitDelay.OnCompleted -= ChangeToWaitScene;
+        protected virtual void OnDisable() => WaitLoadingSceneDelay.OnCompleted -= ChangeToWaitScene;
 
         /// <summary>
         /// Switches to a scene.
@@ -33,8 +33,7 @@ namespace VUDK.Features.Main.SceneManagement
         /// <param name="sceneToLoad">Scene build index of the scene to load.</param>
         public virtual void WaitChangeScene(int sceneIndex)
         {
-            WaitDelay.Reset();
-            WaitDelay.Start();
+            WaitLoadingSceneDelay.Start();
             MainManager.Ins.EventManager.TriggerEvent(EventKeys.SceneEvents.OnBeforeChangeScene);
             _sceneToWaitLoad = sceneIndex;
         }

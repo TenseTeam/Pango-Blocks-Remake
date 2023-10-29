@@ -3,9 +3,9 @@
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Managers.Main.Interfaces;
-    using ProjectPBR.Managers;
     using ProjectPBR.Config.Constants;
     using ProjectPBR.Level.PathSystem;
+    using ProjectPBR.Managers.GameManagers;
 
     public class CharacterPathRunner : MonoBehaviour, ICastGameManager<GameManager>
     {
@@ -46,10 +46,10 @@
         private void RunPath()
         {
             if (!_isRunningPath) return;
+
             if (_currentNodeIndex >= _pathData.Nodes.Count)
             {
-                MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnCharacterReachedDestination, _pathData);
-                _isRunningPath = false;
+                ReachDestination();
                 return;
             }
 
@@ -62,6 +62,13 @@
                 transform.position = _pathData.Nodes[_currentNodeIndex].Position;
                 _currentNodeIndex++;
             }
+        }
+
+        private void ReachDestination()
+        {
+            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnCharacterReachedDestination, _pathData);
+            _isRunningPath = false;
+            _currentNodeIndex = 0;
         }
     }
 }

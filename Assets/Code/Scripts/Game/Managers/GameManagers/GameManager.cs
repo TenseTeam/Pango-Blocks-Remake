@@ -1,8 +1,9 @@
-﻿namespace ProjectPBR.Managers
+﻿namespace ProjectPBR.Managers.GameManagers
 {
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
     using VUDK.Features.Main.InputSystem.MobileInputs;
+    using ProjectPBR.Managers.GameManagers.BlocksManagement;
 
     public class GameManager : GameManagerBase
     {

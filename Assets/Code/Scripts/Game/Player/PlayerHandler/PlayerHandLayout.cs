@@ -5,6 +5,7 @@
     using VUDK.Extensions.Transform;
     using VUDK.Generic.Managers.Main;
     using ProjectPBR.Config.Constants;
+    using VUDK.Generic.Serializable;
 
     [RequireComponent(typeof(Collider2D))]
     public class PlayerHandLayout : MonoBehaviour
@@ -79,10 +80,10 @@
             _usedLayoutWidth = 0;
         }
 
-        public void LerpPutItBackInHand(PlaceableBlock block, float resetDuration)
+        public void LerpPutItBackInHand(PlaceableBlock block, float resetTime)
         {
             block.transform.SetLossyScale(_layoutblockSize);
-            block.StartLerpResettingPosition(resetDuration);
+            block.StartLerpResettingPosition(resetTime);
         }
 
         private bool IsBlockInsideBounds(PlaceableBlock block)

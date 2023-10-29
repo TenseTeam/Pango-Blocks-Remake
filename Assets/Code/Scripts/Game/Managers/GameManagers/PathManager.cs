@@ -1,14 +1,11 @@
-﻿namespace ProjectPBR.Managers
+﻿namespace ProjectPBR.Managers.GameManagers
 {
     using UnityEngine;
     using VUDK.Generic.Managers.Main.Interfaces;
     using VUDK.Generic.Managers.Main;
     using ProjectPBR.Level.Grid;
     using ProjectPBR.Level.PathSystem;
-    using ProjectPBR.Player.Character;
-    using ProjectPBR.Player.Objective.Goal;
     using ProjectPBR.Config.Constants;
-    using System;
 
     public class PathManager : MonoBehaviour, ICastGameManager<GameManager>
     {

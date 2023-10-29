@@ -16,7 +16,7 @@
         public override void Enter()
         {
 #if DEBUG
-            Debug.Log("Objective Phase");
+            Debug.Log($"<color=yellow>Enter {StateKey} state</color>");
 #endif
             MainManager.Ins.EventManager.AddListener<Path>(Constants.Events.OnCharacterReachedDestination, CheckWin);
             MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnBeginObjectivePhase);

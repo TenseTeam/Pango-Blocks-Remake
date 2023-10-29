@@ -1,11 +1,10 @@
-﻿namespace ProjectPBR.Managers
+﻿namespace ProjectPBR.Managers.GameManagers
 {
     using System;
     using System.Collections.Generic;
     using UnityEngine;
     using ProjectPBR.Level.Grid;
     using ProjectPBR.Level.Blocks;
-    using static Unity.Collections.AllocatorManager;
 
     public class GameGridManager : MonoBehaviour
     {

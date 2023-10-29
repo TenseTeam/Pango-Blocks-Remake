@@ -2,8 +2,11 @@
 {
     using UnityEngine;
     using VUDK.Generic.Structures.Grid;    
+    using VUDK.Generic.Managers.Main;
     using ProjectPBR.Level.Blocks;
     using ProjectPBR.Player.Objective.Goal;
+    using ProjectPBR.Managers.GameStateMachine.States;
+    using ProjectPBR.Player.Objective.Interfaces;
 
     public class LevelTile : GridTileBase
     {
@@ -12,6 +15,8 @@
         public Vector2 LeftVertex => new Vector2(transform.position.x - 0.5f, transform.position.y - 0.5f);
         public bool IsOccupiedByBlock => Block;
         public bool IsOccupied => IsOccupiedByBlock || IsOccupiedByObjective;
+
+        public bool IsPlacementPhase => MainManager.Ins.GameStateMachine.IsState(GamePhaseKeys.PlacementPhase);
 
         public void Insert(PlaceableBlock block)
         {
@@ -22,23 +27,26 @@
 
         private void OnTriggerStay2D(Collider2D collision)
         {
+            if (!IsPlacementPhase) return;
             if (IsOccupiedByBlock) return;
 
             if (collision.TryGetComponent(out BlockBase block))
             {
                 if (block is ComplexPlaceableBlock) return;
+                if (block is PlaceableBlock && (block as PlaceableBlock).IsResettingPosition) return;
 
                 Block = block;
                 return;
             }
 
-            if (collision.TryGetComponent(out ObjectiveGoal goal))
+            if (collision.TryGetComponent(out IGoal _))
                 IsOccupiedByObjective = true;
         }
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            // No needs to check for static blocks because they cannot be moved
+            // Checks the Physics2D Matrix to see with which layer the collision is happening
+            if (!IsPlacementPhase) return;
             Block = null;
             IsOccupiedByObjective = false;
         }

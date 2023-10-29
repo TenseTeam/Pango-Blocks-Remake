@@ -1,4 +1,4 @@
-﻿namespace ProjectPBR.Managers
+﻿namespace ProjectPBR.Managers.GameManagers.BlocksManagement
 {
     using System.Collections.Generic;
     using UnityEngine;
@@ -7,9 +7,13 @@
     using ProjectPBR.Player.PlayerHandler;
     using VUDK.Generic.Managers.Main.Interfaces;
     using VUDK.Generic.Managers.Main;
+    using VUDK.Generic.Serializable;
 
     public class BlocksManager : MonoBehaviour, ICastGameManager<GameManager>
     {
+        [SerializeField, Min(0f), Header("Reset Time")]
+        private float _resetBlockTime;
+
         [field: SerializeField, Header("Blocks Dragger")]
         public BlockDragger Dragger { get; private set; }
 
@@ -18,9 +22,6 @@
 
         public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
         private GameGridManager _grid => GameManager.GameGridManager;
-
-        [SerializeField, Min(0f)]
-        private float _resetBlockTime;
 
         private void OnValidate()
         {

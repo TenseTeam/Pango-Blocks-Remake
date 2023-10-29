@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8743141890720139982}
   - component: {fileID: 3069069522658238078}
   - component: {fileID: 71159169722733640}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: pf_ObjectiveBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 3482159866607051099}
   - component: {fileID: 3519186994141822078}
   - component: {fileID: 2112386897937794706}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}

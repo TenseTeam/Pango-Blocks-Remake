@@ -15,13 +15,15 @@
         public override void Enter()
         {
 #if DEBUG
-            Debug.Log("Gameover Phase");
+            Debug.Log($"<color=red>Enter {StateKey} state</color>");
 #endif
             MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnBeginGameoverPhase);
+            MainManager.Ins.EventManager.AddListener(Constants.Events.OnResetLevel, ChangeToPlacement);
         }
 
         public override void Exit()
         {
+            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnResetLevel, ChangeToPlacement);
         }
 
         public override void FixedProcess()
@@ -30,6 +32,11 @@
 
         public override void Process()
         {
+        }
+
+        private void ChangeToPlacement()
+        {
+            ChangeState(GamePhaseKeys.PlacementPhase);
         }
     }
 }

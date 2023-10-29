@@ -9,47 +9,60 @@
         [field: SerializeField, Min(0f)]
         public float Delay { get; private set; }
         public float CurrentTime { get; private set; }
+        public bool IsReady { get; private set; }
 
         public float ClampTime => Mathf.Clamp(CurrentTime, 0, Delay);
         public float ClampNormalizedTime => Mathf.Clamp01(CurrentTime / Delay);
-        public bool IsReady => CurrentTime >= Delay;
-        public bool IsDelaying => !IsReady;
+
+        private bool _isProcessing;
 
         public event Action OnCompleted;
 
-        private bool _isStarted = false;
-
         public TimeDelay()
         {
-            _isStarted = false;
+            _isProcessing = false;
         }
 
-        public TimeDelay(float delay, bool startOnInitialization = false)
+        public TimeDelay(float delay)
         {
             Delay = delay;
-            _isStarted = startOnInitialization;
         }
 
         public void Start()
         {
-            _isStarted = true;
+            Reset();
+            _isProcessing = true;
         }
 
-        public void Process()
-        {
-            if (!_isStarted) return;
-            if (IsReady) 
-            {
-                OnCompleted?.Invoke();
-                return;
-            }
-            CurrentTime += Time.deltaTime;
-        }
-
+        public void Stop() => _isProcessing = false;
+        
+        public void Resume() => _isProcessing = true;
+        
         public void Reset()
         {
-            _isStarted = false;
+            IsReady = false;
+            _isProcessing = false;
             CurrentTime = 0;
+        }
+
+        public void Process() => Process(Time.deltaTime);
+
+        public void Process(float time)
+        {
+            if (!_isProcessing) return;
+            if (CurrentTime >= Delay) 
+            {
+                Complete();
+                return;
+            }
+            CurrentTime += time;
+        }
+
+        private void Complete()
+        {
+            IsReady = true;
+            _isProcessing = false;
+            OnCompleted?.Invoke();
         }
     }
 }

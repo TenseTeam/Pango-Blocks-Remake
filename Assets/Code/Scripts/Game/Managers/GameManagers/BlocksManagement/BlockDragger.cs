@@ -1,4 +1,4 @@
-﻿namespace ProjectPBR.Managers
+﻿namespace ProjectPBR.Managers.GameManagers.BlocksManagement
 {
     using UnityEngine;
     using VUDK.Generic.Managers.Main;

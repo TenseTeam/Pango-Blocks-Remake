@@ -1,4 +1,4 @@
-﻿namespace ProjectPBR.Managers
+﻿namespace ProjectPBR.Managers.GameManagers
 {
     using System.Collections;
     using UnityEngine.SceneManagement;

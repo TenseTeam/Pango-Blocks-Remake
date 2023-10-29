@@ -8,6 +8,7 @@
     using ProjectPBR.Level.Blocks;
     using ProjectPBR.Config.Constants;
     using ProjectPBR.Player.Objective;
+    using ProjectPBR.Managers.GameManagers;
 
     public class PlacementPhase : State<GameContext>
     {
@@ -18,7 +19,7 @@
         public override void Enter()
         {
 #if DEBUG
-            Debug.Log("Placement Phase");
+            Debug.Log($"<color=yellow>Enter {StateKey} state</color>");
 #endif
             MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnBeginPlacementPhase);
 

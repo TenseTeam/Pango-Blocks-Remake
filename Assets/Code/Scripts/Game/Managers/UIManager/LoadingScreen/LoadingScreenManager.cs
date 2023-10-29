@@ -1,9 +1,9 @@
-﻿namespace ProjectPBR.Managers
+﻿namespace ProjectPBR.Managers.UIManager.LoadingScreen
 {
     using UnityEngine;
     using UnityEngine.UI;
     using VUDK.Generic.Managers.Main;
-    using VUDK.Generic.Serializable;
+    using VUDK.Extensions.CustomAttributes;
     using ProjectPBR.Config.Constants;
 
     [RequireComponent(typeof(Animator))]
@@ -16,7 +16,7 @@
         {
             TryGetComponent(out _anim);
             TryGetComponent(out _image);
-            _image.enabled = true;
+            EnableScreen();
         }
 
         private void Start() => RandomOpen();
@@ -24,16 +24,32 @@
         private void OnEnable()
         {
             MainManager.Ins.EventManager.AddListener(EventKeys.SceneEvents.OnBeforeChangeScene, RandomClose);
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnResetLevel, ResetScreen);
+            MainManager.Ins.EventManager.AddListener(Constants.Events.OnStartGameoverLoadingScreen, ResetLevelLoadingScreen);
         }
 
         private void OnDisable()
         {
             MainManager.Ins.EventManager.RemoveListener(EventKeys.SceneEvents.OnBeforeChangeScene, RandomClose);
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnResetLevel, ResetScreen);
+            MainManager.Ins.EventManager.AddListener(Constants.Events.OnStartGameoverLoadingScreen, ResetLevelLoadingScreen);
         }
 
-        private void ResetScreen()
+        [CalledByAnimationEvent]
+        public void LoadingScreenCovered()
+        {
+            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnGameoverLoadingScreenCovered);
+        }
+
+        public void EnableScreen()
+        {
+            _image.enabled = true;
+        }
+
+        public void DisableScreen()
+        {
+            _image.enabled = false;
+        }
+
+        private void ResetLevelLoadingScreen()
         {
             _anim.SetTrigger(Constants.UIAnimations.ResetScreen);
         }

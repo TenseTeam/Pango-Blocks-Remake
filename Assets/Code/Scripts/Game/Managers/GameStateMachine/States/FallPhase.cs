@@ -1,6 +1,7 @@
 ﻿namespace ProjectPBR.Managers.GameStateMachine.States
 {
     using System;
+    using UnityEngine;
     using VUDK.Patterns.StateMachine;
     using VUDK.Generic.Serializable;
     using ProjectPBR.Level.Blocks;
@@ -16,13 +17,15 @@
 
         public override void Enter()
         {
+#if DEBUG
+            Debug.Log($"<color=yellow>Enter {StateKey} state</color>");
+#endif
             _delayForCheck.Start();
             Context.BlocksManager.EnableBlocksGravity();
         }
 
         public override void Exit()
         {
-            _delayForCheck.Reset();
             CheckBlocks();
             Context.BlocksManager.DisableBlocksGravity();
         }

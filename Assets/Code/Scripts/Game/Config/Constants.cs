@@ -15,6 +15,8 @@
             public const string OnBeginGameWonPhase = "OnGamewon";
             public const string OnBeginGameoverPhase = "OnGameover";
 
+            public const string OnStartGameoverLoadingScreen = "OnStartGameoverLoadingScreen";
+            public const string OnGameoverLoadingScreenCovered = "OnGameoverLoadingScreenCovered";
             public const string OnResetLevel = "OnResetLevel";
 
             public const string OnCharacterStartWalking = "OnCharacterStartWalking";

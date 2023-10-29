@@ -1542,6 +1542,17 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &785692225 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9168239045055623262, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+  m_PrefabInstance: {fileID: 8996969572099385717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c586fb10551632349be95d53913d332f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &805191576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2648,6 +2659,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectiveGoal
       objectReference: {fileID: 0}
+    - target: {fileID: 5256789430173898699, guid: adeaa1e5a443d4642862ed1fb72da41b, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2717,6 +2732,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2545238035592835803, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _fadeDelay.<Delay>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2878284362111026567, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.5
@@ -2761,6 +2780,10 @@ PrefabInstance:
       propertyPath: <MainCamera>k__BackingField
       value: 
       objectReference: {fileID: 236989290}
+    - target: {fileID: 5403176040699830600, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: <PlayerLayerMask>k__BackingField.m_Bits
+      value: 2056
+      objectReference: {fileID: 0}
     - target: {fileID: 5529405804343258530, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_Size.x
       value: 8
@@ -2785,6 +2808,14 @@ PrefabInstance:
       propertyPath: _waitResetLevel.<Delay>k__BackingField
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5762545395386250756, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: <WaitLoadingSceneDelay>k__BackingField._resetOnCompleted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5762545395386250756, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: <WaitLoadingSceneDelay>k__BackingField.<Delay>k__BackingField
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6753597487363825322, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1
@@ -2794,9 +2825,25 @@ PrefabInstance:
       value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 7135350831645924964, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _resetBlockTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135350831645924964, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: <PlayerHand>k__BackingField
       value: 
       objectReference: {fileID: 918524896}
+    - target: {fileID: 7135350831645924964, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _resetBlockTime._resetOnCompleted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135350831645924964, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _resetBlockTime.<Delay>k__BackingField
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7376889942592224760, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: <LoadingScreenManager>k__BackingField
+      value: 
+      objectReference: {fileID: 785692225}
     - target: {fileID: 7745985251624203005, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: _waitTime
       value: 0

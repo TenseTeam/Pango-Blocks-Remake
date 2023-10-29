@@ -1,6 +1,9 @@
 ﻿namespace ProjectPBR.Managers.GameStateMachine
 {
     using VUDK.Generic.MainManagers.Main.GameStateMachine.Contexts;
+    using ProjectPBR.Managers.GameManagers;
+    using ProjectPBR.Managers.GameManagers.BlocksManagement;
+    using ProjectPBR.Managers.SceneManager;
 
     public class GameContext : GameMachineContext
     {

@@ -1,13 +1,12 @@
 ﻿namespace ProjectPBR.Level.Blocks
 {
-    using ProjectPBR.Level.Blocks.Interfaces;
-    using ProjectPBR.Managers;
-    using ProjectPBR.ScriptableObjects;
-    using System;
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Managers.Main.Interfaces;
     using VUDK.Generic.Serializable;
+    using ProjectPBR.Managers.GameManagers;
+    using ProjectPBR.ScriptableObjects;
+    using ProjectPBR.Level.Blocks.Interfaces;
 
     public abstract class PlaceableBlock : PooledBlock, ICastGameManager<GameManager>, IPlaceableBlock
     {
@@ -65,6 +64,8 @@
             _isInvalid = isInvalid;
         }
 
+        public virtual bool IsInvalid() => _isInvalid;
+
         public void StartLerpResettingPosition(float resetDuration)
         {
             DisableGravity();
@@ -93,11 +94,6 @@
             _rb.bodyType = RigidbodyType2D.Kinematic;
             _rb.velocity = Vector2.zero;
             _rb.angularVelocity = 0f;
-        }
-
-        public virtual bool IsInvalid()
-        {
-            return _isInvalid;
         }
 
         public bool IsTilted()

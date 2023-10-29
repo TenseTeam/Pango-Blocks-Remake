@@ -1,9 +1,10 @@
-﻿using ProjectPBR.Config.Constants;
-namespace ProjectPBR.Player.Objective.Goal
+﻿namespace ProjectPBR.Player.Objective.Goal
 {
+    using ProjectPBR.Config.Constants;
+    using ProjectPBR.Player.Objective.Interfaces;
     using VUDK.Generic.Managers.Main;
 
-    public class ObjectiveGoal : ObjectiveTrigger
+    public class ObjectiveGoal : ObjectiveTrigger, IGoal
     {
         private void Start()
         {

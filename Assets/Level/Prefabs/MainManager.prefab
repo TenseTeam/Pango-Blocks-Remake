@@ -1001,8 +1001,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7998b8a24ffe69849add8926eec6bbf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <WaitDelay>k__BackingField:
-    <Delay>k__BackingField: 3
+  <WaitLoadingSceneDelay>k__BackingField:
+    <Delay>k__BackingField: 0
   _waitResetLevel:
     <Delay>k__BackingField: 3
 --- !u!1 &4564716474377814198
@@ -1160,7 +1160,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4952031749192989740}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1357,7 +1357,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e180dcf25967547b007f9b6e0e2f8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fadeDuration: 1
+  _fadeDelay:
+    <Delay>k__BackingField: 1
+  _startColor: {r: 0, g: 0, b: 0, a: 0}
+  _fadeOutColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5098485664366709840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,7 +1501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72e37002d5333a64f9ede258327e7404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _followSpeed: 10
+  _followSpeed: 20
 --- !u!1 &5512635390998929586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,9 +1547,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a835163679b69646b6445556ca7b362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _resetBlockTime: 0.2
   <Dragger>k__BackingField: {fileID: 5921824416243918374}
   <PlayerHand>k__BackingField: {fileID: 0}
-  _resetBlockTime: 0.2
 --- !u!1 &5911593633351755342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2084,6 +2087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvas: {fileID: 4481860706633670592}
+  <LoadingScreenManager>k__BackingField: {fileID: 0}
 --- !u!1 &7754776920317325807
 GameObject:
   m_ObjectHideFlags: 0

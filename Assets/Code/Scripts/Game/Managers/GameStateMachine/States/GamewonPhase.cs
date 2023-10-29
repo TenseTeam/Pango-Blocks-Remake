@@ -15,7 +15,7 @@
         public override void Enter()
         {
 #if DEBUG
-            Debug.Log("Gamewon Phase");
+            Debug.Log($"<color=green>Enter {StateKey} state</color>");
 #endif
             MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnBeginGameWonPhase);
             Context.SceneManager.LoadNextScene();

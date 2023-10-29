@@ -27,5 +27,15 @@
         {
             return new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value);
         }
+
+        /// <summary>
+        /// Copies a color.
+        /// </summary>
+        /// <param name="color">Color to copy.</param>
+        /// <returns>Copied color.</returns>
+        public static Color Copy(this Color color)
+        {
+            return new Color(color.r, color.g, color.b, color.a);
+        }
     }
 }

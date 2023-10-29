@@ -1,7 +1,8 @@
 ﻿namespace ProjectPBR.Patterns.Factories
 {
-    using ProjectPBR.Managers;
+    using ProjectPBR.Managers.GameManagers;
     using ProjectPBR.Managers.GameStateMachine;
+    using ProjectPBR.Managers.SceneManager;
     using VUDK.Features.Main.InputSystem;
     using VUDK.Generic.Managers.Main;
 
