@@ -7,7 +7,7 @@
     [DefaultExecutionOrder(-850)]
     public class EventManager : MonoBehaviour
     {
-        private Dictionary<string, Delegate> s_EventListeners = new Dictionary<string, Delegate>();
+        private Dictionary<string, Delegate> _eventListeners = new Dictionary<string, Delegate>();
 
         public void AddListener(string eventKey, Action listener)
         {
@@ -41,27 +41,27 @@
 
         public void TriggerEvent(string eventKey)
         {
-            if (s_EventListeners.ContainsKey(eventKey))
+            if (_eventListeners.ContainsKey(eventKey))
             {
-                Action del = s_EventListeners[eventKey] as Action;
+                Action del = _eventListeners[eventKey] as Action;
                 del.Invoke();
             }
         }
 
         public void TriggerEvent<T>(string eventKey, T parameter)
         {
-            if (s_EventListeners.ContainsKey(eventKey))
+            if (_eventListeners.ContainsKey(eventKey))
             {
-                Action<T> del = s_EventListeners[eventKey] as Action<T>;
+                Action<T> del = _eventListeners[eventKey] as Action<T>;
                 del.Invoke(parameter);
             }
         }
 
         public void TriggerEvent<T1, T2>(string eventKey, T1 param1, T2 param2)
         {
-            if (s_EventListeners.ContainsKey(eventKey))
+            if (_eventListeners.ContainsKey(eventKey))
             {
-                Action<T1, T2> del = s_EventListeners[eventKey] as Action<T1, T2>;
+                Action<T1, T2> del = _eventListeners[eventKey] as Action<T1, T2>;
                 del.Invoke(param1, param2);
             }
         }
@@ -69,24 +69,24 @@
         [System.ObsoleteAttribute("This TriggerEvent is obsolete. Use TriggerEvent<T> instead.", false)]
         public void TriggerEvent(string eventKey, params object[] parameters)
         {
-            if (s_EventListeners.ContainsKey(eventKey))
+            if (_eventListeners.ContainsKey(eventKey))
             {
-                s_EventListeners[eventKey].DynamicInvoke(parameters);
+                _eventListeners[eventKey].DynamicInvoke(parameters);
             }
         }
 
         private void RegisterEvent(string eventKey, Delegate listener)
         {
-            if (s_EventListeners.ContainsKey(eventKey))
-                s_EventListeners[eventKey] = Delegate.Combine(s_EventListeners[eventKey], listener);
+            if (_eventListeners.ContainsKey(eventKey))
+                _eventListeners[eventKey] = Delegate.Combine(_eventListeners[eventKey], listener);
             else
-                s_EventListeners.Add(eventKey, listener);
+                _eventListeners.Add(eventKey, listener);
         }
 
         private void UnregisterEvent(string eventKey, Delegate listener)
         {
-            if (s_EventListeners.ContainsKey(eventKey))
-                s_EventListeners[eventKey] = Delegate.Remove(s_EventListeners[eventKey], listener);
+            if (_eventListeners.ContainsKey(eventKey))
+                _eventListeners[eventKey] = Delegate.Remove(_eventListeners[eventKey], listener);
         }
     }
 }

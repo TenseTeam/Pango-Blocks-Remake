@@ -1,6 +1,6 @@
 ﻿namespace ProjectPBR.Level.Grid
 {
-    using ProjectPBR.Config.Constants;
+    using ProjectPBR.GameConfig.Constants;
     using System;
     using UnityEngine;
     using VUDK.Extensions.Colors;
@@ -32,14 +32,14 @@
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginObjectivePhase, StartFading);
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnResetLevel, ResetGraphicsGrid);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginObjectivePhase, StartFading);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnResetLevel, ResetGraphicsGrid);
         }
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginObjectivePhase, StartFading);
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnResetLevel, ResetGraphicsGrid);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginObjectivePhase, StartFading);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnResetLevel, ResetGraphicsGrid);
         }
 
         private void Update()

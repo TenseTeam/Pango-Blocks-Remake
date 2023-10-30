@@ -4,7 +4,8 @@
     using UnityEngine.UI;
     using VUDK.Generic.Managers.Main;
     using VUDK.Extensions.CustomAttributes;
-    using ProjectPBR.Config.Constants;
+    using VUDK.Config;
+    using ProjectPBR.GameConfig.Constants;
 
     [RequireComponent(typeof(Animator))]
     public class LoadingScreenManager : MonoBehaviour
@@ -24,19 +25,19 @@
         private void OnEnable()
         {
             MainManager.Ins.EventManager.AddListener(EventKeys.SceneEvents.OnBeforeChangeScene, RandomClose);
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnStartGameoverLoadingScreen, ResetLevelLoadingScreen);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnStartGameoverLoadingScreen, ResetLevelLoadingScreen);
         }
 
         private void OnDisable()
         {
             MainManager.Ins.EventManager.RemoveListener(EventKeys.SceneEvents.OnBeforeChangeScene, RandomClose);
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnStartGameoverLoadingScreen, ResetLevelLoadingScreen);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnStartGameoverLoadingScreen, ResetLevelLoadingScreen);
         }
 
         [CalledByAnimationEvent]
         public void LoadingScreenCovered()
         {
-            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnGameoverLoadingScreenCovered);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnGameoverLoadingScreenCovered);
         }
 
         public void EnableScreen()
@@ -51,24 +52,24 @@
 
         private void ResetLevelLoadingScreen()
         {
-            _anim.SetTrigger(Constants.UIAnimations.ResetScreen);
+            _anim.SetTrigger(GameConstants.UIAnimations.ResetScreen);
         }
 
         private void RandomOpen()
         {
-            _anim.SetTrigger(Constants.UIAnimations.OpenScreen);
-            _anim.SetInteger(Constants.UIAnimations.ScreenState, GetRandom());
+            _anim.SetTrigger(GameConstants.UIAnimations.OpenScreen);
+            _anim.SetInteger(GameConstants.UIAnimations.ScreenState, GetRandom());
         }
 
         private void RandomClose()
         {
-            _anim.SetTrigger(Constants.UIAnimations.CloseScreen);
-            _anim.SetInteger(Constants.UIAnimations.ScreenState, GetRandom());
+            _anim.SetTrigger(GameConstants.UIAnimations.CloseScreen);
+            _anim.SetInteger(GameConstants.UIAnimations.ScreenState, GetRandom());
         }
 
         private int GetRandom()
         {
-            return Random.Range(0, Constants.UIAnimations.MaxAnimations);
+            return Random.Range(0, GameConstants.UIAnimations.MaxAnimations);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace ProjectPBR.Managers.GameStateMachine.States
 {
-    using ProjectPBR.Config.Constants;
+    using ProjectPBR.GameConfig.Constants;
     using System;
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
@@ -17,13 +17,13 @@
 #if DEBUG
             Debug.Log($"<color=red>Enter {StateKey} state</color>");
 #endif
-            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnBeginGameoverPhase);
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnResetLevel, ChangeToPlacement);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBeginGameoverPhase);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnResetLevel, ChangeToPlacement);
         }
 
         public override void Exit()
         {
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnResetLevel, ChangeToPlacement);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnResetLevel, ChangeToPlacement);
         }
 
         public override void FixedProcess()

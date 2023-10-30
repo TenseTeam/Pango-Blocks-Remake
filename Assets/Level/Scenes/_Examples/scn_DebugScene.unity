@@ -2692,6 +2692,14 @@ PrefabInstance:
       propertyPath: test
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1478506729268075701, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _defaultUnlockedLevels.<Max>k__BackingField
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478506729268075701, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _defaultUnlockedLevels.<Min>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2220860461155247804, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -5,6 +5,7 @@ namespace VUDK.Features.Main.DialogueSystem
     using UnityEngine;
     using UnityEngine.Events;
     using UnityEngine.UI;
+    using VUDK.Config;
     using VUDK.Features.Main.DialogueSystem.Data;
     using VUDK.Generic.Managers.Main;
 

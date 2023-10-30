@@ -1,4 +1,4 @@
-﻿namespace VUDK.Generic.Managers.Main
+﻿namespace VUDK.Config
 {
     public static class EventKeys
     {

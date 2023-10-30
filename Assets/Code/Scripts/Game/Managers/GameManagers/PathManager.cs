@@ -5,7 +5,7 @@
     using VUDK.Generic.Managers.Main;
     using ProjectPBR.Level.Grid;
     using ProjectPBR.Level.PathSystem;
-    using ProjectPBR.Config.Constants;
+    using ProjectPBR.GameConfig.Constants;
 
     public class PathManager : MonoBehaviour, ICastGameManager<GameManager>
     {
@@ -17,8 +17,14 @@
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener<Vector3>(Constants.Events.OnCharacterSendPosition, SetFromTile);
-            MainManager.Ins.EventManager.AddListener<Vector3>(Constants.Events.OnObjectiveGoalSendPosition, SetToTile);
+            MainManager.Ins.EventManager.AddListener<Vector3>(GameConstants.Events.OnCharacterSendPosition, SetFromTile);
+            MainManager.Ins.EventManager.AddListener<Vector3>(GameConstants.Events.OnObjectiveGoalSendPosition, SetToTile);
+        }
+
+        public void OnDisable()
+        {
+            MainManager.Ins.EventManager.RemoveListener<Vector3>(GameConstants.Events.OnCharacterSendPosition, SetFromTile);
+            MainManager.Ins.EventManager.RemoveListener<Vector3>(GameConstants.Events.OnObjectiveGoalSendPosition, SetToTile);
         }
 
         /// <summary>

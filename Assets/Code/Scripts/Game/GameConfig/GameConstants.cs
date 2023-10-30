@@ -1,6 +1,6 @@
-﻿namespace ProjectPBR.Config.Constants
+﻿namespace ProjectPBR.GameConfig.Constants
 {
-    public static class Constants
+    public static class GameConstants
     {
         public static class Events
         {
@@ -58,6 +58,12 @@
             public const string CloseScreen = "Close";
             public const string ResetScreen = "Reset";
             public const string ScreenState = "Screen";
+        }
+
+        public static class Levels
+        {
+            public const int MinDefaultLevel = 1;
+            public const int MaxDefaultLevel = 8;
         }
     }
 }

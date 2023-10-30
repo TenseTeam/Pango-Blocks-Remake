@@ -2,7 +2,7 @@
 {
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
-    using ProjectPBR.Config.Constants;
+    using ProjectPBR.GameConfig.Constants;
     using System;
 
     [RequireComponent(typeof(CharacterPathRunner))]
@@ -21,15 +21,15 @@
         private void OnEnable()
         {
             // Register here events that will trigger multiple methods
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginObjectivePhase, StartCharacter);
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnResetLevel, ResetCharacter);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginObjectivePhase, StartCharacter);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnResetLevel, ResetCharacter);
         }
 
         private void OnDisable()
         {
             // Unregister here events that will trigger multiple methods
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginObjectivePhase, StartCharacter);
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnResetLevel, ResetCharacter);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginObjectivePhase, StartCharacter);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnResetLevel, ResetCharacter);
         }
 
         private void StartCharacter()

@@ -1,6 +1,6 @@
 namespace ProjectPBR.Player.Character
 {
-    using ProjectPBR.Config.Constants;
+    using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Level.Blocks;
     using ProjectPBR.Level.PathSystem;
     using UnityEngine;
@@ -23,21 +23,21 @@ namespace ProjectPBR.Player.Character
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener<BlockType>(Constants.Events.OnCharacterChangedTile, SetAnimation);
-            MainManager.Ins.EventManager.AddListener<Path>(Constants.Events.OnCharacterReachedDestination, SetEndGameAnimation);
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginGameWonPhase, SpawnStarsVFX);
+            MainManager.Ins.EventManager.AddListener<BlockType>(GameConstants.Events.OnCharacterChangedTile, SetAnimation);
+            MainManager.Ins.EventManager.AddListener<Path>(GameConstants.Events.OnCharacterReachedDestination, SetEndGameAnimation);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginGameWonPhase, SpawnStarsVFX);
         }
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener<BlockType>(Constants.Events.OnCharacterChangedTile, SetAnimation);
-            MainManager.Ins.EventManager.RemoveListener<Path>(Constants.Events.OnCharacterReachedDestination, SetEndGameAnimation);
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginGameWonPhase, SpawnStarsVFX);
+            MainManager.Ins.EventManager.RemoveListener<BlockType>(GameConstants.Events.OnCharacterChangedTile, SetAnimation);
+            MainManager.Ins.EventManager.RemoveListener<Path>(GameConstants.Events.OnCharacterReachedDestination, SetEndGameAnimation);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameWonPhase, SpawnStarsVFX);
         }
 
         private void Start()
         {
-            _anim.SetInteger(Constants.CharacterAnimations.State, Constants.CharacterAnimations.Idle);
+            _anim.SetInteger(GameConstants.CharacterAnimations.State, GameConstants.CharacterAnimations.Idle);
         }
 
         /// <summary>
@@ -90,44 +90,44 @@ namespace ProjectPBR.Player.Character
         private void SetIdleAnimation()
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-            _anim.SetInteger(Constants.CharacterAnimations.State, Constants.CharacterAnimations.Idle);
+            _anim.SetInteger(GameConstants.CharacterAnimations.State, GameConstants.CharacterAnimations.Idle);
         }
 
         private void SetWalkAnimation()
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-            _anim.SetInteger(Constants.CharacterAnimations.State, Constants.CharacterAnimations.Walk);
+            _anim.SetInteger(GameConstants.CharacterAnimations.State, GameConstants.CharacterAnimations.Walk);
         }
 
         private void SetClimbAnimation()
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 45f);
-            _anim.SetInteger(Constants.CharacterAnimations.State, Constants.CharacterAnimations.Climb);
+            _anim.SetInteger(GameConstants.CharacterAnimations.State, GameConstants.CharacterAnimations.Climb);
         }
 
         private void SetSlideAnimation()
         {
             transform.rotation = Quaternion.Euler(0f, 0f, -45f);
-            _anim.SetInteger(Constants.CharacterAnimations.State, Constants.CharacterAnimations.Slide);
+            _anim.SetInteger(GameConstants.CharacterAnimations.State, GameConstants.CharacterAnimations.Slide);
         }
 
         private void SetEndGameAnimation(Path pathData)
         {
             if (pathData.HasReached)
             {
-                _anim.SetTrigger(Constants.CharacterAnimations.GamewonAnimation);
+                _anim.SetTrigger(GameConstants.CharacterAnimations.GamewonAnimation);
                 return;
             }
 
             if (pathData.IsGoingToCollide)
             {
-                _anim.SetTrigger(Constants.CharacterAnimations.GameoverCollide);
+                _anim.SetTrigger(GameConstants.CharacterAnimations.GameoverCollide);
                 return;
             }
 
             if(pathData.IsGoingToFall)
             {
-                _anim.SetTrigger(Constants.CharacterAnimations.GameoverFall);
+                _anim.SetTrigger(GameConstants.CharacterAnimations.GameoverFall);
                 return;
             }
         }

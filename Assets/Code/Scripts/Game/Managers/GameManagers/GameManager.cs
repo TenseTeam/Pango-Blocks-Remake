@@ -18,8 +18,5 @@
 
         [field: SerializeField, Header("Path Manager")]
         public PathManager PathManager { get; private set; }
-
-        [field: SerializeField, Header("Levels Manager")]
-        public StageSaver LevelsManager { get; private set; }
     }
 }

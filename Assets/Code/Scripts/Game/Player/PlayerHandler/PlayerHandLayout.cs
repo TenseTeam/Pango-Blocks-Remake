@@ -4,7 +4,7 @@
     using ProjectPBR.Level.Blocks;
     using VUDK.Extensions.Transform;
     using VUDK.Generic.Managers.Main;
-    using ProjectPBR.Config.Constants;
+    using ProjectPBR.GameConfig.Constants;
     using VUDK.Generic.Serializable;
 
     [RequireComponent(typeof(Collider2D))]

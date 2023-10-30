@@ -4,7 +4,7 @@
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
     using VUDK.Patterns.StateMachine;
-    using ProjectPBR.Config.Constants;
+    using ProjectPBR.GameConfig.Constants;
 
     public class GamewonPhase : State<GameContext>
     {
@@ -17,7 +17,7 @@
 #if DEBUG
             Debug.Log($"<color=green>Enter {StateKey} state</color>");
 #endif
-            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnBeginGameWonPhase);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBeginGameWonPhase);
             Context.SceneManager.LoadNextScene();
         }
 

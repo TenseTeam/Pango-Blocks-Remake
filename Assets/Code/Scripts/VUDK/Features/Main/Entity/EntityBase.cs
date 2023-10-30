@@ -3,7 +3,7 @@
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
     using VUDK.Features.Main.EntitySystem.Interfaces;
-    using System;
+    using VUDK.Config;
 
     public abstract class EntityBase : MonoBehaviour, IEntity
     {

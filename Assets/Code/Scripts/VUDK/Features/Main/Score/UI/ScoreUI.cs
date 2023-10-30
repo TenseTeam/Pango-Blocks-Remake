@@ -3,6 +3,7 @@
     using UnityEngine;
     using TMPro;
     using VUDK.Generic.Managers.Main;
+    using VUDK.Config;
 
     public class ScoreUI : MonoBehaviour
     {

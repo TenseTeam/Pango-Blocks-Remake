@@ -1,6 +1,7 @@
 namespace VUDK.UI.Menu
 {
     using UnityEngine;
+    using VUDK.Config;
     using VUDK.Features.Main.SceneManagement;
     using VUDK.Generic.Managers.Main;
 

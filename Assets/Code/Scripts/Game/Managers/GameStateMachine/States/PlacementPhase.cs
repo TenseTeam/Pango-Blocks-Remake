@@ -6,7 +6,7 @@
     using VUDK.Patterns.StateMachine;
     using VUDK.Generic.Managers.Main;
     using ProjectPBR.Level.Blocks;
-    using ProjectPBR.Config.Constants;
+    using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Player.Objective;
     using ProjectPBR.Managers.GameManagers;
 
@@ -21,16 +21,16 @@
 #if DEBUG
             Debug.Log($"<color=yellow>Enter {StateKey} state</color>");
 #endif
-            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnBeginPlacementPhase);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBeginPlacementPhase);
 
             Context.Inputs.Interaction.Interact.canceled += TryToPlaceBlock;
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnObjectiveTriggered, ChangeToObjectivePhase);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnObjectiveTriggered, ChangeToObjectivePhase);
         }
 
         public override void Exit()
         {
             Context.Inputs.Interaction.Interact.canceled -= TryToPlaceBlock;
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnObjectiveTriggered, ChangeToObjectivePhase);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnObjectiveTriggered, ChangeToObjectivePhase);
         }
         
         public override void FixedProcess()

@@ -2,6 +2,7 @@ namespace VUDK.Features.Main.Timer
 {
     using System.Collections;
     using UnityEngine;
+    using VUDK.Config;
     using VUDK.Generic.Managers.Main;
 
     public class CountdownTimer : MonoBehaviour

@@ -3,7 +3,7 @@
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Managers.Main.Interfaces;
-    using ProjectPBR.Config.Constants;
+    using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Level.PathSystem;
     using ProjectPBR.Managers.GameManagers;
 
@@ -27,7 +27,7 @@
 
         private void Start()
         {
-            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnCharacterSendPosition, transform.position);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnCharacterSendPosition, transform.position);
         }
 
         private void Update() => RunPath();
@@ -58,7 +58,7 @@
             transform.position = Vector3.Lerp(transform.position, _pathData.Nodes[_currentNodeIndex].Position, t);
             if (distance < 0.01f)
             {
-                MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnCharacterChangedTile, _pathData.Nodes[_currentNodeIndex].BlockType);
+                MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnCharacterChangedTile, _pathData.Nodes[_currentNodeIndex].BlockType);
                 transform.position = _pathData.Nodes[_currentNodeIndex].Position;
                 _currentNodeIndex++;
             }
@@ -66,7 +66,7 @@
 
         private void ReachDestination()
         {
-            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnCharacterReachedDestination, _pathData);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnCharacterReachedDestination, _pathData);
             _isRunningPath = false;
             _currentNodeIndex = 0;
         }

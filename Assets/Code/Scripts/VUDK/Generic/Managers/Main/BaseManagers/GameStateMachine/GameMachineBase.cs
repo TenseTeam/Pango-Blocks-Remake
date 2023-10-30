@@ -1,6 +1,7 @@
 ﻿namespace VUDK.Generic.Managers.Main
 {
     using UnityEngine;
+    using VUDK.Config;
     using VUDK.Patterns.StateMachine;
 
     [DefaultExecutionOrder(-990)]

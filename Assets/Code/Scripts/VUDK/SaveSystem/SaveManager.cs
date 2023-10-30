@@ -7,12 +7,11 @@
     public static class SaveManager
     {
         private const string s_Extension = ".save";
-        //private const string s_Folder = "/Saves/";
 
         public static void Save<T>(T data) where T : SaveDataBase
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            string path = Path.Combine(Application.persistentDataPath, /*s_Folder +*/ typeof(T).Name + s_Extension);
+            string path = Path.Combine(Application.persistentDataPath, typeof(T).Name + s_Extension);
 
             using (FileStream stream = new FileStream(path, FileMode.Create))
             {

@@ -3,6 +3,7 @@ namespace VUDK.Features.Main.DialogueSystem
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
     using VUDK.Features.Main.TriggerSystem;
+    using VUDK.Config;
 
     [RequireComponent(typeof(Collider))]
     public class DialogueTrigger : TriggerEvent
