@@ -2788,10 +2788,6 @@ PrefabInstance:
       propertyPath: <MainCamera>k__BackingField
       value: 
       objectReference: {fileID: 236989290}
-    - target: {fileID: 5403176040699830600, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: <PlayerLayerMask>k__BackingField.m_Bits
-      value: 2056
-      objectReference: {fileID: 0}
     - target: {fileID: 5529405804343258530, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_Size.x
       value: 8
@@ -2813,16 +2809,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5762545395386250756, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: _waitResetLevel.<Delay>k__BackingField
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5762545395386250756, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: <WaitLoadingSceneDelay>k__BackingField._resetOnCompleted
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5762545395386250756, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: <WaitLoadingSceneDelay>k__BackingField.<Delay>k__BackingField
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6753597487363825322, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_LocalScale.x

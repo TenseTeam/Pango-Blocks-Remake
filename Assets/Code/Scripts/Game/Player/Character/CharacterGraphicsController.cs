@@ -46,7 +46,8 @@ namespace ProjectPBR.Player.Character
         [CalledByAnimationEvent]
         public void SpawnCloudVFX() 
         {
-            MainManager.Ins.PoolsManager.Pools[PoolKeys.CloudVFX].Get().transform.position = transform.position;
+            if(MainManager.Ins.PoolsManager.Pools[PoolKeys.CloudVFX].TryGet(out GameObject vfx))
+                vfx.transform.position = transform.position;
         }
 
         public void IncreaseRender()

@@ -2,28 +2,19 @@ namespace VUDK.UI.Menu
 {
     using UnityEngine;
     using VUDK.Config;
-    using VUDK.Features.Main.SceneManagement;
     using VUDK.Generic.Managers.Main;
 
-    [RequireComponent(typeof(SceneSwitcher))]
     public class UIMenuActions : MonoBehaviour
     {
-        private SceneSwitcher _sceneSwitcher;
-
-        private void Awake()
-        {
-            TryGetComponent(out _sceneSwitcher);
-        }
-
         private void Start()
         {
             MainManager.Ins.EventManager.TriggerEvent(EventKeys.SceneEvents.OnMainMenuLoaded);
         }
 
-        public void ChangeScene(int sceneIndex)
+        public void WaitChangeScene(int sceneIndex)
         {
             ClickButton();
-            _sceneSwitcher.WaitChangeScene(sceneIndex);
+            MainManager.Ins.SceneManager.WaitChangeScene(sceneIndex);
         }
 
         public void ExitApplication()

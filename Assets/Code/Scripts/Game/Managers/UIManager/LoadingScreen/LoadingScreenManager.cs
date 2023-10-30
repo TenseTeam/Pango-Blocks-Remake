@@ -6,10 +6,14 @@
     using VUDK.Extensions.CustomAttributes;
     using VUDK.Config;
     using ProjectPBR.GameConfig.Constants;
+    using VUDK.Generic.Serializable;
 
     [RequireComponent(typeof(Animator))]
     public class LoadingScreenManager : MonoBehaviour
     {
+        [SerializeField, Header("Wait Before Close")]
+        private TimeDelay _waitRandomClose;
+
         private Animator _anim;
         private Image _image;
 
@@ -24,15 +28,19 @@
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener(EventKeys.SceneEvents.OnBeforeChangeScene, RandomClose);
+            MainManager.Ins.EventManager.AddListener(EventKeys.SceneEvents.OnBeforeChangeScene, WaitRandomClose);
             MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnStartGameoverLoadingScreen, ResetLevelLoadingScreen);
+            _waitRandomClose.OnCompleted += RandomClose;
         }
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener(EventKeys.SceneEvents.OnBeforeChangeScene, RandomClose);
+            MainManager.Ins.EventManager.RemoveListener(EventKeys.SceneEvents.OnBeforeChangeScene, WaitRandomClose);
             MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnStartGameoverLoadingScreen, ResetLevelLoadingScreen);
+            _waitRandomClose.OnCompleted -= RandomClose;
         }
+
+        private void Update() => _waitRandomClose.Process();
 
         [CalledByAnimationEvent]
         public void LoadingScreenCovered()
@@ -53,6 +61,11 @@
         private void ResetLevelLoadingScreen()
         {
             _anim.SetTrigger(GameConstants.UIAnimations.ResetScreen);
+        }
+
+        private void WaitRandomClose()
+        {
+            _waitRandomClose.Start();
         }
 
         private void RandomOpen()

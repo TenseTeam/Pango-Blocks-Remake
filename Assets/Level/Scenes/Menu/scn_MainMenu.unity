@@ -366,7 +366,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1808497513}
         m_TargetAssemblyTypeName: VUDK.UI.Menu.UIMenuActions, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: WaitChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -542,7 +542,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1808497513}
         m_TargetAssemblyTypeName: VUDK.UI.Menu.UIMenuActions, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: WaitChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -998,7 +998,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1808497513}
         m_TargetAssemblyTypeName: VUDK.UI.Menu.UIMenuActions, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: WaitChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1130,7 +1130,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1808497513}
         m_TargetAssemblyTypeName: VUDK.UI.Menu.UIMenuActions, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: WaitChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1262,7 +1262,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1808497513}
         m_TargetAssemblyTypeName: VUDK.UI.Menu.UIMenuActions, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: WaitChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1394,7 +1394,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1808497513}
         m_TargetAssemblyTypeName: VUDK.UI.Menu.UIMenuActions, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: WaitChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1612,7 +1612,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1808497513}
         m_TargetAssemblyTypeName: VUDK.UI.Menu.UIMenuActions, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: WaitChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1742,11 +1742,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5166686400070394916, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5512635390998929586, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5762545395386250756, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: <WaitLoadingSceneDelay>k__BackingField.<Delay>k__BackingField
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5911593633351755342, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_IsActive
@@ -1790,6 +1794,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8643423207488035244, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168239045055623262, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: _waitRandomClose.<Delay>k__BackingField
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1881,7 +1889,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1808497513}
         m_TargetAssemblyTypeName: VUDK.UI.Menu.UIMenuActions, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: WaitChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2182,7 +2190,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1808497513}
         m_TargetAssemblyTypeName: VUDK.UI.Menu.UIMenuActions, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: WaitChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3010,7 +3018,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1808497513}
         m_TargetAssemblyTypeName: VUDK.UI.Menu.UIMenuActions, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: WaitChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3377,7 +3385,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1808497513}
         m_TargetAssemblyTypeName: VUDK.UI.Menu.UIMenuActions, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: WaitChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3509,7 +3517,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1808497513}
         m_TargetAssemblyTypeName: VUDK.UI.Menu.UIMenuActions, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: WaitChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4020,7 +4028,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1808497513}
         m_TargetAssemblyTypeName: VUDK.UI.Menu.UIMenuActions, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: WaitChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4380,7 +4388,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1808497513}
         m_TargetAssemblyTypeName: VUDK.UI.Menu.UIMenuActions, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: WaitChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4588,7 +4596,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1808497513}
         m_TargetAssemblyTypeName: VUDK.UI.Menu.UIMenuActions, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: WaitChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4649,7 +4657,6 @@ GameObject:
   - component: {fileID: 1808497510}
   - component: {fileID: 1808497509}
   - component: {fileID: 1808497513}
-  - component: {fileID: 1808497514}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -4754,19 +4761,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ad30fec16b684d4ab8bd242a415f5c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1808497514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1808497508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c77b7eecf35408a48ab217f0b18b3bd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _waitTime: 3
 --- !u!1 &1808626886
 GameObject:
   m_ObjectHideFlags: 0
@@ -5253,7 +5247,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1808497513}
         m_TargetAssemblyTypeName: VUDK.UI.Menu.UIMenuActions, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: WaitChangeScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

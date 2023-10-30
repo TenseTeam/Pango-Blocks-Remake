@@ -27,7 +27,7 @@
 
         private void Start()
         {
-            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnCharacterSendPosition, transform.position);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnCharacterSendPosition, transform.position + Vector3.up * .5f);
         }
 
         private void Update() => RunPath();
