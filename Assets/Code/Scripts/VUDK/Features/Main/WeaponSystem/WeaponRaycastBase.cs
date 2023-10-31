@@ -8,15 +8,14 @@
     {
         [SerializeField, Header("Raycast")]
         protected float RaycastShootRange;
-
         [SerializeField]
         private LayerMask _rayShootableMask;
 
         public static event Action<Vector3> OnBulletHit;
 
-        protected override void BulletGeneration()
+        protected override void OnBulletGeneration()
         {
-            base.BulletGeneration();
+            base.OnBulletGeneration();
             foreach (Transform barrel in BarrelsPoints)
             {
 #if DEBUG

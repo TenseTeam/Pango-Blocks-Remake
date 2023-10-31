@@ -1,7 +1,7 @@
-﻿namespace VUDK.SaveSystem
+﻿namespace VUDK.Features.Main.SaveSystem
 {
     using UnityEngine;
-    using VUDK.SaveSystem.Interfaces;
+    using VUDK.Features.Main.SaveSystem.Interfaces;
 
     public abstract class SaverControllerBase : MonoBehaviour, ISaver
     {

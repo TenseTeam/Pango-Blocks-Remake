@@ -60,10 +60,12 @@
             public const string ScreenState = "Screen";
         }
 
-        public static class Levels
+        public static class ProfileSaving
         {
             public const int MinDefaultLevel = 1;
             public const int MaxDefaultLevel = 8;
+            public const int MaxProfilesNumber = 5;
+            public const string ProfileExtension = ".prof";
         }
     }
 }

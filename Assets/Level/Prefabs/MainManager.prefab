@@ -1227,7 +1227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5814122865872255255}
-  - component: {fileID: 2280657569772541297}
+  - component: {fileID: 4410690796777936866}
   m_Layer: 0
   m_Name: EventManager
   m_TagString: Untagged
@@ -1250,7 +1250,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2220860461155247804}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2280657569772541297
+--- !u!114 &4410690796777936866
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2144,7 +2144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <GameManager>k__BackingField: {fileID: 2944187853429039867}
   <UIManager>k__BackingField: {fileID: 7376889942592224760}
-  <EventManager>k__BackingField: {fileID: 2280657569772541297}
+  <EventManager>k__BackingField: {fileID: 4410690796777936866}
   <GameStateMachine>k__BackingField: {fileID: 7669568288478646049}
   <SceneManager>k__BackingField: {fileID: 5762545395386250756}
   <AudioManager>k__BackingField: {fileID: 5719957247285582592}

@@ -1,4 +1,4 @@
-﻿namespace VUDK.SaveSystem.Interfaces
+﻿namespace VUDK.Features.Main.SaveSystem.Interfaces
 {
     public interface ISaver
     {

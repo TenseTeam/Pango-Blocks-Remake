@@ -77,7 +77,7 @@
         /// <summary>
         /// On Generation of the bullet.
         /// </summary>
-        protected virtual void BulletGeneration()
+        protected virtual void OnBulletGeneration()
         {
         }
 
@@ -86,7 +86,7 @@
         /// </summary>
         private IEnumerator ShootingRoutine()
         {
-            BulletGeneration();
+            OnBulletGeneration();
             CurrentAmmunition -= AmmunitionCostPerShot;
             IsShooting = true;
             yield return new WaitForSeconds(FireRate);

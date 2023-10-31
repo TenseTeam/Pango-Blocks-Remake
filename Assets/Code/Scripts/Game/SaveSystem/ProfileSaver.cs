@@ -3,19 +3,12 @@
     using UnityEngine;
     using UnityEngine.SceneManagement;
     using VUDK.Generic.Managers.Main;
-    using VUDK.SaveSystem;
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Data.SaveDatas;
-    using System;
 
-    public static class StageSaver
+    public static class ProfileSaver
     {
-        public static LevelsData LevelsData;
-
-        static StageSaver()
-        {
-            LoadAllData();
-        }
+        private static ProfileData s_SelectedProfile; 
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
         private static void Init()
@@ -34,28 +27,19 @@
             MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameWonPhase, SaveLevel);
         }
 
-        private static void SaveAllData()
+        public static void SelectProfile(string profileName)
         {
-            SaveManager.Save(LevelsData);
-        }
-
-        private static void LoadAllData()
-        {
-            if (!SaveManager.TryLoad(out LevelsData))
-            {
-                LevelsData = new LevelsData(GameConstants.Levels.MinDefaultLevel, GameConstants.Levels.MaxDefaultLevel);
-                SaveAllData();
-            }
+            s_SelectedProfile = ProfilesManager.GetProfile(profileName);
         }
 
         private static void SaveLevel()
         {
             int currentScene = SceneManager.GetActiveScene().buildIndex;
 
-            if (!LevelsData.ClearedLevels.TryAdd(currentScene, LevelStatus.Completed))
-                LevelsData.ClearedLevels[currentScene] = LevelStatus.Completed;
+            if (!s_SelectedProfile.ClearedLevels.TryAdd(currentScene, LevelStatus.Completed))
+                s_SelectedProfile.ClearedLevels[currentScene] = LevelStatus.Completed;
 
-            SaveAllData();
+            ProfilesManager.SaveProfile(s_SelectedProfile);
         }
     }
 }

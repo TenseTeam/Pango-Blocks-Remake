@@ -1,8 +1,8 @@
 ﻿namespace VUDK.Generic.Managers.Main
 {
+    using UnityEngine;
     using System;
     using System.Collections.Generic;
-    using UnityEngine;
 
     [DefaultExecutionOrder(-850)]
     public class EventManager : MonoBehaviour
@@ -19,22 +19,12 @@
             RegisterEvent(eventKey, listener);
         }
 
-        public void AddListener<T1, T2>(string eventKey, Action<T1, T2> listener)
-        {
-            RegisterEvent(eventKey, listener);
-        }
-
         public void RemoveListener(string eventKey, Action listener)
         {
             UnregisterEvent(eventKey, listener);
         }
 
         public void RemoveListener<T>(string eventKey, Action<T> listener)
-        {
-            UnregisterEvent(eventKey, listener);
-        }
-
-        public void RemoveListener<T1, T2>(string eventKey, Action<T1, T2> listener)
         {
             UnregisterEvent(eventKey, listener);
         }
@@ -54,24 +44,6 @@
             {
                 Action<T> del = _eventListeners[eventKey] as Action<T>;
                 del.Invoke(parameter);
-            }
-        }
-
-        public void TriggerEvent<T1, T2>(string eventKey, T1 param1, T2 param2)
-        {
-            if (_eventListeners.ContainsKey(eventKey))
-            {
-                Action<T1, T2> del = _eventListeners[eventKey] as Action<T1, T2>;
-                del.Invoke(param1, param2);
-            }
-        }
-
-        [System.ObsoleteAttribute("This TriggerEvent is obsolete. Use TriggerEvent<T> instead.", false)]
-        public void TriggerEvent(string eventKey, params object[] parameters)
-        {
-            if (_eventListeners.ContainsKey(eventKey))
-            {
-                _eventListeners[eventKey].DynamicInvoke(parameters);
             }
         }
 

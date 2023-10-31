@@ -1,6 +1,6 @@
-﻿namespace VUDK.SaveSystem
+﻿namespace VUDK.Features.Main.SaveSystem
 {
-    using VUDK.SaveSystem.Interfaces;
+    using VUDK.Features.Main.SaveSystem.Interfaces;
 
     [System.Serializable]
     public abstract class SaveDataBase : ISaveData

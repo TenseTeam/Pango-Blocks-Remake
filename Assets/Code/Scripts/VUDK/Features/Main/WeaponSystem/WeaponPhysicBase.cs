@@ -12,9 +12,9 @@ namespace VUDK.Features.Main.WeaponSystem
 
         private int _currentBarrelIndex = 0;
 
-        protected override void BulletGeneration()
+        protected override void OnBulletGeneration()
         {
-            base.BulletGeneration();
+            base.OnBulletGeneration();
             if (_alternateBarrel)
             {
                 SpawnBullet(BarrelsPoints[_currentBarrelIndex]);
