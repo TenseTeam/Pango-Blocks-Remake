@@ -7,10 +7,14 @@
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Data.SaveDatas;
     using ProjectPBR.Data.SaveDatas.Enums;
+    using VUDK.Generic.Managers.Main.Interfaces;
+    using ProjectPBR.Managers.SceneManager;
 
-    public class ProfileSaver : MonoBehaviour, ISaver
+    public class ProfileSaver : MonoBehaviour, ISaver, ICastSceneManager<GameSceneManager>
     {
         private ProfileData _selectedProfile => ProfileSelector.SelectedProfile;
+
+        public GameSceneManager SceneManager => MainManager.Ins.SceneManager as GameSceneManager;
 
         private void Awake()
         {
@@ -40,8 +44,9 @@
 
         private void SaveLevel()
         {
-            int currentScene = SceneManager.GetActiveScene().buildIndex;
-            _selectedProfile.LevelsData[currentScene].Status = LevelStatus.Completed;
+            LevelKey levelKey = SceneManager.GetLevelKeyByBuildIndex(SceneManager.CurrentSceneIndex);
+            Debug.Log(levelKey.SaveIndex + " " + levelKey.Difficulty);
+            _selectedProfile.LevelsData[levelKey].Status = LevelStatus.Completed;
             Save();
         }
     }

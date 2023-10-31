@@ -5,7 +5,7 @@
     public static class StringExtension
     {
         /// <summary>
-        /// Gets a random generated string using Guid.
+        /// Gets a random generated string using  <see cref="System.Guid"/>.
         /// </summary>
         /// <returns>Random generated string.</returns>
         public static string Random()
@@ -14,7 +14,7 @@
         }
 
         /// <summary>
-        /// Gets a random generated string using Guid with a given length.
+        /// Gets a random generated sub-string using <see cref="System.Guid"/> with a given length.
         /// </summary>
         /// <param name="length">String length.</param>
         /// <returns>Random generated string.</returns>

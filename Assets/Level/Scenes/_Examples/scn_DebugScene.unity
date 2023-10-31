@@ -2301,7 +2301,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f985275c0568bd46960684d8046c0c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProfileNameToCreate: Pippo
+  ProfileToCreate: 
+  ProfileToSelect: 
 --- !u!1 &1737650384
 GameObject:
   m_ObjectHideFlags: 0

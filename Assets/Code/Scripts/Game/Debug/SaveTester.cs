@@ -3,12 +3,13 @@ namespace ProjectPBR.Debug
 {
     using UnityEngine;
     using ProjectPBR.SaveSystem;
-    using ProjectPBR.Data.SaveDatas;
+    using ProjectPBR.Data.SaveDatas.Enums;
 
     public class SaveTester : MonoBehaviour
     {
         public string ProfileToCreate;
         public string ProfileToSelect;
+        public LevelDifficulty DifficultyToChange;
 
         [ContextMenu("CreateProfile")]
         public void Create()
@@ -16,28 +17,34 @@ namespace ProjectPBR.Debug
             ProfilesManager.CreateProfile(ProfileToCreate);
         }
 
-        [ContextMenu("PrintProfiles")]
+        [ContextMenu("Print Profiles")]
         public void Print()
         {
             ProfilesManager.PrintProfiles();
         }
 
-        [ContextMenu("DeleteAllProfiles")]
+        [ContextMenu("Delete All Profiles")]
         public void Delete()
         {
             ProfilesManager.DeleteAllProfiles();
         }
 
-        [ContextMenu("SelectProfile")]
-        public void Select()
+        [ContextMenu("Change Selected Profile Difficulty")]
+        public void ChangeDifficulty()
         {
-            ProfileSelector.SelectProfile(ProfileToSelect);
+            ProfileSelector.ChangeSelectedProfileDifficulty(DifficultyToChange);
         }
 
-        [ContextMenu("PrintSelectedProfile")]
+        [ContextMenu("Print Selected Profile")]
         public void PrintSelected()
         {
             Debug.Log(ProfileSelector.SelectedProfile);
+        }
+
+        [ContextMenu("Print Difficulty")]
+        public void PrintDifficulty()
+        {
+            Debug.Log(ProfileSelector.SelectedProfile.CurrentDifficulty);
         }
     }
 }

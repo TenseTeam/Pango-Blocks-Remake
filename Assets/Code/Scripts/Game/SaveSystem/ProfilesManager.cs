@@ -8,6 +8,7 @@
     using VUDK.Generic.Managers.Static;
     using System.Linq;
     using ProjectPBR.Patterns.Factories;
+    using ProjectPBR.Data.SaveDatas.Enums;
 
     public static class ProfilesManager
     {
@@ -38,15 +39,24 @@
             }
         }
 
-        public static bool CreateProfile(string profileName)
+        public static bool CreateProfile(string profileName, LevelDifficulty difficulty = LevelDifficulty.Easy)
         {
             if (s_Profiles.Count >= GameConstants.ProfileSaving.MaxProfilesNumber) return false;
             if (s_Profiles.ContainsKey(profileName)) return false;
 
-            ProfileData profile = DataFactory.Create(profileName);
+            ProfileData profile = DataFactory.Create(profileName, difficulty);
             SaveManager.Save(profile, profileName, GameConstants.ProfileSaving.ProfileExtension);
             s_Profiles.Add(profileName, profile);
             return true;
+        }
+
+        public static void ChangeProfileDifficulty(string profileName, LevelDifficulty difficulty)
+        {
+            if (!s_Profiles.ContainsKey(profileName)) return;
+
+            ProfileData profile = GetProfile(profileName);
+            profile.CurrentDifficulty = difficulty;
+            SaveProfile(profile);
         }
 
         public static void DeleteProfile(string profileName)

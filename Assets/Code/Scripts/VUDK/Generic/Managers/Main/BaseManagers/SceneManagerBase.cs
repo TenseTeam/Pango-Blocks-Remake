@@ -5,6 +5,8 @@
 
     public abstract class SceneManagerBase : SceneSwitcher
     {
+        public int CurrentSceneIndex => SceneManager.GetActiveScene().buildIndex;
+
         public virtual void LoadNextScene()
         {
             WaitChangeScene(SceneManager.GetActiveScene().buildIndex + 1);

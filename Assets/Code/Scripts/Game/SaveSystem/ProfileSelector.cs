@@ -1,6 +1,7 @@
 ﻿namespace ProjectPBR.SaveSystem
 {
     using ProjectPBR.Data.SaveDatas;
+    using ProjectPBR.Data.SaveDatas.Enums;
     using VUDK.Extensions.Strings;
 
     public static class ProfileSelector
@@ -15,6 +16,11 @@
         public static void SelectProfile(ProfileData profile)
         {
             SelectedProfile = profile;
+        }
+
+        public static void ChangeSelectedProfileDifficulty(LevelDifficulty difficulty)
+        {
+            ProfilesManager.ChangeProfileDifficulty(SelectedProfile.ProfileName, difficulty);
         }
 
         public static bool TrySelectFirstProfile()

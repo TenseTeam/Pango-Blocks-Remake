@@ -1049,6 +1049,7 @@ MonoBehaviour:
     <Delay>k__BackingField: 5
   _waitResetLevel:
     <Delay>k__BackingField: 3
+  _levelBuildIndexes: {fileID: 11400000, guid: dcc5522dbbf19524ab0192561046878b, type: 2}
 --- !u!1 &4564716474377814198
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,13 +5,13 @@
     [System.Serializable]
     public class LevelData
     {
-        public int SaveIndex; // To not confuse with the build index
+        public int LevelNumber; // To not confuse with the build index
         public LevelDifficulty Difficulty;
         public LevelStatus Status;
 
-        public LevelData(int saveIndex, LevelDifficulty difficulty)
+        public LevelData(int levelNumber, LevelDifficulty difficulty)
         {
-            SaveIndex = saveIndex;
+            LevelNumber = levelNumber;
             Difficulty = difficulty;
             Status = LevelStatus.Locked;
         }
