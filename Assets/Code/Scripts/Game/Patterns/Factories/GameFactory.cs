@@ -6,7 +6,10 @@
     using ProjectPBR.Level.Blocks;
     using ProjectPBR.Data.ScriptableObjects.Blocks;
 
-    public static class BlocksFactory
+    /// <summary>
+    /// Factory for Game's GameObjects
+    /// </summary>
+    public static class GameFactory
     {
         public static PlaceableBlock Create(BlockData blockData, bool isPartOfComplex)
         {

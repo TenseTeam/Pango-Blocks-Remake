@@ -8,7 +8,7 @@
 
     public class GameoverPhase : State<GameContext>
     {
-        public GameoverPhase(Enum stateKey, StateMachine relatedStateMachine, Context context) : base(stateKey, relatedStateMachine, context)
+        public GameoverPhase(Enum stateKey, StateMachine relatedStateMachine, StateMachineContext context) : base(stateKey, relatedStateMachine, context)
         {
         }
 

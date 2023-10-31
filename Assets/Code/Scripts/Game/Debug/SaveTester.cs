@@ -3,6 +3,7 @@ namespace ProjectPBR.Debug
 {
     using UnityEngine;
     using ProjectPBR.SaveSystem;
+    using ProjectPBR.Data.SaveDatas;
 
     public class SaveTester : MonoBehaviour
     {

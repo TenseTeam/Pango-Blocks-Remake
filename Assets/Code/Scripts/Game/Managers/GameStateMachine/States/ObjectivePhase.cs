@@ -9,7 +9,7 @@
 
     public class ObjectivePhase : State<GameContext>
     {
-        public ObjectivePhase(Enum stateKey, StateMachine relatedStateMachine, Context context) : base(stateKey, relatedStateMachine, context)
+        public ObjectivePhase(Enum stateKey, StateMachine relatedStateMachine, StateMachineContext context) : base(stateKey, relatedStateMachine, context)
         {
         }
 

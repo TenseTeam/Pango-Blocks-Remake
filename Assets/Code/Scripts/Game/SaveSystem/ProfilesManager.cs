@@ -7,6 +7,7 @@
     using ProjectPBR.GameConfig.Constants;
     using VUDK.Generic.Managers.Static;
     using System.Linq;
+    using ProjectPBR.Patterns.Factories;
 
     public static class ProfilesManager
     {
@@ -42,7 +43,7 @@
             if (s_Profiles.Count >= GameConstants.ProfileSaving.MaxProfilesNumber) return false;
             if (s_Profiles.ContainsKey(profileName)) return false;
 
-            ProfileData profile = new ProfileData(profileName);
+            ProfileData profile = DataFactory.Create(profileName);
             SaveManager.Save(profile, profileName, GameConstants.ProfileSaving.ProfileExtension);
             s_Profiles.Add(profileName, profile);
             return true;

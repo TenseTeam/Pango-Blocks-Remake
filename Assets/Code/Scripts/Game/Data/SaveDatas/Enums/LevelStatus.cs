@@ -1,4 +1,4 @@
-﻿namespace ProjectPBR.Data.SaveDatas
+﻿namespace ProjectPBR.Data.SaveDatas.Enums
 {
     public enum LevelStatus
     {

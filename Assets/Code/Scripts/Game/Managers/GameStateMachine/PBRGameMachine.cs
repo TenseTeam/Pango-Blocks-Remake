@@ -9,13 +9,13 @@
         public override void Init()
         {
             base.Init();
-            GameContext context = ContextsFactory.Create();
+            GameContext context = MachineFactory.Create();
 
-            PlacementPhase placementPhase = StatesFactory.Create(GamePhaseKeys.PlacementPhase, this, context) as PlacementPhase;
-            ObjectivePhase objectivePhase = StatesFactory.Create(GamePhaseKeys.ObjectivePhase, this, context) as ObjectivePhase;
-            FallPhase fallPhase = StatesFactory.Create(GamePhaseKeys.FallPhase, this, context) as FallPhase;
-            GameoverPhase gameoverPhase = StatesFactory.Create(GamePhaseKeys.GameOverPhase, this, context) as GameoverPhase;
-            GamewonPhase gamewonPhase = StatesFactory.Create(GamePhaseKeys.GameWonPhase, this, context) as GamewonPhase;
+            PlacementPhase placementPhase = MachineFactory.Create(GamePhaseKeys.PlacementPhase, this, context) as PlacementPhase;
+            ObjectivePhase objectivePhase = MachineFactory.Create(GamePhaseKeys.ObjectivePhase, this, context) as ObjectivePhase;
+            FallPhase fallPhase = MachineFactory.Create(GamePhaseKeys.FallPhase, this, context) as FallPhase;
+            GameoverPhase gameoverPhase = MachineFactory.Create(GamePhaseKeys.GameOverPhase, this, context) as GameoverPhase;
+            GamewonPhase gamewonPhase = MachineFactory.Create(GamePhaseKeys.GameWonPhase, this, context) as GamewonPhase;
 
             AddState(GamePhaseKeys.GameOverPhase, gameoverPhase);
             AddState(GamePhaseKeys.GameWonPhase, gamewonPhase);

@@ -62,8 +62,7 @@
 
         public static class ProfileSaving
         {
-            public const int MinDefaultLevel = 1;
-            public const int MaxDefaultLevel = 8;
+            public const int NumberOfLevels = 10; // TO DO: Add correct number of levels
             public const int MaxProfilesNumber = 5;
             public const string ProfileExtension = ".prof";
         }

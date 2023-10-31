@@ -8,7 +8,7 @@
 
     public class GamewonPhase : State<GameContext>
     {
-        public GamewonPhase(Enum stateKey, StateMachine relatedStateMachine, Context context) : base(stateKey, relatedStateMachine, context)
+        public GamewonPhase(Enum stateKey, StateMachine relatedStateMachine, StateMachineContext context) : base(stateKey, relatedStateMachine, context)
         {
         }
 

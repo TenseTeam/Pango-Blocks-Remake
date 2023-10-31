@@ -41,7 +41,7 @@
 
             foreach(SingleBlockData single in Data.ComposedBlocks)
             {
-                ComposedBlock block = BlocksFactory.Create(single, true) as ComposedBlock;
+                ComposedBlock block = GameFactory.Create(single, true) as ComposedBlock;
                 ComposedBlocks.Add(block);
                 block.transform.position = transform.position + Vector3.right * width++;
                 block.transform.parent = transform;

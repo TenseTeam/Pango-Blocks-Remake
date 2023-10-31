@@ -6,6 +6,7 @@
     using VUDK.Features.Main.SaveSystem.Interfaces;
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Data.SaveDatas;
+    using ProjectPBR.Data.SaveDatas.Enums;
 
     public class ProfileSaver : MonoBehaviour, ISaver
     {
@@ -40,10 +41,7 @@
         private void SaveLevel()
         {
             int currentScene = SceneManager.GetActiveScene().buildIndex;
-
-            if (!_selectedProfile.ClearedLevels.TryAdd(currentScene, LevelStatus.Completed))
-                _selectedProfile.ClearedLevels[currentScene] = LevelStatus.Completed;
-            
+            _selectedProfile.LevelsData[currentScene].Status = LevelStatus.Completed;
             Save();
         }
     }

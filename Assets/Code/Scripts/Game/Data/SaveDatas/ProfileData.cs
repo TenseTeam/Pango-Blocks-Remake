@@ -1,35 +1,40 @@
 ﻿namespace ProjectPBR.Data.SaveDatas
 {
-    using ProjectPBR.GameConfig.Constants;
     using System.Collections.Generic;
     using VUDK.Features.Main.SaveSystem;
+    using ProjectPBR.GameConfig.Constants;
+    using ProjectPBR.Data.SaveDatas.Enums;
+    using ProjectPBR.Patterns.Factories;
 
     [System.Serializable]
     public class ProfileData : SaveDataBase
     {
         public string ProfileName;
-        public Dictionary<int, LevelStatus> ClearedLevels;
+        public List<LevelData> LevelsData;
 
         public ProfileData(string name) : base()
         {
-            ClearedLevels = new Dictionary<int, LevelStatus>();
+            LevelsData = new List<LevelData>();
             ProfileName = name;
 
-            for (int i = GameConstants.ProfileSaving.MinDefaultLevel; i <= GameConstants.ProfileSaving.MaxDefaultLevel; i++)
-                ClearedLevels.Add(i, LevelStatus.Unlocked);
+            for (int i = 0; i < GameConstants.ProfileSaving.NumberOfLevels; i++)
+            {
+                LevelsData.Add(DataFactory.Create(i, LevelDifficulty.Easy));
+                LevelsData.Add(DataFactory.Create(i, LevelDifficulty.Hard));
+            }
         }
 
         public override string ToString()
         {
-            return $"{ProfileName}: {ClearedLevelsToString()}";
+            return $"{ProfileName} : {ClearedLevelsToString()}";
         }
 
         private string ClearedLevelsToString()
         {
             string result = string.Empty;
 
-            foreach (var levelPair in ClearedLevels)
-                result += $"\n[{levelPair.Key} = {levelPair.Value}]";
+            foreach (var level in LevelsData)
+                result += $"\n[{level.SaveIndex} = {level.Status}]";
 
             return result;
         }
