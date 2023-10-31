@@ -2,10 +2,11 @@
 {
     using System.Collections.Generic;
     using UnityEngine;
-    using ProjectPBR.Data.SaveDatas;
-
-    using ProjectPBR.GameConfig.Constants;
     using VUDK.Features.Main.SaveSystem;
+    using ProjectPBR.Data.SaveDatas;
+    using ProjectPBR.GameConfig.Constants;
+    using VUDK.Generic.Managers.Static;
+    using System.Linq;
 
     public static class ProfilesManager
     {
@@ -61,6 +62,12 @@
                 SaveManager.DeleteSave(profilePair.Key, GameConstants.ProfileSaving.ProfileExtension);
 
             s_Profiles.Clear();
+        }
+
+        public static ProfileData GetFirstProfile()
+        {
+            if (s_Profiles.Count == 0) return null;
+            return s_Profiles.ElementAt(0).Value;
         }
 
         public static ProfileData GetProfile(string profileName)

@@ -30,7 +30,13 @@ namespace ProjectPBR.Debug
         [ContextMenu("SelectProfile")]
         public void Select()
         {
-            ProfileSaver.SelectProfile(ProfileToSelect);
+            ProfileSelector.SelectProfile(ProfileToSelect);
+        }
+
+        [ContextMenu("PrintSelectedProfile")]
+        public void PrintSelected()
+        {
+            Debug.Log(ProfileSelector.SelectedProfile);
         }
     }
 }
