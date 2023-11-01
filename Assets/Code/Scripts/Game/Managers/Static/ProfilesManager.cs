@@ -8,6 +8,8 @@
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Patterns.Factories;
     using ProjectPBR.Data.SaveDatas.Enums;
+    using ProjectPBR.SaveSystem;
+    using VUDK.Extensions.Strings;
 
     public static class ProfilesManager
     {
@@ -47,6 +49,19 @@
             SaveManager.Save(profile, profileName, GameConstants.ProfileSaving.ProfileExtension);
             s_Profiles.Add(profileName, profile);
             return true;
+        }
+
+        public static void CreateAndSelect(string profileName, GameDifficulty difficulty = GameDifficulty.Easy)
+        {
+            CreateProfile(profileName, difficulty);
+            ProfileSelector.SelectProfile(profileName);
+        }
+
+        public static void CreateRandomAndSelect()
+        {
+            string profileName = StringExtension.Random(GameConstants.ProfileSaving.MaxProfileNameLength);
+            ProfilesManager.CreateProfile(profileName);
+            ProfileSelector.SelectProfile(profileName);
         }
 
         public static void ChangeProfileDifficulty(string profileName, GameDifficulty difficulty)

@@ -22,7 +22,7 @@
             {
                 if(!ProfileSelector.TrySelectFirstProfile())    // Try to select the first profile
                 {
-                    ProfileSelector.CreateAndSelect();          // If no profile exists, create one
+                    ProfilesManager.CreateRandomAndSelect();          // If no profile exists, create one
                 }
             }
         }

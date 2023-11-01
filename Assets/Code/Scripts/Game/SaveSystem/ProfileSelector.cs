@@ -35,12 +35,5 @@
             SelectProfile(firstProfile);
             return true;
         }
-
-        public static void CreateAndSelect()
-        {
-            string profileName = StringExtension.Random(GameConstants.ProfileSaving.MaxProfileNameLength);
-            ProfilesManager.CreateProfile(profileName);
-            SelectProfile(profileName);
-        }
     }
 }
