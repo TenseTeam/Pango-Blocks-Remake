@@ -18,6 +18,12 @@ namespace ProjectPBR.Debug
             ProfilesManager.CreateProfile(ProfileToCreate);
         }
 
+        [ContextMenu("SelectProfile")]
+        public void Select()
+        {
+            ProfileSelector.SelectProfile(ProfileToSelect);
+        }
+
         [ContextMenu("Print Profiles")]
         public void Print()
         {

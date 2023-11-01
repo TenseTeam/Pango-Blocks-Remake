@@ -6045,7 +6045,7 @@ MonoBehaviour:
   _easyButton: {fileID: 31672090}
   _hardButton: {fileID: 1770691429}
   _createButton: {fileID: 1886173105}
-  _profileNameText: {fileID: 883845664}
+  _profileNameField: {fileID: 1539730070}
   OnCreatedProfile:
     m_PersistentCalls:
       m_Calls:

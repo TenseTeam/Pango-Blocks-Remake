@@ -21,10 +21,11 @@ namespace VUDK.UI.Menu
         private Button _createButton;
 
         [SerializeField, Header("Profile Inputs")]
-        private TMP_Text _profileNameText;
+        private TMP_InputField _profileNameField;
 
         private GameDifficulty _newProfileDifficulty;
-        private string _newProfileName;
+
+        private string _newProfileName => _profileNameField.text.ToLower();
 
         [Header("Events")]
         public UnityEvent OnCreatedProfile;
@@ -46,12 +47,6 @@ namespace VUDK.UI.Menu
             ValidateCreateButton();
         }
 
-        public void SetNewProfileName()
-        {
-            _newProfileName = _profileNameText.text;
-            //_newProfileName = _newProfileName.ToLowerInvariant();
-        }
-
         public void SetProfileDifficulty(GameDifficulty difficulty)
         {
             _newProfileDifficulty = difficulty;
@@ -59,34 +54,48 @@ namespace VUDK.UI.Menu
 
         public void CreateNewProfile()
         {
-            if (string.IsNullOrEmpty(_newProfileName)) return;
+            if (!IsProfileNameValid()) return;
             if (!ProfilesManager.CreateAndSelect(_newProfileName, _newProfileDifficulty)) return;
-            _profileNameText.text = string.Empty;
+            ResetCreator();
             OnCreatedProfile?.Invoke();
         }
 
         public void ValidateCreateButton()
         {
-            if (string.IsNullOrEmpty(_newProfileName))
+            if (!IsProfileNameValid())
             {
                 _createButton.interactable = false;
                 return;
             }
 
-            _createButton.interactable = ProfilesManager.HasProfile(_newProfileName);
+            _createButton.interactable = !ProfilesManager.HasProfile(_newProfileName);
         }
 
         private void SelectProfileDifficulty(UIDifficultyButton difficultyBtn)
         {
-            DeselectSprites();
+            DeselectDifficultySprites();
             difficultyBtn.ChangeToSelectedSprite();
             SetProfileDifficulty(difficultyBtn.Difficulty);
         }
 
-        private void DeselectSprites()
+        private void DeselectDifficultySprites()
         {
             _easyButton.ChangeToDeselectedSprite();
             _hardButton.ChangeToDeselectedSprite();
+        }
+
+        private void ResetCreator()
+        {
+            _profileNameField.text = string.Empty;
+            _createButton.interactable = false;
+        }
+
+        private bool IsProfileNameValid()
+        {
+            return 
+                !string.IsNullOrEmpty(_newProfileName)
+                && !string.IsNullOrWhiteSpace(_newProfileName)
+                && !_newProfileName.Contains(" ");
         }
 
         //public void DeleteProfile()
