@@ -27,7 +27,8 @@
             public const string OnStartGameoverLoadingScreen = "OnStartGameoverLoadingScreen";
             public const string OnGameoverLoadingScreenCovered = "OnGameoverLoadingScreenCovered";
 
-            public const string OnSelectedDifficulty = "OnSelectedDifficulty";
+            public const string OnSelectedProfile = "OnSelectedProfile";
+            public const string OnSelectedDifficultyButton = "OnSelectedDifficultyButton";
         }
 
         public static class CharacterAnimations
@@ -67,7 +68,7 @@
 
         public static class ProfileSaving
         {
-            public const int MaxProfileNameLength = 7;
+            public const int MaxProfileNameLength = 10;
             public const int MaxProfilesNumber = 5;
             public const string ProfileExtension = ".prof";
         }

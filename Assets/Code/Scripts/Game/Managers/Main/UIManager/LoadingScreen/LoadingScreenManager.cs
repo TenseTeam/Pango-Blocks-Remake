@@ -29,14 +29,14 @@
         private void OnEnable()
         {
             MainManager.Ins.EventManager.AddListener(EventKeys.SceneEvents.OnBeforeChangeScene, WaitRandomClose);
-            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnStartGameoverLoadingScreen, ResetLevelLoadingScreen);
+            MainManager.Ins.EventManager.AddListener(GameConstants.UIEvents.OnStartGameoverLoadingScreen, ResetLevelLoadingScreen);
             _waitRandomClose.OnCompleted += RandomClose;
         }
 
         private void OnDisable()
         {
             MainManager.Ins.EventManager.RemoveListener(EventKeys.SceneEvents.OnBeforeChangeScene, WaitRandomClose);
-            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnStartGameoverLoadingScreen, ResetLevelLoadingScreen);
+            MainManager.Ins.EventManager.AddListener(GameConstants.UIEvents.OnStartGameoverLoadingScreen, ResetLevelLoadingScreen);
             _waitRandomClose.OnCompleted -= RandomClose;
         }
 
@@ -45,7 +45,7 @@
         [CalledByAnimationEvent]
         public void LoadingScreenCovered()
         {
-            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnGameoverLoadingScreenCovered);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.UIEvents.OnGameoverLoadingScreenCovered);
         }
 
         public void EnableScreen()

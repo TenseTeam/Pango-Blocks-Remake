@@ -26,7 +26,7 @@
             base.OnEnable();
             MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginGameWonPhase, LoadNextScene);
             MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginGameoverPhase, WaitLoading);
-            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnGameoverLoadingScreenCovered, ResetLevel);
+            MainManager.Ins.EventManager.AddListener(GameConstants.UIEvents.OnGameoverLoadingScreenCovered, ResetLevel);
             _waitResetLevel.OnCompleted += StartLoading;
         }
 
@@ -35,7 +35,7 @@
             base.OnDisable();
             MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameWonPhase, LoadNextScene);
             MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameoverPhase, WaitLoading);
-            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnGameoverLoadingScreenCovered, ResetLevel);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.UIEvents.OnGameoverLoadingScreenCovered, ResetLevel);
             _waitResetLevel.OnCompleted -= StartLoading;
         }
 
@@ -46,7 +46,7 @@
 
         private void StartLoading()
         {
-            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnStartGameoverLoadingScreen);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.UIEvents.OnStartGameoverLoadingScreen);
         }
 
         private void WaitLoading()

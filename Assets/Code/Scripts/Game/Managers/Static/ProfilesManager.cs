@@ -15,7 +15,8 @@
     {
         private static Dictionary<string, ProfileData> s_Profiles = new Dictionary<string, ProfileData>();
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
+        // This method is called before the first scene is loaded, before AfterAssembliesLoaded
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         public static void Init()
         {
             LoadProfiles();
@@ -51,10 +52,14 @@
             return true;
         }
 
-        public static void CreateAndSelect(string profileName, GameDifficulty difficulty = GameDifficulty.Easy)
+        public static bool CreateAndSelect(string profileName, GameDifficulty difficulty = GameDifficulty.Easy)
         {
-            CreateProfile(profileName, difficulty);
-            ProfileSelector.SelectProfile(profileName);
+            if(CreateProfile(profileName, difficulty))
+            {
+                ProfileSelector.SelectProfile(profileName);
+                return true;
+            }
+            return false;
         }
 
         public static void CreateRandomAndSelect()
@@ -73,12 +78,13 @@
             SaveProfile(profile);
         }
 
-        public static void DeleteProfile(string profileName)
+        public static bool DeleteProfile(string profileName)
         {
-            if (!s_Profiles.ContainsKey(profileName)) return;
+            if (!s_Profiles.ContainsKey(profileName)) return false;
 
             SaveManager.DeleteSave(profileName, GameConstants.ProfileSaving.ProfileExtension);
             s_Profiles.Remove(profileName);
+            return true;
         }
 
         public static void DeleteAllProfiles()
@@ -99,6 +105,11 @@
         {
             if (!s_Profiles.ContainsKey(profileName)) return null;
             return s_Profiles[profileName];
+        }
+
+        public static bool HasProfile(string profileName)
+        {
+            return s_Profiles.ContainsKey(profileName);
         }
 
         public static void SaveProfile(ProfileData profile)

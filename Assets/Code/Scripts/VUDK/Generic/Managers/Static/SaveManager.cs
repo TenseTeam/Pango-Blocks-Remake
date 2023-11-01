@@ -17,7 +17,7 @@
         public static void Save<T>(T data, string fileName, string extension = s_DefaultExtension) where T : SaveDataBase
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            string path = Path.Combine(Application.persistentDataPath, fileName + extension);
+            string path = Path.Combine(Application.persistentDataPath, fileName + extension.ToLower());
 
             using (FileStream stream = new FileStream(path, FileMode.Create))
             {
@@ -32,7 +32,7 @@
 
         public static bool TryLoad<T>(out T data, string fileName, string extension = s_DefaultExtension) where T : SaveDataBase
         {
-            string path = Path.Combine(Application.persistentDataPath, fileName + extension);
+            string path = Path.Combine(Application.persistentDataPath, fileName + extension.ToLower());
 
             if (!File.Exists(path))
             {

@@ -7,36 +7,49 @@
     using ProjectPBR.GameConfig.Constants;
 
     [RequireComponent(typeof(Button))]
-    [RequireComponent(typeof(SpriteRenderer))]
     public class UIDifficultyButton : MonoBehaviour
     {
         [SerializeField, Header("Sprites")]
         private Sprite _selectedSprite;
         [SerializeField]
         private Sprite _deselectedSprite;
-        [SerializeField, Header("Difficulty")]
-        private GameDifficulty _difficulty;
+
+        [SerializeField, Header("Image")]
+        private Image _spriteImage;
 
         private Button _btn;
+
+        [field: SerializeField, Header("Difficulty")]
+        public GameDifficulty Difficulty { get; private set; }
 
         private void Awake()
         {
             TryGetComponent(out _btn);
         }
 
-        private void Start()
+        private void OnEnable()
         {
-            _btn.onClick.AddListener(SelectDifficulty);
+            _btn.onClick.AddListener(SelectedDifficultyButton);
         }
 
-        public void Deselect()
+        private void OnDisable()
         {
-            _btn.image.sprite = _deselectedSprite;
+            _btn.onClick.RemoveListener(SelectedDifficultyButton);
         }
 
-        private void SelectDifficulty()
+        public void ChangeToDeselectedSprite()
         {
-            MainManager.Ins.EventManager.TriggerEvent(GameConstants.UIEvents.OnSelectedDifficulty, this);
+            _spriteImage.sprite = _deselectedSprite;
+        }
+
+        public void ChangeToSelectedSprite()
+        {
+            _spriteImage.sprite = _selectedSprite;
+        }
+
+        private void SelectedDifficultyButton()
+        {
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.UIEvents.OnSelectedDifficultyButton, this);
         }
     }
 }
