@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 31672088}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1808497514}
+        m_TargetAssemblyTypeName: VUDK.UI.Menu.UIProfiler, Assembly-CSharp
+        m_MethodName: SetEasyDifficulty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &31672088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1202,7 +1214,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 472814841}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1808497514}
+        m_TargetAssemblyTypeName: VUDK.UI.Menu.UIProfiler, Assembly-CSharp
+        m_MethodName: DeleteProfile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &472814841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4625,7 +4649,19 @@ MonoBehaviour:
   m_CharacterLimit: 10
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1808497514}
+        m_TargetAssemblyTypeName: VUDK.UI.Menu.UIProfiler, Assembly-CSharp
+        m_MethodName: SetProfileName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -5677,7 +5713,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1770691427}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1808497514}
+        m_TargetAssemblyTypeName: VUDK.UI.Menu.UIProfiler, Assembly-CSharp
+        m_MethodName: SetHardDifficulty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1770691427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5861,6 +5909,7 @@ GameObject:
   - component: {fileID: 1808497510}
   - component: {fileID: 1808497509}
   - component: {fileID: 1808497513}
+  - component: {fileID: 1808497514}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -5966,6 +6015,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ad30fec16b684d4ab8bd242a415f5c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1808497514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808497508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3713a66c5ca0e5d4080c81fa4f452d22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _profileNameText: {fileID: 883845664}
 --- !u!1 &1808626886
 GameObject:
   m_ObjectHideFlags: 0
@@ -6267,7 +6329,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1886173106}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1808497514}
+        m_TargetAssemblyTypeName: VUDK.UI.Menu.UIProfiler, Assembly-CSharp
+        m_MethodName: CreateProfile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1886173106
 MonoBehaviour:
   m_ObjectHideFlags: 0

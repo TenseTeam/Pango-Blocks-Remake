@@ -1,23 +1,32 @@
 namespace VUDK.UI.Menu
 {
+    using UnityEngine;
+    using TMPro;
     using ProjectPBR.Data.SaveDatas.Enums;
     using ProjectPBR.Managers.Static;
     using ProjectPBR.SaveSystem;
-    using UnityEngine;
 
     public class UIProfiler : MonoBehaviour
     {
+        [SerializeField, Header("Profile Inputs")]
+        private TMP_Text _profileNameText;
+
         private string _profileName;
         private GameDifficulty _difficulty;
 
-        public void SetProfileName(string profileName)
+        public void SetProfileName()
         {
-            _profileName = profileName;
+            _profileName = _profileNameText.text;
         }
 
-        public void SetGameDifficulty(GameDifficulty difficulty)
+        public void SetEasyDifficulty()
         {
-            _difficulty = difficulty;
+            _difficulty = GameDifficulty.Easy;
+        }
+
+        public void SetHardDifficulty()
+        {
+            _difficulty = GameDifficulty.Hard;
         }
 
         public void SelectProfile()
@@ -27,6 +36,7 @@ namespace VUDK.UI.Menu
 
         public void CreateProfile()
         {
+            if(string.IsNullOrEmpty(_profileName)) return;
             ProfilesManager.CreateAndSelect(_profileName, _difficulty);
         }
 
