@@ -13,7 +13,7 @@
         //private float _maxDistanceFromLocation;
 
         //protected MobileInputsManager MobileInputs => (MainManager.Ins.GameManager).MobileInputsManager;
-        protected Vector2 ReferenceResolution => MainManager.Ins.GameConfig.ReferenceResolution;
+        protected Vector2 ReferenceResolution => MainManager.Ins.GameStats.ReferenceResolution;
 
         public Action OnInputPerformed;
         public Action OnInputCancelled;

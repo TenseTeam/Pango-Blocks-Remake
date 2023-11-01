@@ -1,14 +1,14 @@
 ﻿namespace ProjectPBR.SaveSystem
 {
     using UnityEngine;
-    using UnityEngine.SceneManagement;
     using VUDK.Generic.Managers.Main;
     using VUDK.Features.Main.SaveSystem.Interfaces;
+    using VUDK.Generic.Managers.Main.Interfaces;
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Data.SaveDatas;
     using ProjectPBR.Data.SaveDatas.Enums;
-    using VUDK.Generic.Managers.Main.Interfaces;
-    using ProjectPBR.Managers.SceneManager;
+    using ProjectPBR.Managers.Main.SceneManager;
+    using ProjectPBR.Managers.Static;
 
     public class ProfileSaver : MonoBehaviour, ISaver, ICastSceneManager<GameSceneManager>
     {
@@ -29,12 +29,12 @@
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginGameWonPhase, SaveLevel);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginGameWonPhase, CompleteLevel);
         }
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameWonPhase, SaveLevel);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameWonPhase, CompleteLevel);
         }
 
         public void Save()
@@ -42,11 +42,11 @@
             ProfilesManager.SaveProfile(_selectedProfile);
         }
 
-        private void SaveLevel()
+        private void CompleteLevel()
         {
-            LevelKey levelKey = SceneManager.GetLevelKeyByBuildIndex(SceneManager.CurrentSceneIndex);
-            Debug.Log(levelKey.SaveIndex + " " + levelKey.Difficulty);
-            _selectedProfile.LevelsData[levelKey].Status = LevelStatus.Completed;
+            LevelKey levelKey = LevelMapper.GetLevelKeyByBuildIndex(SceneManager.CurrentSceneIndex);
+            ProfileLevelOperation.SetLevelStatus(levelKey, LevelStatus.Completed);
+            ProfileLevelOperation.SetLevelStatus(++levelKey, LevelStatus.Unlocked);
             Save();
         }
     }

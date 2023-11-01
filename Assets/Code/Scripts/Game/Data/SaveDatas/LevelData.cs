@@ -1,18 +1,16 @@
-﻿namespace ProjectPBR.Data.SaveDatas
-{
-    using ProjectPBR.Data.SaveDatas.Enums;
+﻿using ProjectPBR.Data.SaveDatas.Enums;
 
+namespace ProjectPBR.Data.SaveDatas
+{
     [System.Serializable]
     public class LevelData
     {
-        public int LevelNumber; // To not confuse with the build index
-        public LevelDifficulty Difficulty;
+        public int LevelNumber;
         public LevelStatus Status;
 
-        public LevelData(int levelNumber, LevelDifficulty difficulty)
+        public LevelData(int levelNumber)
         {
             LevelNumber = levelNumber;
-            Difficulty = difficulty;
             Status = LevelStatus.Locked;
         }
     }

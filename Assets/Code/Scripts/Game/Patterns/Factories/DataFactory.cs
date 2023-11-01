@@ -8,17 +8,17 @@
     /// </summary>
     public static class DataFactory
     {
-        public static LevelData CreateLevelData(int levelNumber, LevelDifficulty difficulty)
+        public static LevelData CreateLevelData(int levelNumber)
         {
-            return new LevelData(levelNumber, difficulty);
+            return new LevelData(levelNumber);
         }
 
-        public static LevelKey CreateLevelKey(int saveIndex, LevelDifficulty difficulty)
+        public static LevelKey CreateLevelKey(int saveIndex, GameDifficulty difficulty)
         {
             return new LevelKey(saveIndex, difficulty);
         }
 
-        public static ProfileData Create(string name, LevelDifficulty difficulty)
+        public static ProfileData Create(string name, GameDifficulty difficulty)
         {
             return new ProfileData(name, difficulty);
         }

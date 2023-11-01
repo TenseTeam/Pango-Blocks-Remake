@@ -6,12 +6,24 @@
     public class LevelKey
     {
         public int SaveIndex;
-        public LevelDifficulty Difficulty;
+        public GameDifficulty Difficulty;
 
-        public LevelKey(int saveIndex, LevelDifficulty difficulty)
+        public LevelKey(int saveIndex, GameDifficulty difficulty)
         {
             SaveIndex = saveIndex;
             Difficulty = difficulty;
+        }
+
+        public static LevelKey operator ++(LevelKey key)
+        {
+            key.SaveIndex++;
+            return key;
+        }
+
+        public static LevelKey operator --(LevelKey key)
+        {
+            key.SaveIndex--;
+            return key;
         }
 
         public override int GetHashCode()

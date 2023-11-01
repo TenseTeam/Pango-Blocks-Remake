@@ -4,12 +4,13 @@ namespace ProjectPBR.Debug
     using UnityEngine;
     using ProjectPBR.SaveSystem;
     using ProjectPBR.Data.SaveDatas.Enums;
+    using ProjectPBR.Managers.Static;
 
     public class SaveTester : MonoBehaviour
     {
         public string ProfileToCreate;
         public string ProfileToSelect;
-        public LevelDifficulty DifficultyToChange;
+        public GameDifficulty DifficultyToChange;
 
         [ContextMenu("CreateProfile")]
         public void Create()

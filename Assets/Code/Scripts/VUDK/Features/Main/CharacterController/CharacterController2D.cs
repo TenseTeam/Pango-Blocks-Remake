@@ -8,7 +8,7 @@
     {
         protected Rigidbody2D Rigidbody;
 
-        public override bool IsGrounded => Physics2D.OverlapCircle(transform.position + GroundedOffset, GroundedRadius, MainManager.Ins.GameConfig.GroundLayerMask);
+        public override bool IsGrounded => Physics2D.OverlapCircle(transform.position + GroundedOffset, GroundedRadius, MainManager.Ins.GameStats.GroundLayerMask);
 
         protected virtual void Awake()
         {

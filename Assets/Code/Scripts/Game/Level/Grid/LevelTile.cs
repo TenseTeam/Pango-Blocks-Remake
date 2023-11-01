@@ -4,9 +4,8 @@
     using VUDK.Generic.Structures.Grid;    
     using VUDK.Generic.Managers.Main;
     using ProjectPBR.Level.Blocks;
-    using ProjectPBR.Player.Objective.Goal;
-    using ProjectPBR.Managers.GameStateMachine.States;
     using ProjectPBR.Player.Objective.Interfaces;
+    using ProjectPBR.Managers.Main.GameStateMachine.States.Keys;
 
     public class LevelTile : GridTileBase
     {

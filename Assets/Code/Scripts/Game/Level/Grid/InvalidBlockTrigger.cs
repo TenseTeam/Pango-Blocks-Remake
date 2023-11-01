@@ -3,7 +3,7 @@
     using UnityEngine;
     using ProjectPBR.Level.Blocks;
     using VUDK.Generic.Managers.Main;
-    using ProjectPBR.Managers.GameStateMachine.States;
+    using ProjectPBR.Managers.Main.GameStateMachine.States.Keys;
 
     [RequireComponent(typeof(Collider2D))]
     public class InvalidBlockTrigger : MonoBehaviour

@@ -5,7 +5,7 @@
     using VUDK.Generic.Managers.Main.Interfaces;
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Level.PathSystem;
-    using ProjectPBR.Managers.GameManagers;
+    using ProjectPBR.Managers.Main.GameManagers;
 
     public class CharacterPathRunner : MonoBehaviour, ICastGameManager<GameManager>
     {

@@ -1049,7 +1049,7 @@ MonoBehaviour:
     <Delay>k__BackingField: 5
   _waitResetLevel:
     <Delay>k__BackingField: 3
-  _levelBuildIndexes: {fileID: 11400000, guid: dcc5522dbbf19524ab0192561046878b, type: 2}
+  <MappedLevels>k__BackingField: {fileID: 0}
 --- !u!1 &4564716474377814198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,9 +1106,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1839510435650468898}
-  - component: {fileID: 5403176040699830600}
+  - component: {fileID: 7902243552671464052}
   m_Layer: 0
-  m_Name: GameConfig
+  m_Name: GameStats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1129,7 +1129,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2220860461155247804}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5403176040699830600
+--- !u!114 &7902243552671464052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1138,19 +1138,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4852216774246371854}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13e3c9d8a95d86347b90c886a8c45c29, type: 3}
+  m_Script: {fileID: 11500000, guid: e41b9a10c824a0745b7733ee2824bd9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <MainCamera>k__BackingField: {fileID: 0}
   <GroundLayerMask>k__BackingField:
     serializedVersion: 2
-    m_Bits: 640
+    m_Bits: 512
   <PlayerLayerMask>k__BackingField:
     serializedVersion: 2
     m_Bits: 2056
   _canvasScaler: {fileID: 3024138547044415243}
   _gameScaleTime: 1
   _gameFPS: 60
+  <MappedLevels>k__BackingField: {fileID: 11400000, guid: dcc5522dbbf19524ab0192561046878b, type: 2}
 --- !u!1 &4952031749192989740
 GameObject:
   m_ObjectHideFlags: 0
@@ -2194,7 +2195,7 @@ MonoBehaviour:
   <GameStateMachine>k__BackingField: {fileID: 7669568288478646049}
   <SceneManager>k__BackingField: {fileID: 5762545395386250756}
   <AudioManager>k__BackingField: {fileID: 5719957247285582592}
-  <GameConfig>k__BackingField: {fileID: 5403176040699830600}
+  <GameStats>k__BackingField: {fileID: 7902243552671464052}
   <PoolsManager>k__BackingField: {fileID: 1629796388240318885}
 --- !u!1 &8168307127334575487
 GameObject:

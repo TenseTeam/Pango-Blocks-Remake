@@ -16,7 +16,7 @@
         /// <summary>
         /// Returns the position of the touch in the screen already converted with ScreenToWorldPoint.
         /// </summary>
-        public Vector2 ScreenTouchPosition => MainManager.Ins.GameConfig.MainCamera.ScreenToWorldPoint(RawTouchPosition);
+        public Vector2 ScreenTouchPosition => MainManager.Ins.GameStats.MainCamera.ScreenToWorldPoint(RawTouchPosition);
         public Vector2 RawTouchPosition => InputsManager.Inputs.Touches.TouchPosition0.ReadValue<Vector2>();
 
         /// <summary>
@@ -28,7 +28,7 @@
         {
             Vector2 origin = ScreenTouchPosition;
             Vector2 direction = Vector2.zero;
-            float maxDistance = Mathf.Abs(MainManager.Ins.GameConfig.MainCamera.transform.position.z);
+            float maxDistance = Mathf.Abs(MainManager.Ins.GameStats.MainCamera.transform.position.z);
             return Physics2D.Raycast(origin, direction, maxDistance, layerMask);
         }
 

@@ -1,12 +1,13 @@
 ﻿namespace ProjectPBR.Patterns.Factories
 {
-    using ProjectPBR.Managers.GameManagers;
-    using ProjectPBR.Managers.GameStateMachine;
-    using ProjectPBR.Managers.GameStateMachine.States;
-    using ProjectPBR.Managers.SceneManager;
     using VUDK.Features.Main.InputSystem;
     using VUDK.Generic.Managers.Main;
     using VUDK.Patterns.StateMachine;
+    using ProjectPBR.Managers.Main.GameManagers;
+    using ProjectPBR.Managers.Main.GameStateMachine;
+    using ProjectPBR.Managers.Main.GameStateMachine.States.Keys;
+    using ProjectPBR.Managers.Main.SceneManager;
+    using ProjectPBR.Managers.Main.GameStateMachine.States;
 
     /// <summary>
     /// Factory for Game's StateMachines

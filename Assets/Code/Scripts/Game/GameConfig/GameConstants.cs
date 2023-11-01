@@ -62,7 +62,7 @@
 
         public static class ProfileSaving
         {
-            public const int NumberOfLevels = 10; // TO DO: Add correct number of levels
+            public const int MaxProfileNameLength = 7;
             public const int MaxProfilesNumber = 5;
             public const string ProfileExtension = ".prof";
         }
