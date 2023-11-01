@@ -19,14 +19,9 @@ namespace VUDK.UI.Menu
             _profileName = _profileNameText.text;
         }
 
-        public void SetEasyDifficulty()
+        public void SetDifficulty(GameDifficulty difficulty)
         {
-            _difficulty = GameDifficulty.Easy;
-        }
-
-        public void SetHardDifficulty()
-        {
-            _difficulty = GameDifficulty.Hard;
+            _difficulty = difficulty;
         }
 
         public void SelectProfile()

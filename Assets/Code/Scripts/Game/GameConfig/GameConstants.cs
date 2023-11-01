@@ -9,20 +9,25 @@
             public const string OnObjectiveGoalTouched = "OnObjectiveGoalTouched";
             public const string OnObjectiveGoalSendPosition = "OnObjectiveGoalSendPosition";
 
-
             public const string OnBeginPlacementPhase = "OnBeginPlacementPhase";
             public const string OnBeginObjectivePhase = "OnBeginObjectivePhase";
             public const string OnBeginGameWonPhase = "OnGamewon";
             public const string OnBeginGameoverPhase = "OnGameover";
 
-            public const string OnStartGameoverLoadingScreen = "OnStartGameoverLoadingScreen";
-            public const string OnGameoverLoadingScreenCovered = "OnGameoverLoadingScreenCovered";
             public const string OnResetLevel = "OnResetLevel";
 
             public const string OnCharacterStartWalking = "OnCharacterStartWalking";
             public const string OnCharacterChangedTile = "OnCharacterMoved";
             public const string OnCharacterReachedDestination = "OnCharacterReachedDestination";
             public const string OnCharacterSendPosition = "OnCharacterSendPosition";
+        }
+
+        public static class UIEvents
+        {
+            public const string OnStartGameoverLoadingScreen = "OnStartGameoverLoadingScreen";
+            public const string OnGameoverLoadingScreenCovered = "OnGameoverLoadingScreenCovered";
+
+            public const string OnSelectedDifficulty = "OnSelectedDifficulty";
         }
 
         public static class CharacterAnimations
