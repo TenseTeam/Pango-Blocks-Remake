@@ -5,31 +5,31 @@
     [System.Serializable]
     public class LevelKey
     {
-        public int SaveIndex;
+        public int LevelIndex;
         public GameDifficulty Difficulty;
 
-        public LevelKey(int saveIndex, GameDifficulty difficulty)
+        public LevelKey(int levelIndex, GameDifficulty difficulty)
         {
-            SaveIndex = saveIndex;
+            LevelIndex = levelIndex;
             Difficulty = difficulty;
         }
 
         public static LevelKey operator ++(LevelKey key)
         {
-            key.SaveIndex++;
+            key.LevelIndex++;
             return key;
         }
 
         public static LevelKey operator --(LevelKey key)
         {
-            key.SaveIndex--;
+            key.LevelIndex--;
             return key;
         }
 
         public override int GetHashCode()
         {
             int hash = 17;
-            hash = hash * 23 + SaveIndex.GetHashCode();
+            hash = hash * 23 + LevelIndex.GetHashCode();
             hash = hash * 23 + Difficulty.GetHashCode();
 
             return hash;
@@ -44,7 +44,7 @@
         {
             if(obj == null) return false;
 
-            return obj.SaveIndex == this.SaveIndex && obj.Difficulty == this.Difficulty;
+            return obj.LevelIndex == this.LevelIndex && obj.Difficulty == this.Difficulty;
         }
     }
 }

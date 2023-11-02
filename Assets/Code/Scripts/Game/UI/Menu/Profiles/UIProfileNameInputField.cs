@@ -1,11 +1,11 @@
-﻿namespace ProjectPBR.UI.Menu
+﻿namespace ProjectPBR.UI.Menu.Profiles
 {
     using UnityEngine;
     using TMPro;
     using ProjectPBR.GameConfig.Constants;
 
     [RequireComponent(typeof(TMP_InputField))]
-    public class UIProfileName : MonoBehaviour
+    public class UIProfileNameInputField : MonoBehaviour
     {
         private TMP_InputField _inputField;
 

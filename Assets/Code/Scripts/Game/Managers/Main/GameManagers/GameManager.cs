@@ -4,6 +4,7 @@
     using VUDK.Features.Main.InputSystem.MobileInputs;
     using VUDK.Generic.Managers.Main.Bases;
     using ProjectPBR.Managers.Main.GameManagers.BlocksManagement;
+    using ProjectPBR.Managers.Main.GameManagers.Profiles;
 
     public class GameManager : GameManagerBase
     {
@@ -18,5 +19,8 @@
 
         [field: SerializeField, Header("Path Manager")]
         public PathManager PathManager { get; private set; }
+
+        [field: SerializeField, Header("Profiles Controller")]
+        public ProfileLevelsController ProfileLevelsController { get; private set; }
     }
 }

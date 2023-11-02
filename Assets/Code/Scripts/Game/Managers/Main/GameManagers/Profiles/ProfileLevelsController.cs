@@ -1,4 +1,4 @@
-﻿namespace ProjectPBR.SaveSystem
+﻿namespace ProjectPBR.Managers.Main.GameManagers.Profiles
 {
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
@@ -9,8 +9,9 @@
     using ProjectPBR.Data.SaveDatas.Enums;
     using ProjectPBR.Managers.Main.SceneManager;
     using ProjectPBR.Managers.Static;
+    using ProjectPBR.Managers.Static.Profiles;
 
-    public class ProfileSaver : MonoBehaviour, ISaver, ICastSceneManager<GameSceneManager>
+    public class ProfileLevelsController : MonoBehaviour, ISaver, ICastSceneManager<GameSceneManager>
     {
         private ProfileData _selectedProfile => ProfileSelector.SelectedProfile;
 
@@ -18,13 +19,7 @@
 
         private void Awake()
         {
-            if (ProfileSelector.SelectedProfile == null)        // If no profile is selected
-            {
-                if(!ProfileSelector.TrySelectFirstProfile())    // Try to select the first profile
-                {
-                    ProfilesManager.CreateRandomAndSelect();          // If no profile exists, create one
-                }
-            }
+            ProfileSelector.SelectOrCreateIfNoProfileSelected();
         }
 
         private void OnEnable()

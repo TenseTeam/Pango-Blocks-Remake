@@ -5,8 +5,8 @@
     using ProjectPBR.Data.SaveDatas;
     using ProjectPBR.Data.ScriptableObjects.Levels;
     using ProjectPBR.Patterns.Factories;
-    using ProjectPBR.SaveSystem;
     using ProjectPBR.Managers.Main.GameStats;
+    using ProjectPBR.Managers.Static.Profiles;
 
     public static class LevelMapper
     {
@@ -18,11 +18,11 @@
             _mappedLevels = (MainManager.Ins.GameStats as GameStats).MappedLevels;
         }
 
-        public static int GetBuildIndexBySaveIndex(int saveIndex)
+        public static int GetBuildIndexByLevelIndex(int levelIndex)
         {
             for(int i = 0; i < _mappedLevels.Levels.Length; i++)
             {
-                if (i == saveIndex)
+                if (i == levelIndex)
                 {
                     if (s_CurrDifficulty == GameDifficulty.Hard)
                         return _mappedLevels.Levels[i].HardBuildIndex;
@@ -63,9 +63,12 @@
         public static LevelKey GetLevelKeyByBuildIndex(int buildIndex)
         {
             int saveIndex = GetLevelIndexByBuildIndex(buildIndex);
-            GameDifficulty difficulty = ProfileSelector.SelectedProfile.CurrentDifficulty;
+            return DataFactory.Create(saveIndex, s_CurrDifficulty);
+        }
 
-            return DataFactory.CreateLevelKey(saveIndex, difficulty);
+        public static LevelKey GetLevelKeyByLevelIndex(int levelIndex)
+        {
+            return DataFactory.Create(levelIndex, s_CurrDifficulty);
         }
     }
 }

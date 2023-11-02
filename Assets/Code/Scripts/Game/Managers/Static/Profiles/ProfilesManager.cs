@@ -1,0 +1,182 @@
+﻿namespace ProjectPBR.Managers.Static.Profiles
+{
+    using System.Collections.Generic;
+    using System.Linq;
+    using UnityEngine;
+    using VUDK.Generic.Managers.Static;
+    using VUDK.Extensions.Strings;
+    using VUDK.Generic.Managers.Main;
+    using ProjectPBR.Data.SaveDatas;
+    using ProjectPBR.GameConfig.Constants;
+    using ProjectPBR.Patterns.Factories;
+    using ProjectPBR.Data.SaveDatas.Enums;
+
+    public static class ProfilesManager
+    {
+        private static SortedDictionary<int, ProfileData> s_Profiles = new SortedDictionary<int, ProfileData>();
+
+        public static int Count => s_Profiles.Count;
+
+        // This method is called before the first scene is loaded, before AfterAssembliesLoaded
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        public static void Init()
+        {
+            LoadProfiles();
+        }
+
+        public static void LoadProfiles()
+        {
+            foreach(string fileName in SaveManager.GetFileNames(GameConstants.ProfileSaving.ProfileExtension))
+            {
+                if(SaveManager.TryLoad(out ProfileData profile, fileName, GameConstants.ProfileSaving.ProfileExtension))
+                {
+                    s_Profiles.Add(profile.ProfileIndex, profile);
+                }
+            }
+        }
+
+        public static void SaveProfiles()
+        {
+            foreach(var profilePair in s_Profiles)
+            {
+                SaveManager.Save(profilePair.Value, profilePair.Value.ProfileName, GameConstants.ProfileSaving.ProfileExtension);
+            }
+        }
+
+        public static bool CreateProfile(string profileName, GameDifficulty difficulty = GameDifficulty.Easy)
+        {
+            if (s_Profiles.Count >= GameConstants.ProfileSaving.MaxProfilesCount) return false;
+            if (HasProfile(profileName)) return false;
+
+            int profileIndex = s_Profiles.Count;
+            ProfileData profile = DataFactory.Create(profileName, profileIndex, difficulty);                    // Create new profile
+            SaveProfile(profile);                                                                               // Save profile
+            s_Profiles.Add(profileIndex, profile);                                                              // Add profile to list
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnCreatedProfile, s_Profiles.Count); // Trigger event
+            return true;
+        }
+
+        public static bool CreateAndSelect(string profileName, GameDifficulty difficulty = GameDifficulty.Easy)
+        {
+            if(CreateProfile(profileName, difficulty))
+            {
+                ProfileSelector.SelectProfile(profileName);
+                return true;
+            }
+            return false;
+        }
+
+        public static void CreateRandomAndSelect()
+        {
+            string profileName = StringExtension.Random(GameConstants.ProfileSaving.MaxProfileNameLength);
+            CreateProfile(profileName);
+            ProfileSelector.SelectProfile(profileName);
+        }
+
+        public static void ChangeProfileDifficulty(int profileIndex, GameDifficulty difficulty)
+        {
+            if (!s_Profiles.ContainsKey(profileIndex)) return;
+
+            ProfileData profile = GetProfile(profileIndex);
+            profile.CurrentDifficulty = difficulty;
+            SaveProfile(profile);
+        }
+
+        public static void ChangeProfileName(int profileIndex, string profileName)
+        {
+            if (!s_Profiles.ContainsKey(profileIndex)) return;
+
+            ProfileData profile = GetProfile(profileIndex);
+            profile.ProfileName = profileName;
+            SaveProfile(profile);
+        }
+
+        public static void ChangeProfileNameAndDifficulty(int profileIndex, string profileName, GameDifficulty difficulty)
+        {
+            if (!s_Profiles.ContainsKey(profileIndex)) return;
+
+            ProfileData profile = GetProfile(profileIndex);
+            profile.ProfileName = profileName;
+            profile.CurrentDifficulty = difficulty;
+            SaveProfile(profile);
+        }
+
+        public static bool DeleteProfile(int profileIndex)
+        {
+            if (!s_Profiles.ContainsKey(profileIndex)) return false;
+
+            SaveManager.DeleteSave(s_Profiles[profileIndex].ProfileName, GameConstants.ProfileSaving.ProfileExtension);
+            s_Profiles.Remove(profileIndex);
+            return true;
+        }
+
+        public static void DeleteAllProfiles()
+        {
+            foreach (var profilePair in s_Profiles)
+                SaveManager.DeleteSave(profilePair.Value.ProfileName, GameConstants.ProfileSaving.ProfileExtension);
+
+            s_Profiles.Clear();
+        }
+
+        public static ProfileData GetFirstProfile()
+        {
+            return s_Profiles.FirstOrDefault().Value;
+        }
+
+        public static ProfileData GetProfile(string profileName)
+        {
+            foreach(var profilePair in s_Profiles)
+            {
+                if(profilePair.Value.ProfileName == profileName)
+                    return profilePair.Value;
+            }
+
+            return null;
+        }
+
+        public static ProfileData GetProfile(int profileIndex)
+        {
+            return s_Profiles.ElementAtOrDefault(profileIndex).Value;
+        }
+
+        public static ProfileData GetProfileOrFirst(int index)
+        {
+            ProfileData profile = GetProfile(index);
+            if (profile == null)
+                profile = GetFirstProfile();
+
+            return profile;
+        }
+
+        public static bool HasProfile(string profileName)
+        {
+            foreach(var profile in s_Profiles)
+            {
+                if(profile.Value.ProfileName == profileName)
+                    return true;
+            }
+
+            return false;
+        }
+
+        public static void SaveProfile(ProfileData profile)
+        {
+            SaveManager.Save(profile, profile.Id.ToString(), GameConstants.ProfileSaving.ProfileExtension);
+        }
+
+        public static bool IsProfileNameValid(string profileName)
+        {
+            return
+                !string.IsNullOrEmpty(profileName)
+                && !string.IsNullOrWhiteSpace(profileName)
+                && !profileName.Contains(" ");
+        }
+#if DEBUG
+        public static void PrintProfiles()
+        {
+            foreach (var profilePair in s_Profiles)
+                Debug.Log($"{profilePair.Value}");
+        }
+#endif
+    }
+}

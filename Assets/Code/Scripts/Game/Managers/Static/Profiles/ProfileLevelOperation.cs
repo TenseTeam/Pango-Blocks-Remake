@@ -1,4 +1,4 @@
-﻿namespace ProjectPBR.SaveSystem
+﻿namespace ProjectPBR.Managers.Static.Profiles
 {
     using ProjectPBR.Data.SaveDatas;
     using ProjectPBR.Data.SaveDatas.Enums;

@@ -2,9 +2,8 @@
 namespace ProjectPBR.Debug
 {
     using UnityEngine;
-    using ProjectPBR.SaveSystem;
     using ProjectPBR.Data.SaveDatas.Enums;
-    using ProjectPBR.Managers.Static;
+    using ProjectPBR.Managers.Static.Profiles;
 
     public class SaveTester : MonoBehaviour
     {
@@ -34,12 +33,6 @@ namespace ProjectPBR.Debug
         public void Delete()
         {
             ProfilesManager.DeleteAllProfiles();
-        }
-
-        [ContextMenu("Change Selected Profile Difficulty")]
-        public void ChangeDifficulty()
-        {
-            ProfileSelector.ChangeSelectedProfileDifficulty(DifficultyToChange);
         }
 
         [ContextMenu("Print Selected Profile")]

@@ -1,4 +1,4 @@
-﻿namespace ProjectPBR.UI.Menu
+﻿namespace ProjectPBR.UI.Menu.Profiles
 {
     using UnityEngine;
     using UnityEngine.UI;
