@@ -93,3 +93,4 @@ MonoBehaviour:
     HardBuildIndex: 39
   - EasyBuildIndex: 40
     HardBuildIndex: 40
+  LevelsPerStage: 8

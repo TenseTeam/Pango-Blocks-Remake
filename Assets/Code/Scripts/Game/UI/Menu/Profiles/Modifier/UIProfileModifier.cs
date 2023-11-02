@@ -2,12 +2,12 @@
 {
     using UnityEngine;
     using UnityEngine.UI;
+    using UnityEngine.Events;
     using TMPro;
     using VUDK.Generic.Managers.Main;
     using ProjectPBR.Data.SaveDatas.Enums;
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Managers.Static.Profiles;
-    using UnityEngine.Events;
 
     public class UIProfileModifier : MonoBehaviour
     {
@@ -24,7 +24,7 @@
 
         private GameDifficulty _profileModifiedDifficulty;
 
-        private string _profileModifiedName => _profileModifiedNameField.text.ToLower();
+        private string _profileModifiedName => _profileModifiedNameField.text;
 
         [Header("Events")]
         public UnityEvent OnOpenProfile;
@@ -44,6 +44,7 @@
         public void ConfirmModify()
         {
             if (!ProfilesManager.IsProfileNameValid(_profileModifiedName)) return;
+            //if (ProfilesManager.HasMultipleProfiles(_profileModifiedName)) return;
 
             ProfileSelector.ChangeSelectedProfileValues(_profileModifiedName, _profileModifiedDifficulty);
             OnProfileModified?.Invoke();
@@ -51,13 +52,20 @@
 
         public void DeleteOpenProfile()
         {
-            ProfilesManager.DeleteProfile(ProfileSelector.SelectedProfile.ProfileIndex);
+            ProfileSelector.DeleteAndDeselect();
             ProfileSelector.TrySelectFirstProfile();
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnDeletedProfile, ProfilesManager.Count);
             OnDeletedProfile?.Invoke();
         }
 
         public void ValidateModifyButton()
         {
+            //if (ProfilesManager.HasMultipleProfiles(_profileModifiedName))
+            //{
+            //    _confirmButton.interactable = false;
+            //    return;
+            //}
+
             _confirmButton.interactable = ProfilesManager.IsProfileNameValid(_profileModifiedName);
         }
 

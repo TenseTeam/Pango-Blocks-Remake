@@ -18,15 +18,13 @@ namespace ProjectPBR.UI.Menu.Profiles.Creator
 
         [SerializeField, Header("Profile Buttons")]
         private Button _createButton;
-        [SerializeField]
-        private Button _addProfileButton;
 
         [SerializeField, Header("Profile Inputs")]
         private TMP_InputField _profileNameField;
 
         private GameDifficulty _profileDifficulty;
 
-        private string _profileName => _profileNameField.text.ToLower();
+        private string _profileName => _profileNameField.text;
 
         [Header("Events")]
         public UnityEvent OnOpenCreator;
@@ -35,19 +33,17 @@ namespace ProjectPBR.UI.Menu.Profiles.Creator
         private void OnEnable()
         {
             MainManager.Ins.EventManager.AddListener<UIDifficultyButton>(GameConstants.UIEvents.OnSelectedDifficultyButton, ButtonSelectProfileDifficulty);
-            MainManager.Ins.EventManager.AddListener<int>(GameConstants.Events.OnCreatedProfile, ValidateAddProfileButton);
-        }
+       }
 
         private void OnDisable()
         {
             MainManager.Ins.EventManager.RemoveListener<UIDifficultyButton>(GameConstants.UIEvents.OnSelectedDifficultyButton, ButtonSelectProfileDifficulty);
-            MainManager.Ins.EventManager.RemoveListener<int>(GameConstants.Events.OnCreatedProfile, ValidateAddProfileButton);
         }
 
         private void Start()
         {
             ValidateCreateButton();
-            ValidateAddProfileButton(ProfilesManager.Count);
+
         }
 
         public void OpenCreator()
@@ -73,12 +69,6 @@ namespace ProjectPBR.UI.Menu.Profiles.Creator
             }
 
             _createButton.interactable = !ProfilesManager.HasProfile(_profileName);
-        }
-
-        private void ValidateAddProfileButton(int profilesCount)
-        {
-            bool profilesAreFull = profilesCount >= GameConstants.ProfileSaving.MaxProfilesCount;
-            _addProfileButton.gameObject.SetActive(!profilesAreFull);
         }
 
         private void ButtonSelectProfileDifficulty(UIDifficultyButton difficultyBtn)

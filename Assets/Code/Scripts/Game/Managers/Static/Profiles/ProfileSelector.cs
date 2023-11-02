@@ -30,14 +30,23 @@
         public static void SelectNextProfile()
         {
             if (SelectedProfile == null) return;
-            int nextIndex = SelectedProfile.ProfileIndex + 1;
-            TrySelectProfileOrFirst(nextIndex);
+            TrySelectNextFirstDifferent();
         }
 
         public static void ChangeSelectedProfileValues(string newName, GameDifficulty newDifficulty)
         {
             ProfilesManager.ChangeProfileNameAndDifficulty(SelectedProfile.ProfileIndex, newName, newDifficulty);
             SelectProfile(SelectedProfile);
+        }
+
+        public static bool TrySelectNextFirstDifferent()
+        {
+            ProfileData profile = ProfilesManager.GetNextFirstDifferent(SelectedProfile.ProfileIndex);
+            if (profile == null)
+                return false;
+
+            SelectProfile(profile);
+            return true;
         }
 
         public static bool TrySelectProfileOrFirst(int profileIndex)
@@ -82,6 +91,12 @@
         {
             if (SelectedProfile == null)
                 SelectOrCreateFirstProfile();
+        }
+
+        public static void DeleteAndDeselect()
+        {
+            ProfilesManager.DeleteProfile(SelectedProfile.ProfileIndex);
+            SelectedProfile = null;
         }
     }
 }

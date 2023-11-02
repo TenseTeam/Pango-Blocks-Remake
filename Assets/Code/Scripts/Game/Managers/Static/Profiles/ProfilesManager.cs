@@ -14,8 +14,14 @@
     public static class ProfilesManager
     {
         private static SortedDictionary<int, ProfileData> s_Profiles = new SortedDictionary<int, ProfileData>();
+        private static Color[] s_TagColors;
 
         public static int Count => s_Profiles.Count;
+
+        static ProfilesManager()
+        {
+            s_TagColors = new Color[5] { Color.red, Color.blue, Color.green, Color.yellow, Color.magenta };
+        }
 
         // This method is called before the first scene is loaded, before AfterAssembliesLoaded
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
@@ -48,11 +54,11 @@
             if (s_Profiles.Count >= GameConstants.ProfileSaving.MaxProfilesCount) return false;
             if (HasProfile(profileName)) return false;
 
-            int profileIndex = s_Profiles.Count;
-            ProfileData profile = DataFactory.Create(profileName, profileIndex, difficulty);                    // Create new profile
-            SaveProfile(profile);                                                                               // Save profile
-            s_Profiles.Add(profileIndex, profile);                                                              // Add profile to list
-            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnCreatedProfile, s_Profiles.Count); // Trigger event
+            int profileIndex = s_Profiles.LastOrDefault().Key + 1;                                                  // Get last profile index and add 1
+            ProfileData profile = DataFactory.Create(profileName, GetAvailableColor(), profileIndex, difficulty);   // Create new profile
+            SaveProfile(profile);                                                                                   // Save profile
+            s_Profiles.Add(profileIndex, profile);                                                                  // Add profile to list
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnCreatedProfile, s_Profiles.Count);     // Trigger event
             return true;
         }
 
@@ -105,7 +111,7 @@
         {
             if (!s_Profiles.ContainsKey(profileIndex)) return false;
 
-            SaveManager.DeleteSave(s_Profiles[profileIndex].ProfileName, GameConstants.ProfileSaving.ProfileExtension);
+            SaveManager.DeleteSave(s_Profiles[profileIndex].Id.ToString(), GameConstants.ProfileSaving.ProfileExtension);
             s_Profiles.Remove(profileIndex);
             return true;
         }
@@ -134,9 +140,33 @@
             return null;
         }
 
+        public static ProfileData GetNextFirstDifferent(int profileIndex)
+        {
+            if (s_Profiles.Count == 0) return null;
+            if (!s_Profiles.ContainsKey(profileIndex)) return null;
+
+            SortedDictionary<int, ProfileData>.Enumerator enumerator = s_Profiles.GetEnumerator();
+
+            while (enumerator.MoveNext())
+            {
+                if (enumerator.Current.Key > profileIndex)
+                    return enumerator.Current.Value;
+            }
+
+            return GetFirstProfile();
+        }
+
+
         public static ProfileData GetProfile(int profileIndex)
         {
-            return s_Profiles.ElementAtOrDefault(profileIndex).Value;
+            try
+            {
+                return s_Profiles[profileIndex];
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public static ProfileData GetProfileOrFirst(int index)
@@ -159,6 +189,22 @@
             return false;
         }
 
+        public static bool HasMultipleProfiles(string profileName)
+        {
+            int n = 0;
+
+            foreach(var profile in s_Profiles)
+            {
+                if(profile.Value.ProfileName == profileName)
+                    n++;
+
+                if(n > 1)
+                    return true;
+            }
+
+            return false;
+        }
+
         public static void SaveProfile(ProfileData profile)
         {
             SaveManager.Save(profile, profile.Id.ToString(), GameConstants.ProfileSaving.ProfileExtension);
@@ -170,6 +216,17 @@
                 !string.IsNullOrEmpty(profileName)
                 && !string.IsNullOrWhiteSpace(profileName)
                 && !profileName.Contains(" ");
+        }
+
+        public static Color GetAvailableColor()
+        {
+            foreach (Color color in s_TagColors)
+            {
+                if (!s_Profiles.Any(profile => profile.Value.Color.Equals(color)))
+                    return color;
+            }
+
+            return Color.white;
         }
 #if DEBUG
         public static void PrintProfiles()

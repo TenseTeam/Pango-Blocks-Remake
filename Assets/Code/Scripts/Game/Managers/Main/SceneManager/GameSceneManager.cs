@@ -12,9 +12,6 @@
         [SerializeField, Header("Level Reset")]
         private TimeDelay _waitResetLevel;
 
-        [field: SerializeField, Header("Mapped Levels")]
-        public LevelMapping MappedLevels { get; private set; }
-
         protected override void Update()
         {
             base.Update();

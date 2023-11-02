@@ -29,13 +29,13 @@
             TryGetComponent(out _image);
             TryGetComponent(out _button);
 
-            SetStatus();
             _levelNumber = transform.GetSiblingIndex();
         }
 
         private void OnEnable()
         {
             _button.onClick.AddListener(LoadLevelScene);
+            SetStatus();
         }
 
         private void OnDisable()

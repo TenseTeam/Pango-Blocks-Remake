@@ -29,6 +29,8 @@
             // Profile
             public const string OnSelectedProfile = "OnSelectedProfile";
             public const string OnCreatedProfile = "OnCreatedProfile";
+            public const string OnDeletedProfile = "OnDeletedProfile";
+            public const string OnProfileChanged = "OnProfileChanged";
         }
 
         public static class UIEvents
