@@ -142,7 +142,6 @@
 
         public static ProfileData GetNextFirstDifferent(int profileIndex)
         {
-            if (s_Profiles.Count == 0) return null;
             if (!s_Profiles.ContainsKey(profileIndex)) return null;
 
             SortedDictionary<int, ProfileData>.Enumerator enumerator = s_Profiles.GetEnumerator();
@@ -155,7 +154,6 @@
 
             return GetFirstProfile();
         }
-
 
         public static ProfileData GetProfile(int profileIndex)
         {
@@ -189,21 +187,32 @@
             return false;
         }
 
-        public static bool HasMultipleProfiles(string profileName)
+        public static bool HasProfile(string profileName, ProfileData excludedProfile)
         {
-            int n = 0;
-
-            foreach(var profile in s_Profiles)
+            foreach (var profile in s_Profiles)
             {
-                if(profile.Value.ProfileName == profileName)
-                    n++;
-
-                if(n > 1)
+                if (excludedProfile != profile.Value && profile.Value.ProfileName == profileName)
                     return true;
             }
 
             return false;
         }
+
+        //public static bool HasMultipleProfiles(string profileName)
+        //{
+        //    int n = 0;
+
+        //    foreach(var profile in s_Profiles)
+        //    {
+        //        if(profile.Value.ProfileName == profileName)
+        //            n++;
+
+        //        if(n > 1)
+        //            return true;
+        //    }
+
+        //    return false;
+        //}
 
         public static void SaveProfile(ProfileData profile)
         {

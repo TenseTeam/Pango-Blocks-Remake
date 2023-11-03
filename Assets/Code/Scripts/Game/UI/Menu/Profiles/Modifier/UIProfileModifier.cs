@@ -44,7 +44,7 @@
         public void ConfirmModify()
         {
             if (!ProfilesManager.IsProfileNameValid(_profileModifiedName)) return;
-            //if (ProfilesManager.HasMultipleProfiles(_profileModifiedName)) return;
+            if (ProfilesManager.HasProfile(_profileModifiedName, ProfileSelector.SelectedProfile)) return;
 
             ProfileSelector.ChangeSelectedProfileValues(_profileModifiedName, _profileModifiedDifficulty);
             OnProfileModified?.Invoke();
@@ -60,11 +60,11 @@
 
         public void ValidateModifyButton()
         {
-            //if (ProfilesManager.HasMultipleProfiles(_profileModifiedName))
-            //{
-            //    _confirmButton.interactable = false;
-            //    return;
-            //}
+            if (ProfilesManager.HasProfile(_profileModifiedName, ProfileSelector.SelectedProfile))
+            {
+                _confirmButton.interactable = false;
+                return;
+            }
 
             _confirmButton.interactable = ProfilesManager.IsProfileNameValid(_profileModifiedName);
         }

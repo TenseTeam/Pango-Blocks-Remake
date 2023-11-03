@@ -3,17 +3,21 @@ namespace ProjectPBR.Player.Character
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Level.Blocks;
     using ProjectPBR.Level.PathSystem;
+    using ProjectPBR.Managers.Main.GameStats;
     using UnityEngine;
     using VUDK.Extensions.CustomAttributes;
     using VUDK.Generic.Managers.Main;
+    using VUDK.Generic.Managers.Main.Interfaces;
     using VUDK.Patterns.Pooling;
 
     [RequireComponent(typeof(Animator))]
     [RequireComponent(typeof(SpriteRenderer))]
-    public class CharacterGraphicsController : MonoBehaviour
+    public class CharacterGraphicsController : MonoBehaviour, ICastGameStats<GameStats>
     {
         private Animator _anim;
         private SpriteRenderer _sprite;
+
+        public GameStats GameStats => MainManager.Ins.GameStats as GameStats;
 
         private void Awake()
         {
@@ -37,6 +41,7 @@ namespace ProjectPBR.Player.Character
 
         private void Start()
         {
+            ResetGraphics();
             _anim.SetInteger(GameConstants.CharacterAnimations.State, GameConstants.CharacterAnimations.Idle);
         }
 
@@ -50,18 +55,19 @@ namespace ProjectPBR.Player.Character
                 vfx.transform.position = transform.position;
         }
 
-        public void IncreaseRender()
-        {
-            _sprite.sortingOrder++;
-        }
-
         public void SetStartAnimation()
         {
             SetWalkAnimation();
         }
 
+        public void IncreaseRender()
+        {
+            _sprite.sortingOrder++;
+        }
+
         public void ResetGraphics()
         {
+            _sprite.sortingOrder = GameStats.CharacterLayer;
             SetIdleAnimation();
         }
 

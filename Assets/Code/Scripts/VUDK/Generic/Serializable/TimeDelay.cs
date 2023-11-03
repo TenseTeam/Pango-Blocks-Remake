@@ -11,6 +11,7 @@
         public float CurrentTime { get; private set; }
         public bool IsReady { get; private set; }
 
+        public bool IsRunning => _isProcessing;
         public float ClampTime => Mathf.Clamp(CurrentTime, 0, Delay);
         public float ClampNormalizedTime => Mathf.Clamp01(CurrentTime / Delay);
 
@@ -45,17 +46,24 @@
             CurrentTime = 0;
         }
 
-        public void Process() => Process(Time.deltaTime);
+        public bool Process() => Process(Time.deltaTime);
 
-        public void Process(float time)
+        public bool Process(float time)
         {
-            if (!_isProcessing) return;
+            if (!_isProcessing) return false;
             if (CurrentTime >= Delay) 
             {
                 Complete();
-                return;
+                return false;
             }
             CurrentTime += time;
+            return true;
+        }
+
+        public void ChangeDelay(float delay)
+        {
+            Delay = delay;
+            Reset();
         }
 
         private void Complete()

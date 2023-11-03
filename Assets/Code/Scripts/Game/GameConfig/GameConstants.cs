@@ -5,7 +5,10 @@
         public static class Events
         {
             // Blocks
-            public const string OnBlockReset = "OnBlockReset";
+            public const string OnBlockStartReset = "OnBlockReset";
+            public const string OnBlockStartDrag = "OnBlockStartDrag";
+            public const string OnBlockStopDrag = "OnBlockStopDrag";
+            public const string OnBlockPlaced = "OnBlockPlaced";
 
             // Objective
             public const string OnObjectiveTriggered = "OnObjectiveTriggered";

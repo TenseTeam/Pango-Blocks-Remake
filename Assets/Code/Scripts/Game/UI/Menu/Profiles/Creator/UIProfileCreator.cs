@@ -43,7 +43,6 @@ namespace ProjectPBR.UI.Menu.Profiles.Creator
         private void Start()
         {
             ValidateCreateButton();
-
         }
 
         public void OpenCreator()

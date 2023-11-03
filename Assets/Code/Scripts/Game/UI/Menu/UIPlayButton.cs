@@ -1,10 +1,43 @@
 ﻿namespace ProjectPBR.UI.Menu
 {
     using UnityEngine;
+    using UnityEngine.Events;
     using UnityEngine.UI;
+    using ProjectPBR.Managers.Static.Profiles;
 
+    [RequireComponent(typeof(Button))]
     public class UIPlayButton : MonoBehaviour
     {
-        // TO DO: Button to check if the player has selected a Profile before allowing them to play
+        private Button _button;
+
+        [Header("Events")]
+        public UnityEvent OnPlaySuccess;
+        public UnityEvent OnPlayFail;
+
+        private void Awake()
+        {
+            TryGetComponent(out _button);
+        }
+
+        private void OnEnable()
+        {
+            _button.onClick.AddListener(TryPlay);
+        }
+
+        private void OnDisable()
+        {
+            _button.onClick.RemoveListener(TryPlay);
+        }
+
+        private void TryPlay()
+        {
+            if (ProfileSelector.SelectedProfile == null)
+            {
+                OnPlayFail?.Invoke();
+                return;
+            }
+
+            OnPlaySuccess?.Invoke();
+        }
     }
 }

@@ -20,8 +20,7 @@
 
         public void Insert(LevelTile tile, PlaceableBlock blockToPlace)
         {
-            blockToPlace.EnableCollider();
-            AddBlockToGridList(blockToPlace);
+            AddPlacealbleBlockToGridCount(blockToPlace);
             tile.Insert(blockToPlace);
         }
 
@@ -47,7 +46,7 @@
             }
         }
 
-        private void AddBlockToGridList(PlaceableBlock block)
+        private void AddPlacealbleBlockToGridCount(PlaceableBlock block)
         {
             if (!BlocksOnGrid.Contains(block))
                 BlocksOnGrid.Add(block);

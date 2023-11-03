@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Level/Scenes/Menu/scn_MainMenu.unity
     guid: 4da9b3676b5d89a47bd3469e20253f5f
   - enabled: 1
-    path: Assets/Level/Scenes/_Examples/scn_DebugScene.unity
+    path: Assets/Level/Scenes/_Debug/scn_DebugGameScene.unity
     guid: 72e15f140972ec342a3b915149511dae
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 8172eb888cd0d75488fc398487e8abcc, type: 2}

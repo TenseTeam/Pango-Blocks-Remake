@@ -4,6 +4,7 @@
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Managers.Main.Interfaces;
     using ProjectPBR.Level.Blocks;
+    using ProjectPBR.GameConfig.Constants;
 
     public class BlockDragger : MonoBehaviour, ICastGameManager<GameManager>
     {
@@ -26,14 +27,12 @@
         {
             CurrentDraggedBlock = block;
             _dragOffset = blockDragOffset;
-            block.transform.rotation = Quaternion.identity;
-            block.IncreaseRender();
-            block.DisableCollider();
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBlockStartDrag, block);
         }
 
         public void StopDrag()
         {
-            CurrentDraggedBlock.DecreaseRender();
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBlockStopDrag, CurrentDraggedBlock);
             CurrentDraggedBlock = null;
         }
         

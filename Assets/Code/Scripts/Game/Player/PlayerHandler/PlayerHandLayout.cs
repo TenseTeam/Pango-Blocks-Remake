@@ -80,7 +80,7 @@
             _usedLayoutWidth = 0;
         }
 
-        public void LerpPutItBackInHand(PlaceableBlock block, float resetTime)
+        public void LerpPositionToHand(PlaceableBlock block, float resetTime)
         {
             block.transform.SetLossyScale(_layoutblockSize);
             block.StartLerpResettingPosition(resetTime);

@@ -45,7 +45,6 @@
         private void OnTriggerExit2D(Collider2D collision)
         {
             // Checks the Physics2D Matrix to see with which layer the collision is happening
-            if (!IsPlacementPhase) return;
             Block = null;
             IsOccupiedByObjective = false;
         }

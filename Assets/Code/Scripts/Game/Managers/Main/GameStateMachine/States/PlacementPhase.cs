@@ -82,7 +82,7 @@
 
         private void ResetBlockInHand(PlaceableBlock block)
         {
-            Context.BlocksManager.LerpResetBlockInHand(block);
+            Context.BlocksManager.RemoveFromGridAndPlaceInHand(block);
             ChangeToFallPhase();
         }
 

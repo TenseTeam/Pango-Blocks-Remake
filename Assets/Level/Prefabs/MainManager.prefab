@@ -1049,7 +1049,6 @@ MonoBehaviour:
     <Delay>k__BackingField: 5
   _waitResetLevel:
     <Delay>k__BackingField: 3
-  <MappedLevels>k__BackingField: {fileID: 0}
 --- !u!1 &4564716474377814198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,6 +1151,9 @@ MonoBehaviour:
   _gameScaleTime: 1
   _gameFPS: 60
   <MappedLevels>k__BackingField: {fileID: 11400000, guid: dcc5522dbbf19524ab0192561046878b, type: 2}
+  <CharacterLayer>k__BackingField: 2
+  <PlacingBlockLayer>k__BackingField: 5
+  <PlacedBlockLayer>k__BackingField: 2
 --- !u!1 &4952031749192989740
 GameObject:
   m_ObjectHideFlags: 0

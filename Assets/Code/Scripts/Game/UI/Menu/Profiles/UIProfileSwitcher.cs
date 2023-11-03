@@ -52,7 +52,6 @@
 
         private void Start()
         {
-            //SetProfileTag(ProfileSelector.SelectedProfile);
             ValidateProfileTag(ProfilesManager.Count);
         }
 
@@ -62,6 +61,7 @@
 
             _profileTagImage.color = profile.Color;
             _profileTagNameText.text = profile.ProfileName;
+            _profileTagDifficultyImage.enabled = true;
             _profileTagDifficultyImage.sprite = profile.CurrentDifficulty == GameDifficulty.Easy ? _easySprite : _hardSprite;
         }
 
@@ -84,6 +84,7 @@
 
         private void ResetProfileTag()
         {
+            _profileTagDifficultyImage.enabled = false;
             _profileTagImage.color = _defaultProfileTagColor;
             _profileTagNameText.text = _defaultProfileString;
         }

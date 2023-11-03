@@ -2,12 +2,12 @@
 {
     using System.Collections.Generic;
     using UnityEngine;
+    using VUDK.Generic.Managers.Main;
+    using VUDK.Generic.Managers.Main.Interfaces;
     using ProjectPBR.Level.Blocks;
     using ProjectPBR.Level.Grid;
     using ProjectPBR.Player.PlayerHandler;
-    using VUDK.Generic.Managers.Main.Interfaces;
-    using VUDK.Generic.Managers.Main;
-    using VUDK.Generic.Serializable;
+    using ProjectPBR.GameConfig.Constants;
 
     public class BlocksManager : MonoBehaviour, ICastGameManager<GameManager>
     {
@@ -33,13 +33,11 @@
         /// Reset the block in the player hand layout by starting its lerp.
         /// </summary>
         /// <param name="block"><see cref="PlaceableBlock"/> to reset.</param>
-        public void LerpResetBlockInHand(PlaceableBlock block)
+        public void RemoveFromGridAndPlaceInHand(PlaceableBlock block)
         {
-            block.DisableGravity();
-            block.SetIsInvalid(false);
             _grid.RemoveBlockFromGrid(block);
-            //MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnBlockReset, block, _resetBlockTime);
-            PlayerHand.Layout.LerpPutItBackInHand(block, _resetBlockTime);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBlockStartReset, block);
+            PlayerHand.Layout.LerpPositionToHand(block, _resetBlockTime);
         }
 
         public bool TryToPlaceBlockOnGrid()
@@ -51,6 +49,7 @@
 
                 if(_grid.AreTilesFreeForBlock(closestTile, block))
                 {
+                    MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBlockPlaced, block);
                     _grid.Insert(closestTile, block);
                     return true;
                 }
@@ -63,7 +62,7 @@
             if (GameManager.MobileInputsManager.IsTouchOn2D(out PlayerHandLayout layout, PlayerHand.Layout.LayoutMask))
             {
                 layout.SetResetPositionInLayoutBounds(Dragger.CurrentDraggedBlock);
-                LerpResetBlockInHand(Dragger.CurrentDraggedBlock);
+                RemoveFromGridAndPlaceInHand(Dragger.CurrentDraggedBlock);
                 return true;
             }
 
@@ -95,7 +94,7 @@
             List<PlaceableBlock> invalidBlocks = blocks.FindAll(block => block.IsInvalid() || block.IsTilted());
 
             foreach (PlaceableBlock block in invalidBlocks)
-                LerpResetBlockInHand(block);
+                RemoveFromGridAndPlaceInHand(block);
         }
 
         /// <summary>
