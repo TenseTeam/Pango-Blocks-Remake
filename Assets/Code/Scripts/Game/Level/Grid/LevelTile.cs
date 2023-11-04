@@ -2,10 +2,8 @@
 {
     using UnityEngine;
     using VUDK.Generic.Structures.Grid;    
-    using VUDK.Generic.Managers.Main;
     using ProjectPBR.Level.Blocks;
     using ProjectPBR.Player.Objective.Interfaces;
-    using ProjectPBR.Managers.Main.GameStateMachine.States.Keys;
 
     public class LevelTile : GridTileBase
     {
@@ -15,18 +13,14 @@
         public bool IsOccupiedByBlock => Block;
         public bool IsOccupied => IsOccupiedByBlock || IsOccupiedByObjective;
 
-        public bool IsPlacementPhase => MainManager.Ins.GameStateMachine.IsState(GamePhaseKeys.PlacementPhase);
-
         public void Insert(PlaceableBlockBase block)
         {
             block.transform.parent = null;
-            block.transform.rotation = Quaternion.identity;
-            block.transform.position = transform.position;
+            block.transform.SetPositionAndRotation(transform.position, Quaternion.identity);
         }
 
         private void OnTriggerStay2D(Collider2D collision)
         {
-            if (!IsPlacementPhase) return;
             if (IsOccupiedByBlock) return;
 
             if (collision.TryGetComponent(out BlockBase block))

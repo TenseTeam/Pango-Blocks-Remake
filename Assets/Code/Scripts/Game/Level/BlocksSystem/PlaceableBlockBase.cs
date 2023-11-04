@@ -7,7 +7,6 @@
     using ProjectPBR.Level.Blocks.Interfaces;
     using ProjectPBR.Data.ScriptableObjects.Blocks;
     using ProjectPBR.Managers.Main.GameManagers;
-    using ProjectPBR.GameConfig.Constants;
 
     public abstract class PlaceableBlockBase : DraggableBlockBase, ICastGameManager<GameManager>, IPlaceableBlock
     {
@@ -18,32 +17,18 @@
         private Vector2 _startPosition;
         private TimeDelay _resetTimer;
 
-        public bool IsResettingPosition => _resetTimer.IsRunning;
         protected BlockData Data { get; private set; }
 
+        public bool IsResettingPosition => _resetTimer.IsRunning;
         public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
         public bool IsMoving => _rb.velocity.magnitude > 0.1f;
+
         public virtual bool IsInvalid() => _isInvalid; // I need to override this in ComplexPlaceableBlock
 
         protected virtual void Awake()
         {
             TryGetComponent(out _rb);
             _resetTimer = new TimeDelay();
-        }
-
-        protected virtual void OnEnable()
-        {
-            //MainManager.Ins.EventManager.AddListener<PlaceableBlock>(GameConstants.Events.OnBlockStartDrag, OnBlockBeingDragged);
-            //MainManager.Ins.EventManager.AddListener<PlaceableBlockBase>(GameConstants.Events.OnBlockPlaced, OnBlockPlaced);
-            //MainManager.Ins.EventManager.AddListener<PlaceableBlockBase>(GameConstants.Events.OnBlockStartReset, OnBlockStartReset);
-
-        }
-
-        protected virtual void OnDisable()
-        {
-            //MainManager.Ins.EventManager.RemoveListener<PlaceableBlock>(GameConstants.Events.OnBlockStartDrag, OnBlockBeingDragged);
-            //MainManager.Ins.EventManager.RemoveListener<PlaceableBlockBase>(GameConstants.Events.OnBlockPlaced, OnBlockPlaced);
-            //MainManager.Ins.EventManager.RemoveListener<PlaceableBlockBase>(GameConstants.Events.OnBlockStartReset, OnBlockStartReset);
         }
 
         public virtual void Init(BlockData data)

@@ -11,9 +11,10 @@
     [RequireComponent(typeof(Animator))]
     public class LoadingScreenManager : MonoBehaviour
     {
-        [SerializeField, Header("Wait Before Close")]
-        private TimeDelay _waitRandomClose;
+        [SerializeField, Min(0f), Header("Loading Screen Duration")]
+        private float _minDuration;
 
+        private TimeDelay _waitRandomClose;
         private Animator _anim;
         private Image _image;
 
@@ -22,21 +23,23 @@
             TryGetComponent(out _anim);
             TryGetComponent(out _image);
             EnableScreen();
+
+            _waitRandomClose = new TimeDelay(_minDuration);
         }
 
         private void Start() => RandomOpen();
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener(EventKeys.SceneEvents.OnBeforeChangeScene, WaitRandomClose);
+            MainManager.Ins.EventManager.AddListener<float>(EventKeys.SceneEvents.OnBeforeChangeScene, WaitRandomClose);
             MainManager.Ins.EventManager.AddListener(GameConstants.UIEvents.OnStartGameoverLoadingScreen, ResetLevelLoadingScreen);
             _waitRandomClose.OnCompleted += RandomClose;
         }
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener(EventKeys.SceneEvents.OnBeforeChangeScene, WaitRandomClose);
-            MainManager.Ins.EventManager.AddListener(GameConstants.UIEvents.OnStartGameoverLoadingScreen, ResetLevelLoadingScreen);
+            MainManager.Ins.EventManager.RemoveListener<float>(EventKeys.SceneEvents.OnBeforeChangeScene, WaitRandomClose);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.UIEvents.OnStartGameoverLoadingScreen, ResetLevelLoadingScreen);
             _waitRandomClose.OnCompleted -= RandomClose;
         }
 
@@ -63,8 +66,10 @@
             _anim.SetTrigger(GameConstants.UIAnimations.ResetScreen);
         }
 
-        private void WaitRandomClose()
+        private void WaitRandomClose(float delayChangeScene)
         {
+            float duration = delayChangeScene - _minDuration;
+            _waitRandomClose.ChangeDelay(duration);
             _waitRandomClose.Start();
         }
 

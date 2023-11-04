@@ -16,7 +16,7 @@
         public override void Enter()
         {
 #if DEBUG
-            Debug.Log($"<color=red>Enter {StateKey} state</color>");
+            Debug.Log($"<color=yellow>Enter {StateKey} state</color>");
 #endif
             MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBeginGameoverPhase);
             MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnResetLevel, ChangeToPlacement);

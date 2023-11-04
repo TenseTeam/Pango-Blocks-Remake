@@ -23,20 +23,28 @@ namespace VUDK.Features.Main.SceneManagement
         /// Switches to a scene.
         /// </summary>
         /// <param name="sceneToLoad">Build index of the scene to load.</param>
-        public virtual void ChangeScene(int sceneIndex)
+        public void ChangeScene(int sceneIndex)
         {
             SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
         }
 
         /// <summary>
-        /// Waits for seconds and then switches to a scene.
+        /// Waits for specified seconds and then switches to a scene.
         /// </summary>
         /// <param name="sceneToLoad">Scene build index of the scene to load.</param>
-        public virtual void WaitChangeScene(int sceneIndex)
+        public void WaitChangeScene(int sceneIndex)
         {
+            if (WaitLoadingSceneDelay.IsRunning) return;
+
             WaitLoadingSceneDelay.Start();
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.SceneEvents.OnBeforeChangeScene);
+            MainManager.Ins.EventManager.TriggerEvent(EventKeys.SceneEvents.OnBeforeChangeScene, WaitLoadingSceneDelay.Delay);
             _sceneToWaitLoad = sceneIndex;
+        }
+
+        public void WaitChangeScene(int sceneIndex, float delay)
+        {
+            WaitLoadingSceneDelay.ChangeDelay(delay);
+            WaitChangeScene(sceneIndex);
         }
 
         private void ChangeToWaitScene()

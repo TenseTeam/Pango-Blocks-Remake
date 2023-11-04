@@ -7,7 +7,7 @@
     public class GameStats : GameStatsBase
     {
         [field: SerializeField, Header("Level Mapping")]
-        public LevelMapping MappedLevels { get; private set; }
+        public LevelMapping LevelMapping { get; private set; }
 
         [field: SerializeField, Header("Sorting Layers")]
         public int CharacterLayer { get; private set; }

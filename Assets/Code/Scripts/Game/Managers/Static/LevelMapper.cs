@@ -15,7 +15,7 @@
 
         static LevelMapper()
         {
-            _mappedLevels = (MainManager.Ins.GameStats as GameStats).MappedLevels;
+            _mappedLevels = (MainManager.Ins.GameStats as GameStats).LevelMapping;
         }
 
         public static int GetBuildIndexByLevelIndex(int levelIndex)

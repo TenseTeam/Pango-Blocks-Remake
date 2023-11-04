@@ -4,13 +4,18 @@
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Serializable;
     using VUDK.Generic.Managers.Main.Bases;
-    using ProjectPBR.Data.ScriptableObjects.Levels;
+    using VUDK.Generic.Managers.Main.Interfaces;
+    using ProjectPBR.Managers.Main.GameStats;
     using ProjectPBR.GameConfig.Constants;
 
-    public class GameSceneManager : SceneManagerBase
+    public class GameSceneManager : SceneManagerBase, ICastGameStats<GameStats>
     {
         [SerializeField, Header("Level Reset")]
         private TimeDelay _waitResetLevel;
+        [SerializeField, Min(0f)]
+        private float _loadMenuDelay;
+
+        public GameStats GameStats => MainManager.Ins.GameStats as GameStats;
 
         protected override void Update()
         {
@@ -34,6 +39,11 @@
             MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameoverPhase, WaitLoading);
             MainManager.Ins.EventManager.RemoveListener(GameConstants.UIEvents.OnGameoverLoadingScreenCovered, ResetLevel);
             _waitResetLevel.OnCompleted -= StartLoading;
+        }
+
+        public void LoadMenu()
+        {
+            WaitChangeScene(GameStats.LevelMapping.MenuBuildIndex, _loadMenuDelay);
         }
 
         private void ResetLevel()

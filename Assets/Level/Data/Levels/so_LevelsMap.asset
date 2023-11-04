@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8c13a61dadf04a47997777d196bb0a5, type: 3}
   m_Name: so_LevelsMap
   m_EditorClassIdentifier: 
+  MenuBuildIndex: 0
+  LevelsPerStage: 8
   Levels:
   - EasyBuildIndex: 1
     HardBuildIndex: 1
@@ -93,4 +95,3 @@ MonoBehaviour:
     HardBuildIndex: 39
   - EasyBuildIndex: 40
     HardBuildIndex: 40
-  LevelsPerStage: 8

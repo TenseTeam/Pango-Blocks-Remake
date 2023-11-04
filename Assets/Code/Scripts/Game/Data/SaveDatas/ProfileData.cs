@@ -32,7 +32,7 @@
             ColorSerialize(color);
             Id = Guid.NewGuid();
 
-            for (int i = 0; i < GameStats.MappedLevels.Levels.Length; i++)
+            for (int i = 0; i < GameStats.LevelMapping.Levels.Length; i++)
             {
                 LevelsData.Add(
                     DataFactory.Create(i, GameDifficulty.Easy),
@@ -71,7 +71,7 @@
 
         private void UnlockDefaultLevels()
         {
-            for (int i = 0; i < GameStats.MappedLevels.LevelsPerStage; i++)
+            for (int i = 0; i < GameStats.LevelMapping.LevelsPerStage; i++)
             {
                 LevelKey easyKey = DataFactory.Create(i, GameDifficulty.Easy);
                 LevelKey hardKey = DataFactory.Create(i, GameDifficulty.Hard);
@@ -82,8 +82,8 @@
 
         private void UnlockFirstLevels()
         {
-            int each = GameStats.MappedLevels.LevelsPerStage;
-            for (int i = each; i < GameStats.MappedLevels.Levels.Length; i += each)
+            int each = GameStats.LevelMapping.LevelsPerStage;
+            for (int i = each; i < GameStats.LevelMapping.Levels.Length; i += each)
             {
                 LevelKey easyKey = DataFactory.Create(i, GameDifficulty.Easy);
                 LevelKey hardKey = DataFactory.Create(i, GameDifficulty.Hard);

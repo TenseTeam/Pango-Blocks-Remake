@@ -12,9 +12,9 @@
     {
         private SpriteRenderer _sprite;
 
-        public new SingleBlockData Data => base.Data as SingleBlockData;
         public PolygonCollider2D Collider { get; protected set; }
 
+        public new SingleBlockData Data => base.Data as SingleBlockData;
         public GameStats GameStats => MainManager.Ins.GameStats as GameStats;
 
         protected override void Awake()

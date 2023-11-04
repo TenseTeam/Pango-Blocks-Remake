@@ -7,12 +7,12 @@
     {
         public int CurrentSceneIndex => SceneManager.GetActiveScene().buildIndex;
 
-        public virtual void LoadNextScene()
+        public void LoadNextScene()
         {
             WaitChangeScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
-        public virtual void ReloadScene()
+        public void ReloadScene()
         {
             WaitChangeScene(SceneManager.GetActiveScene().buildIndex);
         }

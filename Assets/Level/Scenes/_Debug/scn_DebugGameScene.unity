@@ -2869,6 +2869,10 @@ PrefabInstance:
       propertyPath: _timeToLoadNextScene
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4481860706633670592, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4679426333627143973, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_Controller
       value: 

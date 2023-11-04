@@ -21,7 +21,11 @@
             public const string OnBeginGameWonPhase = "OnGamewon";
             public const string OnBeginGameoverPhase = "OnGameover";
 
+            // Level
             public const string OnResetLevel = "OnResetLevel";
+
+            // Scenes
+            public const string OnGoBackToMenu = "OnGoBackToMenu";
 
             // Character
             public const string OnCharacterStartWalking = "OnCharacterStartWalking";

@@ -12,11 +12,6 @@
 
         public List<ComposedBlock> ComposedBlocks { get; private set; } = new List<ComposedBlock>();
 
-        protected override void Awake()
-        {
-            base.Awake();
-        }
-
         public override void Init(BlockData data)
         {
             base.Init(data);
