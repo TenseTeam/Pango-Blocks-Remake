@@ -1,0 +1,20 @@
+
+Giudicatore copia 2.png
+size: 2054,1912
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+braccio dx
+  rotate: true
+  xy: 2, 884
+  size: 1026, 2050
+  orig: 1026, 2050
+  offset: 0, 0
+  index: -1
+pupille
+  rotate: true
+  xy: 2, 2
+  size: 880, 975
+  orig: 880, 975
+  offset: 0, 0
+  index: -1

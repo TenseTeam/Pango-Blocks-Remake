@@ -1,0 +1,13 @@
+
+Procionearrabbiato.png
+size: 1030,1081
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pupille
+  rotate: false
+  xy: 2, 2
+  size: 1026, 1077
+  orig: 1026, 1077
+  offset: 0, 0
+  index: -1

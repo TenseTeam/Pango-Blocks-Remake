@@ -1,0 +1,787 @@
+fileFormatVersion: 2
+guid: 8d22de389b8003f4abff3ceb3fee49ed
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 512
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5740
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6ec0eaabe40814e8be83f5684c0193
+      internalID: 402384045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_1
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 5740
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94679e4cd35d2a3479a17ff41c8556fe
+      internalID: 1162659762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_2
+      rect:
+        serializedVersion: 2
+        x: 2358
+        y: 5740
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8772a7b3525c9404e8689e4d2349e92f
+      internalID: 1896161177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_3
+      rect:
+        serializedVersion: 2
+        x: 3537
+        y: 5740
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21214002459e8649949a154e6d69e73
+      internalID: 147037552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_4
+      rect:
+        serializedVersion: 2
+        x: 4716
+        y: 5740
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab648237f5012345b2290e5f957d339
+      internalID: -1920285045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4592
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c8c45299c912a429cc4ae4a1d801fa
+      internalID: 1124263445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_6
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 4592
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee0c92946c56ba41874c018c8035826
+      internalID: 1668290063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_7
+      rect:
+        serializedVersion: 2
+        x: 2358
+        y: 4592
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1eb1fb1bf9aeb42a240a69d59baaf7
+      internalID: -1254829537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_8
+      rect:
+        serializedVersion: 2
+        x: 3537
+        y: 4592
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebffb8b51a0c67f478a51a7d42909741
+      internalID: 24598152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_9
+      rect:
+        serializedVersion: 2
+        x: 4716
+        y: 4592
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a63eeab9d0b044a978ac53f1205a38
+      internalID: 1204080505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3444
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a237053c2cca194e81f760a2219f5d5
+      internalID: 1366441475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_11
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 3444
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ec97f33b3d9d049ba4a7c89f43137d
+      internalID: 209284726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_12
+      rect:
+        serializedVersion: 2
+        x: 2358
+        y: 3444
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979202490316f4946a8b2386e7dc2c49
+      internalID: 533334709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_13
+      rect:
+        serializedVersion: 2
+        x: 3537
+        y: 3444
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fa4b24a4e2d4246beb8bd0d7232c2f
+      internalID: -2064306028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_14
+      rect:
+        serializedVersion: 2
+        x: 4716
+        y: 3444
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 319d2021b9878fa4ab6fb2d4bb83d99f
+      internalID: -487597771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2296
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6146c2d93dd95674aa1ed605cb071f98
+      internalID: 1852923995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_16
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 2296
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a7653d41004af4c9eddeade5048365
+      internalID: -1343612459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_17
+      rect:
+        serializedVersion: 2
+        x: 2358
+        y: 2296
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b857fcadfdbf2d4ca294dd51eb7e0af
+      internalID: 980420709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_18
+      rect:
+        serializedVersion: 2
+        x: 3537
+        y: 2296
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09d1e5ff2fd4e34d93bf417694a912c
+      internalID: -1233104517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_19
+      rect:
+        serializedVersion: 2
+        x: 4716
+        y: 2296
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6824137b28cdb7a4e92565f40a14f613
+      internalID: -2135340038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1148
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76706540ba86eb84286d75e8c9779fcd
+      internalID: 723530934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_21
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 1148
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f8a3074a5600a4ebc92ed44937afea
+      internalID: 1937460935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_22
+      rect:
+        serializedVersion: 2
+        x: 2358
+        y: 1148
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d88c3cdc9c712a48bd0ef7c404952c9
+      internalID: -1429639533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_23
+      rect:
+        serializedVersion: 2
+        x: 3537
+        y: 1148
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd56910654d393849bc36e148d7a0c42
+      internalID: 32688291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_24
+      rect:
+        serializedVersion: 2
+        x: 4716
+        y: 1148
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20259fca2cebdc94c847a58007f7713c
+      internalID: -1967403116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62516c17ed97052419e2647abb013b7d
+      internalID: 1702469206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_26
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 0
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f032edd98040295438f410b27d41bcff
+      internalID: -1124964981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_27
+      rect:
+        serializedVersion: 2
+        x: 2358
+        y: 0
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b49215feb8305e42b19a04aa937f4c2
+      internalID: 425092833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_28
+      rect:
+        serializedVersion: 2
+        x: 3537
+        y: 0
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9f1f7f1a88ebf4d827618154270fb9
+      internalID: -1853445028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Pango_Tourist_Angry_0a_29
+      rect:
+        serializedVersion: 2
+        x: 4716
+        y: 0
+        width: 1179
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b320ad3c2677447830a186e23b6076
+      internalID: 1503365823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spr_Pango_Tourist_Angry_0a_0: 402384045
+      spr_Pango_Tourist_Angry_0a_1: 1162659762
+      spr_Pango_Tourist_Angry_0a_10: 1366441475
+      spr_Pango_Tourist_Angry_0a_11: 209284726
+      spr_Pango_Tourist_Angry_0a_12: 533334709
+      spr_Pango_Tourist_Angry_0a_13: -2064306028
+      spr_Pango_Tourist_Angry_0a_14: -487597771
+      spr_Pango_Tourist_Angry_0a_15: 1852923995
+      spr_Pango_Tourist_Angry_0a_16: -1343612459
+      spr_Pango_Tourist_Angry_0a_17: 980420709
+      spr_Pango_Tourist_Angry_0a_18: -1233104517
+      spr_Pango_Tourist_Angry_0a_19: -2135340038
+      spr_Pango_Tourist_Angry_0a_2: 1896161177
+      spr_Pango_Tourist_Angry_0a_20: 723530934
+      spr_Pango_Tourist_Angry_0a_21: 1937460935
+      spr_Pango_Tourist_Angry_0a_22: -1429639533
+      spr_Pango_Tourist_Angry_0a_23: 32688291
+      spr_Pango_Tourist_Angry_0a_24: -1967403116
+      spr_Pango_Tourist_Angry_0a_25: 1702469206
+      spr_Pango_Tourist_Angry_0a_26: -1124964981
+      spr_Pango_Tourist_Angry_0a_27: 425092833
+      spr_Pango_Tourist_Angry_0a_28: -1853445028
+      spr_Pango_Tourist_Angry_0a_29: 1503365823
+      spr_Pango_Tourist_Angry_0a_3: 147037552
+      spr_Pango_Tourist_Angry_0a_4: -1920285045
+      spr_Pango_Tourist_Angry_0a_5: 1124263445
+      spr_Pango_Tourist_Angry_0a_6: 1668290063
+      spr_Pango_Tourist_Angry_0a_7: -1254829537
+      spr_Pango_Tourist_Angry_0a_8: 24598152
+      spr_Pango_Tourist_Angry_0a_9: 1204080505
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
