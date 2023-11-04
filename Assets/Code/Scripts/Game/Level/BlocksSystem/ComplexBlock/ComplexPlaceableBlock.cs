@@ -6,7 +6,7 @@
     using ProjectPBR.Level.Blocks.ComplexBlock;
     using ProjectPBR.Data.ScriptableObjects.Blocks;
 
-    public class ComplexPlaceableBlock : PlaceableBlock
+    public class ComplexPlaceableBlock : PlaceableBlockBase
     {
         public new ComplexBlockData Data => base.Data as ComplexBlockData;
 

@@ -11,7 +11,7 @@
     /// </summary>
     public static class GameFactory
     {
-        public static PlaceableBlock Create(BlockData blockData, bool isPartOfComplex)
+        public static PlaceableBlockBase Create(BlockData blockData, bool isPartOfComplex)
         {
             GameObject goBlock = null;
 
@@ -26,7 +26,7 @@
                     goBlock = MainManager.Ins.PoolsManager.Pools[PoolKeys.SingleBlockBase].Get();
             }
 
-            if (goBlock.TryGetComponent(out PlaceableBlock blockBase))
+            if (goBlock.TryGetComponent(out PlaceableBlockBase blockBase))
                 blockBase.Init(blockData);
 
             return blockBase;

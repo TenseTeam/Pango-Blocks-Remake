@@ -1,4 +1,4 @@
-﻿namespace VUDK.Generic.Utility
+﻿namespace VUDK.Generic.Utility.Physics
 {
     using UnityEngine;
 

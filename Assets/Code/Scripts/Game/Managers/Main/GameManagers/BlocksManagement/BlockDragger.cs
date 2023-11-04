@@ -3,44 +3,29 @@
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Managers.Main.Interfaces;
+    using VUDK.Features.Main.DragSystem;
     using ProjectPBR.Level.Blocks;
-    using ProjectPBR.GameConfig.Constants;
 
-    public class BlockDragger : MonoBehaviour, ICastGameManager<GameManager>
+    public class BlockDragger : DraggerBase, ICastGameManager<GameManager>
     {
-        [SerializeField, Header("Drag Settings")]
-        private float _followSpeed = 10f;
-
-        private Vector3 _dragOffset;
-
-        public PlaceableBlock CurrentDraggedBlock { get; private set; }
-        public bool IsDragging => CurrentDraggedBlock != null;
+        public PlaceableBlockBase CurrentDraggedBlock { get; private set; }
         public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
 
-        private void Update()
+        protected override Vector3 CalculateTargetPosition()
         {
-            if(IsDragging)
-                DragBlock();
+            return GameManager.MobileInputsManager.ScreenTouchPosition;
         }
 
-        public void StartDrag(PlaceableBlock block, Vector2 blockDragOffset)
+        public void StartDrag(PlaceableBlockBase draggedBlock, Vector3 offset = default)
         {
-            CurrentDraggedBlock = block;
-            _dragOffset = blockDragOffset;
-            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBlockStartDrag, block);
+            base.StartDrag(draggedBlock, offset);
+            CurrentDraggedBlock = draggedBlock;
         }
 
-        public void StopDrag()
+        public override void StopDrag()
         {
-            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBlockStopDrag, CurrentDraggedBlock);
+            base.StopDrag();
             CurrentDraggedBlock = null;
-        }
-        
-        private void DragBlock()
-        {
-            Vector2 fromPosition = CurrentDraggedBlock.transform.position;
-            Vector2 targetPosition = GameManager.MobileInputsManager.ScreenTouchPosition - (Vector2)_dragOffset;
-            CurrentDraggedBlock.transform.position = Vector2.Lerp(fromPosition, targetPosition, Time.deltaTime * _followSpeed);
         }
     }
 }

@@ -48,7 +48,7 @@
 
         private bool AreAllBlocksStopped()
         {
-            foreach (PlaceableBlock block in Context.Grid.BlocksOnGrid)
+            foreach (PlaceableBlockBase block in Context.Grid.BlocksOnGrid)
             {
                 if (block.IsMoving)
                     return false;

@@ -8,7 +8,7 @@
 
     [RequireComponent(typeof(PolygonCollider2D))]
     [RequireComponent(typeof(SpriteRenderer))]
-    public class SinglePlaceableBlock : PlaceableBlock, ICastGameStats<GameStats>
+    public class SinglePlaceableBlock : PlaceableBlockBase, ICastGameStats<GameStats>
     {
         private SpriteRenderer _sprite;
 

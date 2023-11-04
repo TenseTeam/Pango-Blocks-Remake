@@ -59,7 +59,7 @@
 
         private void TryToGetBlock()
         {
-            if (Context.BlocksManager.TryGetBlockFromTouch(out PlaceableBlock block, out Vector2 offset))
+            if (Context.BlocksManager.TryGetBlockFromTouch(out PlaceableBlockBase block, out Vector2 offset))
             {
                 Context.BlocksManager.Dragger.StartDrag(block, offset);
             }
@@ -80,7 +80,7 @@
             ResetBlockInHand(Context.BlocksManager.Dragger.CurrentDraggedBlock);
         }
 
-        private void ResetBlockInHand(PlaceableBlock block)
+        private void ResetBlockInHand(PlaceableBlockBase block)
         {
             Context.BlocksManager.RemoveFromGridAndPlaceInHand(block);
             ChangeToFallPhase();

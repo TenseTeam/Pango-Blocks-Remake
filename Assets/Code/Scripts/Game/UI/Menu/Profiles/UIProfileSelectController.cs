@@ -2,7 +2,7 @@
 {
     using UnityEngine;
 
-    public class UIProfileSelector : MonoBehaviour
+    public class UIProfileSelectController : MonoBehaviour
     {
         private void Start()
         {

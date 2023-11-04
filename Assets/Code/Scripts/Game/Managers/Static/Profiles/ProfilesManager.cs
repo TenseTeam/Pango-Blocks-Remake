@@ -3,9 +3,9 @@
     using System.Collections.Generic;
     using System.Linq;
     using UnityEngine;
-    using VUDK.Generic.Managers.Static;
     using VUDK.Extensions.Strings;
     using VUDK.Generic.Managers.Main;
+    using VUDK.Features.Main.SaveSystem;
     using ProjectPBR.Data.SaveDatas;
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Patterns.Factories;
@@ -198,22 +198,6 @@
             return false;
         }
 
-        //public static bool HasMultipleProfiles(string profileName)
-        //{
-        //    int n = 0;
-
-        //    foreach(var profile in s_Profiles)
-        //    {
-        //        if(profile.Value.ProfileName == profileName)
-        //            n++;
-
-        //        if(n > 1)
-        //            return true;
-        //    }
-
-        //    return false;
-        //}
-
         public static void SaveProfile(ProfileData profile)
         {
             SaveManager.Save(profile, profile.Id.ToString(), GameConstants.ProfileSaving.ProfileExtension);
@@ -237,6 +221,7 @@
 
             return Color.white;
         }
+
 #if DEBUG
         public static void PrintProfiles()
         {

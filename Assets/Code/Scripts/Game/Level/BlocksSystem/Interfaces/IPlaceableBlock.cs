@@ -5,5 +5,7 @@
     public interface IPlaceableBlock
     {
         public void Init(BlockData data);
+
+        public void Place();
     }
 }

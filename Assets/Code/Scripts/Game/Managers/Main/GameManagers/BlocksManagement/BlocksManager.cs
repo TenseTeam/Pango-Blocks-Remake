@@ -32,11 +32,12 @@
         /// <summary>
         /// Reset the block in the player hand layout by starting its lerp.
         /// </summary>
-        /// <param name="block"><see cref="PlaceableBlock"/> to reset.</param>
-        public void RemoveFromGridAndPlaceInHand(PlaceableBlock block)
+        /// <param name="block"><see cref="PlaceableBlockBase"/> to reset.</param>
+        public void RemoveFromGridAndPlaceInHand(PlaceableBlockBase block)
         {
             _grid.RemoveBlockFromGrid(block);
-            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBlockStartReset, block);
+            block.PlaceableBlockReset();
+            //MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBlockStartReset, block);
             PlayerHand.Layout.LerpPositionToHand(block, _resetBlockTime);
         }
 
@@ -44,12 +45,13 @@
         {
             if (GameManager.MobileInputsManager.IsTouchOn2D(out LevelGrid grid, _grid.GridLayerMask))
             {
-                PlaceableBlock block = Dragger.CurrentDraggedBlock;
+                PlaceableBlockBase block = Dragger.CurrentDraggedBlock;
                 LevelTile closestTile = _grid.GetClosestTile(block.transform.position);
 
                 if(_grid.AreTilesFreeForBlock(closestTile, block))
                 {
-                    MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBlockPlaced, block);
+                    block.Place();
+                    //MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBlockPlaced, block);
                     _grid.Insert(closestTile, block);
                     return true;
                 }
@@ -69,11 +71,11 @@
             return false;
         }
 
-        public bool TryGetBlockFromTouch(out PlaceableBlock block, out Vector2 touchOffsetPosition)
+        public bool TryGetBlockFromTouch(out PlaceableBlockBase block, out Vector2 touchOffsetPosition)
         {
             RaycastHit2D hit = GameManager.MobileInputsManager.RaycastFromTouch2D(_grid.BlocksLayerMask);
 
-            if (hit && hit.transform.TryGetComponent(out PlaceableBlock bl) && !bl.IsResettingPosition)
+            if (hit && hit.transform.TryGetComponent(out PlaceableBlockBase bl) && !bl.IsResettingPosition)
             {
                 block = PlayerHand.Layout.GetAndRemoveFromHand(bl);
                 touchOffsetPosition = hit.point - (Vector2)block.transform.position;
@@ -90,10 +92,10 @@
         /// </summary>
         public void ReturnInHandInvalidBlocks()
         {
-            List<PlaceableBlock> blocks = _grid.BlocksOnGrid;
-            List<PlaceableBlock> invalidBlocks = blocks.FindAll(block => block.IsInvalid() || block.IsTilted());
+            List<PlaceableBlockBase> blocks = _grid.BlocksOnGrid;
+            List<PlaceableBlockBase> invalidBlocks = blocks.FindAll(block => block.IsInvalid() || block.IsTilted());
 
-            foreach (PlaceableBlock block in invalidBlocks)
+            foreach (PlaceableBlockBase block in invalidBlocks)
                 RemoveFromGridAndPlaceInHand(block);
         }
 
@@ -102,7 +104,7 @@
         /// </summary>
         public void EnableBlocksGravity()
         {
-            foreach (PlaceableBlock block in _grid.BlocksOnGrid)
+            foreach (PlaceableBlockBase block in _grid.BlocksOnGrid)
                 block.EnableGravity();
         }
 
@@ -111,7 +113,7 @@
         /// </summary>
         public void DisableBlocksGravity()
         {
-            foreach (PlaceableBlock block in _grid.BlocksOnGrid)
+            foreach (PlaceableBlockBase block in _grid.BlocksOnGrid)
                 block.DisableGravity();
         }
     }

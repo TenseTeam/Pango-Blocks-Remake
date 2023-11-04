@@ -8,10 +8,8 @@
     using ProjectPBR.Data.ScriptableObjects.Blocks;
     using ProjectPBR.Managers.Main.GameManagers;
     using ProjectPBR.GameConfig.Constants;
-    using System;
-    using static Unity.Collections.AllocatorManager;
 
-    public abstract class PlaceableBlock : PooledBlock, ICastGameManager<GameManager>, IPlaceableBlock
+    public abstract class PlaceableBlockBase : DraggableBlockBase, ICastGameManager<GameManager>, IPlaceableBlock
     {
         private Rigidbody2D _rb;
         private bool _isInvalid;
@@ -35,17 +33,17 @@
 
         protected virtual void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener<PlaceableBlock>(GameConstants.Events.OnBlockStartDrag, OnBlockBeingDragged);
-            MainManager.Ins.EventManager.AddListener<PlaceableBlock>(GameConstants.Events.OnBlockPlaced, OnBlockPlaced);
-            MainManager.Ins.EventManager.AddListener<PlaceableBlock>(GameConstants.Events.OnBlockStartReset, OnBlockStartReset);
+            //MainManager.Ins.EventManager.AddListener<PlaceableBlock>(GameConstants.Events.OnBlockStartDrag, OnBlockBeingDragged);
+            //MainManager.Ins.EventManager.AddListener<PlaceableBlockBase>(GameConstants.Events.OnBlockPlaced, OnBlockPlaced);
+            //MainManager.Ins.EventManager.AddListener<PlaceableBlockBase>(GameConstants.Events.OnBlockStartReset, OnBlockStartReset);
 
         }
 
         protected virtual void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener<PlaceableBlock>(GameConstants.Events.OnBlockStartDrag, OnBlockBeingDragged);
-            MainManager.Ins.EventManager.RemoveListener<PlaceableBlock>(GameConstants.Events.OnBlockPlaced, OnBlockPlaced);
-            MainManager.Ins.EventManager.RemoveListener<PlaceableBlock>(GameConstants.Events.OnBlockStartReset, OnBlockStartReset);
+            //MainManager.Ins.EventManager.RemoveListener<PlaceableBlock>(GameConstants.Events.OnBlockStartDrag, OnBlockBeingDragged);
+            //MainManager.Ins.EventManager.RemoveListener<PlaceableBlockBase>(GameConstants.Events.OnBlockPlaced, OnBlockPlaced);
+            //MainManager.Ins.EventManager.RemoveListener<PlaceableBlockBase>(GameConstants.Events.OnBlockStartReset, OnBlockStartReset);
         }
 
         public virtual void Init(BlockData data)
@@ -107,6 +105,26 @@
 
         public abstract void DecreaseRender();
 
+        public override void OnDragObject()
+        {
+            transform.rotation = Quaternion.identity;
+            IncreaseRender();
+            DisableCollider();
+        }
+
+        public void Place()
+        {
+            EnableCollider();
+            DecreaseRender();
+        }
+
+        public void PlaceableBlockReset()
+        {
+            IncreaseRender();
+            DisableGravity();
+            SetIsInvalid(false);
+        }
+
         private void LerpPosition()
         {
             if (!_resetTimer.Process()) return;
@@ -123,32 +141,6 @@
             SetResetPosition();
             DecreaseRender();
             _resetTimer.Reset();
-        }
-
-        private void OnBlockBeingDragged(PlaceableBlock block)
-        {
-            if (block != this) return;
-
-            transform.rotation = Quaternion.identity;
-            IncreaseRender();
-            DisableCollider();
-        }
-
-        private void OnBlockPlaced(PlaceableBlock block)
-        {
-            if (block != this) return;
-
-            EnableCollider();
-            DecreaseRender();
-        }
-
-        private void OnBlockStartReset(PlaceableBlock block)
-        {
-            if (block != this) return;
-
-            IncreaseRender();
-            DisableGravity();
-            SetIsInvalid(false);
         }
     }
 }

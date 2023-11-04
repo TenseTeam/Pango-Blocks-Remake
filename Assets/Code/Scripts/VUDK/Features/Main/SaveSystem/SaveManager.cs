@@ -1,4 +1,4 @@
-﻿namespace VUDK.Generic.Managers.Static
+﻿namespace VUDK.Features.Main.SaveSystem
 {
     using System.IO;
     using System.Runtime.Serialization.Formatters.Binary;

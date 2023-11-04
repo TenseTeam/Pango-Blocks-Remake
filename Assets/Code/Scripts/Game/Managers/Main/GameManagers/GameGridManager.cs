@@ -16,15 +16,15 @@
         [field: SerializeField]
         public LayerMask GridLayerMask { get; private set; }
 
-        public List<PlaceableBlock> BlocksOnGrid { get; private set; } = new List<PlaceableBlock>();
+        public List<PlaceableBlockBase> BlocksOnGrid { get; private set; } = new List<PlaceableBlockBase>();
 
-        public void Insert(LevelTile tile, PlaceableBlock blockToPlace)
+        public void Insert(LevelTile tile, PlaceableBlockBase blockToPlace)
         {
             AddPlacealbleBlockToGridCount(blockToPlace);
             tile.Insert(blockToPlace);
         }
 
-        public void RemoveBlockFromGrid(PlaceableBlock block)
+        public void RemoveBlockFromGrid(PlaceableBlockBase block)
         {
             BlocksOnGrid.Remove(block);
         }
@@ -37,7 +37,7 @@
 
         public void AdjustBlocksPositionOnGrid()
         {
-            foreach (PlaceableBlock block in BlocksOnGrid)
+            foreach (PlaceableBlockBase block in BlocksOnGrid)
             {
                 LevelTile closestTile = GetClosestTile(block.transform.position);
                 //There is no need to check with AreTilesFreeForBlock because the block is already on the grid,
@@ -46,13 +46,13 @@
             }
         }
 
-        private void AddPlacealbleBlockToGridCount(PlaceableBlock block)
+        private void AddPlacealbleBlockToGridCount(PlaceableBlockBase block)
         {
             if (!BlocksOnGrid.Contains(block))
                 BlocksOnGrid.Add(block);
         }
 
-        public bool AreTilesFreeForBlock(LevelTile fromTile, PlaceableBlock block)
+        public bool AreTilesFreeForBlock(LevelTile fromTile, PlaceableBlockBase block)
         {
             if (block is SinglePlaceableBlock) return !fromTile.IsOccupied;
 
@@ -85,7 +85,7 @@
             return BlocksOnGrid.Count == Grid.GridTiles.Length;
         }
 
-        public bool Contains(PlaceableBlock block)
+        public bool Contains(PlaceableBlockBase block)
         {
             return BlocksOnGrid.Contains(block);
         }

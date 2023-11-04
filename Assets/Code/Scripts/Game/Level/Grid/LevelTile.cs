@@ -17,7 +17,7 @@
 
         public bool IsPlacementPhase => MainManager.Ins.GameStateMachine.IsState(GamePhaseKeys.PlacementPhase);
 
-        public void Insert(PlaceableBlock block)
+        public void Insert(PlaceableBlockBase block)
         {
             block.transform.parent = null;
             block.transform.rotation = Quaternion.identity;
@@ -32,7 +32,7 @@
             if (collision.TryGetComponent(out BlockBase block))
             {
                 if (block is ComplexPlaceableBlock) return;
-                if (block is PlaceableBlock && (block as PlaceableBlock).IsResettingPosition) return;
+                if (block is PlaceableBlockBase && (block as PlaceableBlockBase).IsResettingPosition) return;
 
                 Block = block;
                 return;

@@ -23,7 +23,7 @@
         {
             foreach (BlockData blockData in _playerBlocks)
             {
-                PlaceableBlock block = GameFactory.Create(blockData, false) as PlaceableBlock;
+                PlaceableBlockBase block = GameFactory.Create(blockData, false) as PlaceableBlockBase;
                 block.transform.name = blockData.name.Replace("so_", "");
                 Layout.SetBlockPositionInLayoutRow(block);
             }
