@@ -7,15 +7,14 @@
     using VUDK.Generic.Managers.Main.Interfaces;
     using ProjectPBR.Managers.Main.GameStats;
     using ProjectPBR.GameConfig.Constants;
+    using ProjectPBR.Managers.Static;
 
-    public class GameSceneManager : SceneManagerBase, ICastGameStats<GameStats>
+    public class GameSceneManager : SceneManagerBase
     {
         [SerializeField, Header("Level Reset")]
         private TimeDelay _waitResetLevel;
         [SerializeField, Min(0f)]
         private float _loadMenuDelay;
-
-        public GameStats GameStats => MainManager.Ins.GameStats as GameStats;
 
         protected override void Update()
         {
@@ -26,8 +25,8 @@
         protected override void OnEnable()
         {
             base.OnEnable();
-            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginGameWonPhase, LoadNextScene);
-            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginGameoverPhase, WaitLoading);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginGameWonPhase, LaodNextUnlockedLevel);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginGameoverPhase, WaitResetLoading);
             MainManager.Ins.EventManager.AddListener(GameConstants.UIEvents.OnGameoverLoadingScreenCovered, ResetLevel);
             _waitResetLevel.OnCompleted += StartLoading;
         }
@@ -35,15 +34,20 @@
         protected override void OnDisable()
         {
             base.OnDisable();
-            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameWonPhase, LoadNextScene);
-            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameoverPhase, WaitLoading);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameWonPhase, LaodNextUnlockedLevel);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameoverPhase, WaitResetLoading);
             MainManager.Ins.EventManager.RemoveListener(GameConstants.UIEvents.OnGameoverLoadingScreenCovered, ResetLevel);
             _waitResetLevel.OnCompleted -= StartLoading;
         }
 
         public void LoadMenu()
         {
-            WaitChangeScene(GameStats.LevelMapping.MenuBuildIndex, _loadMenuDelay);
+            WaitChangeScene(LevelMapper.ScenesMapping.MenuBuildIndex, _loadMenuDelay);
+        }
+
+        private void LaodNextUnlockedLevel()
+        {
+
         }
 
         private void ResetLevel()
@@ -56,7 +60,7 @@
             MainManager.Ins.EventManager.TriggerEvent(GameConstants.UIEvents.OnStartGameoverLoadingScreen);
         }
 
-        private void WaitLoading()
+        private void WaitResetLoading()
         {
             _waitResetLevel.Start();
         }

@@ -7,7 +7,6 @@
     using ProjectPBR.Level.Blocks;
     using ProjectPBR.Level.Grid;
     using ProjectPBR.Player.PlayerHandler;
-    using ProjectPBR.GameConfig.Constants;
 
     public class BlocksManager : MonoBehaviour, ICastGameManager<GameManager>
     {

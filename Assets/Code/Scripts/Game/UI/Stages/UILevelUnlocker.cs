@@ -21,7 +21,7 @@
 
         private Button _button;
         private Image _image;
-        private int _levelNumber;
+        private int _levelIndex;
         private LevelStatus _status;
 
         private void Awake()
@@ -29,7 +29,7 @@
             TryGetComponent(out _image);
             TryGetComponent(out _button);
 
-            _levelNumber = transform.GetSiblingIndex();
+            _levelIndex = transform.GetSiblingIndex();
         }
 
         private void OnEnable()
@@ -45,7 +45,7 @@
 
         private void SetStatus()
         {
-            LevelKey levelKey = LevelMapper.GetLevelKeyByLevelIndex(_levelNumber);
+            LevelKey levelKey = LevelMapper.GetLevelKeyByLevelIndex(_levelIndex);
             _status = ProfileSelector.SelectedProfile.LevelsData[levelKey].Status;
             SetSpriteStatus(_status);
         }
@@ -70,7 +70,7 @@
         {
             if (_status == LevelStatus.Locked) return;
 
-            int buildIndex = LevelMapper.GetBuildIndexByLevelIndex(_levelNumber);
+            int buildIndex = LevelMapper.GetBuildIndexByLevelIndex(_levelIndex);
             MainManager.Ins.SceneManager.WaitChangeScene(buildIndex);
         }
     }

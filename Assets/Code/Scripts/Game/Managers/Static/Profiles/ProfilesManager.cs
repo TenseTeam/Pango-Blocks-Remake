@@ -10,6 +10,7 @@
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Patterns.Factories;
     using ProjectPBR.Data.SaveDatas.Enums;
+    using VUDK.Extensions.Colors;
 
     public static class ProfilesManager
     {
@@ -215,7 +216,7 @@
         {
             foreach (Color color in s_TagColors)
             {
-                if (!s_Profiles.Any(profile => profile.Value.Color.Equals(color)))
+                if (!s_Profiles.Any(profile => ColorExtension.Deserialize(profile.Value.Rgba).Equals(color)))
                     return color;
             }
 

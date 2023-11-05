@@ -3,20 +3,25 @@
     using UnityEngine;
     using UnityEditor;
     using ProjectPBR.Data.ScriptableObjects.Levels;
+    using log4net.Core;
+    using ProjectPBR.Data.ScriptableObjects.Levels.Structs;
+    using NUnit.Framework;
+    using System.Collections.Generic;
 
-    [CustomEditor(typeof(LevelMapping))]
+    [CustomEditor(typeof(ScenesMappingData))]
     public class LevelMappingEditor : Editor
     {
         private int _offsetValue; // Valore predefinito dell'offset
-        private LevelMapping _levelMapping;
+        private ScenesMappingData _levelMapping;
 
         private void OnEnable()
         {
-            _levelMapping = target as LevelMapping;
+            _levelMapping = target as ScenesMappingData;
         }
 
         public override void OnInspectorGUI()
         {
+            SetLevelsSize();
             DrawDefaultInspector();
             DrawMappingBox();
         }
@@ -36,11 +41,28 @@
 
         private void MapLevels(int offset)
         {
-            for (int i = 0; i < _levelMapping.Levels.Length; i++)
+            for (int k = 0; k < _levelMapping.Stages.Count; k++)
             {
-                _levelMapping.Levels[i].EasyBuildIndex = i + offset;
-                _levelMapping.Levels[i].HardBuildIndex = i + offset;
+                for (int i = 0; i < _levelMapping.Stages[k].Levels.Count; i++)
+                    _levelMapping.Stages[k].Levels[i] = new LevelMapData(i + offset);
             }
         }
+
+        private void SetLevelsSize()
+        {
+            int size = _levelMapping.LevelsPerStage;
+
+            for (int k = 0; k < _levelMapping.Stages.Count; k++)
+            {
+                List<LevelMapData> currentLevels = _levelMapping.Stages[k].Levels;
+
+                while (currentLevels.Count > size)
+                    currentLevels.RemoveAt(currentLevels.Count - 1);
+
+                while (currentLevels.Count < size)
+                    currentLevels.Add(new LevelMapData());
+            }
+        }
+
     }
 }

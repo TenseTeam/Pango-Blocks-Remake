@@ -9,14 +9,14 @@
     /// </summary>
     public static class DataFactory
     {
-        public static LevelData Create(int levelNumber)
+        public static LevelData Create()
         {
-            return new LevelData(levelNumber);
+            return new LevelData();
         }
 
-        public static LevelKey Create(int saveIndex, GameDifficulty difficulty)
+        public static LevelKey Create(int stageIndex, int levelIndex, GameDifficulty difficulty)
         {
-            return new LevelKey(saveIndex, difficulty);
+            return new LevelKey(stageIndex, levelIndex, difficulty);
         }
 
         public static ProfileData Create(string name, Color color, int profileIndex, GameDifficulty difficulty)

@@ -5,11 +5,13 @@
     [System.Serializable]
     public class LevelKey
     {
+        public int StageIndex;
         public int LevelIndex;
         public GameDifficulty Difficulty;
 
-        public LevelKey(int levelIndex, GameDifficulty difficulty)
+        public LevelKey(int stageIndex, int levelIndex, GameDifficulty difficulty)
         {
+            StageIndex = stageIndex;
             LevelIndex = levelIndex;
             Difficulty = difficulty;
         }
@@ -29,6 +31,7 @@
         public override int GetHashCode()
         {
             int hash = 17;
+            hash = hash * 23 + StageIndex.GetHashCode();
             hash = hash * 23 + LevelIndex.GetHashCode();
             hash = hash * 23 + Difficulty.GetHashCode();
 
@@ -37,14 +40,13 @@
 
         public override bool Equals(object obj)
         {
-            return Equals(obj as LevelKey);
-        }
+            if (obj is not LevelKey) return false;
+            LevelKey key = (LevelKey)obj;
 
-        public bool Equals(LevelKey obj)
-        {
-            if(obj == null) return false;
-
-            return obj.LevelIndex == this.LevelIndex && obj.Difficulty == this.Difficulty;
+            return
+                key.StageIndex == StageIndex &&
+                key.LevelIndex == LevelIndex &&
+                key.Difficulty == Difficulty;
         }
     }
 }

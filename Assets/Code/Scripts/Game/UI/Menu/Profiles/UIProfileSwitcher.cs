@@ -9,6 +9,7 @@
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Managers.Static.Profiles;
     using System;
+    using VUDK.Extensions.Colors;
 
     public class UIProfileSwitcher : MonoBehaviour
     {
@@ -36,7 +37,7 @@
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener<ProfileData>(GameConstants.Events.OnSelectedProfile, SetProfileTag);
+            MainManager.Ins.EventManager.AddListener<ProfileData>(GameConstants.Events.OnProfileAlteration, SetProfileTag);
             MainManager.Ins.EventManager.AddListener<int>(GameConstants.Events.OnDeletedProfile, ValidateProfileTag);
             MainManager.Ins.EventManager.AddListener<int>(GameConstants.Events.OnCreatedProfile, ValidateAddProfileButton);
             _switchButton.onClick.AddListener(SwitchProfile);
@@ -44,7 +45,7 @@
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener<ProfileData>(GameConstants.Events.OnSelectedProfile, SetProfileTag);
+            MainManager.Ins.EventManager.RemoveListener<ProfileData>(GameConstants.Events.OnProfileAlteration, SetProfileTag);
             MainManager.Ins.EventManager.RemoveListener<int>(GameConstants.Events.OnDeletedProfile, ValidateProfileTag);
             MainManager.Ins.EventManager.RemoveListener<int>(GameConstants.Events.OnCreatedProfile, ValidateAddProfileButton);
             _switchButton.onClick.RemoveListener(SwitchProfile);
@@ -59,7 +60,7 @@
         {
             if (profile == null) ResetProfileTag();
 
-            _profileTagImage.color = profile.Color;
+            _profileTagImage.color = ColorExtension.Deserialize(profile.Rgba);
             _profileTagNameText.text = profile.ProfileName;
             _profileTagDifficultyImage.enabled = true;
             _profileTagDifficultyImage.sprite = profile.CurrentDifficulty == GameDifficulty.Easy ? _easySprite : _hardSprite;

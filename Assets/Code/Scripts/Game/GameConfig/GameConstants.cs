@@ -34,10 +34,11 @@
             public const string OnCharacterSendPosition = "OnCharacterSendPosition";
 
             // Profile
+            public const string OnProfileAlteration = "OnProfileAlteration";
             public const string OnSelectedProfile = "OnSelectedProfile";
+            public const string OnModifiedProfile = "OnModifiedProfile";
             public const string OnCreatedProfile = "OnCreatedProfile";
             public const string OnDeletedProfile = "OnDeletedProfile";
-            public const string OnProfileChanged = "OnProfileChanged";
         }
 
         public static class UIEvents

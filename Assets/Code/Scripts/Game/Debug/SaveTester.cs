@@ -6,14 +6,19 @@ namespace ProjectPBR.Debug
     using ProjectPBR.Managers.Static.Profiles;
     using ProjectPBR.Data.SaveDatas;
     using ProjectPBR.Managers.Static;
-    using UnityEngine.SceneManagement;
+    using VUDK.Generic.Managers.Main;
+    using ProjectPBR.Patterns.Factories;
 
     public class SaveTester : MonoBehaviour
     {
+        [Header("Profile")]
         public string ProfileToCreate;
         public string ProfileToSelect;
-        public int LevelToComplete;
         public GameDifficulty DifficultyToChange;
+
+        [Header("Stage")]
+        public int StageToSelect;
+        public int LevelToComplete;
 
         [ContextMenu("CreateProfile")]
         public void Create()
@@ -27,11 +32,45 @@ namespace ProjectPBR.Debug
             ProfileSelector.SelectProfile(ProfileToSelect);
         }
 
+        [ContextMenu("Change Difficulty")]
+        public void ChangeDifficulty()
+        {
+            ProfileSelector.SelectedProfile.CurrentDifficulty = DifficultyToChange;
+            ProfilesManager.SaveProfile(ProfileSelector.SelectedProfile);
+        }
+
+        [ContextMenu("Change Stage")]
+        public void ChangeStage()
+        {
+            LevelMapper.SetCurrentStageIndex(StageToSelect);
+        }
+
+        [ContextMenu("Check Cutscene Unlocked")]
+        public void CheckCutscene()
+        {
+            Debug.Log(LevelOperation.IsCutsceneUnlocked(StageToSelect));
+        }
+
         [ContextMenu("Complete Level")]
         public void CompleteLevel()
         {
             LevelKey levelKey = LevelMapper.GetLevelKeyByLevelIndex(LevelToComplete);
-            ProfileLevelOperation.SetLevelStatus(levelKey, LevelStatus.Completed);
+            LevelOperation.SetLevelStatus(levelKey, LevelStatus.Completed);
+            ProfilesManager.SaveProfile(ProfileSelector.SelectedProfile);
+        }
+
+        //public void CompleteAllLevel()
+        //{
+        //    LevelKey levelKey = DataFactory.Create(StageToSelect, 0, ProfileSelector.SelectedProfile.CurrentDifficulty);
+
+        //    for(int i = 0; i < LevelMapper.ScenesMapping.LevelsPerStage
+        //}
+
+        [ContextMenu("Complete Level By Scene Build Index")]
+        public void CompleteLevelByBuildIndex()
+        {
+            LevelKey levelKey = LevelMapper.GetLevelKeyByBuildIndex(MainManager.Ins.SceneManager.CurrentSceneIndex);
+            LevelOperation.SetLevelStatus(levelKey, LevelStatus.Completed);
             ProfilesManager.SaveProfile(ProfileSelector.SelectedProfile);
         }
 

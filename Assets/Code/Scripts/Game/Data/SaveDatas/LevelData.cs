@@ -1,16 +1,14 @@
-﻿using ProjectPBR.Data.SaveDatas.Enums;
-
-namespace ProjectPBR.Data.SaveDatas
+﻿namespace ProjectPBR.Data.SaveDatas
 {
+    using ProjectPBR.Data.SaveDatas.Enums;
+
     [System.Serializable]
     public class LevelData
     {
-        public int LevelNumber;
         public LevelStatus Status;
 
-        public LevelData(int levelNumber)
+        public LevelData()
         {
-            LevelNumber = levelNumber;
             Status = LevelStatus.Locked;
         }
     }

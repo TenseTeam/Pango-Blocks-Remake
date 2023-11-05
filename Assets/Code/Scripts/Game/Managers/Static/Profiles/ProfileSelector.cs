@@ -25,6 +25,7 @@
         {
             SelectedProfile = profile;
             MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnSelectedProfile, profile);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnProfileAlteration, profile);
         }
 
         public static void SelectNextProfile()
@@ -36,7 +37,8 @@
         public static void ChangeSelectedProfileValues(string newName, GameDifficulty newDifficulty)
         {
             ProfilesManager.ChangeProfileNameAndDifficulty(SelectedProfile.ProfileIndex, newName, newDifficulty);
-            SelectProfile(SelectedProfile);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnModifiedProfile, SelectedProfile);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnProfileAlteration, SelectedProfile);
         }
 
         public static bool TrySelectNextFirstDifferent()

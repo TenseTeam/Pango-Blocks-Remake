@@ -2304,8 +2304,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProfileToCreate: 
   ProfileToSelect: 
-  LevelToComplete: 0
   DifficultyToChange: 0
+  StageToSelect: 0
+  LevelToComplete: 0
 --- !u!1 &1737650384
 GameObject:
   m_ObjectHideFlags: 0
