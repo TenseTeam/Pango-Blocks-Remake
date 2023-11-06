@@ -48,5 +48,10 @@
                 key.LevelIndex == LevelIndex &&
                 key.Difficulty == Difficulty;
         }
+
+        public override string ToString()
+        {
+            return $"Stage: {StageIndex} - Level: {LevelIndex} - Difficulty: {Difficulty}";
+        }
     }
 }

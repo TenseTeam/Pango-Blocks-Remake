@@ -15,27 +15,25 @@
         [SerializeField, Header("Status Sprites")]
         private Sprite _unlocked;
         [SerializeField]
-        private Sprite _locked;
-        [SerializeField]
         private Sprite _completed;
+        [SerializeField, Header("Lock Image")]
+        private Image _lockImage;
 
         private Button _button;
         private Image _image;
         private int _levelIndex;
         private LevelStatus _status;
 
-        private void Awake()
+        public void Init()
         {
             TryGetComponent(out _image);
             TryGetComponent(out _button);
-
             _levelIndex = transform.GetSiblingIndex();
         }
 
         private void OnEnable()
         {
             _button.onClick.AddListener(LoadLevelScene);
-            SetStatus();
         }
 
         private void OnDisable()
@@ -43,8 +41,9 @@
             _button.onClick.RemoveListener(LoadLevelScene);
         }
 
-        private void SetStatus()
+        public void SetStatus()
         {
+            _lockImage.enabled = false;
             LevelKey levelKey = LevelMapper.GetLevelKeyByLevelIndex(_levelIndex);
             _status = ProfileSelector.SelectedProfile.LevelsData[levelKey].Status;
             SetSpriteStatus(_status);
@@ -55,7 +54,8 @@
             switch (status)
             {
                 case LevelStatus.Locked:
-                    _image.sprite = _locked;
+                    _image.sprite = _unlocked;
+                    _lockImage.enabled = true;
                     break;
                 case LevelStatus.Unlocked:
                     _image.sprite = _unlocked;

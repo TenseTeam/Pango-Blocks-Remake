@@ -20,7 +20,7 @@
         private Button _button;
         private bool _isUnlocked;
 
-        private void Awake()
+        public void Init()
         {
             TryGetComponent(out _image);
             TryGetComponent(out _button);
@@ -29,7 +29,6 @@
         private void OnEnable()
         {
             _button.onClick.AddListener(LoadCutscene);
-            SetStatus();
         }
 
         private void OnDisable()
@@ -47,7 +46,7 @@
             return true;
         }
 
-        private void SetStatus()
+        public void SetStatus()
         {
             _isUnlocked = LevelOperation.IsCutsceneUnlocked(LevelMapper.CurrentStageIndex);
             SetSpriteStatus(_isUnlocked);
