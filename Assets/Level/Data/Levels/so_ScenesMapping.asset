@@ -32,76 +32,76 @@ MonoBehaviour:
       HardBuildIndex: 7
     - EasyBuildIndex: 8
       HardBuildIndex: 8
-    CutsceneBuildIndex: 2
+    CutsceneBuildIndex: 73
   - Levels:
-    - EasyBuildIndex: 1
-      HardBuildIndex: 1
-    - EasyBuildIndex: 2
-      HardBuildIndex: 2
-    - EasyBuildIndex: 3
-      HardBuildIndex: 3
-    - EasyBuildIndex: 4
-      HardBuildIndex: 4
-    - EasyBuildIndex: 5
-      HardBuildIndex: 5
-    - EasyBuildIndex: 6
-      HardBuildIndex: 6
-    - EasyBuildIndex: 7
-      HardBuildIndex: 7
-    - EasyBuildIndex: 8
-      HardBuildIndex: 8
-    CutsceneBuildIndex: 0
+    - EasyBuildIndex: 9
+      HardBuildIndex: 41
+    - EasyBuildIndex: 10
+      HardBuildIndex: 42
+    - EasyBuildIndex: 11
+      HardBuildIndex: 43
+    - EasyBuildIndex: 12
+      HardBuildIndex: 44
+    - EasyBuildIndex: 13
+      HardBuildIndex: 45
+    - EasyBuildIndex: 14
+      HardBuildIndex: 46
+    - EasyBuildIndex: 15
+      HardBuildIndex: 47
+    - EasyBuildIndex: 16
+      HardBuildIndex: 48
+    CutsceneBuildIndex: 74
   - Levels:
-    - EasyBuildIndex: 1
-      HardBuildIndex: 1
-    - EasyBuildIndex: 2
-      HardBuildIndex: 2
-    - EasyBuildIndex: 3
-      HardBuildIndex: 3
-    - EasyBuildIndex: 4
-      HardBuildIndex: 4
-    - EasyBuildIndex: 5
-      HardBuildIndex: 5
-    - EasyBuildIndex: 6
-      HardBuildIndex: 6
-    - EasyBuildIndex: 7
-      HardBuildIndex: 7
-    - EasyBuildIndex: 8
-      HardBuildIndex: 8
-    CutsceneBuildIndex: 0
+    - EasyBuildIndex: 17
+      HardBuildIndex: 49
+    - EasyBuildIndex: 18
+      HardBuildIndex: 50
+    - EasyBuildIndex: 19
+      HardBuildIndex: 51
+    - EasyBuildIndex: 20
+      HardBuildIndex: 52
+    - EasyBuildIndex: 21
+      HardBuildIndex: 53
+    - EasyBuildIndex: 22
+      HardBuildIndex: 54
+    - EasyBuildIndex: 23
+      HardBuildIndex: 55
+    - EasyBuildIndex: 24
+      HardBuildIndex: 56
+    CutsceneBuildIndex: 75
   - Levels:
-    - EasyBuildIndex: 1
-      HardBuildIndex: 1
-    - EasyBuildIndex: 2
-      HardBuildIndex: 2
-    - EasyBuildIndex: 3
-      HardBuildIndex: 3
-    - EasyBuildIndex: 4
-      HardBuildIndex: 4
-    - EasyBuildIndex: 5
-      HardBuildIndex: 5
-    - EasyBuildIndex: 6
-      HardBuildIndex: 6
-    - EasyBuildIndex: 7
-      HardBuildIndex: 7
-    - EasyBuildIndex: 8
-      HardBuildIndex: 8
-    CutsceneBuildIndex: 0
+    - EasyBuildIndex: 25
+      HardBuildIndex: 57
+    - EasyBuildIndex: 26
+      HardBuildIndex: 58
+    - EasyBuildIndex: 27
+      HardBuildIndex: 59
+    - EasyBuildIndex: 28
+      HardBuildIndex: 60
+    - EasyBuildIndex: 29
+      HardBuildIndex: 61
+    - EasyBuildIndex: 30
+      HardBuildIndex: 62
+    - EasyBuildIndex: 31
+      HardBuildIndex: 63
+    - EasyBuildIndex: 32
+      HardBuildIndex: 64
+    CutsceneBuildIndex: 76
   - Levels:
-    - EasyBuildIndex: 1
-      HardBuildIndex: 1
-    - EasyBuildIndex: 2
-      HardBuildIndex: 2
-    - EasyBuildIndex: 3
-      HardBuildIndex: 3
-    - EasyBuildIndex: 4
-      HardBuildIndex: 4
-    - EasyBuildIndex: 5
-      HardBuildIndex: 5
-    - EasyBuildIndex: 6
-      HardBuildIndex: 6
-    - EasyBuildIndex: 7
-      HardBuildIndex: 7
-    - EasyBuildIndex: 8
-      HardBuildIndex: 8
-    CutsceneBuildIndex: 0
+    - EasyBuildIndex: 33
+      HardBuildIndex: 65
+    - EasyBuildIndex: 34
+      HardBuildIndex: 66
+    - EasyBuildIndex: 35
+      HardBuildIndex: 67
+    - EasyBuildIndex: 36
+      HardBuildIndex: 68
+    - EasyBuildIndex: 37
+      HardBuildIndex: 69
+    - EasyBuildIndex: 38
+      HardBuildIndex: 70
+    - EasyBuildIndex: 39
+      HardBuildIndex: 71
+    - EasyBuildIndex: 40
+      HardBuildIndex: 72
+    CutsceneBuildIndex: 77
