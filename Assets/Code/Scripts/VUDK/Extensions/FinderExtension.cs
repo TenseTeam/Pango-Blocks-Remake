@@ -30,7 +30,7 @@
         }
 
         /// <summary>
-        /// Try to get the closest gameobject in an array of gameobjects found with a tag.
+        /// Tries to get the closest gameobject in an array of gameobjects found with a tag.
         /// </summary>
         /// <param name="self">transform source.</param>
         /// <param name="tag">tag of the gameobjects.</param>

@@ -87,3 +87,21 @@ MonoBehaviour:
     - EasyBuildIndex: 8
       HardBuildIndex: 8
     CutsceneBuildIndex: 0
+  - Levels:
+    - EasyBuildIndex: 1
+      HardBuildIndex: 1
+    - EasyBuildIndex: 2
+      HardBuildIndex: 2
+    - EasyBuildIndex: 3
+      HardBuildIndex: 3
+    - EasyBuildIndex: 4
+      HardBuildIndex: 4
+    - EasyBuildIndex: 5
+      HardBuildIndex: 5
+    - EasyBuildIndex: 6
+      HardBuildIndex: 6
+    - EasyBuildIndex: 7
+      HardBuildIndex: 7
+    - EasyBuildIndex: 8
+      HardBuildIndex: 8
+    CutsceneBuildIndex: 0

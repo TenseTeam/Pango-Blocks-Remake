@@ -45,7 +45,7 @@
         {
             base.MoveCharacter(direction);
 
-            Vector2 _movementDirection = /* transform.forward * InputMove.y + */ transform.right * InputMove.x; // TO DO: Add a sub-class from this class for isometric 2d movement
+            Vector2 _movementDirection = /* transform.forward * InputMove.y + */ transform.right * InputMove.x; // TODO: Add a sub-class from this class for isometric 2d movement
             Vector2 velocityDirection = new Vector2(_movementDirection.x * CurrentSpeed, Rigidbody.velocity.y);
             Rigidbody.velocity = velocityDirection;
         }

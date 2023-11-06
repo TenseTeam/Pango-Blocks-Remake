@@ -22,11 +22,14 @@
         }
 
         /// <summary>
-        /// Sets the current stage index.
+        /// Tries to set the current stage index, if a stage of the given index exists.
         /// </summary>
         /// <param name="stageIndex">Stage Index to set.</param>
-        public static void SetCurrentStageIndex(int stageIndex)
+        public static void TrySetCurrentStageIndex(int stageIndex)
         {
+            if (stageIndex < 0 || stageIndex >= ScenesMapping.Stages.Count)
+                return;
+
             CurrentStageIndex = stageIndex;
         }
 

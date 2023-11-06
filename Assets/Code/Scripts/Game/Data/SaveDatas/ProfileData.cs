@@ -33,26 +33,22 @@
             Rgba = color.Serialize();
             Id = Guid.NewGuid();
 
-            Init();
+            InitDefault();
         }
 
-        public void Init()
+        public void InitDefault()
         {
             List<StageMapData> stages = LevelMapper.ScenesMapping.Stages;
 
-            foreach (var stage in stages)
+            for (int i = 0; i < stages.Count; i++)
             {
-                int stageIndex = stages.IndexOf(stage);
-
-                foreach (var level in stage.Levels)
+                for (int k = 0; k < stages[i].Levels.Count; k++)
                 {
-                    int levelIndex = stage.Levels.IndexOf(level);
-
                     LevelsData.Add(
-                        DataFactory.Create(stageIndex, levelIndex, GameDifficulty.Easy),
+                        DataFactory.Create(i, k, GameDifficulty.Easy),
                         DataFactory.Create());
                     LevelsData.Add(
-                        DataFactory.Create(stageIndex, levelIndex, GameDifficulty.Hard),
+                        DataFactory.Create(i, k, GameDifficulty.Hard),
                         DataFactory.Create());
                 }
             }
@@ -76,11 +72,10 @@
         {
             List<StageMapData> stages = LevelMapper.ScenesMapping.Stages;
 
-            foreach (var stage in stages)
+            for (int i = 0; i < stages.Count; i++)
             {
-                int stageIndex = stages.IndexOf(stage);
-                LevelKey easyKey = DataFactory.Create(stageIndex, 0, GameDifficulty.Easy);
-                LevelKey hardKey = DataFactory.Create(stageIndex, 0, GameDifficulty.Hard);
+                LevelKey easyKey = DataFactory.Create(i, 0, GameDifficulty.Easy);
+                LevelKey hardKey = DataFactory.Create(i, 0, GameDifficulty.Hard);
                 LevelsData[easyKey].Status = LevelStatus.Unlocked;
                 LevelsData[hardKey].Status = LevelStatus.Unlocked;
             }

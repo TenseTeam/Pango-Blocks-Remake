@@ -2,6 +2,6 @@
 //{
 //    public static class GlobalEventManager
 //    {
-//        // TO DO: Global Event Manager that will be used to trigger events from anywhere in the project
+//        // TODO: Global Event Manager that will be used to trigger events from anywhere in the project
 //    }
 //}

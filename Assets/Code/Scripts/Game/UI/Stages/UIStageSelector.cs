@@ -8,6 +8,9 @@
         [SerializeField, Min(0), Header("Stage Index")]
         private int _stageIndex;
 
-        private void OnEnable() => LevelMapper.SetCurrentStageIndex(_stageIndex);
+        private void OnEnable()
+        {
+            LevelMapper.TrySetCurrentStageIndex(_stageIndex);
+        }
     }
 }

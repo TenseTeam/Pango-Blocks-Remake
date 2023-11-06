@@ -42,7 +42,7 @@ namespace ProjectPBR.Debug
         [ContextMenu("Change Stage")]
         public void ChangeStage()
         {
-            LevelMapper.SetCurrentStageIndex(StageToSelect);
+            LevelMapper.TrySetCurrentStageIndex(StageToSelect);
         }
 
         [ContextMenu("Check Cutscene Unlocked")]
