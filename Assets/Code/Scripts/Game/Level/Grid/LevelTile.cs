@@ -3,41 +3,44 @@
     using UnityEngine;
     using VUDK.Generic.Structures.Grid;    
     using ProjectPBR.Level.Blocks;
+    using ProjectPBR.Player.Objective.Interfaces;
 
     public class LevelTile : GridTileBase
     {
         public BlockBase Block { get; private set; }
+        public bool IsOccupiedByObjective { get; private set; }
         public Vector2 LeftVertex => new Vector2(transform.position.x - 0.5f, transform.position.y - 0.5f);
-        public bool IsOccupied => Block;
+        public bool IsOccupiedByBlock => Block;
+        public bool IsOccupied => IsOccupiedByBlock || IsOccupiedByObjective;
 
-        private Collider2D _coll;
-
-        private void Awake()
-        {
-            TryGetComponent(out _coll);
-        }
-
-        public void InsertBlock(PlaceableBlock block)
+        public void Insert(PlaceableBlockBase block)
         {
             block.transform.parent = null;
-            block.transform.position = transform.position;
+            block.transform.SetPositionAndRotation(transform.position, Quaternion.identity);
         }
 
         private void OnTriggerStay2D(Collider2D collision)
         {
-            if (IsOccupied) return;
+            if (IsOccupiedByBlock) return;
 
             if (collision.TryGetComponent(out BlockBase block))
             {
-                if (block is SinglePlaceableBlock || block is StaticBlock)
-                    Block = block;
+                if (block is ComplexPlaceableBlock) return;
+                if (block is PlaceableBlockBase && (block as PlaceableBlockBase).IsResettingPosition) return;
+
+                Block = block;
+                return;
             }
+
+            if (collision.TryGetComponent(out IGoal _))
+                IsOccupiedByObjective = true;
         }
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            // No needs to check for static blocks because they cannot be moved
+            // Checks the Physics2D Matrix to see with which layer the collision is happening
             Block = null;
+            IsOccupiedByObjective = false;
         }
 
 #if DEBUG

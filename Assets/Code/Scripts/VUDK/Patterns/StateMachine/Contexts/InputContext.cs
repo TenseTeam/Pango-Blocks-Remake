@@ -1,6 +1,6 @@
 ﻿namespace VUDK.Patterns.StateMachine
 {
-    public abstract class InputContext : Context
+    public abstract class InputContext : StateMachineContext
     {
         public InputsMap Inputs { get; protected set; }
 

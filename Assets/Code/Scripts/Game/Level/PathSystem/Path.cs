@@ -6,12 +6,11 @@
     {
         public bool IsGoingToCollide;
         public bool IsGoingToFall;
-        public List<Node> Nodes;
+        public List<Node> Nodes = new List<Node>();
         public bool HasReached => !IsGoingToCollide && !IsGoingToFall;
 
         public Path()
         {
-            Nodes = new List<Node>();
             IsGoingToCollide = false;
             IsGoingToFall = false;
         }

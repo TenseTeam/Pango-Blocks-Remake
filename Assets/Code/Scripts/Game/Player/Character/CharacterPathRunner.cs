@@ -3,9 +3,9 @@
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Managers.Main.Interfaces;
-    using ProjectPBR.Managers;
-    using ProjectPBR.Config.Constants;
+    using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Level.PathSystem;
+    using ProjectPBR.Managers.Main.GameManagers;
 
     public class CharacterPathRunner : MonoBehaviour, ICastGameManager<GameManager>
     {
@@ -16,27 +16,28 @@
         private int _currentNodeIndex = 0;
 
         private Path _pathData;
+        private Vector3 _startPosition;
 
         public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
 
+        private void Awake()
+        {
+            _startPosition = transform.position;
+        }
+
         private void Start()
         {
-            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnCharacterSendPosition, transform.position + Vector3.up * .5f);
-        }
-
-        private void OnEnable()
-        {
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginObjectivePhase, StartPath);
-        }
-
-        private void OnDisable()
-        {
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginObjectivePhase, StartPath);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnCharacterSendPosition, transform.position + Vector3.up * .5f);
         }
 
         private void Update() => RunPath();
 
-        private void StartPath()
+        public void ResetPosition()
+        {
+            transform.position = _startPosition;
+        }
+
+        public void StartPath()
         {
             _pathData = GameManager.PathManager.GetPath();
             _isRunningPath = true;
@@ -45,10 +46,10 @@
         private void RunPath()
         {
             if (!_isRunningPath) return;
+
             if (_currentNodeIndex >= _pathData.Nodes.Count)
             {
-                MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnCharacterReachedDestination, _pathData);
-                _isRunningPath = false;
+                ReachDestination();
                 return;
             }
 
@@ -57,10 +58,17 @@
             transform.position = Vector3.Lerp(transform.position, _pathData.Nodes[_currentNodeIndex].Position, t);
             if (distance < 0.01f)
             {
-                MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnCharacterChangedTile, _pathData.Nodes[_currentNodeIndex].BlockType);
+                MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnCharacterChangedTile, _pathData.Nodes[_currentNodeIndex].BlockType);
                 transform.position = _pathData.Nodes[_currentNodeIndex].Position;
                 _currentNodeIndex++;
             }
+        }
+
+        private void ReachDestination()
+        {
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnCharacterReachedDestination, _pathData);
+            _isRunningPath = false;
+            _currentNodeIndex = 0;
         }
     }
 }

@@ -8,7 +8,7 @@
     {
         protected Rigidbody2D Rigidbody;
 
-        public override bool IsGrounded => Physics2D.OverlapCircle(transform.position + GroundedOffset, GroundedRadius, MainManager.Ins.GameConfig.GroundLayerMask);
+        public override bool IsGrounded => Physics2D.OverlapCircle(transform.position + GroundedOffset, GroundedRadius, MainManager.Ins.GameStats.GroundLayerMask);
 
         protected virtual void Awake()
         {
@@ -45,7 +45,7 @@
         {
             base.MoveCharacter(direction);
 
-            Vector2 _movementDirection = /* transform.forward * InputMove.y + */ transform.right * InputMove.x; // TO DO: Add a sub-class from this class for isometric 2d movement
+            Vector2 _movementDirection = /* transform.forward * InputMove.y + */ transform.right * InputMove.x; // TODO: Add a sub-class from this class for isometric 2d movement
             Vector2 velocityDirection = new Vector2(_movementDirection.x * CurrentSpeed, Rigidbody.velocity.y);
             Rigidbody.velocity = velocityDirection;
         }

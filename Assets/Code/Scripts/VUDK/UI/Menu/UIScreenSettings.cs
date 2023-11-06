@@ -4,8 +4,8 @@ namespace VUDK.UI.Menu
     using System.Linq;
     using UnityEngine;
     using UnityEngine.UI;
-    using VUDK.DataSave.MenuPreferences;
     using TMPro;
+    using VUDK.UI.Menu.MenuPreferences;
 
     public class UIScreenSettings : MonoBehaviour
     {

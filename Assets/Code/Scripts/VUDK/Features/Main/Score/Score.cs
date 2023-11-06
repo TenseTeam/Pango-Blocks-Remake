@@ -1,6 +1,7 @@
 namespace VUDK.Features.Main.Score
 {
     using UnityEngine;
+    using VUDK.Config;
     using VUDK.Generic.Managers.Main;
 
     public class Score : MonoBehaviour

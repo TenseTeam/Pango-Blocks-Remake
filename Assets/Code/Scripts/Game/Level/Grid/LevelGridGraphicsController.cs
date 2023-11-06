@@ -1,6 +1,6 @@
 ﻿namespace ProjectPBR.Level.Grid
 {
-    using ProjectPBR.Config.Constants;
+    using ProjectPBR.GameConfig.Constants;
     using System;
     using UnityEngine;
     using VUDK.Extensions.Colors;
@@ -10,30 +10,36 @@
     [RequireComponent(typeof(SpriteRenderer))]
     public class LevelGridGraphicsController : MonoBehaviour
     {
-        [SerializeField, Min(0f), Header("Grid Fade")]
-        private float _fadeDuration;
+        [SerializeField, Header("Grid Fade")]
+        private TimeDelay _fadeDelay;
 
         private SpriteRenderer _gridSprite;
-        
-        private TimeDelay _fadeDelay;
         private bool _isFading;
 
-        private Color _fadeOutColor = new Color(1, 1, 1, 0);
+        [SerializeField]
+        private Color _startColor;
+        [SerializeField]
+        private Color _fadeOutColor;
 
         private void Awake()
         {
             TryGetComponent(out _gridSprite);
-            _fadeDelay = new TimeDelay(_fadeDuration);
+
+            _startColor = _gridSprite.color.Copy();
+            _fadeOutColor = _startColor.Copy();
+            _fadeOutColor.a = 0f;
         }
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginObjectivePhase, StartFading);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginObjectivePhase, StartFading);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnResetLevel, ResetGraphicsGrid);
         }
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginObjectivePhase, StartFading);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginObjectivePhase, StartFading);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnResetLevel, ResetGraphicsGrid);
         }
 
         private void Update()
@@ -41,19 +47,24 @@
             FadeGridOut();
         }
 
+        private void ResetGraphicsGrid()
+        {
+            _gridSprite.color = _startColor;
+        }
+
         private void StartFading()
         {
             _isFading = true;
-            _fadeDelay = new TimeDelay(_fadeDuration);
+            _fadeDelay.Start();
         }
 
         private void FadeGridOut()
         {
             if (!_isFading) return;
 
-            _fadeDelay.AddDeltaTime();
+            _fadeDelay.Process();
             _gridSprite.color = Color.Lerp(_gridSprite.color, _fadeOutColor,_fadeDelay.ClampNormalizedTime);
-            if(_gridSprite.color.ColorEquals(Color.clear))
+            if(_gridSprite.color.ColorEquals(_fadeOutColor))
                 _isFading = false;
         }
     }

@@ -2,7 +2,7 @@
 {
     using UnityEngine;
     using System.Collections.Generic;
-    using ProjectPBR.ScriptableObjects;
+    using ProjectPBR.Data.ScriptableObjects.Blocks;
     using ProjectPBR.Patterns.Factories;
     using ProjectPBR.Level.Blocks;
 
@@ -23,7 +23,7 @@
         {
             foreach (BlockData blockData in _playerBlocks)
             {
-                PlaceableBlock block = BlocksFactory.Create(blockData, false) as PlaceableBlock;
+                PlaceableBlockBase block = GameFactory.Create(blockData, false) as PlaceableBlockBase;
                 block.transform.name = blockData.name.Replace("so_", "");
                 Layout.SetBlockPositionInLayoutRow(block);
             }

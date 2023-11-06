@@ -9,10 +9,10 @@
     public sealed class AudioManager : MonoBehaviour
     {
         [SerializeField, Header("Uncuncurrent AudioSources")]
-        [Tooltip("Uncuncurrent audio source for music")]
+        [Tooltip("Unconcurrent audio source for music")]
         private AudioSource _music;
         [field: SerializeField]
-        [Tooltip("Uncuncurrent audio source for effects")]
+        [Tooltip("Unconcurrent audio source for effects")]
         private AudioSource _source;
 
         [SerializeField, Header("Concurrent AudioSources")]
@@ -29,7 +29,7 @@
             if(isConcurrent)
                 PlayConcurrentEffectAudio(clip);
             else
-                PlayUncuncurrentEffectAudio(clip);
+                PlayUnconcurrentEffectAudio(clip);
         }
 
         public void PlayConcurrentEffectAudio(AudioClip clip)
@@ -47,7 +47,7 @@
             PlayAudio(audio, clip);
         }
 
-        public void PlayUncuncurrentEffectAudio(AudioClip clip, Range<float> pitchVariation = null)
+        public void PlayUnconcurrentEffectAudio(AudioClip clip, Range<float> pitchVariation = null)
         {
             PlayAudio(_source, clip, pitchVariation);
         }
