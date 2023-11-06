@@ -2681,6 +2681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pf_Pango
       objectReference: {fileID: 0}
+    - target: {fileID: 6408400922603740999, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9213554592578030076, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
       propertyPath: m_Constraints
       value: 7
