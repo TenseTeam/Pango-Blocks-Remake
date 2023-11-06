@@ -6,11 +6,11 @@
     using VUDK.Extensions.Strings;
     using VUDK.Generic.Managers.Main;
     using VUDK.Features.Main.SaveSystem;
+    using VUDK.Extensions.Colors;
     using ProjectPBR.Data.SaveDatas;
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Patterns.Factories;
     using ProjectPBR.Data.SaveDatas.Enums;
-    using VUDK.Extensions.Colors;
 
     public static class ProfilesManager
     {
@@ -171,8 +171,7 @@
         public static ProfileData GetProfileOrFirst(int index)
         {
             ProfileData profile = GetProfile(index);
-            if (profile == null)
-                profile = GetFirstProfile();
+            profile ??= GetFirstProfile();
 
             return profile;
         }
