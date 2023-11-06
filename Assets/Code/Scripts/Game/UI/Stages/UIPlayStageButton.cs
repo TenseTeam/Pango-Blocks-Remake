@@ -3,14 +3,15 @@
     using UnityEngine;
     using UnityEngine.UI;
     using VUDK.Generic.Managers.Main;
-    using ProjectPBR.Managers.Static;
+    using VUDK.Generic.Managers.Main.Interfaces;
+    using ProjectPBR.Managers.Main.SceneManager;
 
     [RequireComponent(typeof(Button))]
-    public class UIPlayStageButton : MonoBehaviour
+    public class UIPlayStageButton : MonoBehaviour, ICastSceneManager<GameSceneManager>
     {
-        [SerializeField, Header("Cutscene Unlocker")]
-        private UICutsceneUnlocker _cutscene;
         private Button _button;
+
+        public GameSceneManager SceneManager => MainManager.Ins.SceneManager as GameSceneManager;
 
         private void Awake()
         {
@@ -19,21 +20,17 @@
 
         private void OnEnable()
         {
-            _button.onClick.AddListener(TryPlayFirstAvailableLevel);
+            _button.onClick.AddListener(TryLoadNextLevel);
         }
 
         private void OnDisable()
         {
-            _button.onClick.RemoveListener(TryPlayFirstAvailableLevel);
+            _button.onClick.RemoveListener(TryLoadNextLevel);
         }
 
-        private void TryPlayFirstAvailableLevel()
+        private void TryLoadNextLevel()
         {
-            _cutscene.TryLaodCutscene();
-            int buildIndex = LevelMapper.GetFirstUnlockedLevelBuildIndex();
-
-            if (buildIndex < 0) return;
-            MainManager.Ins.SceneManager.WaitChangeScene(buildIndex);
+            SceneManager.TryLaodNextUnlockedLevel();
         }
     }
 }

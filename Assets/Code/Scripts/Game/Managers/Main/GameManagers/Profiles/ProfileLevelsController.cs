@@ -40,8 +40,7 @@
         private void CompleteLevel()
         {
             LevelKey levelKey = LevelMapper.GetLevelKeyByBuildIndex(SceneManager.CurrentSceneIndex);
-            LevelOperation.SetLevelStatus(levelKey, LevelStatus.Completed);
-            LevelOperation.SetLevelStatus(++levelKey, LevelStatus.Unlocked);
+            LevelOperation.CompleteLevel(levelKey);
             Save();
         }
     }

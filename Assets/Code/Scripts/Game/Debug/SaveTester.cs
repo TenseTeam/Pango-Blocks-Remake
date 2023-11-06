@@ -55,22 +55,15 @@ namespace ProjectPBR.Debug
         public void CompleteLevel()
         {
             LevelKey levelKey = LevelMapper.GetLevelKeyByLevelIndex(LevelToComplete);
-            LevelOperation.SetLevelStatus(levelKey, LevelStatus.Completed);
+            LevelOperation.CompleteLevel(levelKey);
             ProfilesManager.SaveProfile(ProfileSelector.SelectedProfile);
         }
-
-        //public void CompleteAllLevel()
-        //{
-        //    LevelKey levelKey = DataFactory.Create(StageToSelect, 0, ProfileSelector.SelectedProfile.CurrentDifficulty);
-
-        //    for(int i = 0; i < LevelMapper.ScenesMapping.LevelsPerStage
-        //}
 
         [ContextMenu("Complete Level By Scene Build Index")]
         public void CompleteLevelByBuildIndex()
         {
             LevelKey levelKey = LevelMapper.GetLevelKeyByBuildIndex(MainManager.Ins.SceneManager.CurrentSceneIndex);
-            LevelOperation.SetLevelStatus(levelKey, LevelStatus.Completed);
+            LevelOperation.CompleteLevel(levelKey);
             ProfilesManager.SaveProfile(ProfileSelector.SelectedProfile);
         }
 

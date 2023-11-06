@@ -25,7 +25,7 @@
         protected override void OnEnable()
         {
             base.OnEnable();
-            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginGameWonPhase, LaodNextUnlockedLevel);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginGameWonPhase, LaodNextUnlockedLevelOrBackToMenu);
             MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginGameoverPhase, WaitResetLoading);
             MainManager.Ins.EventManager.AddListener(GameConstants.UIEvents.OnGameoverLoadingScreenCovered, ResetLevel);
             _waitResetLevel.OnCompleted += StartLoading;
@@ -34,7 +34,7 @@
         protected override void OnDisable()
         {
             base.OnDisable();
-            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameWonPhase, LaodNextUnlockedLevel);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameWonPhase, LaodNextUnlockedLevelOrBackToMenu);
             MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameoverPhase, WaitResetLoading);
             MainManager.Ins.EventManager.RemoveListener(GameConstants.UIEvents.OnGameoverLoadingScreenCovered, ResetLevel);
             _waitResetLevel.OnCompleted -= StartLoading;
@@ -45,9 +45,20 @@
             WaitChangeScene(LevelMapper.ScenesMapping.MenuBuildIndex, _loadMenuDelay);
         }
 
-        private void LaodNextUnlockedLevel()
+        public bool TryLaodNextUnlockedLevel()
         {
+            int nextUnlockedLevel = LevelMapper.GetFirstUnlockedLevelOrCutsceneBuildIndex();
+            if (nextUnlockedLevel < 0)
+                return false;
 
+            WaitChangeScene(nextUnlockedLevel);
+            return true;
+        }
+
+        private void LaodNextUnlockedLevelOrBackToMenu()
+        {
+            if (!TryLaodNextUnlockedLevel())
+                LoadMenu();
         }
 
         private void ResetLevel()

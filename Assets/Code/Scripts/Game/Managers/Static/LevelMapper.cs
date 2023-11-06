@@ -21,16 +21,44 @@
             ScenesMapping = (MainManager.Ins.GameStats as GameStats).ScenesMapping;
         }
 
-        public static void SetCurrentStageIndex(int currentStageIndex)
+        /// <summary>
+        /// Sets the current stage index.
+        /// </summary>
+        /// <param name="stageIndex">Stage Index to set.</param>
+        public static void SetCurrentStageIndex(int stageIndex)
         {
-            CurrentStageIndex = currentStageIndex;
+            CurrentStageIndex = stageIndex;
         }
 
+        /// <summary>
+        /// Gets the current stage's cutscene build index.
+        /// </summary>
+        /// <returns>Cutscene build index of the current stage.</returns>
         public static int GetCutsceneBuildIndex()
         {
             return ScenesMapping.Stages[CurrentStageIndex].CutsceneBuildIndex;
         }
 
+        /// <summary>
+        /// Gets the first level build index of status <see cref="LevelStatus.Unlocked"/>
+        /// or the current stage cutscene build index.
+        /// </summary>
+        /// <returns>Build index of the first <see cref="LevelStatus.Unlocked"/> level or the current stage cutscene build index..</returns>
+        public static int GetFirstUnlockedLevelOrCutsceneBuildIndex()
+        {
+            int buildIndex = GetFirstUnlockedLevelBuildIndex();
+
+            if (buildIndex < 0)
+                return GetCutsceneBuildIndex();
+
+            return buildIndex;
+        }
+
+        /// <summary>
+        /// Gets the build index of the level with the given level index.
+        /// </summary>
+        /// <param name="levelIndex">Level Index.</param>
+        /// <returns>Level Build Index.</returns>
         public static int GetBuildIndexByLevelIndex(int levelIndex)
         {
             List<LevelMapData> levels = ScenesMapping.Stages[CurrentStageIndex].Levels;
@@ -51,6 +79,11 @@
             return -1;
         }
 
+        /// <summary>
+        /// Gets the level index of the level with the given build index.
+        /// </summary>
+        /// <param name="buildIndex">Level Build Index.</param>
+        /// <returns>Level Index.</returns>
         public static int GetLevelIndexByBuildIndex(int buildIndex)
         {
             if (s_CurrDifficulty == GameDifficulty.Easy)
@@ -75,6 +108,10 @@
             return -1;
         }
 
+        /// <summary>
+        /// Gets the first level build index of status <see cref="LevelStatus.Unlocked"/>.
+        /// </summary>
+        /// <returns></returns>
         public static int GetFirstUnlockedLevelBuildIndex()
         {
             int levelIndex = GetFirstUnlockedLevelIndex();
@@ -82,6 +119,10 @@
             return GetBuildIndexByLevelIndex(levelIndex);
         }
 
+        /// <summary>
+        /// Gets the first level build index of status <see cref="LevelStatus.Unlocked"/>.
+        /// </summary>
+        /// <returns>Build index of the first  <see cref="LevelStatus.Unlocked"/> level.</returns>
         public static int GetFirstUnlockedLevelIndex()
         {
             for (int i = 0; i < ScenesMapping.Stages[CurrentStageIndex].Levels.Count; i++)
@@ -95,12 +136,22 @@
             return -1;
         }
 
+        /// <summary>
+        /// Gets the <see cref="LevelKey"/> of the level with the given build index.
+        /// </summary>
+        /// <param name="buildIndex">Level Build Index.</param>
+        /// <returns>Level <see cref="LevelKey"/>.</returns>
         public static LevelKey GetLevelKeyByBuildIndex(int buildIndex)
         {
             int levelIndex = GetLevelIndexByBuildIndex(buildIndex);
             return DataFactory.Create(CurrentStageIndex, levelIndex, s_CurrDifficulty);
         }
 
+        /// <summary>
+        /// Gets the <see cref="LevelKey"/> of the level with the given level index.
+        /// </summary>
+        /// <param name="levelIndex">Level Index.</param>
+        /// <returns>Level <see cref="LevelKey"/>.</returns>
         public static LevelKey GetLevelKeyByLevelIndex(int levelIndex)
         {
             return DataFactory.Create(CurrentStageIndex, levelIndex, s_CurrDifficulty);
