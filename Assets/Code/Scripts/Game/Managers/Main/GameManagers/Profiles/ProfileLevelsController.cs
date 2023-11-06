@@ -6,7 +6,6 @@
     using VUDK.Generic.Managers.Main.Interfaces;
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Data.SaveDatas;
-    using ProjectPBR.Data.SaveDatas.Enums;
     using ProjectPBR.Managers.Main.SceneManager;
     using ProjectPBR.Managers.Static;
     using ProjectPBR.Managers.Static.Profiles;

@@ -747,17 +747,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242038329}
   m_CullTransparentMesh: 1
---- !u!114 &350121280 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9168239045055623262, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-  m_PrefabInstance: {fileID: 609946482}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c586fb10551632349be95d53913d332f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &374581684
 GameObject:
   m_ObjectHideFlags: 0
@@ -2422,19 +2411,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3498170918530091167, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4481860706633670592, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4852216774246371854, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4952031749192989740, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -2466,30 +2443,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6753597487363825322, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753597487363825322, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753597487363825322, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753597487363825322, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7376889942592224760, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: <LoadingScreenManager>k__BackingField
-      value: 
-      objectReference: {fileID: 350121280}
-    - target: {fileID: 7503843607170308542, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7579029428191637468, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2498,6 +2451,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7902243552671464052, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: <MainCamera>k__BackingField
+      value: 
+      objectReference: {fileID: 733947206}
     - target: {fileID: 8643423207488035244, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2925,7 +2882,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 73.555565, y: -88.61539}
+  m_AnchoredPosition: {x: 73.555664, y: -88.61539}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &737404938
@@ -5720,7 +5677,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af12d56dc36dbfe4eb9587e6dda56862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cutscene: {fileID: 1396476995}
 --- !u!114 &1446300062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9371,7 +9327,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 146873cda6f3c45858d5b87e82a0ef64, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa4d99cc5f30144879a5a557cc20fc9e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

@@ -1542,17 +1542,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &785692225 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9168239045055623262, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-  m_PrefabInstance: {fileID: 8996969572099385717}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c586fb10551632349be95d53913d332f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &805191576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2847,18 +2836,6 @@ PrefabInstance:
       value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3498170918530091167, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3498170918530091167, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: m_Color.g
-      value: 0.5176471
-      objectReference: {fileID: 0}
-    - target: {fileID: 3498170918530091167, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3498170918530091167, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -2870,18 +2847,10 @@ PrefabInstance:
       propertyPath: _timeToLoadNextScene
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 4481860706633670592, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 4679426333627143973, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 446315a24ad83ec4ba86df4d2b0ae408, type: 2}
-    - target: {fileID: 4952031749192989740, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5403176040699830600, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: <MainCamera>k__BackingField
       value: 
@@ -2910,14 +2879,6 @@ PrefabInstance:
       propertyPath: <WaitLoadingSceneDelay>k__BackingField._resetOnCompleted
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6753597487363825322, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753597487363825322, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.1
-      objectReference: {fileID: 0}
     - target: {fileID: 7135350831645924964, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: _resetBlockTime
       value: 0.2
@@ -2934,10 +2895,6 @@ PrefabInstance:
       propertyPath: _resetBlockTime.<Delay>k__BackingField
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 7376889942592224760, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: <LoadingScreenManager>k__BackingField
-      value: 
-      objectReference: {fileID: 785692225}
     - target: {fileID: 7745985251624203005, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: _waitTime
       value: 0
@@ -2946,6 +2903,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7902243552671464052, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: <MainCamera>k__BackingField
+      value: 
+      objectReference: {fileID: 236989290}
     - target: {fileID: 8380163339913947043, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_Color.r
       value: 0.95686275
@@ -2965,10 +2926,6 @@ PrefabInstance:
     - target: {fileID: 8385416626601443676, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_SortingLayerID
       value: -10473359
-      objectReference: {fileID: 0}
-    - target: {fileID: 9168239045055623262, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
-      propertyPath: _waitAfterGameIsEnded
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

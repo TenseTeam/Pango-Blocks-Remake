@@ -20,7 +20,10 @@
             SetLevelStatus(levelKey, LevelStatus.Completed);
 
             if (levelKey.LevelIndex + 1 < LevelMapper.ScenesMapping.Stages[levelKey.StageIndex].Levels.Count - 1)
-                SetLevelStatus(++levelKey, LevelStatus.Unlocked);
+            {
+                if (ProfileSelector.SelectedProfile.LevelsData[++levelKey].Status == LevelStatus.Locked)
+                    SetLevelStatus(++levelKey, LevelStatus.Unlocked);
+            }
         }
 
         /// <summary>

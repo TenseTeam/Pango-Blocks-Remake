@@ -4,8 +4,6 @@
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Serializable;
     using VUDK.Generic.Managers.Main.Bases;
-    using VUDK.Generic.Managers.Main.Interfaces;
-    using ProjectPBR.Managers.Main.GameStats;
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Managers.Static;
 
