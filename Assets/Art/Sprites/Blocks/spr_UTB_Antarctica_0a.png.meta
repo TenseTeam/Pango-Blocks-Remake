@@ -1,0 +1,690 @@
+fileFormatVersion: 2
+guid: 48e2f9b2174ba0348a55fe1a3153e8f7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 512
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 4096
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0798fb35be021f647ad7491030de3a4b
+      internalID: 1434239579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_13
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1fc14793a2d55f4299597b684160067
+      internalID: 1304398514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_16
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ba5f851f925474e9d1a5adac4e8e45
+      internalID: -1063304285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_17
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30915b5e349abd84e97f2e8d2f79ba72
+      internalID: 201448048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_18
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba8db2b10abd8a4cabf1b859b63312e
+      internalID: -733768325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_19
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34915e3edf021c544ba7c8aec06d1525
+      internalID: 426171554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_22
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d9f9d429ac114429599b82f48162d9
+      internalID: -861898526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_34
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e3e71f10208b643a123270e8354dc6
+      internalID: -1834831106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_47
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5c9bb325ed45544b43c91d6d8bb21d
+      internalID: -1631542915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_50
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6feee9e14cdc0ac4988d58d6a203359f
+      internalID: 955751189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_53
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba81cffabb92814d85e28773c96b868
+      internalID: 1758790682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_56
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6070c3215deb3bb4d8ab0c996c8fd828
+      internalID: 1328342380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_72
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c5ee200a3b7f442b10e36d96e7d687
+      internalID: 1071981005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9edb17565936fbe47b79e2f8f3769f58
+      internalID: 686138036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_81
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffba111a6bcb813458fafc1c96880571
+      internalID: -1348723107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_82
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04810478774a2ac41a72fc9a2c2d93be
+      internalID: 1408081696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_84
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7effbb1bcad76e43abbe0f3abc90bb3
+      internalID: 423834785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_87
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dede661f1f392c04885b88636a6a2aee
+      internalID: -711135754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_90
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7ae2e3a7b0ae643b84ccaef860ff3b
+      internalID: -703502964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_UTB_Antartide_0a_96
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b568cbe931d884fbb76f606f6bc9ec
+      internalID: 1554716170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spr_UTB_Antartide_0a_0: -820420519
+      spr_UTB_Antartide_0a_1: 1434239579
+      spr_UTB_Antartide_0a_10: 350381189
+      spr_UTB_Antartide_0a_100: -795495295
+      spr_UTB_Antartide_0a_101: -1296914199
+      spr_UTB_Antartide_0a_102: 244041180
+      spr_UTB_Antartide_0a_103: 383540793
+      spr_UTB_Antartide_0a_11: -1071624852
+      spr_UTB_Antartide_0a_12: 986712853
+      spr_UTB_Antartide_0a_13: 1304398514
+      spr_UTB_Antartide_0a_14: -1855480885
+      spr_UTB_Antartide_0a_15: -619906296
+      spr_UTB_Antartide_0a_16: -1063304285
+      spr_UTB_Antartide_0a_17: 201448048
+      spr_UTB_Antartide_0a_18: -733768325
+      spr_UTB_Antartide_0a_19: 426171554
+      spr_UTB_Antartide_0a_2: 237065622
+      spr_UTB_Antartide_0a_20: 536074298
+      spr_UTB_Antartide_0a_21: 1674105992
+      spr_UTB_Antartide_0a_22: -861898526
+      spr_UTB_Antartide_0a_23: 1292409814
+      spr_UTB_Antartide_0a_24: -2065263715
+      spr_UTB_Antartide_0a_25: -1187503613
+      spr_UTB_Antartide_0a_26: -405526779
+      spr_UTB_Antartide_0a_27: -1018245734
+      spr_UTB_Antartide_0a_28: -1095246434
+      spr_UTB_Antartide_0a_29: -23886535
+      spr_UTB_Antartide_0a_3: 1468234492
+      spr_UTB_Antartide_0a_30: 697367835
+      spr_UTB_Antartide_0a_31: -728424418
+      spr_UTB_Antartide_0a_32: -1220919999
+      spr_UTB_Antartide_0a_33: -1523713962
+      spr_UTB_Antartide_0a_34: -1834831106
+      spr_UTB_Antartide_0a_35: 1333302086
+      spr_UTB_Antartide_0a_36: -1484155317
+      spr_UTB_Antartide_0a_37: 772899981
+      spr_UTB_Antartide_0a_38: 1358151403
+      spr_UTB_Antartide_0a_39: 579582480
+      spr_UTB_Antartide_0a_4: -422075256
+      spr_UTB_Antartide_0a_40: -1713098159
+      spr_UTB_Antartide_0a_41: -766626213
+      spr_UTB_Antartide_0a_42: 657207500
+      spr_UTB_Antartide_0a_43: -1409391904
+      spr_UTB_Antartide_0a_44: 1771408676
+      spr_UTB_Antartide_0a_45: -2003238967
+      spr_UTB_Antartide_0a_46: 475854301
+      spr_UTB_Antartide_0a_47: -1631542915
+      spr_UTB_Antartide_0a_48: 1956245676
+      spr_UTB_Antartide_0a_49: 985419425
+      spr_UTB_Antartide_0a_5: 1770955006
+      spr_UTB_Antartide_0a_50: 955751189
+      spr_UTB_Antartide_0a_51: 1919771140
+      spr_UTB_Antartide_0a_52: 2003794691
+      spr_UTB_Antartide_0a_53: 1758790682
+      spr_UTB_Antartide_0a_54: -1723745198
+      spr_UTB_Antartide_0a_55: -1034147497
+      spr_UTB_Antartide_0a_56: 1328342380
+      spr_UTB_Antartide_0a_57: -541179911
+      spr_UTB_Antartide_0a_58: 1632766086
+      spr_UTB_Antartide_0a_59: -1386028033
+      spr_UTB_Antartide_0a_6: 1728242698
+      spr_UTB_Antartide_0a_60: -1400519274
+      spr_UTB_Antartide_0a_61: 605099277
+      spr_UTB_Antartide_0a_62: 993236115
+      spr_UTB_Antartide_0a_63: -350740690
+      spr_UTB_Antartide_0a_64: 2093567311
+      spr_UTB_Antartide_0a_65: -595923732
+      spr_UTB_Antartide_0a_66: -1544911175
+      spr_UTB_Antartide_0a_67: 551214361
+      spr_UTB_Antartide_0a_68: -1490612090
+      spr_UTB_Antartide_0a_69: 2040584078
+      spr_UTB_Antartide_0a_7: 348393326
+      spr_UTB_Antartide_0a_70: -1902245783
+      spr_UTB_Antartide_0a_71: -605422676
+      spr_UTB_Antartide_0a_72: 1071981005
+      spr_UTB_Antartide_0a_73: -1254661284
+      spr_UTB_Antartide_0a_74: -1538692471
+      spr_UTB_Antartide_0a_75: -1457256084
+      spr_UTB_Antartide_0a_76: 1248841204
+      spr_UTB_Antartide_0a_77: -1460336796
+      spr_UTB_Antartide_0a_78: -1770149247
+      spr_UTB_Antartide_0a_79: 628466451
+      spr_UTB_Antartide_0a_8: 1061364074
+      spr_UTB_Antartide_0a_80: 686138036
+      spr_UTB_Antartide_0a_81: -1348723107
+      spr_UTB_Antartide_0a_82: 1408081696
+      spr_UTB_Antartide_0a_83: 2125029058
+      spr_UTB_Antartide_0a_84: 423834785
+      spr_UTB_Antartide_0a_85: 1045882891
+      spr_UTB_Antartide_0a_86: 480221633
+      spr_UTB_Antartide_0a_87: -711135754
+      spr_UTB_Antartide_0a_88: 647901732
+      spr_UTB_Antartide_0a_89: 940063284
+      spr_UTB_Antartide_0a_9: -1208999580
+      spr_UTB_Antartide_0a_90: -703502964
+      spr_UTB_Antartide_0a_91: 520199116
+      spr_UTB_Antartide_0a_92: -1750158090
+      spr_UTB_Antartide_0a_93: -830979677
+      spr_UTB_Antartide_0a_94: 1907329211
+      spr_UTB_Antartide_0a_95: 73884097
+      spr_UTB_Antartide_0a_96: 1554716170
+      spr_UTB_Antartide_0a_97: -1203280114
+      spr_UTB_Antartide_0a_98: -2132336413
+      spr_UTB_Antartide_0a_99: 1649709578
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
