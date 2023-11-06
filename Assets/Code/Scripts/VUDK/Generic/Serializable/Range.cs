@@ -7,10 +7,10 @@
     public class Range<T> where T : struct, IComparable<T>
     {
         [field: SerializeField]
-        public T Max { get; set; }
+        public T Min { get; set; }
 
         [field: SerializeField]
-        public T Min { get; set; }
+        public T Max { get; set; }
 
         public Range(T min, T max)
         {

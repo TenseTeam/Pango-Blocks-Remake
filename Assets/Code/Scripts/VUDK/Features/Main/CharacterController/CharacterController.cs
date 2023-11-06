@@ -8,7 +8,7 @@
     {
         protected Rigidbody Rigidbody;
 
-        public override bool IsGrounded => Physics.CheckSphere(transform.position + GroundedOffset, GroundedRadius, MainManager.Ins.GameConfig.GroundLayerMask, QueryTriggerInteraction.Ignore);
+        public override bool IsGrounded => Physics.CheckSphere(transform.position + GroundedOffset, GroundedRadius, MainManager.Ins.GameStats.GroundLayerMask, QueryTriggerInteraction.Ignore);
         
         protected virtual void Awake()
         {

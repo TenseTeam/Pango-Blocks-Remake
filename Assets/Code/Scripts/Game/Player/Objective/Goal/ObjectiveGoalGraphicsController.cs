@@ -2,7 +2,7 @@
 {
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
-    using ProjectPBR.Config.Constants;
+    using ProjectPBR.GameConfig.Constants;
 
     [RequireComponent(typeof(Animator))]
     public class ObjectiveGoalGraphicsController : MonoBehaviour
@@ -16,24 +16,24 @@
 
         private void OnEnable()
         {
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnBeginGameWonPhase, AnimateWon);
-            MainManager.Ins.EventManager.AddListener(Constants.Events.OnObjectiveGoalTouched, AnimateTouch);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginGameWonPhase, AnimateWon);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnObjectiveGoalTouched, AnimateTouch);
         }
 
         private void OnDisable()
         {
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnBeginGameWonPhase, AnimateWon);
-            MainManager.Ins.EventManager.RemoveListener(Constants.Events.OnObjectiveGoalTouched, AnimateTouch);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameWonPhase, AnimateWon);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnObjectiveGoalTouched, AnimateTouch);
         }
 
         private void AnimateWon()
         {
-            _anim.SetTrigger(Constants.ObjectiveAnimations.ObjectiveWon);
+            _anim.SetTrigger(GameConstants.ObjectiveAnimations.ObjectiveWon);
         }
 
         private void AnimateTouch()
         {
-            _anim.SetTrigger(Constants.ObjectiveAnimations.ObjectiveTouched);
+            _anim.SetTrigger(GameConstants.ObjectiveAnimations.ObjectiveTouched);
         }
     }
 }

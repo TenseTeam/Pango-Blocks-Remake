@@ -68,8 +68,8 @@ namespace VUDK.Editor.Tools.Project
             if (GUILayout.Button("Create Folders"))
                 CreateFolders();
 
-            if (GUILayout.Button("Create Managers"))
-                CreateMainManager();
+            //if (GUILayout.Button("Create Managers"))
+            //    CreateMainManager();
         }
 
         private void CreateFolders()
@@ -98,30 +98,30 @@ namespace VUDK.Editor.Tools.Project
             }
         }
 
-        private void CreateMainManager()
-        {
-            GameObject mainManagerObj = new GameObject(nameof(MainManager));
-            MainManager mainManager = mainManagerObj.AddComponent<MainManager>();
+        //private void CreateMainManager()
+        //{
+        //    GameObject mainManagerObj = new GameObject(nameof(MainManager));
+        //    MainManager mainManager = mainManagerObj.AddComponent<MainManager>();
 
-            GameObject gameManagerObj = new GameObject("GameManager");
-            GameManagerBase gameManager = gameManagerObj.AddComponent<GameManagerBase>();
-            gameManagerObj.transform.parent = mainManagerObj.transform;
+        //    GameObject gameManagerObj = new GameObject("GameManager");
+        //    GameManagerBase gameManager = gameManagerObj.AddComponent<GameManagerBase>();
+        //    gameManagerObj.transform.parent = mainManagerObj.transform;
 
-            GameObject poolsManagerObj = new GameObject(nameof(PoolsManager));
-            PoolsManager poolsManager = poolsManagerObj.AddComponent<PoolsManager>();
-            poolsManagerObj.transform.parent = mainManagerObj.transform;
+        //    GameObject poolsManagerObj = new GameObject(nameof(PoolsManager));
+        //    PoolsManager poolsManager = poolsManagerObj.AddComponent<PoolsManager>();
+        //    poolsManagerObj.transform.parent = mainManagerObj.transform;
 
-            GameObject eventManagerObj = new GameObject(nameof(EventManager));
-            EventManager eventManager = eventManagerObj.AddComponent<EventManager>();
-            eventManagerObj.transform.parent = mainManagerObj.transform;
+        //    GameObject eventManagerObj = new GameObject(nameof(EventManager));
+        //    EventManager eventManager = eventManagerObj.AddComponent<EventManager>();
+        //    eventManagerObj.transform.parent = mainManagerObj.transform;
 
-            GameObject gameConfigObj = new GameObject(nameof(GameConfig));
-            GameConfig gameConfig = gameConfigObj.AddComponent<GameConfig>();
-            gameConfigObj.transform.parent = mainManagerObj.transform;
+        //    GameObject gameConfigObj = new GameObject(nameof(GameStatsBase));
+        //    GameStatsBase gameConfig = gameConfigObj.AddComponent<GameStatsBase>();
+        //    gameConfigObj.transform.parent = mainManagerObj.transform;
 
-            GameObject gameStateMachineObj = new GameObject("GameMachine");
-            GameMachineBase gameStateMachine = gameStateMachineObj.AddComponent<GameMachineBase>();
-            gameStateMachineObj.transform.parent = mainManagerObj.transform;
-        }
+        //    GameObject gameStateMachineObj = new GameObject("GameMachine");
+        //    GameMachineBase gameStateMachine = gameStateMachineObj.AddComponent<GameMachineBase>();
+        //    gameStateMachineObj.transform.parent = mainManagerObj.transform;
+        //}
     }
 }

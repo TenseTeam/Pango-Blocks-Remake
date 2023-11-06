@@ -24,7 +24,7 @@
             {
                 LevelTile currTile = tiles[currTilePos.x, currTilePos.y];
 
-                if (currTile == tileB)
+                if (currTile.IsOccupiedByObjective)
                 {
                     Node endNode = pathData.Nodes[pathData.Nodes.Count - 1];
                     Vector3 endPosition = endNode.Position + Vector3.right * 0.5f;
@@ -50,9 +50,9 @@
 
                 pathData.Nodes.Add(node);
 
-                if (nextTile.IsOccupied)
+                if (nextTile.IsOccupiedByBlock)
                 {
-                    if (!nextTile.Block.IsClimbable || (nextAboveTile && nextAboveTile.IsOccupied))
+                    if (!nextTile.Block.IsClimbable || (nextAboveTile && nextAboveTile.IsOccupiedByBlock))
                     {
                         pathData.IsGoingToCollide = true;
                         return pathData;
@@ -63,7 +63,7 @@
                 }
                 else if (nextUnderTile) // That means there is the terrain below
                 {
-                    if (!nextUnderTile.IsOccupied || nextUnderTile.Block.IsClimbable)
+                    if (!nextUnderTile.IsOccupiedByBlock || nextUnderTile.Block.IsClimbable)
                     {
                         pathData.IsGoingToFall = true;
                         return pathData;

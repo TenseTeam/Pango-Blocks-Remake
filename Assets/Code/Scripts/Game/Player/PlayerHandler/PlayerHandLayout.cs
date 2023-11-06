@@ -4,7 +4,8 @@
     using ProjectPBR.Level.Blocks;
     using VUDK.Extensions.Transform;
     using VUDK.Generic.Managers.Main;
-    using ProjectPBR.Config.Constants;
+    using ProjectPBR.GameConfig.Constants;
+    using VUDK.Generic.Serializable;
 
     [RequireComponent(typeof(Collider2D))]
     public class PlayerHandLayout : MonoBehaviour
@@ -32,10 +33,10 @@
         }
 
         /// <summary>
-        /// Set the <see cref="PlaceableBlock"/> position, aligned in a row.
+        /// Set the <see cref="PlaceableBlockBase"/> position, aligned in a row.
         /// </summary>
         /// <param name="block">Block to insert.</param>
-        public void SetBlockPositionInLayoutRow(PlaceableBlock block)
+        public void SetBlockPositionInLayoutRow(PlaceableBlockBase block)
         {
             block.transform.SetLossyScale(_layoutblockSize); // Set the block size to the layout size
             _usedLayoutWidth += _spacing;
@@ -48,10 +49,10 @@
         }
 
         /// <summary>
-        /// Set the reset position of a <see cref="PlaceableBlock"/> in the layout position, not aligned, if it is inside the layout bounds.
+        /// Set the reset position of a <see cref="PlaceableBlockBase"/> in the layout position, not aligned, if it is inside the layout bounds.
         /// </summary>
         /// <param name="block">Block to insert.</param>
-        public void SetResetPositionInLayoutBounds(PlaceableBlock block)
+        public void SetResetPositionInLayoutBounds(PlaceableBlockBase block)
         {
             block.transform.SetLossyScale(_layoutblockSize); // Set the block size to the layout size
             block.transform.position = new Vector2(block.transform.position.x, transform.position.y); // Momentarily align the block to the layout
@@ -63,13 +64,13 @@
             block.SetResetPosition(); // If the block is inside the layout, set the reset position
         }
 
-        public PlaceableBlock GetAndRemoveFromHand(PlaceableBlock block)
+        public PlaceableBlockBase GetAndRemoveFromHand(PlaceableBlockBase block)
         {
             RemoveFromLayout(block);
             return block;
         }
 
-        public void RemoveFromLayout(PlaceableBlock block)
+        public void RemoveFromLayout(PlaceableBlockBase block)
         {
             block.transform.SetLossyScale(Vector3.one);
         }
@@ -79,13 +80,13 @@
             _usedLayoutWidth = 0;
         }
 
-        public void LerpPutItBackInHand(PlaceableBlock block, float resetDuration)
+        public void LerpPositionToHand(PlaceableBlockBase block, float resetTime)
         {
             block.transform.SetLossyScale(_layoutblockSize);
-            block.StartLerpResettingPosition(resetDuration);
+            block.StartLerpResettingPosition(resetTime);
         }
 
-        private bool IsBlockInsideBounds(PlaceableBlock block)
+        private bool IsBlockInsideBounds(PlaceableBlockBase block)
         {
             if (block is SinglePlaceableBlock)
             {

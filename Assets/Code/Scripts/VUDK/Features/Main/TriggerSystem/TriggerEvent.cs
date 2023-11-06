@@ -2,7 +2,6 @@
 {
     using UnityEngine;
     using UnityEngine.Events;
-    using VUDK.Extensions.Gizmos;
 
     [RequireComponent(typeof(Collider))]
     public class TriggerEvent : MonoBehaviour

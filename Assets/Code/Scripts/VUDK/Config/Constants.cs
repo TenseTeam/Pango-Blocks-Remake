@@ -1,10 +1,6 @@
-﻿namespace VUDK.Config.Constants
+﻿namespace VUDK.Config
 {
     public static class Constants 
     {
-        //public static class Pools
-        //{
-        //    public const string AudioSFXPool = "AudioSFXPool";
-        //}
     }
 }

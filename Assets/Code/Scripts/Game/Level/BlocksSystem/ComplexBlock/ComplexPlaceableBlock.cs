@@ -3,19 +3,14 @@
     using System.Collections.Generic;
     using UnityEngine;
     using ProjectPBR.Patterns.Factories;
-    using ProjectPBR.ScriptableObjects;
     using ProjectPBR.Level.Blocks.ComplexBlock;
+    using ProjectPBR.Data.ScriptableObjects.Blocks;
 
-    public class ComplexPlaceableBlock : PlaceableBlock
+    public class ComplexPlaceableBlock : PlaceableBlockBase
     {
         public new ComplexBlockData Data => base.Data as ComplexBlockData;
 
         public List<ComposedBlock> ComposedBlocks { get; private set; } = new List<ComposedBlock>();
-
-        protected override void Awake()
-        {
-            base.Awake();
-        }
 
         public override void Init(BlockData data)
         {
@@ -41,7 +36,7 @@
 
             foreach(SingleBlockData single in Data.ComposedBlocks)
             {
-                ComposedBlock block = BlocksFactory.Create(single, true) as ComposedBlock;
+                ComposedBlock block = GameFactory.Create(single, true) as ComposedBlock;
                 ComposedBlocks.Add(block);
                 block.transform.position = transform.position + Vector3.right * width++;
                 block.transform.parent = transform;

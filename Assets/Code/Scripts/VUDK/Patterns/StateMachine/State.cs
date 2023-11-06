@@ -8,9 +8,9 @@
         private StateMachine _relatedStateMachine;
 
         public Enum StateKey { get; protected set; }
-        protected Context Context { get; private set; }
+        protected StateMachineContext Context { get; private set; }
 
-        protected State(Enum stateKey, StateMachine relatedStateMachine, Context context)
+        protected State(Enum stateKey, StateMachine relatedStateMachine, StateMachineContext context)
         {
             StateKey = stateKey;
             _relatedStateMachine = relatedStateMachine;
@@ -57,11 +57,11 @@
         }
     }
 
-    public abstract class State<T> : State, ICastContext<T> where T : Context
+    public abstract class State<T> : State, ICastContext<T> where T : StateMachineContext
     {
         public new T Context => (T)base.Context;
 
-        protected State(Enum stateKey, StateMachine relatedStateMachine, Context context) : base(stateKey, relatedStateMachine, context)
+        protected State(Enum stateKey, StateMachine relatedStateMachine, StateMachineContext context) : base(stateKey, relatedStateMachine, context)
         {
         }
     }

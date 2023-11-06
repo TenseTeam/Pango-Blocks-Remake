@@ -2,13 +2,13 @@
 {
     using UnityEngine;
     using VUDK.Generic.Managers.Main;
-    using ProjectPBR.Config.Constants;
+    using ProjectPBR.GameConfig.Constants;
 
     public class ObjectiveTrigger : MonoBehaviour
     {
         public virtual void Trigger()
         {
-            MainManager.Ins.EventManager.TriggerEvent(Constants.Events.OnObjectiveTriggered);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnObjectiveTriggered);
         }
     }
 }

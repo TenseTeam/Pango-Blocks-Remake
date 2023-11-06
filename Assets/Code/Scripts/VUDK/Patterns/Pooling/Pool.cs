@@ -52,6 +52,16 @@ namespace VUDK.Patterns.Pooling
             return deq;
         }
 
+        public bool TryGet(out GameObject pooledObject)
+        {
+            pooledObject = Get();
+
+            if(!pooledObject)
+                return false;
+
+            return true;
+        }
+
         /// <summary>
         /// Gets a GameObject from the pool list and changes its parent.
         /// </summary>

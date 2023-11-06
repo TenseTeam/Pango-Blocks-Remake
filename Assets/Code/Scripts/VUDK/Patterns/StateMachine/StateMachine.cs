@@ -79,6 +79,16 @@ namespace VUDK.Patterns.StateMachine
         }
 
         /// <summary>
+        /// Checks if the current state is the same as the passed state key.
+        /// </summary>
+        /// <param name="stateKey">State Key to check.</param>
+        /// <returns>True if is the same, False if not.</returns>
+        public bool IsState(Enum stateKey)
+        {
+            return Equals(CurrentState.StateKey, stateKey);
+        }
+
+        /// <summary>
         /// Coroutine wait for seconds before changing state.
         /// </summary>
         /// <param name="stateKey">State Key.</param>

@@ -5,6 +5,7 @@ namespace VUDK.UI.Menu
     using VUDK.Extensions.Time;
     using VUDK.Generic.Managers.Main;
     using VUDK.Features.Main.InputSystem;
+    using VUDK.Config;
 
     public class UIPauseMenu : MonoBehaviour
     {
