@@ -23,6 +23,7 @@
 
             // Level
             public const string OnResetLevel = "OnResetLevel";
+            public const string OnSavedCompletedLevel = "OnSavedCompltedLevel";
 
             // Scenes
             public const string OnGoBackToMenu = "OnGoBackToMenu";

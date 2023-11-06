@@ -41,6 +41,7 @@
             LevelKey levelKey = LevelMapper.GetLevelKeyByBuildIndex(SceneManager.CurrentSceneIndex);
             LevelOperation.CompleteLevel(levelKey);
             Save();
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnSavedCompletedLevel);
         }
     }
 }

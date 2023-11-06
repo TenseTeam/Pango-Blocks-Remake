@@ -23,7 +23,7 @@
         protected override void OnEnable()
         {
             base.OnEnable();
-            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginGameWonPhase, LaodNextUnlockedLevelOrBackToMenu);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnSavedCompletedLevel, LaodNextUnlockedLevelOrBackToMenu);
             MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginGameoverPhase, WaitResetLoading);
             MainManager.Ins.EventManager.AddListener(GameConstants.UIEvents.OnGameoverLoadingScreenCovered, ResetLevel);
             _waitResetLevel.OnCompleted += StartLoading;
@@ -32,7 +32,7 @@
         protected override void OnDisable()
         {
             base.OnDisable();
-            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameWonPhase, LaodNextUnlockedLevelOrBackToMenu);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnSavedCompletedLevel, LaodNextUnlockedLevelOrBackToMenu);
             MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameoverPhase, WaitResetLoading);
             MainManager.Ins.EventManager.RemoveListener(GameConstants.UIEvents.OnGameoverLoadingScreenCovered, ResetLevel);
             _waitResetLevel.OnCompleted -= StartLoading;
