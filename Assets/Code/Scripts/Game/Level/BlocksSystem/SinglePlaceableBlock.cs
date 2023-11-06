@@ -1,16 +1,21 @@
 ﻿namespace ProjectPBR.Level.Blocks
 {
-    using ProjectPBR.ScriptableObjects;
+    using ProjectPBR.Data.ScriptableObjects.Blocks;
+    using ProjectPBR.Managers.Main.GameStats;
     using UnityEngine;
+    using VUDK.Generic.Managers.Main;
+    using VUDK.Generic.Managers.Main.Interfaces;
 
     [RequireComponent(typeof(PolygonCollider2D))]
     [RequireComponent(typeof(SpriteRenderer))]
-    public class SinglePlaceableBlock : PlaceableBlock
+    public class SinglePlaceableBlock : PlaceableBlockBase, ICastGameStats<GameStats>
     {
         private SpriteRenderer _sprite;
 
-        public new SingleBlockData Data => base.Data as SingleBlockData;
         public PolygonCollider2D Collider { get; protected set; }
+
+        public new SingleBlockData Data => base.Data as SingleBlockData;
+        public GameStats GameStats => MainManager.Ins.GameStats as GameStats;
 
         protected override void Awake()
         {
@@ -47,12 +52,12 @@
 
         public override void IncreaseRender()
         {
-            _sprite.sortingOrder++;
+            _sprite.sortingOrder = GameStats.PlacingBlockLayer;
         }
 
         public override void DecreaseRender()
         {
-            _sprite.sortingOrder--;
+            _sprite.sortingOrder = GameStats.PlacedBlockLayer;
         }
     }
 }

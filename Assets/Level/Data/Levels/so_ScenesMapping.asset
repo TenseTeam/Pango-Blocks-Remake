@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef28a6321774c1041b6bb55b2d44ca28, type: 3}
+  m_Name: so_ScenesMapping
+  m_EditorClassIdentifier: 
+  MenuBuildIndex: 0
+  LevelsPerStage: 8
+  Stages:
+  - Levels:
+    - EasyBuildIndex: 1
+      HardBuildIndex: 1
+    - EasyBuildIndex: 2
+      HardBuildIndex: 2
+    - EasyBuildIndex: 3
+      HardBuildIndex: 3
+    - EasyBuildIndex: 4
+      HardBuildIndex: 4
+    - EasyBuildIndex: 5
+      HardBuildIndex: 5
+    - EasyBuildIndex: 6
+      HardBuildIndex: 6
+    - EasyBuildIndex: 7
+      HardBuildIndex: 7
+    - EasyBuildIndex: 8
+      HardBuildIndex: 8
+    CutsceneBuildIndex: 2
+  - Levels:
+    - EasyBuildIndex: 1
+      HardBuildIndex: 1
+    - EasyBuildIndex: 2
+      HardBuildIndex: 2
+    - EasyBuildIndex: 3
+      HardBuildIndex: 3
+    - EasyBuildIndex: 4
+      HardBuildIndex: 4
+    - EasyBuildIndex: 5
+      HardBuildIndex: 5
+    - EasyBuildIndex: 6
+      HardBuildIndex: 6
+    - EasyBuildIndex: 7
+      HardBuildIndex: 7
+    - EasyBuildIndex: 8
+      HardBuildIndex: 8
+    CutsceneBuildIndex: 0
+  - Levels:
+    - EasyBuildIndex: 1
+      HardBuildIndex: 1
+    - EasyBuildIndex: 2
+      HardBuildIndex: 2
+    - EasyBuildIndex: 3
+      HardBuildIndex: 3
+    - EasyBuildIndex: 4
+      HardBuildIndex: 4
+    - EasyBuildIndex: 5
+      HardBuildIndex: 5
+    - EasyBuildIndex: 6
+      HardBuildIndex: 6
+    - EasyBuildIndex: 7
+      HardBuildIndex: 7
+    - EasyBuildIndex: 8
+      HardBuildIndex: 8
+    CutsceneBuildIndex: 0
+  - Levels:
+    - EasyBuildIndex: 1
+      HardBuildIndex: 1
+    - EasyBuildIndex: 2
+      HardBuildIndex: 2
+    - EasyBuildIndex: 3
+      HardBuildIndex: 3
+    - EasyBuildIndex: 4
+      HardBuildIndex: 4
+    - EasyBuildIndex: 5
+      HardBuildIndex: 5
+    - EasyBuildIndex: 6
+      HardBuildIndex: 6
+    - EasyBuildIndex: 7
+      HardBuildIndex: 7
+    - EasyBuildIndex: 8
+      HardBuildIndex: 8
+    CutsceneBuildIndex: 0
+  - Levels:
+    - EasyBuildIndex: 1
+      HardBuildIndex: 1
+    - EasyBuildIndex: 2
+      HardBuildIndex: 2
+    - EasyBuildIndex: 3
+      HardBuildIndex: 3
+    - EasyBuildIndex: 4
+      HardBuildIndex: 4
+    - EasyBuildIndex: 5
+      HardBuildIndex: 5
+    - EasyBuildIndex: 6
+      HardBuildIndex: 6
+    - EasyBuildIndex: 7
+      HardBuildIndex: 7
+    - EasyBuildIndex: 8
+      HardBuildIndex: 8
+    CutsceneBuildIndex: 0

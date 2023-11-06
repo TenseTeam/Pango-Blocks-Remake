@@ -1,6 +1,7 @@
 ﻿namespace VUDK.Generic.Managers.Main
 {
     using UnityEngine;
+    using VUDK.Generic.Managers.Main.Bases;
     using VUDK.Patterns.Pooling;
     using VUDK.Patterns.Singleton;
 
@@ -12,9 +13,9 @@
     /// - UIManager: Manages the game's UIs; ExecutionOrder(-895).
     /// - EventManager: Governs all in-game events, providing centralized event handling; ExecutionOrder(-850).
     /// - GameMachine: Manages the game's state through a versatile state machine; ExecutionOrder(-990).
+    /// - GameStats: Manages all the possible game's configs and statistics; ExecutionOrder(-800).
     /// Not extensible managers:
     /// - AudioManager: Manages all the possible game's audio; ExecutionOrder(-890).
-    /// - GameConfig: Manages all the possible game's configurations; ExecutionOrder(-800).
     /// - PoolsManager: Manages all the possible game's pools; ExecutionOrder(-100).
     /// </summary>
     [DefaultExecutionOrder(-999)]
@@ -29,14 +30,17 @@
         [field: SerializeField, Header("Event Manager")]
         public EventManager EventManager { get; private set; }
 
-        [field: SerializeField, Header("Game Config")]
-        public GameConfig GameConfig { get; private set; }
+        [field: SerializeField, Header("Game State Machine")]
+        public GameMachineBase GameStateMachine { get; private set; }
+
+        [field: SerializeField, Header("Scene Manager")]
+        public SceneManagerBase SceneManager { get; private set; }
 
         [field: SerializeField, Header("Audio Manager")]
         public AudioManager AudioManager { get; private set; }
 
-        [field: SerializeField, Header("Game State Machine")]
-        public GameMachineBase GameStateMachine { get; private set; }
+        [field: SerializeField, Header("Game Stats")]
+        public GameStatsBase GameStats { get; private set; }
 
         [field: SerializeField, Header("Pooling")]
         public PoolsManager PoolsManager { get; private set; }

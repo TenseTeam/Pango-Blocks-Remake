@@ -27,5 +27,32 @@
         {
             return new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value);
         }
+
+        /// <summary>
+        /// Copies a color.
+        /// </summary>
+        /// <param name="color">Color to copy.</param>
+        /// <returns>Copied color.</returns>
+        public static Color Copy(this Color color)
+        {
+            return new Color(color.r, color.g, color.b, color.a);
+        }
+
+        public static float[] Serialize(this Color color)
+        {
+            float[] rgba = new float[4];
+
+            rgba[0] = color.r;
+            rgba[1] = color.g;
+            rgba[2] = color.b;
+            rgba[3] = color.a;
+
+            return rgba;
+        }
+
+        public static Color Deserialize(float[] rgba)
+        {
+            return new Color(rgba[0], rgba[1], rgba[2], rgba[3]);
+        }
     }
 }

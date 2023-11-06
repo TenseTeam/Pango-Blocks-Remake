@@ -47,10 +47,9 @@
         public Vector2Int WorldToGridPosition(Vector3 worldPosition)
         {
             Vector3 localPosition = worldPosition - transform.position;
-            int x = Mathf.FloorToInt(localPosition.x);
-            int y = Mathf.FloorToInt(localPosition.y);
+            int x = Mathf.RoundToInt(localPosition.x);
+            int y = Mathf.RoundToInt(localPosition.y);
 
-            // Assicurati che la posizione rientri all'interno della griglia
             x = Mathf.Clamp(x, 0, Size.x - 1);
             y = Mathf.Clamp(y, 0, Size.y - 1);
 

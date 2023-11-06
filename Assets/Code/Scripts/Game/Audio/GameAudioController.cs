@@ -2,7 +2,7 @@
 {
     using UnityEngine;
     using VUDK.Features.Main.AudioSFX;
-    using ProjectPBR.Config.Constants;
+    using ProjectPBR.GameConfig.Constants;
 
     public class GameAudioController : AudioEventsControllerBase
     {
