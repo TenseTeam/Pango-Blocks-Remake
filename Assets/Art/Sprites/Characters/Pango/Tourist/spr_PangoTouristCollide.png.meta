@@ -1,0 +1,725 @@
+fileFormatVersion: 2
+guid: 6b31489cf748449e5af57ccb726c05cb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1080
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5320
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7035818057e3844b6829e48929809d06
+      internalID: -1312854398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_1
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 5320
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01247dd912e44413eaf59a182e05ca00
+      internalID: -1949682795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_2
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 5320
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7abafd4e54c6d4f3ba258651623cfb25
+      internalID: 2067201551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_3
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 5320
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5116aaed7f2374440ab6b1d191ba4825
+      internalID: -2136611537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_4
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 5320
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4168f5afd20e645f89eeb4847a9ddf8e
+      internalID: 615201678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4256
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a70e3a7867434745b56f437b3e841a1
+      internalID: -1461141509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_6
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 4256
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d777eb52d01d4c22b81d312e3b60ad9
+      internalID: -1522622866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_7
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 4256
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1909a262f698348628f07511d2330bc3
+      internalID: 1137533893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_8
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 4256
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d691566b9df47d1a214b5be1cce0c1
+      internalID: 1913881070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_9
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 4256
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f75cf8c8719c44b49ddc75b255ac60f
+      internalID: -543551542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3192
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2c45831bd92402bab2a60cd50f9a18
+      internalID: -522650688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_11
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 3192
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f2c24c2c3534c76a2e1bdf2e70fae9
+      internalID: 391744002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_12
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 3192
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc59f12f24234e8c850e36f176b50ef
+      internalID: 1953482922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_13
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 3192
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7905be6934a5a44c4a337336a27ecbf1
+      internalID: 1163808982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_14
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 3192
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b101fbb12ed0428bb39815cd14af58d
+      internalID: -302110439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2128
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b1e72358ec28422ba8e39df60536beb
+      internalID: -910462437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_16
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2128
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c359f95ccc5ef4d26ad709dad19fccfc
+      internalID: -1396971981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_17
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2128
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a6b951669c347f6bf63a38dacd2ba7
+      internalID: -900981723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_18
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 2128
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a1f617bda294c26aae219fb95c1b85
+      internalID: -450433427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_19
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 2128
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98fa982da3fb4c8eb91f0f9ea921055
+      internalID: 1327669782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1064
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15fcf4fd92e814d3eb371559f3557064
+      internalID: -1133329939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_21
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1064
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3b7643218854dc1bbfb8cd3598072b
+      internalID: -1052739068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_22
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1064
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1514c91067cab459dafaeb99ae50ecca
+      internalID: -659957712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_23
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 1064
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff4c2c5899b9f47e8ad88b8f9fbfec51
+      internalID: 1485189691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_24
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 1064
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a780daeefd8154e7bbc5987f30d1cf16
+      internalID: -642478967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3347735e0d723447584af4a94f6687eb
+      internalID: -444498830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristCollide_26
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 1080
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16913bf8da55493e8408c03e055ad5d
+      internalID: 902234825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spr_PangoTouristCollide_0: -1312854398
+      spr_PangoTouristCollide_1: -1949682795
+      spr_PangoTouristCollide_10: -522650688
+      spr_PangoTouristCollide_11: 391744002
+      spr_PangoTouristCollide_12: 1953482922
+      spr_PangoTouristCollide_13: 1163808982
+      spr_PangoTouristCollide_14: -302110439
+      spr_PangoTouristCollide_15: -910462437
+      spr_PangoTouristCollide_16: -1396971981
+      spr_PangoTouristCollide_17: -900981723
+      spr_PangoTouristCollide_18: -450433427
+      spr_PangoTouristCollide_19: 1327669782
+      spr_PangoTouristCollide_2: 2067201551
+      spr_PangoTouristCollide_20: -1133329939
+      spr_PangoTouristCollide_21: -1052739068
+      spr_PangoTouristCollide_22: -659957712
+      spr_PangoTouristCollide_23: 1485189691
+      spr_PangoTouristCollide_24: -642478967
+      spr_PangoTouristCollide_25: -444498830
+      spr_PangoTouristCollide_26: 902234825
+      spr_PangoTouristCollide_27: 15487840
+      spr_PangoTouristCollide_28: 796575527
+      spr_PangoTouristCollide_29: 338416007
+      spr_PangoTouristCollide_3: -2136611537
+      spr_PangoTouristCollide_30: 1739804414
+      spr_PangoTouristCollide_4: 615201678
+      spr_PangoTouristCollide_5: -1461141509
+      spr_PangoTouristCollide_6: -1522622866
+      spr_PangoTouristCollide_7: 1137533893
+      spr_PangoTouristCollide_8: 1913881070
+      spr_PangoTouristCollide_9: -543551542
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
