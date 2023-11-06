@@ -1,0 +1,721 @@
+fileFormatVersion: 2
+guid: c389f9618f58f4f93960455634271900
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1228
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5300
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9379ac1e074e406bb9b984cf8139abd
+      internalID: 1591759554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_1
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 5300
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e72117fd5286d4cde9d467b0fed250ed
+      internalID: 803385674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_2
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5300
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29741d8daa47a473d950e793a7be473b
+      internalID: 451413059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_3
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 5300
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73528a7a71d84c5583ea5aeccbf8601
+      internalID: -1110970701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_4
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 5300
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4067b71aee743c6a79df52f12de6f4
+      internalID: -980233569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4240
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4894525f683a0415e927eb1d135eb65a
+      internalID: -466356939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 4240
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12aebdfd0d70941a8ac4191afdc15f72
+      internalID: 344426338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_7
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 4240
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7192c586f1bd6424a9dda49d6bd2136d
+      internalID: -313581552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_8
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 4240
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d56b211f59c14b838d7c2f7a284913a
+      internalID: -1541445604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_9
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 4240
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b2337dbd02545ff9df08aaca9f809d
+      internalID: -1741314564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3180
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb2acc8d853148aca08d0fd2acc0758
+      internalID: 233047261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_11
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 3180
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df750b1a4d52493eb68e4ebbc5fa2ce
+      internalID: 2071768230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_12
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3180
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7267d0657a9947f89635496802c01ef
+      internalID: -450096870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_13
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 3180
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334d269f51e164a299940d03e50ceefb
+      internalID: -1196381063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_14
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 3180
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8538f36da2d344959ff939ff6faed5a
+      internalID: -2029177144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2120
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02243e2bca404e5aa5fb3396ecd0807
+      internalID: -1593794186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_16
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2120
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df477f80a54e044a6b576cfae4d874aa
+      internalID: -650718701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_17
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2120
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ea7e237c66b4fe2acbd952d82aecb6
+      internalID: 1353422370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_18
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 2120
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a25b16585c794612b808ae2592ce07f
+      internalID: -1376464957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_19
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 2120
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd92852a5792c4729951f9bce05c9699
+      internalID: 1715936655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1060
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30cf25c3e24d54ba0ab3a13be857cac3
+      internalID: 1667634399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_21
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1060
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37ba5b52bfbd43afb14db9817923ea6
+      internalID: 1072241659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_22
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1060
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5d29458314bb408195f87840bbad510
+      internalID: 1931747757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_23
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1060
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b5a03d087f24712bab9227e0031d5b
+      internalID: -2094792999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_24
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1060
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53901b2f251964005b605a0aa2a1911c
+      internalID: -270102368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8197fcd5435b249cd96692c55e48c94a
+      internalID: -747828120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristSliding_26
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 1200
+        height: 1060
+      alignment: 9
+      pivot: {x: 0.6, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803f8e0cb7a29463aa5aae36f076134a
+      internalID: -1527347530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spr_PangoTouristSliding_0: 1591759554
+      spr_PangoTouristSliding_1: 803385674
+      spr_PangoTouristSliding_10: 233047261
+      spr_PangoTouristSliding_11: 2071768230
+      spr_PangoTouristSliding_12: -450096870
+      spr_PangoTouristSliding_13: -1196381063
+      spr_PangoTouristSliding_14: -2029177144
+      spr_PangoTouristSliding_15: -1593794186
+      spr_PangoTouristSliding_16: -650718701
+      spr_PangoTouristSliding_17: 1353422370
+      spr_PangoTouristSliding_18: -1376464957
+      spr_PangoTouristSliding_19: 1715936655
+      spr_PangoTouristSliding_2: 451413059
+      spr_PangoTouristSliding_20: 1667634399
+      spr_PangoTouristSliding_21: 1072241659
+      spr_PangoTouristSliding_22: 1931747757
+      spr_PangoTouristSliding_23: -2094792999
+      spr_PangoTouristSliding_24: -270102368
+      spr_PangoTouristSliding_25: -747828120
+      spr_PangoTouristSliding_26: -1527347530
+      spr_PangoTouristSliding_3: -1110970701
+      spr_PangoTouristSliding_4: -980233569
+      spr_PangoTouristSliding_5: -466356939
+      spr_PangoTouristSliding_6: 344426338
+      spr_PangoTouristSliding_7: -313581552
+      spr_PangoTouristSliding_8: -1541445604
+      spr_PangoTouristSliding_9: -1741314564
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

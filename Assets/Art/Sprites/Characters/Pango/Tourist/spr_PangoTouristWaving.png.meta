@@ -1,0 +1,787 @@
+fileFormatVersion: 2
+guid: 54bc8044150ae4953a19e480ec1f93d2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1038
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5320
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4931fd5374ead40c48c03e20e8bf5e44
+      internalID: -1021984887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_1
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 5320
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40b7a507b4124d6f8cefa6a880df13f
+      internalID: 229706862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_2
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 5320
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97df191b9653a4be8991941fa8aa5a97
+      internalID: -407472770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_3
+      rect:
+        serializedVersion: 2
+        x: 3114
+        y: 5320
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e509f7e9d50c40c8b6b35ec331f6c3d
+      internalID: 838315456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_4
+      rect:
+        serializedVersion: 2
+        x: 4152
+        y: 5320
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c975df00304a34451947ade9ed452aab
+      internalID: -274700460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4256
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b56a102d44ac348e6b77db8ca7f3af8e
+      internalID: -292855697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_6
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 4256
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ad2745a809e4f22a0f9f0b81826cf5
+      internalID: -1917694900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_7
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 4256
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c8c6075a17845fb824ac4cc3e82b48
+      internalID: -2090592239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_8
+      rect:
+        serializedVersion: 2
+        x: 3114
+        y: 4256
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90597146a251c4168a705e31a8e264f0
+      internalID: 344182581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_9
+      rect:
+        serializedVersion: 2
+        x: 4152
+        y: 4256
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101daa55dc853447a9998f0fb1de98e8
+      internalID: 1893365513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3192
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d71abbf1ee284aa7a3bd8d4f2c0f21c
+      internalID: 967397607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_11
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 3192
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0555ea53dc28e44b9a604b882a24e139
+      internalID: 1640180082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_12
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 3192
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf750042c213648a2a264535d0a3d88b
+      internalID: 1837566044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_13
+      rect:
+        serializedVersion: 2
+        x: 3114
+        y: 3192
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7abf0a3282a1a4cf481d5153f012e0ee
+      internalID: 346145176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_14
+      rect:
+        serializedVersion: 2
+        x: 4152
+        y: 3192
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6587af6ec32b4dc1b3726f084a64348
+      internalID: 1484037776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2128
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8215ae9c3d04e41d582de92f29081485
+      internalID: 1029998784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_16
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 2128
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb443528175a4dbb970900742636f03
+      internalID: -188310174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_17
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 2128
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b581a5c3968294d13818c5d3d36f8cf7
+      internalID: 2137100772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_18
+      rect:
+        serializedVersion: 2
+        x: 3114
+        y: 2128
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0a7b8dc91fd4e748b74a9b6902cf89
+      internalID: 219293367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_19
+      rect:
+        serializedVersion: 2
+        x: 4152
+        y: 2128
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37aeb57b664e94e9aabbcb428f4638ee
+      internalID: -194469357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1064
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27fbc7348603d4dd68fe4d3f8415e2ee
+      internalID: -808284732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_21
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 1064
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7dc30cb9c6424bad9cc616762da75ff
+      internalID: -1189756337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_22
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 1064
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff5feffdc87549d08b2eefc1e5ddbc5
+      internalID: 1663966461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_23
+      rect:
+        serializedVersion: 2
+        x: 3114
+        y: 1064
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77130b1c8a2214fc8a01717db2ac0b0d
+      internalID: 566519176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_24
+      rect:
+        serializedVersion: 2
+        x: 4152
+        y: 1064
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0378418a47c417b91ca4f0de96db8d
+      internalID: -371609024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eae72c533a804ba7acb57bd669bd71d
+      internalID: 184851126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_26
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 0
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e30ca93485846809f0c07913ffd81e
+      internalID: -775233346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_27
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 0
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaef316adbb584aaf9d57a920b84c7aa
+      internalID: 1113265408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_28
+      rect:
+        serializedVersion: 2
+        x: 3114
+        y: 0
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a6d4b09e1824770b265eb0cc64d227
+      internalID: 1026803480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoTouristWaving_29
+      rect:
+        serializedVersion: 2
+        x: 4152
+        y: 0
+        width: 1038
+        height: 1064
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f77ac83c5bc4f7c9a80fb13196e756
+      internalID: 1043999373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spr_PangoTouristWaving_0: -1021984887
+      spr_PangoTouristWaving_1: 229706862
+      spr_PangoTouristWaving_10: 967397607
+      spr_PangoTouristWaving_11: 1640180082
+      spr_PangoTouristWaving_12: 1837566044
+      spr_PangoTouristWaving_13: 346145176
+      spr_PangoTouristWaving_14: 1484037776
+      spr_PangoTouristWaving_15: 1029998784
+      spr_PangoTouristWaving_16: -188310174
+      spr_PangoTouristWaving_17: 2137100772
+      spr_PangoTouristWaving_18: 219293367
+      spr_PangoTouristWaving_19: -194469357
+      spr_PangoTouristWaving_2: -407472770
+      spr_PangoTouristWaving_20: -808284732
+      spr_PangoTouristWaving_21: -1189756337
+      spr_PangoTouristWaving_22: 1663966461
+      spr_PangoTouristWaving_23: 566519176
+      spr_PangoTouristWaving_24: -371609024
+      spr_PangoTouristWaving_25: 184851126
+      spr_PangoTouristWaving_26: -775233346
+      spr_PangoTouristWaving_27: 1113265408
+      spr_PangoTouristWaving_28: 1026803480
+      spr_PangoTouristWaving_29: 1043999373
+      spr_PangoTouristWaving_3: 838315456
+      spr_PangoTouristWaving_4: -274700460
+      spr_PangoTouristWaving_5: -292855697
+      spr_PangoTouristWaving_6: -1917694900
+      spr_PangoTouristWaving_7: -2090592239
+      spr_PangoTouristWaving_8: 344182581
+      spr_PangoTouristWaving_9: 1893365513
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
