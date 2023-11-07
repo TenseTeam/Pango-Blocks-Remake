@@ -1,6 +1,7 @@
 ﻿namespace ProjectPBR.Managers.Main.GameStats
 {
     using UnityEngine;
+    using UnityEngine.SceneManagement;
     using VUDK.Generic.Managers.Main.Bases;
     using ProjectPBR.Data.ScriptableObjects.Levels;
 

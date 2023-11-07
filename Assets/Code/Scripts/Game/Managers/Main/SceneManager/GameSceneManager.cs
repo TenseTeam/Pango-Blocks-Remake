@@ -43,7 +43,7 @@
             WaitChangeScene(LevelMapper.ScenesMapping.MenuBuildIndex, _loadMenuDelay);
         }
 
-        public bool TryLaodNextUnlockedLevel()
+        public bool TryLaodNextUnlockedLevel() // TODO: Maybe create a LevelUnlockerManager?
         {
             int nextUnlockedLevel = LevelMapper.GetFirstUnlockedLevelOrCutsceneBuildIndex();
             if (nextUnlockedLevel < 0)
@@ -51,6 +51,11 @@
 
             WaitChangeScene(nextUnlockedLevel);
             return true;
+        }
+
+        public bool IsThisMenu()
+        {
+            return UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == LevelMapper.ScenesMapping.MenuBuildIndex;
         }
 
         private void LaodNextUnlockedLevelOrBackToMenu()

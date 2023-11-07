@@ -2,6 +2,13 @@
 {
     public static class EventKeys
     {
+        public static class GameEvents
+        {
+            public const string OnGameMachineStart = "OnGameMachineStart";
+            public const string OnGameOpened = "OnGameOpened";
+            public const string OnFirstLaunch = "OnFirstLaunch";
+        }
+
         public static class CountdownEvents
         {
             public const string OnCountdownTimesUp = "OnCountdownTimesUp";
@@ -31,11 +38,6 @@
         {
             public const string OnPauseEnter = "OnPauseEnter";
             public const string OnPauseExit = "OnPuaseExit";
-        }
-
-        public static class GameEvents
-        {
-            public const string OnGameMachineStart = "OnGameMachineStart";
         }
 
         public static class SceneEvents
