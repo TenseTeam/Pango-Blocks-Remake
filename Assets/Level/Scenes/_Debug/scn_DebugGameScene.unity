@@ -1184,6 +1184,7 @@ Transform:
   m_Children:
   - {fileID: 918524894}
   - {fileID: 7584587621880915120}
+  - {fileID: 1085237455}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &713537232
@@ -1765,8 +1766,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerBlocks:
-  - {fileID: 11400000, guid: a349d8ce56359af429fcffe0731833e5, type: 2}
   - {fileID: 11400000, guid: 8274b886e51de2242b117675184c5bbe, type: 2}
+  - {fileID: 11400000, guid: 8274b886e51de2242b117675184c5bbe, type: 2}
+  - {fileID: 11400000, guid: 53870c2814894794a98094b33921e257, type: 2}
+  - {fileID: 11400000, guid: 53870c2814894794a98094b33921e257, type: 2}
+  - {fileID: 11400000, guid: 187d16c28eb4c5841b70f2267a011776, type: 2}
   - {fileID: 11400000, guid: 187d16c28eb4c5841b70f2267a011776, type: 2}
   - {fileID: 11400000, guid: 187d16c28eb4c5841b70f2267a011776, type: 2}
   <Layout>k__BackingField: {fileID: 1348621928}
@@ -1832,6 +1836,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4253243533211253459, guid: f0b257363c94bb24eb883e65b5040b95, type: 3}
   m_PrefabInstance: {fileID: 969684327}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &972039548
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 625747956}
+    m_Modifications:
+    - target: {fileID: 704130037067503737, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 704130037067503737, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 704130037067503737, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704130037067503737, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 704130037067503737, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704130037067503737, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704130037067503737, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704130037067503737, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704130037067503737, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704130037067503737, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6408400922603740999, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
+      propertyPath: m_Name
+      value: pf_Pango
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
 --- !u!1001 &1018275769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1893,6 +1954,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4253243533211253459, guid: f0b257363c94bb24eb883e65b5040b95, type: 3}
   m_PrefabInstance: {fileID: 1018275769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1085237455 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 704130037067503737, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
+  m_PrefabInstance: {fileID: 972039548}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1163899799
 PrefabInstance:
@@ -2684,6 +2750,10 @@ PrefabInstance:
     - target: {fileID: 1680502142275147513, guid: 750bd6f0accc2e941a4871d553baa608, type: 3}
       propertyPath: m_Name
       value: pf_PangoTourist
+      objectReference: {fileID: 0}
+    - target: {fileID: 1680502142275147513, guid: 750bd6f0accc2e941a4871d553baa608, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5078076780562371015, guid: 750bd6f0accc2e941a4871d553baa608, type: 3}
       propertyPath: m_LocalPosition.x
