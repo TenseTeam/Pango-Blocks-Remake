@@ -10726,8 +10726,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8abb16f224aa4449bc6b5ecf3c45b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _unlocked: {fileID: 21300000, guid: 4466d0aa2084014488de2524f6a48042, type: 3}
-  _completed: {fileID: 21300000, guid: 49fe953c93ba657498cfe3eee524fd33, type: 3}
+  _unlocked: {fileID: 21300000, guid: 0fc2a07096a57824d90b8f3ccd758545, type: 3}
+  _completed: {fileID: 21300000, guid: 4803378f3bc08ea41880c66e552472c9, type: 3}
   _lockImage: {fileID: 590923740}
 --- !u!114 &1248957446
 MonoBehaviour:
@@ -10793,7 +10793,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 517ebcd30273ba34bb27fb31065bb0da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4803378f3bc08ea41880c66e552472c9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
