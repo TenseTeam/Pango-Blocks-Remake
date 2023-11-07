@@ -106,6 +106,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -117,8 +143,8 @@ TextureImporter:
         y: 5120
         width: 512
         height: 1024
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -138,8 +164,8 @@ TextureImporter:
         y: 5120
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,15 +178,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_2
+      name: spr_PangoTouristWalking_10
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 5120
+        x: 0
+        y: 3072
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,15 +199,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_3
+      name: spr_PangoTouristWalking_11
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 5120
+        x: 512
+        y: 3072
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,15 +220,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_4
+      name: spr_PangoTouristWalking_12
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 5120
+        x: 1024
+        y: 3072
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,15 +241,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_5
+      name: spr_PangoTouristWalking_13
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4096
+        x: 1536
+        y: 3072
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,15 +262,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_6
+      name: spr_PangoTouristWalking_14
       rect:
         serializedVersion: 2
-        x: 512
-        y: 4096
+        x: 2048
+        y: 3072
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,15 +283,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_7
+      name: spr_PangoTouristWalking_15
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 4096
+        x: 0
+        y: 2048
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,15 +304,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_8
+      name: spr_PangoTouristWalking_16
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 4096
+        x: 512
+        y: 2048
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,15 +325,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_9
+      name: spr_PangoTouristWalking_17
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 4096
+        x: 1024
+        y: 2048
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,15 +346,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_10
+      name: spr_PangoTouristWalking_18
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3072
+        x: 1536
+        y: 2048
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -341,15 +367,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_11
+      name: spr_PangoTouristWalking_19
       rect:
         serializedVersion: 2
-        x: 512
-        y: 3072
+        x: 2048
+        y: 2048
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,15 +388,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_12
+      name: spr_PangoTouristWalking_2
       rect:
         serializedVersion: 2
         x: 1024
-        y: 3072
+        y: 5120
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,15 +409,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_13
+      name: spr_PangoTouristWalking_20
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 3072
+        x: 0
+        y: 1024
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -404,15 +430,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_14
+      name: spr_PangoTouristWalking_21
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 3072
+        x: 512
+        y: 1024
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -425,15 +451,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_15
+      name: spr_PangoTouristWalking_22
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2048
+        x: 1024
+        y: 1024
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -446,15 +472,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_16
+      name: spr_PangoTouristWalking_23
       rect:
         serializedVersion: 2
-        x: 512
-        y: 2048
+        x: 1536
+        y: 1024
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -467,15 +493,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_17
+      name: spr_PangoTouristWalking_24
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 2048
+        x: 2048
+        y: 1024
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -488,15 +514,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_18
+      name: spr_PangoTouristWalking_25
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 2048
+        x: 0
+        y: 0
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -509,15 +535,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_19
+      name: spr_PangoTouristWalking_26
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 2048
+        x: 512
+        y: 0
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -530,36 +556,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_20
+      name: spr_PangoTouristWalking_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1024
+        x: 1536
+        y: 5120
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32c077138f27902408c4eab6a4c9fdf6
-      internalID: 1994511837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_PangoTouristWalking_21
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 1024
-        width: 512
-        height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -572,15 +577,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_22
+      name: spr_PangoTouristWalking_4
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 1024
+        x: 2048
+        y: 5120
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -593,15 +598,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_23
+      name: spr_PangoTouristWalking_5
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 1024
+        x: 0
+        y: 4096
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -614,15 +619,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_24
+      name: spr_PangoTouristWalking_6
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 1024
+        x: 512
+        y: 4096
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -635,15 +640,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_25
+      name: spr_PangoTouristWalking_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 1024
+        y: 4096
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -656,15 +661,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_26
+      name: spr_PangoTouristWalking_8
       rect:
         serializedVersion: 2
-        x: 512
-        y: 0
+        x: 1536
+        y: 4096
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -677,15 +682,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_PangoTouristWalking_27
+      name: spr_PangoTouristWalking_9
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 0
+        x: 2048
+        y: 4096
         width: 512
         height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55, y: 0.215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -710,32 +715,32 @@ TextureImporter:
     nameFileIdTable:
       spr_PangoTouristWalking_0: 2109352297
       spr_PangoTouristWalking_1: -1812104661
-      spr_PangoTouristWalking_10: 1629446620
-      spr_PangoTouristWalking_11: -169466762
-      spr_PangoTouristWalking_12: 1502444402
-      spr_PangoTouristWalking_13: -182406478
-      spr_PangoTouristWalking_14: -310418128
-      spr_PangoTouristWalking_15: 3321279
-      spr_PangoTouristWalking_16: -2103521077
-      spr_PangoTouristWalking_17: 346496301
-      spr_PangoTouristWalking_18: 613589284
-      spr_PangoTouristWalking_19: -880348622
-      spr_PangoTouristWalking_2: 913637873
-      spr_PangoTouristWalking_20: 1994511837
-      spr_PangoTouristWalking_21: 1271326701
-      spr_PangoTouristWalking_22: -65169656
-      spr_PangoTouristWalking_23: 96465127
-      spr_PangoTouristWalking_24: 1157917334
-      spr_PangoTouristWalking_25: -542642935
-      spr_PangoTouristWalking_26: 168400690
-      spr_PangoTouristWalking_27: -392169269
-      spr_PangoTouristWalking_3: 1959670128
-      spr_PangoTouristWalking_4: -1537994055
-      spr_PangoTouristWalking_5: 1653622860
-      spr_PangoTouristWalking_6: 1809344564
-      spr_PangoTouristWalking_7: -2142965038
-      spr_PangoTouristWalking_8: -583823039
-      spr_PangoTouristWalking_9: 1710434397
+      spr_PangoTouristWalking_10: 913637873
+      spr_PangoTouristWalking_11: 1959670128
+      spr_PangoTouristWalking_12: -1537994055
+      spr_PangoTouristWalking_13: 1653622860
+      spr_PangoTouristWalking_14: 1809344564
+      spr_PangoTouristWalking_15: -2142965038
+      spr_PangoTouristWalking_16: -583823039
+      spr_PangoTouristWalking_17: 1710434397
+      spr_PangoTouristWalking_18: 1629446620
+      spr_PangoTouristWalking_19: -169466762
+      spr_PangoTouristWalking_2: 1502444402
+      spr_PangoTouristWalking_20: -182406478
+      spr_PangoTouristWalking_21: -310418128
+      spr_PangoTouristWalking_22: 3321279
+      spr_PangoTouristWalking_23: -2103521077
+      spr_PangoTouristWalking_24: 346496301
+      spr_PangoTouristWalking_25: 613589284
+      spr_PangoTouristWalking_26: -880348622
+      spr_PangoTouristWalking_27: 1994511837
+      spr_PangoTouristWalking_3: 1271326701
+      spr_PangoTouristWalking_4: -65169656
+      spr_PangoTouristWalking_5: 96465127
+      spr_PangoTouristWalking_6: 1157917334
+      spr_PangoTouristWalking_7: -542642935
+      spr_PangoTouristWalking_8: 168400690
+      spr_PangoTouristWalking_9: -392169269
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
