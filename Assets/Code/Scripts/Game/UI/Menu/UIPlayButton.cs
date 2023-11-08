@@ -1,43 +1,23 @@
 ﻿namespace ProjectPBR.UI.Menu
 {
-    using UnityEngine;
-    using UnityEngine.Events;
-    using UnityEngine.UI;
+    using VUDK.UI.Buttons;
+    using VUDK.Generic.Managers.Main;
+    using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Managers.Static.Profiles;
 
-    [RequireComponent(typeof(Button))]
-    public class UIPlayButton : MonoBehaviour
+
+    public class UIPlayButton : UIButton
     {
-        private Button _button;
-
-        [Header("Events")]
-        public UnityEvent OnPlaySuccess;
-        public UnityEvent OnPlayFail;
-
-        private void Awake()
+        protected override void Press()
         {
-            TryGetComponent(out _button);
-        }
-
-        private void OnEnable()
-        {
-            _button.onClick.AddListener(TryPlay);
-        }
-
-        private void OnDisable()
-        {
-            _button.onClick.RemoveListener(TryPlay);
-        }
-
-        private void TryPlay()
-        {
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.UIEvents.OnPlayButtonPressed);
             if (ProfileSelector.SelectedProfile == null)
             {
-                OnPlayFail?.Invoke();
+                OnButtonPressedFail?.Invoke();
                 return;
             }
 
-            OnPlaySuccess?.Invoke();
+            OnButtonPressedSuccess?.Invoke();
         }
     }
 }

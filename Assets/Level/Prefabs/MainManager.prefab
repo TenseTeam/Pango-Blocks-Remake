@@ -681,6 +681,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e13c450fcd6c1459e163954d5d1a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _defaultButton: {fileID: 8300000, guid: 0c08827d6c0b14c149a039ca1e5400c0, type: 3}
+  _playButton: {fileID: 8300000, guid: e743b30ace92d436e9e085100a025d48, type: 3}
+  _infoButton: {fileID: 8300000, guid: 3ec5cb56ef4524037a68cfb1e51b80c9, type: 3}
+  _levelButton: {fileID: 8300000, guid: 8dc78a7cd3b3c4455ba258c33ed80d34, type: 3}
+  _transitionMenu: {fileID: 8300000, guid: b12854b523fab46f58b0916b3e61ecfa, type: 3}
+  _closeButton: {fileID: 8300000, guid: 3ec5cb56ef4524037a68cfb1e51b80c9, type: 3}
+  _transitionLevel: {fileID: 8300000, guid: 81a980b9681964efe9303d917e2baa18, type: 3}
+  _levelClear: {fileID: 8300000, guid: adab8e5be87b040c8828826a726bcfb4, type: 3}
+  _characterFootstep: {fileID: 8300000, guid: 77fd01ee50ca04dc894c715b0999c46e, type: 3}
+  _characterSlide: {fileID: 8300000, guid: 2bf1b5b9636154b26ac2dd528abf9eac, type: 3}
+  _touchBlock: {fileID: 8300000, guid: 8dc78a7cd3b3c4455ba258c33ed80d34, type: 3}
+  _cantPlaceBlock: {fileID: 8300000, guid: afbcfe71b4e8d4b09bcd27010fd04f44, type: 3}
 --- !u!1 &3383882095538835351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,7 +1301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <WaitLoadingSceneDelay>k__BackingField:
-    <Delay>k__BackingField: 5
+    <Delay>k__BackingField: 6
   _waitResetLevel:
     <Delay>k__BackingField: 3
   _loadMenuDelay: 3
@@ -2633,9 +2645,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -7207453572216972504, guid: 9e4d80b09256e4d47b4083753794ff5f, type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 3d401946090e04ae2bf7fa004c928de8, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

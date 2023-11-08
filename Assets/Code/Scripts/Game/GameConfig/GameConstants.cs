@@ -1,4 +1,6 @@
-﻿namespace ProjectPBR.GameConfig.Constants
+﻿using System.Data;
+
+namespace ProjectPBR.GameConfig.Constants
 {
     public static class GameConstants
     {
@@ -9,6 +11,7 @@
             public const string OnBlockStartDrag = "OnBlockStartDrag";
             public const string OnBlockStopDrag = "OnBlockStopDrag";
             public const string OnBlockPlaced = "OnBlockPlaced";
+            public const string OnCantPlaceBlock = "OnCantPlaceBlock";
 
             // Objective
             public const string OnObjectiveTriggered = "OnObjectiveTriggered";
@@ -33,6 +36,7 @@
             public const string OnCharacterChangedTile = "OnCharacterMoved";
             public const string OnCharacterReachedDestination = "OnCharacterReachedDestination";
             public const string OnCharacterSendPosition = "OnCharacterSendPosition";
+            public const string OnCharacterFootstep = "OnCharacterFootstep";
 
             // Profile
             public const string OnProfileAlteration = "OnProfileAlteration";
@@ -44,8 +48,17 @@
 
         public static class UIEvents
         {
+            // Buttons
+            public const string OnPlayButtonPressed = "OnPlayButtonPressed";
+            public const string OnInfoButtonPressed = "OnInfoButtonPressed";
+            public const string OnLevelButtonPressed = "OnLevelButtonPressed";
+            public const string OnCloseButtonPressed = "OnCloseButtonPressed";
+
+            // Loading Screen
             public const string OnStartGameoverLoadingScreen = "OnStartGameoverLoadingScreen";
             public const string OnGameoverLoadingScreenCovered = "OnGameoverLoadingScreenCovered";
+            public const string OnLoadingScreenOpen = "OnLoadingScreenOpen";
+            public const string OnLoadingScreenClose = "OnLoadingScreenClose";
             public const string OnSelectedDifficultyButton = "OnSelectedDifficultyButton";
         }
 

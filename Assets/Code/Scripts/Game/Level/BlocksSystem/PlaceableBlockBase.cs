@@ -7,6 +7,7 @@
     using ProjectPBR.Level.Blocks.Interfaces;
     using ProjectPBR.Data.ScriptableObjects.Blocks;
     using ProjectPBR.Managers.Main.GameManagers;
+    using ProjectPBR.GameConfig.Constants;
 
     public abstract class PlaceableBlockBase : DraggableBlockBase, ICastGameManager<GameManager>, IPlaceableBlock
     {
@@ -92,6 +93,7 @@
 
         public override void OnDragObject()
         {
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBlockStartDrag);
             transform.rotation = Quaternion.identity;
             IncreaseRender();
             DisableCollider();

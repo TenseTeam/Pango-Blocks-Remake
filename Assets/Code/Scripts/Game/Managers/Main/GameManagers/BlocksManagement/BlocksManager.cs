@@ -7,6 +7,7 @@
     using ProjectPBR.Level.Blocks;
     using ProjectPBR.Level.Grid;
     using ProjectPBR.Player.PlayerHandler;
+    using ProjectPBR.GameConfig.Constants;
 
     public class BlocksManager : MonoBehaviour, ICastGameManager<GameManager>
     {
@@ -49,12 +50,14 @@
 
                 if(_grid.AreTilesFreeForBlock(closestTile, block))
                 {
+                    MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBlockPlaced);
                     block.Place();
-                    //MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBlockPlaced, block);
                     _grid.Insert(closestTile, block);
                     return true;
                 }
             }
+
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnCantPlaceBlock);
             return false;
         }
 

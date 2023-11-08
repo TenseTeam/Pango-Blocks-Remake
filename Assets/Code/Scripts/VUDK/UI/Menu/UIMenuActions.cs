@@ -25,7 +25,7 @@ namespace VUDK.UI.Menu
 
         public void ClickButton()
         {
-            MainManager.Ins.EventManager.TriggerEvent(EventKeys.UIEvents.OnButtonClick);
+            MainManager.Ins.EventManager.TriggerEvent(EventKeys.UIEvents.OnButtonPressed);
         }
     }
 }

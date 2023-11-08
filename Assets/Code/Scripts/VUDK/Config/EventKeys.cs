@@ -56,7 +56,7 @@
 
         public static class UIEvents 
         {
-            public const string OnButtonClick = "OnButtonClick";
+            public const string OnButtonPressed = "OnButtonClick";
         }
     }
 }

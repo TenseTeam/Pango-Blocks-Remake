@@ -76,6 +76,7 @@
         private void RandomOpen()
         {
             Enable(_openAnim);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.UIEvents.OnLoadingScreenOpen);
             _openAnim.SetTrigger(GameConstants.UIAnimations.OpenScreen);
             _openAnim.SetInteger(GameConstants.UIAnimations.ScreenState, GetRandom());
         }
@@ -83,6 +84,7 @@
         private void RandomClose()
         {
             Enable(_closeAnim);
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.UIEvents.OnLoadingScreenClose);
             _closeAnim.SetTrigger(GameConstants.UIAnimations.CloseScreen);
             _closeAnim.SetInteger(GameConstants.UIAnimations.ScreenState, GetRandom());
         }

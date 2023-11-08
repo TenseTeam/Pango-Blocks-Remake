@@ -7,6 +7,7 @@
     using ProjectPBR.Managers.Static.Profiles;
     using ProjectPBR.Data.SaveDatas;
     using ProjectPBR.Managers.Static;
+    using ProjectPBR.GameConfig.Constants;
 
     [RequireComponent(typeof(Image))]
     [RequireComponent(typeof(Button))]
@@ -60,6 +61,7 @@
         private void LoadLevelScene()
         {
             if (_status == LevelStatus.Locked) return;
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.UIEvents.OnLevelButtonPressed);
 
             int buildIndex = LevelMapper.GetBuildIndexByLevelIndex(_levelIndex);
             MainManager.Ins.SceneManager.WaitChangeScene(buildIndex);

@@ -45,14 +45,11 @@ namespace ProjectPBR.Player.Character
             _anim.SetInteger(GameConstants.CharacterAnimations.State, GameConstants.CharacterAnimations.Idle);
         }
 
-        /// <summary>
-        /// Spawns a cloud VFX at the character's position.
-        /// </summary>
         [CalledByAnimationEvent]
-        public void SpawnCloudVFX() 
+        public void Footstep()
         {
-            if(MainManager.Ins.PoolsManager.Pools[PoolKeys.CloudVFX].TryGet(out GameObject vfx))
-                vfx.transform.position = transform.position;
+            MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnCharacterFootstep);
+            SpawnCloudVFX();
         }
 
         public void SetStartAnimation()
@@ -69,6 +66,15 @@ namespace ProjectPBR.Player.Character
         {
             _sprite.sortingOrder = GameStats.CharacterLayer;
             SetIdleAnimation();
+        }
+
+        /// <summary>
+        /// Spawns a cloud VFX at the character's position.
+        /// </summary>
+        private void SpawnCloudVFX()
+        {
+            if (MainManager.Ins.PoolsManager.Pools[PoolKeys.CloudVFX].TryGet(out GameObject vfx))
+                vfx.transform.position = transform.position;
         }
 
         private void SpawnStarsVFX()
