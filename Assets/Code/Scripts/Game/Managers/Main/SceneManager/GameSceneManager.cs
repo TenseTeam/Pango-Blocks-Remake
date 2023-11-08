@@ -6,6 +6,7 @@
     using VUDK.Generic.Managers.Main.Bases;
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Managers.Static;
+    using UnityEngine.SceneManagement;
 
     public class GameSceneManager : SceneManagerBase
     {
@@ -23,7 +24,7 @@
         protected override void OnEnable()
         {
             base.OnEnable();
-            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnSavedCompletedLevel, LaodNextUnlockedLevelOrBackToMenu);
+            MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnSavedCompletedLevel, LaodNextLevel);
             MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnBeginGameoverPhase, WaitResetLoading);
             MainManager.Ins.EventManager.AddListener(GameConstants.UIEvents.OnGameoverLoadingScreenCovered, ResetLevel);
             _waitResetLevel.OnCompleted += StartLoading;
@@ -32,7 +33,7 @@
         protected override void OnDisable()
         {
             base.OnDisable();
-            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnSavedCompletedLevel, LaodNextUnlockedLevelOrBackToMenu);
+            MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnSavedCompletedLevel, LaodNextLevel);
             MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameoverPhase, WaitResetLoading);
             MainManager.Ins.EventManager.RemoveListener(GameConstants.UIEvents.OnGameoverLoadingScreenCovered, ResetLevel);
             _waitResetLevel.OnCompleted -= StartLoading;
@@ -43,25 +44,21 @@
             WaitChangeScene(LevelMapper.ScenesMapping.MenuBuildIndex, _loadMenuDelay);
         }
 
-        public bool TryLaodNextUnlockedLevel() // TODO: Maybe create a LevelUnlockerManager?
+        public void LoadCutsceneOrFirstUnlocked()
         {
-            int nextUnlockedLevel = LevelMapper.GetFirstUnlockedLevelOrCutsceneBuildIndex();
-            if (nextUnlockedLevel < 0)
-                return false;
+            int firstUnlocked = LevelMapper.GetCutsceneOrFirstUnlockedOrCompletedLevel();
+            WaitChangeScene(firstUnlocked);
+        }
 
+        private void LaodNextLevel()
+        {
+            int nextUnlockedLevel = LevelMapper.GetNextUnlockedOrFirstUnlockedLevelOrCutsceneBuildIndexByBuildIndex(SceneManager.GetActiveScene().buildIndex);
             WaitChangeScene(nextUnlockedLevel);
-            return true;
         }
 
         public bool IsThisMenu()
         {
             return UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == LevelMapper.ScenesMapping.MenuBuildIndex;
-        }
-
-        private void LaodNextUnlockedLevelOrBackToMenu()
-        {
-            if (!TryLaodNextUnlockedLevel())
-                LoadMenu();
         }
 
         private void ResetLevel()

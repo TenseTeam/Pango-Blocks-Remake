@@ -57,12 +57,20 @@
         {
             for(int i = 0; i < LevelMapper.ScenesMapping.Stages[stageIndex].Levels.Count; i++)
             {
-                LevelKey key = DataFactory.Create(stageIndex, i, ProfileSelector.SelectedProfile.CurrentDifficulty);
-                if (GetLevelStatus(key) != status)
+                if (!IsLevelOfStatus(i, status))
                     return false;
             }
 
             return true;
+        }
+
+        public static bool IsLevelOfStatus(int levelIndex, LevelStatus status)
+        {
+            if (levelIndex < 0 || levelIndex >= LevelMapper.ScenesMapping.Stages[LevelMapper.CurrentStageIndex].Levels.Count)
+                return false;
+
+            LevelKey key = DataFactory.Create(LevelMapper.CurrentStageIndex, levelIndex, ProfileSelector.SelectedProfile.CurrentDifficulty);
+            return GetLevelStatus(key) == status;
         }
     }
 }

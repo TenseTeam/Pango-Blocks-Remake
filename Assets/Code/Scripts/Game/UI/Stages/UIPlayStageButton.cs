@@ -30,7 +30,7 @@
 
         private void TryLoadNextLevel()
         {
-            SceneManager.TryLaodNextUnlockedLevel();
+            SceneManager.LoadCutsceneOrFirstUnlocked();
         }
     }
 }

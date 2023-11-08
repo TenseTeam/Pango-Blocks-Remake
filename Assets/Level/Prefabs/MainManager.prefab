@@ -391,6 +391,7 @@ GameObject:
   - component: {fileID: 6428376856628528866}
   - component: {fileID: 4092424923303495120}
   - component: {fileID: 1719881554204242854}
+  - component: {fileID: 5789434160238126031}
   m_Layer: 0
   m_Name: HomeButton
   m_TagString: Untagged
@@ -498,20 +499,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4092424923303495120}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5762545395386250756}
-        m_TargetAssemblyTypeName: ProjectPBR.Managers.Main.SceneManager.GameSceneManager,
-          Assembly-CSharp
-        m_MethodName: LoadMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &5789434160238126031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626051062791968315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501487045d9b83c428514f3ed2ea8280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1706655349438473273
 GameObject:
   m_ObjectHideFlags: 0
