@@ -1,0 +1,567 @@
+fileFormatVersion: 2
+guid: 5b9badeb9f296492d8cf6b3d8b08913c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1056
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_PangoAngry_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3186
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e95c4234be4c4cf8977087ebd782c5f
+      internalID: 99350047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_1
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 3186
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ddffacfe85f4e8f8ba9a775dd85709
+      internalID: -939330473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_2
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 3186
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a52e0e7b5cd4860ae1402d4d8b4f6e
+      internalID: -1612138855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_3
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 3186
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89707784c984445d489a401e789e8ca3
+      internalID: -771581545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_4
+      rect:
+        serializedVersion: 2
+        x: 4224
+        y: 3186
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d005e452e96044ecb3233332d1fc22e
+      internalID: 111411396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2124
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0917312daa840d387747fbd486e695
+      internalID: -710171052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_6
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 2124
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a34b8904d43b840319a6f68a6bc2d93e
+      internalID: -96308340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_7
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 2124
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14128adf02bf41f68b89bb211dbcda6
+      internalID: -1565746142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_8
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 2124
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de24a5a4639f24f0ab3e86559f0435c4
+      internalID: -2044013684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_9
+      rect:
+        serializedVersion: 2
+        x: 4224
+        y: 2124
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69740d5a00a74ddea7d2fac651752f6
+      internalID: 457796678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1062
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebfe2f3c9fd34f639c931acbe818e8e
+      internalID: -467184512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1062
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3dc47e60a35c4df6b206d166e6e7091
+      internalID: 17557502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_12
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 1062
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d1531f8d4324567a9ad0862b82e973
+      internalID: 538749323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_13
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 1062
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d1d81351646a4ad8ad6e49f560bef17
+      internalID: 1857869300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_14
+      rect:
+        serializedVersion: 2
+        x: 4224
+        y: 1062
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366cd0c6f18e94f308ae37bb2abdbe7b
+      internalID: 371970426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bcbe3bee7e4a4382b1a9eb3462f8301
+      internalID: 197025119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_16
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852e1dc6274494154a569cd150646fd9
+      internalID: 724735211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_17
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 0
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767ea0a778c4e45b9b649404bde509f1
+      internalID: -2052493462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_18
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 0
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25741dbf4bc54e0cb82794c5a45836c
+      internalID: -1327376384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoAngry_19
+      rect:
+        serializedVersion: 2
+        x: 4224
+        y: 0
+        width: 1056
+        height: 1062
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d7b3270a3064529895c20172fd8f71
+      internalID: -1114213410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spr_PangoAngry_0: 99350047
+      spr_PangoAngry_1: -939330473
+      spr_PangoAngry_10: -467184512
+      spr_PangoAngry_11: 17557502
+      spr_PangoAngry_12: 538749323
+      spr_PangoAngry_13: 1857869300
+      spr_PangoAngry_14: 371970426
+      spr_PangoAngry_15: 197025119
+      spr_PangoAngry_16: 724735211
+      spr_PangoAngry_17: -2052493462
+      spr_PangoAngry_18: -1327376384
+      spr_PangoAngry_19: -1114213410
+      spr_PangoAngry_2: -1612138855
+      spr_PangoAngry_3: -771581545
+      spr_PangoAngry_4: 111411396
+      spr_PangoAngry_5: -710171052
+      spr_PangoAngry_6: -96308340
+      spr_PangoAngry_7: -1565746142
+      spr_PangoAngry_8: -2044013684
+      spr_PangoAngry_9: 457796678
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

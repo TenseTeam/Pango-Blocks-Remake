@@ -1,0 +1,722 @@
+fileFormatVersion: 2
+guid: 9c0453145500540fb9d09f462b0ef979
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1046
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_PangoPointing_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4895
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a0eb929af4d4faeb6e4ba3027a2409
+      internalID: 1168679443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_1
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 4895
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc84c3c1de4841d69473ca3f284f499
+      internalID: -956715155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_2
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 4895
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e7077611b9404a8681b5e654b65fb0a
+      internalID: 1361915045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_3
+      rect:
+        serializedVersion: 2
+        x: 3138
+        y: 4895
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed7ce93da9ebf4fb29889e31bbae8256
+      internalID: 657264157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_4
+      rect:
+        serializedVersion: 2
+        x: 4184
+        y: 4895
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde272af887094e0195535f44f70ad0d
+      internalID: 2003636742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3916
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19e61a55bb954713ac2992d4107d1ba
+      internalID: 166564346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_6
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 3916
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a7cabfa2eb44d4f8e43b9fc378b62b
+      internalID: 1367556092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_7
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 3916
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b1c1e60fe1f4d23bfbd546cc08777f
+      internalID: -1664600025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_8
+      rect:
+        serializedVersion: 2
+        x: 3138
+        y: 3916
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10aeb47b09684f95b2bc6cee38841df
+      internalID: 821385678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_9
+      rect:
+        serializedVersion: 2
+        x: 4184
+        y: 3916
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a9c14213dd5483c95d19a20f75ff78
+      internalID: 1636245807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2937
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cabc30016b2ca44cea7cf48e95b04f28
+      internalID: 2110902885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_11
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 2937
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2583fc6102574806ba2f58e7c981e16
+      internalID: -1815466341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_12
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 2937
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56cefba038dcb46309bc0597a228fdbc
+      internalID: 102905096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_13
+      rect:
+        serializedVersion: 2
+        x: 3138
+        y: 2937
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49607db2fe68542daa979d8fb8c51e66
+      internalID: -407367030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_14
+      rect:
+        serializedVersion: 2
+        x: 4184
+        y: 2937
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecdb60be2621b4375abd06b9c13add70
+      internalID: 1501972657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1958
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492ba46c08f924d0dbda0166a30ec26a
+      internalID: -512011441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_16
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 1958
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 330b385f2301a420a89caba065cb57df
+      internalID: -535494343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_17
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 1958
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b9998e0b04424931943430dcad29a08
+      internalID: -1574529908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_18
+      rect:
+        serializedVersion: 2
+        x: 3138
+        y: 1958
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4714683713d4b538987efd260a0195
+      internalID: -1903998237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_19
+      rect:
+        serializedVersion: 2
+        x: 4184
+        y: 1958
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc685ab1e025b4bf3bc74f9a454a62c6
+      internalID: -1291095374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 979
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8feaca0cf1354eebb8efdf33ce0839c
+      internalID: -1198580742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_21
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 979
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2792c4adf6a6745c4b08b847ba29d877
+      internalID: -1928138886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_22
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 979
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af060939e02f43b1884859f08173c11
+      internalID: 1753835300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_23
+      rect:
+        serializedVersion: 2
+        x: 3138
+        y: 979
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1bc74a3dd1b94f3e977d61f586ae28d
+      internalID: 265840461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_24
+      rect:
+        serializedVersion: 2
+        x: 4184
+        y: 979
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398fba1cae5454b8e89c03d12b0e2b73
+      internalID: 2146236217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301e3512bfe774686b41cb6400442971
+      internalID: -1394381486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoPointing_26
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 0
+        width: 1046
+        height: 979
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45966a102c3b144a5969bbc37876ec20
+      internalID: 201267608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spr_PangoPointing_0: 1168679443
+      spr_PangoPointing_1: -956715155
+      spr_PangoPointing_10: 2110902885
+      spr_PangoPointing_11: -1815466341
+      spr_PangoPointing_12: 102905096
+      spr_PangoPointing_13: -407367030
+      spr_PangoPointing_14: 1501972657
+      spr_PangoPointing_15: -512011441
+      spr_PangoPointing_16: -535494343
+      spr_PangoPointing_17: -1574529908
+      spr_PangoPointing_18: -1903998237
+      spr_PangoPointing_19: -1291095374
+      spr_PangoPointing_2: 1361915045
+      spr_PangoPointing_20: -1198580742
+      spr_PangoPointing_21: -1928138886
+      spr_PangoPointing_22: 1753835300
+      spr_PangoPointing_23: 265840461
+      spr_PangoPointing_24: 2146236217
+      spr_PangoPointing_25: -1394381486
+      spr_PangoPointing_26: 201267608
+      spr_PangoPointing_27: 870597690
+      spr_PangoPointing_3: 657264157
+      spr_PangoPointing_4: 2003636742
+      spr_PangoPointing_5: 166564346
+      spr_PangoPointing_6: 1367556092
+      spr_PangoPointing_7: -1664600025
+      spr_PangoPointing_8: 821385678
+      spr_PangoPointing_9: 1636245807
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
