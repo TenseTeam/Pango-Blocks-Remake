@@ -1,0 +1,747 @@
+fileFormatVersion: 2
+guid: b65ee1af0d7334982a631fd2512741ee
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_PangoSliding_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5010
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f714a7ea734d146a5b4d5613e0414ce3
+      internalID: 411102403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_1
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 5010
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3476414f3c9d46789e4af2762121cc8
+      internalID: 1674527710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_2
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5010
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515098feb8aa849af9b642e8fa5045e9
+      internalID: -1133728698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_3
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 5010
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d30488f5a1fd472db6df46dfaae7156
+      internalID: 1678832224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_4
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 5010
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73191ee58fd4c4c97b8746b0bc5c8d76
+      internalID: -482794389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4008
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6431ae00a7754e5cacf50aef2d6b405
+      internalID: -311715380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 4008
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 650fa217cdb654f149b383add8f79259
+      internalID: -604912069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_7
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 4008
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a480041fff544940b1e3ff5fbe18b2f
+      internalID: 2104054572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_8
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 4008
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fed22d230e79443282b0923ee1f5fa8
+      internalID: -1860423840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_9
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 4008
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71b3be5637ea48dfb6aa661219c73f5
+      internalID: 2099970430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3006
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4cb3c5d433b4bf7bf39eed12f2ac95
+      internalID: -584579244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_11
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 3006
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebfec47c808d848e18eb7b98fc03c289
+      internalID: 255490596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_12
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3006
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ca3cd4cdea94893a4fe9aa8e42fa1e
+      internalID: 563219696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_13
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 3006
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04fcba4939fb14983940261c94733755
+      internalID: -822079203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_14
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 3006
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b2294153e4843898663b306c18e30e
+      internalID: 1066261086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2004
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55531bc5404946178be48bdb18c9f9a
+      internalID: -2091438498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_16
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2004
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836d596fd153348fbb23664ee5556b92
+      internalID: 676929708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_17
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2004
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a1f5ecd5d60480da5e6ede02e95a8b
+      internalID: -757448525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_18
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 2004
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6408838cd9c743298fb402a75b4553c
+      internalID: 2001624657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_19
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 2004
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ae1fe73773344b5bc8ab894babf02a
+      internalID: 1747171513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1002
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5011b00c03d31433aba2f670ddbffcaf
+      internalID: 1791484166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_21
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1002
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1bae16e7d564aae84b10678e246e37
+      internalID: 705145690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_22
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1002
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3fbef92dd78249719be2c3dac35c186
+      internalID: 924544768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_23
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1002
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbac6d6afbb34810a2524e12ae605bd
+      internalID: 1260919779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_24
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1002
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7984f480a97ca4414aedd0ef24a5b5ad
+      internalID: -131550265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73162be7b085d42ae8c04846691aee8d
+      internalID: -70580768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_PangoSliding_26
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 1200
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8cf79c657404863a6f2e41bb384889
+      internalID: 790368369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spr_PangoSliding_0: 411102403
+      spr_PangoSliding_1: 1674527710
+      spr_PangoSliding_10: -584579244
+      spr_PangoSliding_11: 255490596
+      spr_PangoSliding_12: 563219696
+      spr_PangoSliding_13: -822079203
+      spr_PangoSliding_14: 1066261086
+      spr_PangoSliding_15: -2091438498
+      spr_PangoSliding_16: 676929708
+      spr_PangoSliding_17: -757448525
+      spr_PangoSliding_18: 2001624657
+      spr_PangoSliding_19: 1747171513
+      spr_PangoSliding_2: -1133728698
+      spr_PangoSliding_20: 1791484166
+      spr_PangoSliding_21: 705145690
+      spr_PangoSliding_22: 924544768
+      spr_PangoSliding_23: 1260919779
+      spr_PangoSliding_24: -131550265
+      spr_PangoSliding_25: -70580768
+      spr_PangoSliding_26: 790368369
+      spr_PangoSliding_3: 1678832224
+      spr_PangoSliding_4: -482794389
+      spr_PangoSliding_5: -311715380
+      spr_PangoSliding_6: -604912069
+      spr_PangoSliding_7: 2104054572
+      spr_PangoSliding_8: -1860423840
+      spr_PangoSliding_9: 2099970430
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -24,16 +24,7 @@
         {
             TryGetComponent(out _image);
             TryGetComponent(out _button);
-        }
-
-        private void OnEnable()
-        {
             _button.onClick.AddListener(LoadCutscene);
-        }
-
-        private void OnDisable()
-        {
-            _button.onClick.RemoveListener(LoadCutscene);
         }
 
         public bool TryLaodCutscene()

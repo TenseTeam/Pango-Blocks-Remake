@@ -4523,6 +4523,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 117545560487089172, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1626051062791968315, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4583,6 +4587,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4570148392821380783, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4852216774246371854, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -4605,9 +4613,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5762545395386250756, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: <WaitLoadingSceneDelay>k__BackingField.<Delay>k__BackingField
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5911593633351755342, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6142271465400822988, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -4627,6 +4639,10 @@ PrefabInstance:
       propertyPath: <MainCamera>k__BackingField
       value: 
       objectReference: {fileID: 733947206}
+    - target: {fileID: 8052881640151410828, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8643423207488035244, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -10710,8 +10726,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8abb16f224aa4449bc6b5ecf3c45b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _unlocked: {fileID: 21300000, guid: 4466d0aa2084014488de2524f6a48042, type: 3}
-  _completed: {fileID: 21300000, guid: 49fe953c93ba657498cfe3eee524fd33, type: 3}
+  _unlocked: {fileID: 21300000, guid: 0fc2a07096a57824d90b8f3ccd758545, type: 3}
+  _completed: {fileID: 21300000, guid: 4803378f3bc08ea41880c66e552472c9, type: 3}
   _lockImage: {fileID: 590923740}
 --- !u!114 &1248957446
 MonoBehaviour:
@@ -10777,7 +10793,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 517ebcd30273ba34bb27fb31065bb0da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4803378f3bc08ea41880c66e552472c9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

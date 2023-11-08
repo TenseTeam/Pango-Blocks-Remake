@@ -29,16 +29,7 @@
             TryGetComponent(out _image);
             TryGetComponent(out _button);
             _levelIndex = transform.GetSiblingIndex();
-        }
-
-        private void OnEnable()
-        {
             _button.onClick.AddListener(LoadLevelScene);
-        }
-
-        private void OnDisable()
-        {
-            _button.onClick.RemoveListener(LoadLevelScene);
         }
 
         public void SetStatus()

@@ -42,19 +42,26 @@
             return ScenesMapping.Stages[CurrentStageIndex].CutsceneBuildIndex;
         }
 
-        /// <summary>
-        /// Gets the first level build index of status <see cref="LevelStatus.Unlocked"/>
-        /// or the current stage cutscene build index.
-        /// </summary>
-        /// <returns>Build index of the first <see cref="LevelStatus.Unlocked"/> level or the current stage cutscene build index..</returns>
-        public static int GetFirstUnlockedLevelOrCutsceneBuildIndex()
+        public static int GetCutsceneOrFirstUnlockedOrCompletedLevel()
         {
-            int buildIndex = GetFirstUnlockedLevelBuildIndex();
-
-            if (buildIndex < 0)
+            if (LevelOperation.IsCutsceneUnlocked(CurrentStageIndex))
                 return GetCutsceneBuildIndex();
 
-            return buildIndex;
+            return GetFirstUnlockedLevelBuildIndex();
+        }
+
+        public static int GetNextUnlockedOrFirstUnlockedLevelOrCutsceneBuildIndexByBuildIndex(int buildIndex)
+        {
+            int currentLevelIndex = GetLevelIndexByBuildIndex(buildIndex);
+            int nextLevelIndex = currentLevelIndex + 1;
+
+            if (LevelOperation.IsLevelOfStatus(nextLevelIndex, LevelStatus.Completed) || LevelOperation.IsLevelOfStatus(nextLevelIndex, LevelStatus.Unlocked))
+                return GetBuildIndexByLevelIndex(nextLevelIndex);
+
+            if (LevelOperation.IsCutsceneUnlocked(CurrentStageIndex))
+                return GetCutsceneBuildIndex();
+
+            return GetFirstUnlockedLevelBuildIndex();
         }
 
         /// <summary>
@@ -112,26 +119,34 @@
         }
 
         /// <summary>
-        /// Gets the first level build index of status <see cref="LevelStatus.Unlocked"/>.
+        /// Gets the first level build index of status <see cref="LevelStatus.Unlocked"/> or <see cref="LevelStatus.Completed"/>.
         /// </summary>
+        /// <param name="from">Level index to start searching from.</param>
         /// <returns></returns>
-        public static int GetFirstUnlockedLevelBuildIndex()
+        public static int GetFirstUnlockedLevelBuildIndex(int from = 0)
         {
-            int levelIndex = GetFirstUnlockedLevelIndex();
+            int levelIndex = GetFirstLevelIndexOfStatus(LevelStatus.Unlocked, from);
+
+            return GetBuildIndexByLevelIndex(levelIndex);
+        }
+
+        public static int GetFirstCompletedLevelBuildIndex(int from = 0)
+        {
+            int levelIndex = GetFirstLevelIndexOfStatus(LevelStatus.Completed, from);
 
             return GetBuildIndexByLevelIndex(levelIndex);
         }
 
         /// <summary>
-        /// Gets the first level build index of status <see cref="LevelStatus.Unlocked"/>.
+        /// Gets the first level build index of given status.
         /// </summary>
+        /// <param name="from">Level index to start searching from.</param>
         /// <returns>Build index of the first  <see cref="LevelStatus.Unlocked"/> level.</returns>
-        public static int GetFirstUnlockedLevelIndex()
+        public static int GetFirstLevelIndexOfStatus(LevelStatus status, int from = 0)
         {
-            for (int i = 0; i < ScenesMapping.Stages[CurrentStageIndex].Levels.Count; i++)
+            for (int i = from + 1; i < ScenesMapping.Stages[CurrentStageIndex].Levels.Count; i++)
             {
-                LevelKey key = DataFactory.Create(CurrentStageIndex, i, s_CurrDifficulty);
-                if (LevelOperation.GetLevelStatus(key) == LevelStatus.Unlocked)
+                if (LevelOperation.IsLevelOfStatus(i, status))
                     return i;
             }
 
