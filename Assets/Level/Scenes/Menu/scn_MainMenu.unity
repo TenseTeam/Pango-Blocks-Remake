@@ -332,6 +332,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b27c99b51a70f49b8090ac911da5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnButtonPressedSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnButtonPressedFail:
+    m_PersistentCalls:
+      m_Calls: []
   _selectedSprite: {fileID: 21300000, guid: ec7455f790949408c91d690c0bb24ecc, type: 3}
   _deselectedSprite: {fileID: 21300000, guid: 2f043a705fb574f53a8fd2f6ae591a36, type: 3}
   _spriteImage: {fileID: 154705976}
@@ -13277,6 +13283,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b27c99b51a70f49b8090ac911da5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnButtonPressedSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnButtonPressedFail:
+    m_PersistentCalls:
+      m_Calls: []
   _selectedSprite: {fileID: 21300000, guid: e9b8d678e023445a68b1c4bffe48f815, type: 3}
   _deselectedSprite: {fileID: 21300000, guid: b9b22115b519b4b4f9bdd5f2b2fd0a46, type: 3}
   _spriteImage: {fileID: 1344285878}
@@ -14813,6 +14825,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b27c99b51a70f49b8090ac911da5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnButtonPressedSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnButtonPressedFail:
+    m_PersistentCalls:
+      m_Calls: []
   _selectedSprite: {fileID: 21300000, guid: e9b8d678e023445a68b1c4bffe48f815, type: 3}
   _deselectedSprite: {fileID: 21300000, guid: b9b22115b519b4b4f9bdd5f2b2fd0a46, type: 3}
   _spriteImage: {fileID: 809499370}
@@ -18719,6 +18737,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b27c99b51a70f49b8090ac911da5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnButtonPressedSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnButtonPressedFail:
+    m_PersistentCalls:
+      m_Calls: []
   _selectedSprite: {fileID: 21300000, guid: ec7455f790949408c91d690c0bb24ecc, type: 3}
   _deselectedSprite: {fileID: 21300000, guid: 2f043a705fb574f53a8fd2f6ae591a36, type: 3}
   _spriteImage: {fileID: 1066566921}

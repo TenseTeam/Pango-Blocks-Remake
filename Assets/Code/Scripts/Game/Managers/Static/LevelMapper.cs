@@ -144,7 +144,7 @@
         /// <returns>Build index of the first  <see cref="LevelStatus.Unlocked"/> level.</returns>
         public static int GetFirstLevelIndexOfStatus(LevelStatus status, int from = 0)
         {
-            for (int i = from + 1; i < ScenesMapping.Stages[CurrentStageIndex].Levels.Count; i++)
+            for (int i = from; i < ScenesMapping.Stages[CurrentStageIndex].Levels.Count; i++)
             {
                 if (LevelOperation.IsLevelOfStatus(i, status))
                     return i;

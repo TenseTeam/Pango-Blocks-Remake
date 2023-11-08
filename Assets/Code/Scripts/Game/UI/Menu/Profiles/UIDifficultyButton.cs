@@ -5,9 +5,10 @@
     using VUDK.Generic.Managers.Main;
     using ProjectPBR.Data.SaveDatas.Enums;
     using ProjectPBR.GameConfig.Constants;
+    using VUDK.UI.Buttons;
 
     [RequireComponent(typeof(Button))]
-    public class UIDifficultyButton : MonoBehaviour
+    public class UIDifficultyButton : UIButton
     {
         [SerializeField, Header("Sprites")]
         private Sprite _selectedSprite;
@@ -17,24 +18,13 @@
         [SerializeField, Header("Image")]
         private Image _spriteImage;
 
-        private Button _btn;
-
         [field: SerializeField, Header("Difficulty")]
         public GameDifficulty Difficulty { get; private set; }
 
-        private void Awake()
+        protected override void Press()
         {
-            TryGetComponent(out _btn);
-        }
-
-        private void OnEnable()
-        {
-            _btn.onClick.AddListener(SelectedDifficultyButton);
-        }
-
-        private void OnDisable()
-        {
-            _btn.onClick.RemoveListener(SelectedDifficultyButton);
+            base.Press();
+            SelectedDifficultyButton();
         }
 
         public void ChangeToDeselectedSprite()
