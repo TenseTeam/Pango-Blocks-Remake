@@ -134,10 +134,18 @@
 
         private void PlayCharacterSlideClip(BlockType blockType)
         {
-            if(blockType is BlockType.Slideable && !_hasAlreadyPlayedSlide)
+            switch (blockType)
             {
-                _hasAlreadyPlayedSlide = true;
-                AudioManager.PlayStereoAudio(_characterSlide, true);
+                case BlockType.Climbable:
+                    _hasAlreadyPlayedSlide = false;
+                    break;
+                case BlockType.Slideable:
+                    if (!_hasAlreadyPlayedSlide)
+                    {
+                        _hasAlreadyPlayedSlide = true;
+                        AudioManager.PlayStereoAudio(_characterSlide, true);
+                    }
+                    break;
             }
         }
 
