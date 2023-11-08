@@ -1555,7 +1555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c586fb10551632349be95d53913d332f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minDuration: 3
+  _minDuration: 4
   _closeAnim: {fileID: 4047276196268490637}
   _openAnim: {fileID: 2665006626827825310}
   _resetAnim: {fileID: 9202465795428054478}

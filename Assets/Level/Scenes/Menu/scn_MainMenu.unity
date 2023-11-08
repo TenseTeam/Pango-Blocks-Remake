@@ -4613,7 +4613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5762545395386250756, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: <WaitLoadingSceneDelay>k__BackingField.<Delay>k__BackingField
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5911593633351755342, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_IsActive
