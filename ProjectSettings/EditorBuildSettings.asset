@@ -224,6 +224,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/Scenes/Levels/Stages/Stage 5/Hard/scn_Level_5_8H.unity
     guid: 60718d2d8701c421f837060d4eb3e17a
+  - enabled: 1
+    path: Assets/Level/Scenes/Cutscenes/scn_Cutscene_1.unity
+    guid: 57af49322a0fd574c8be54b48868f8da
+  - enabled: 1
+    path: Assets/Level/Scenes/Cutscenes/scn_Cutscene_2.unity
+    guid: 7d02d82ed0996a1429b7b6989d7ab92c
+  - enabled: 1
+    path: Assets/Level/Scenes/Cutscenes/scn_Cutscene_3.unity
+    guid: 9460109308b386844a8b5e7b82ef8334
+  - enabled: 1
+    path: Assets/Level/Scenes/Cutscenes/scn_Cutscene_4.unity
+    guid: a6876dfaafe71ad499cea47c4255788a
+  - enabled: 1
+    path: Assets/Level/Scenes/Cutscenes/scn_Cutscene_5.unity
+    guid: edd6c724594ebfa44a2bf866bcae40c4
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 8172eb888cd0d75488fc398487e8abcc, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: cda0337a31271984a829d9e579b5977b, type: 2}
