@@ -5,7 +5,6 @@
     using VUDK.Generic.Managers.Main;
     using VUDK.Config;
     using ProjectPBR.GameConfig.Constants;
-    using System;
     using ProjectPBR.Level.Blocks;
 
     public class GameAudioController : AudioEventsControllerBase
@@ -57,7 +56,7 @@
 
             // Character
             EventManager.AddListener(GameConstants.Events.OnCharacterFootstep, PlayCharacterFootstepClip);
-            EventManager.AddListener<BlockType>(GameConstants.Events.OnCharacterChangedTile, PlayCharacterSlideClip);
+            EventManager.AddListener<BlockType>(GameConstants.Events.OnCharacterChangedTile, PlayCharacterTileClip);
 
             // Block
             EventManager.AddListener(GameConstants.Events.OnBlockPlaced, PlayTouchBlockClip);
@@ -82,7 +81,7 @@
 
             // Character
             EventManager.RemoveListener(GameConstants.Events.OnCharacterFootstep, PlayCharacterFootstepClip);
-            EventManager.RemoveListener<BlockType>(GameConstants.Events.OnCharacterChangedTile, PlayCharacterSlideClip);
+            EventManager.RemoveListener<BlockType>(GameConstants.Events.OnCharacterChangedTile, PlayCharacterTileClip);
 
             // Block
             EventManager.RemoveListener(GameConstants.Events.OnBlockPlaced, PlayTouchBlockClip);
@@ -90,49 +89,77 @@
             EventManager.RemoveListener(GameConstants.Events.OnCantPlaceBlock, PlayCantPlaceBlockClip);
         }
 
+        /// <summary>
+        /// Plays the default button clip.
+        /// </summary>
         private void PlayDefaultButtonClip()
         {
             AudioManager.PlayStereoAudio(_defaultButton);
         }
 
+        /// <summary>
+        /// Plays the play button clip.
+        /// </summary>
         private void PlayPlayClip()
         {
             AudioManager.PlayStereoAudio(_playButton);
         }
 
+        /// <summary>
+        /// Plays the info button clip.
+        /// </summary>
         private void PlayInfoClip()
         {
             AudioManager.PlayStereoAudio(_infoButton);
         }
 
+        /// <summary>
+        /// Plays the level transition clip and level button clip.
+        /// </summary>
         private void PlayLevelAndTransitionMenuClip()
         {
             AudioManager.PlayStereoAudio(_levelButton, false);
             AudioManager.PlayStereoAudio(_transitionMenu, true);
         }
 
+        /// <summary>
+        /// Plays the close button clip.
+        /// </summary>
         private void PlayCloseClip()
         {
             AudioManager.PlayStereoAudio(_closeButton);
         }
 
+        /// <summary>
+        /// Plays the transition level clip.
+        /// </summary>
         private void PlayTransitionLevelClip()
         {
             AudioManager.PlayStereoAudio(_transitionLevel);
         }
 
+        /// <summary>
+        /// Plays the level clear clip.
+        /// </summary>
         private void PlayLevelClearClip()
         {
             AudioManager.PlayStereoAudio(_levelClear);
         }
 
+        /// <summary>
+        /// Plays the character footstep clip.
+        /// </summary>
         private void PlayCharacterFootstepClip()
         {
             _hasAlreadyPlayedSlide = false;
             AudioManager.PlayStereoAudio(_characterFootstep, true);
         }
 
-        private void PlayCharacterSlideClip(BlockType blockType)
+        /// <summary>
+        /// Plays a character tile clip based on the block type.
+        /// </summary>
+        /// <param name="blockType"><see cref="BlockType"/></param>
+        private void PlayCharacterTileClip(BlockType blockType)
         {
             switch (blockType)
             {
@@ -149,11 +176,17 @@
             }
         }
 
+        /// <summary>
+        /// Plays the touch block clip.
+        /// </summary>
         private void PlayTouchBlockClip()
         {
             AudioManager.PlayStereoAudio(_touchBlock, true);
         }
 
+        /// <summary>
+        /// Plays the cant place block clip.
+        /// </summary>
         private void PlayCantPlaceBlockClip()
         {
             AudioManager.PlayStereoAudio(_cantPlaceBlock, true);

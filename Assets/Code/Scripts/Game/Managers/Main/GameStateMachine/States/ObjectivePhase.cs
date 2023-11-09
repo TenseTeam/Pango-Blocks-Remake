@@ -14,6 +14,7 @@
         {
         }
 
+        /// <inheritdoc/>
         public override void Enter()
         {
 #if DEBUG
@@ -23,19 +24,26 @@
             MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBeginObjectivePhase);
         }
 
+        /// <inheritdoc/>
         public override void Exit()
         {
             MainManager.Ins.EventManager.RemoveListener<Path>(GameConstants.Events.OnCharacterReachedDestination, CheckWin);
         }
 
+        /// <inheritdoc/>
         public override void FixedProcess()
         {
         }
 
+        /// <inheritdoc/>
         public override void Process()
         {
         }
 
+        /// <summary>
+        /// Checks if the character has reached the objective.
+        /// </summary>
+        /// <param name="pathData"><see cref="Path"/> data to check.</param>
         private void CheckWin(Path pathData)
         {
             if (pathData.HasReached)

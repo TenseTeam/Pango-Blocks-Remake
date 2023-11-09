@@ -4,7 +4,7 @@
     using UnityEngine;
 
     [CreateAssetMenu(menuName = "Level/Blocks/Single Block")]
-    public class SingleBlockData : BlockData
+    public class SingleBlockData : BlockDataBase
     {
         public BlockType BlockType;
         public BlockColliderData ColliderData;

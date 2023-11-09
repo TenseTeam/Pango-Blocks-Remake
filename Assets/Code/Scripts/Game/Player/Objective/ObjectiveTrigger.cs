@@ -6,6 +6,9 @@
 
     public class ObjectiveTrigger : MonoBehaviour
     {
+        /// <summary>
+        /// Triggers the objective triggered.
+        /// </summary>
         public virtual void Trigger()
         {
             MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnObjectiveTriggered);

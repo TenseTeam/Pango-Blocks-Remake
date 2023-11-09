@@ -39,38 +39,60 @@
             _waitResetLevel.OnCompleted -= StartLoading;
         }
 
+        /// <summary>
+        /// Waits and loads the menu scene.
+        /// </summary>
         public void LoadMenu()
         {
             WaitChangeScene(LevelMapper.ScenesMapping.MenuBuildIndex, _loadMenuDelay);
         }
 
+        /// <summary>
+        /// Waits and loads the first unlocked level or cutscene of the current stage.
+        /// </summary>
         public void LoadCutsceneOrFirstUnlocked()
         {
             int firstUnlocked = LevelMapper.GetCutsceneOrFirstUnlockedOrCompletedLevel();
             WaitChangeScene(firstUnlocked);
         }
 
+        /// <summary>
+        /// Waits and loads the next unlocked level or cutscene by the current level scene build index.
+        /// </summary>
         private void LaodNextLevel()
         {
             int nextUnlockedLevel = LevelMapper.GetNextUnlockedOrFirstUnlockedLevelOrCutsceneBuildIndexByBuildIndex(SceneManager.GetActiveScene().buildIndex);
             WaitChangeScene(nextUnlockedLevel);
         }
 
+        /// <summary>
+        /// Checks if the current scene is the menu scene by its build index.
+        /// </summary>
+        /// <returns>True if it is the menu scene, False if not.</returns>
         public bool IsThisMenu()
         {
             return UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == LevelMapper.ScenesMapping.MenuBuildIndex;
         }
 
+        /// <summary>
+        /// Triggers the reset of the current level.
+        /// </summary>
         private void ResetLevel()
         {
             MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnResetLevel);
         }
 
+        /// <summary>
+        /// Triggers the start of the loading screen.
+        /// </summary>
         private void StartLoading()
         {
             MainManager.Ins.EventManager.TriggerEvent(GameConstants.UIEvents.OnStartGameoverLoadingScreen);
         }
 
+        /// <summary>
+        /// Starts the reset of the level.
+        /// </summary>
         private void WaitResetLoading()
         {
             _waitResetLevel.Start();

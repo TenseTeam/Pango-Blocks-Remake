@@ -11,7 +11,13 @@
     /// </summary>
     public static class GameFactory
     {
-        public static PlaceableBlockBase Create(BlockData blockData, bool isPartOfComplex)
+        /// <summary>
+        /// Creates a new <see cref="PlaceableBlockBase"/> based on the provided <see cref="BlockDataBase"/>.
+        /// </summary>
+        /// <param name="blockData">The data defining the characteristics of the block.</param>
+        /// <param name="isPartOfComplex">Specifies whether the block is part of a <see cref="ComplexPlaceableBlock"/>.</param>
+        /// <returns>A new instance of <see cref="PlaceableBlockBase"/>.</returns>
+        public static PlaceableBlockBase Create(BlockDataBase blockData, bool isPartOfComplex)
         {
             GameObject goBlock = null;
 

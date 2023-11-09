@@ -4,8 +4,15 @@
 
     public interface IPlaceableBlock
     {
-        public void Init(BlockData data);
+        /// <summary>
+        /// Initializes the block by its data.
+        /// </summary>
+        /// <param name="data"><see cref="BlockDataBase"/> of the block.</param>
+        public void Init(BlockDataBase data);
 
-        public void Place();
+        /// <summary>
+        /// On block placed.
+        /// </summary>
+        public void OnPlace();
     }
 }

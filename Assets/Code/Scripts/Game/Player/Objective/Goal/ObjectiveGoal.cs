@@ -11,6 +11,9 @@
             MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnObjectiveGoalSendPosition, transform.position);
         }
 
+        /// <summary>
+        /// Triggers the objective triggered and objective goal triggered.
+        /// </summary>
         public override void Trigger()
         {
             base.Trigger();

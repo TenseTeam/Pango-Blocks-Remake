@@ -1,15 +1,14 @@
 ﻿namespace ProjectPBR.UI.Menu.Profiles
 {
-    using TMPro;
     using UnityEngine;
     using UnityEngine.UI;
+    using TMPro;
     using VUDK.Generic.Managers.Main;
+    using VUDK.Extensions.Colors;
     using ProjectPBR.Data.SaveDatas;
     using ProjectPBR.Data.SaveDatas.Enums;
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Managers.Static.Profiles;
-    using System;
-    using VUDK.Extensions.Colors;
 
     public class UIProfileSwitcher : MonoBehaviour
     {
@@ -56,6 +55,10 @@
             ValidateProfileTag(ProfilesManager.Count);
         }
 
+        /// <summary>
+        /// Sets the profile tag to the given profile correct values.
+        /// </summary>
+        /// <param name="profile"><see cref="ProfileData"/> for the profile tag.</param>
         private void SetProfileTag(ProfileData profile)
         {
             if (profile == null) ResetProfileTag();
@@ -66,23 +69,37 @@
             _profileTagDifficultyImage.sprite = profile.CurrentDifficulty == GameDifficulty.Easy ? _easySprite : _hardSprite;
         }
 
-        private void ValidateProfileTag(int count)
+        /// <summary>
+        /// Checks if the profile tag should be resetted or not.
+        /// </summary>
+        /// <param name="profilesCount">Profiles count.</param>
+        private void ValidateProfileTag(int profilesCount)
         {
-            ValidateAddProfileButton(count);
-            if (count.Equals(0)) ResetProfileTag();
+            ValidateAddProfileButton(profilesCount);
+            if (profilesCount.Equals(0)) ResetProfileTag();
         }
 
+        /// <summary>
+        /// Checks if the add profile button should be active or not.
+        /// </summary>
+        /// <param name="profilesCount">Profiles count.</param>
         private void ValidateAddProfileButton(int profilesCount)
         {
             bool profilesAreFull = profilesCount >= GameConstants.ProfileSaving.MaxProfilesCount;
             _addProfileButton.gameObject.SetActive(!profilesAreFull);
         }
 
+        /// <summary>
+        /// Switches to the next profile.
+        /// </summary>
         private void SwitchProfile()
         {
             ProfileSelector.SelectNextProfile();
         }
 
+        /// <summary>
+        /// Resets the profile tag to is default values.
+        /// </summary>
         private void ResetProfileTag()
         {
             _profileTagDifficultyImage.enabled = false;

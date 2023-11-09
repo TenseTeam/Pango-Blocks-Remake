@@ -1,11 +1,10 @@
 ﻿namespace ProjectPBR.Level.Grid
 {
-    using ProjectPBR.GameConfig.Constants;
-    using System;
     using UnityEngine;
     using VUDK.Extensions.Colors;
     using VUDK.Generic.Managers.Main;
     using VUDK.Generic.Serializable;
+    using ProjectPBR.GameConfig.Constants;
 
     [RequireComponent(typeof(SpriteRenderer))]
     public class LevelGridGraphicsController : MonoBehaviour
@@ -47,17 +46,26 @@
             FadeGridOut();
         }
 
+        /// <summary>
+        /// Resets the grid graphics to its start values.
+        /// </summary>
         private void ResetGraphicsGrid()
         {
             _gridSprite.color = _startColor;
         }
 
+        /// <summary>
+        /// Starts the grid fading to its fade out color.
+        /// </summary>
         private void StartFading()
         {
             _isFading = true;
             _fadeDelay.Start();
         }
 
+        /// <summary>
+        /// Fades the grid out.
+        /// </summary>
         private void FadeGridOut()
         {
             if (!_isFading) return;

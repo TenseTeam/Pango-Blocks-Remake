@@ -4,7 +4,7 @@
     using UnityEngine;
 
     [CreateAssetMenu(menuName = "Level/Blocks/Complex Block")]
-    public class ComplexBlockData : BlockData
+    public class ComplexBlockData : BlockDataBase
     {
         public List<SingleBlockData> ComposedBlocks;
     }

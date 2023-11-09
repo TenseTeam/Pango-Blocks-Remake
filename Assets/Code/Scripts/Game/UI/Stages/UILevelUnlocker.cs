@@ -25,6 +25,9 @@
         private int _levelIndex;
         private LevelStatus _status;
 
+        /// <summary>
+        /// Initializes the level unlocker.
+        /// </summary>
         public void Init()
         {
             TryGetComponent(out _image);
@@ -33,6 +36,9 @@
             _button.onClick.AddListener(LoadLevelScene);
         }
 
+        /// <summary>
+        /// Set the status of the level unlocker.
+        /// </summary>
         public void SetStatus()
         {
             _lockImage.enabled = false;
@@ -41,6 +47,10 @@
             SetSpriteStatus(_status);
         }
 
+        /// <summary>
+        /// Sets the sprite status of the level unlocker.
+        /// </summary>
+        /// <param name="status"><see cref="LevelStatus"/> of the level for the level unlocker.</param>
         private void SetSpriteStatus(LevelStatus status)
         {
             switch (status)
@@ -58,6 +68,9 @@
             }
         }
 
+        /// <summary>
+        /// Loads the level scene.
+        /// </summary>
         private void LoadLevelScene()
         {
             if (_status == LevelStatus.Locked) return;

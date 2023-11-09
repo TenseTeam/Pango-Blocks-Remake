@@ -18,23 +18,40 @@
 
         public List<PlaceableBlockBase> BlocksOnGrid { get; private set; } = new List<PlaceableBlockBase>();
 
+        /// <summary>
+        /// Inserts a block on the grid.
+        /// </summary>
+        /// <param name="tile"><see cref="LevelTile"/> where to insert the block.</param>
+        /// <param name="blockToPlace"><see cref="PlaceableBlockBase"/> to insert in tile.</param>
         public void Insert(LevelTile tile, PlaceableBlockBase blockToPlace)
         {
-            AddPlacealbleBlockToGridCount(blockToPlace);
+            AddPlacealbleBlockToGridList(blockToPlace);
             tile.Insert(blockToPlace);
         }
 
-        public void RemoveBlockFromGrid(PlaceableBlockBase block)
+        /// <summary>
+        /// Removes a block from the grid list.
+        /// </summary>
+        /// <param name="block"></param>
+        public void RemoveBlock(PlaceableBlockBase block)
         {
-            BlocksOnGrid.Remove(block);
+            RemovePlaceableBlockFromGridList(block);
         }
 
+        /// <summary>
+        /// Gets the closest tile to the provided position.
+        /// </summary>
+        /// <param name="position">world position.</param>
+        /// <returns>Closest tile from the position.</returns>
         public LevelTile GetClosestTile(Vector3 position)
         {
             Vector2Int tilePos = Grid.WorldToGridPosition(position);
             return Grid.GridTiles[tilePos.x, tilePos.y];
         }
 
+        /// <summary>
+        /// Adjusts all the blocks position on the grid.
+        /// </summary>
         public void AdjustBlocksPositionOnGrid()
         {
             foreach (PlaceableBlockBase block in BlocksOnGrid)
@@ -46,12 +63,31 @@
             }
         }
 
-        private void AddPlacealbleBlockToGridCount(PlaceableBlockBase block)
+        /// <summary>
+        /// Adds a block to the grid list.
+        /// </summary>
+        /// <param name="block">Block to add.</param>
+        private void AddPlacealbleBlockToGridList(PlaceableBlockBase block)
         {
             if (!BlocksOnGrid.Contains(block))
                 BlocksOnGrid.Add(block);
         }
 
+        /// <summary>
+        /// Removes a block from the grid list.
+        /// </summary>
+        /// <param name="block">Block to remove.</param>
+        private void RemovePlaceableBlockFromGridList(PlaceableBlockBase block)
+        {
+            BlocksOnGrid.Remove(block);
+        }
+
+        /// <summary>
+        /// Checks if the tiles are free for the block.
+        /// </summary>
+        /// <param name="fromTile">Tile from where to check.</param>
+        /// <param name="block">Block to check.</param>
+        /// <returns>True if the tiles from the given FromTile are free, False if not.</returns>
         public bool AreTilesFreeForBlock(LevelTile fromTile, PlaceableBlockBase block)
         {
             if (block is SinglePlaceableBlock) return !fromTile.IsOccupied;
@@ -75,16 +111,29 @@
             return true;
         }
 
+        /// <summary>
+        /// Checks if the grid list is empty.
+        /// </summary>
+        /// <returns>True if it is empty, False if not.</returns>
         public bool IsGridEmpty()
         {
             return BlocksOnGrid.Count == 0;
         }
 
+        /// <summary>
+        /// Checks if the grid list is full.
+        /// </summary>
+        /// <returns>True if it is full, False if not.</returns>
         public bool IsGridFull()
         {
             return BlocksOnGrid.Count == Grid.GridTiles.Length;
         }
 
+        /// <summary>
+        /// Checks if the grid list contains the given block.
+        /// </summary>
+        /// <param name="block">Block to check.</param>
+        /// <returns>True if the given block is contained in the grid list, False if not.</returns>
         public bool Contains(PlaceableBlockBase block)
         {
             return BlocksOnGrid.Contains(block);

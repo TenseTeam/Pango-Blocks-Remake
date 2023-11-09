@@ -33,7 +33,7 @@ namespace ProjectPBR.UI.Menu.Profiles.Creator
         private void OnEnable()
         {
             MainManager.Ins.EventManager.AddListener<UIDifficultyButton>(GameConstants.UIEvents.OnSelectedDifficultyButton, ButtonSelectProfileDifficulty);
-       }
+        }
 
         private void OnDisable()
         {
@@ -45,12 +45,18 @@ namespace ProjectPBR.UI.Menu.Profiles.Creator
             ValidateCreateButton();
         }
 
+        /// <summary>
+        /// Opens the profile creator.
+        /// </summary>
         public void OpenCreator()
         {
             ButtonSelectProfileDifficulty(_easyButton);
             OnOpenCreator?.Invoke();
         }
 
+        /// <summary>
+        /// Creates a new profile.
+        /// </summary>
         public void CreateNewProfile()
         {
             if (!ProfilesManager.IsProfileNameValid(_profileName)) return;
@@ -59,6 +65,9 @@ namespace ProjectPBR.UI.Menu.Profiles.Creator
             OnCreatedProfile?.Invoke();
         }
 
+        /// <summary>
+        /// Validates if the create button should be interactable or not based if the profile values are valid.
+        /// </summary>
         public void ValidateCreateButton()
         {
             if (!ProfilesManager.IsProfileNameValid(_profileName))
@@ -70,6 +79,10 @@ namespace ProjectPBR.UI.Menu.Profiles.Creator
             _createButton.interactable = !ProfilesManager.HasProfile(_profileName);
         }
 
+        /// <summary>
+        /// Selects the correct difficulty sprite based on the selected difficulty button.
+        /// </summary>
+        /// <param name="btn">Difficulty button to select correctly.</param>
         private void ButtonSelectProfileDifficulty(UIDifficultyButton difficultyBtn)
         {
             DeselectDifficultySprites();
@@ -77,17 +90,27 @@ namespace ProjectPBR.UI.Menu.Profiles.Creator
             SetProfileDifficulty(difficultyBtn.Difficulty);
         }
 
+        /// <summary>
+        /// Sets the profile difficulty to the given difficulty.
+        /// </summary>
+        /// <param name="difficulty"></param>
         private void SetProfileDifficulty(GameDifficulty difficulty)
         {
             _profileDifficulty = difficulty;
         }
 
+        /// <summary>
+        /// Deselects the difficulty buttons sprites.
+        /// </summary>
         private void DeselectDifficultySprites()
         {
             _easyButton.ChangeToDeselectedSprite();
             _hardButton.ChangeToDeselectedSprite();
         }
 
+        /// <summary>
+        /// Resets the creator to its default values.
+        /// </summary>
         private void ResetCreator()
         {
             _profileNameField.text = string.Empty;

@@ -25,6 +25,9 @@
             SetButtonsStatus();
         }
 
+        /// <summary>
+        /// Initializes all its buttons.
+        /// </summary>
         private void InitButtons()
         {
             foreach(UILevelUnlocker levelButton in _levelButtons)
@@ -33,6 +36,9 @@
             _cutsceneButton.Init();
         }
 
+        /// <summary>
+        /// Sets the status of all its buttons.
+        /// </summary>
         private void SetButtonsStatus()
         {
             foreach (UILevelUnlocker levelButton in _levelButtons)

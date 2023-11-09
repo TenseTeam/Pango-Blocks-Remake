@@ -32,17 +32,26 @@
 
         private void Update() => RunPath();
 
+        /// <summary>
+        /// Resets the character position to its start position.
+        /// </summary>
         public void ResetPosition()
         {
             transform.position = _startPosition;
         }
 
+        /// <summary>
+        /// Starts the character pathing.
+        /// </summary>
         public void StartPath()
         {
             _pathData = GameManager.PathManager.GetPath();
             _isRunningPath = true;
         }
 
+        /// <summary>
+        /// Runs the character path.
+        /// </summary>
         private void RunPath()
         {
             if (!_isRunningPath) return;
@@ -64,6 +73,9 @@
             }
         }
 
+        /// <summary>
+        /// Called when the character reaches its destination.
+        /// </summary>
         private void ReachDestination()
         {
             MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnCharacterReachedDestination, _pathData);

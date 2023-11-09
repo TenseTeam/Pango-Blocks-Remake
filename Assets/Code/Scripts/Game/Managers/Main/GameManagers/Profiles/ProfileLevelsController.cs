@@ -31,11 +31,15 @@
             MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnBeginGameWonPhase, CompleteLevel);
         }
 
+        /// <inheritdoc/>
         public void Save()
         {
             ProfilesManager.SaveProfile(_selectedProfile);
         }
 
+        /// <summary>
+        /// Completes the current level by its scene build index and unlocks the next one.
+        /// </summary>
         private void CompleteLevel()
         {
             LevelKey levelKey = LevelMapper.GetLevelKeyByBuildIndex(SceneManager.CurrentSceneIndex);

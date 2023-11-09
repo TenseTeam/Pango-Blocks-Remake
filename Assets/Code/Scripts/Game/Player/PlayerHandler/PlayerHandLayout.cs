@@ -1,11 +1,8 @@
 ﻿namespace ProjectPBR.Player.PlayerHandler
 {
     using UnityEngine;
-    using ProjectPBR.Level.Blocks;
     using VUDK.Extensions.Transform;
-    using VUDK.Generic.Managers.Main;
-    using ProjectPBR.GameConfig.Constants;
-    using VUDK.Generic.Serializable;
+    using ProjectPBR.Level.Blocks;
 
     [RequireComponent(typeof(Collider2D))]
     public class PlayerHandLayout : MonoBehaviour
@@ -64,28 +61,50 @@
             block.SetResetPosition(); // If the block is inside the layout, set the reset position
         }
 
+        /// <summary>
+        /// Gets a <see cref="PlaceableBlockBase"/> from the layout and removes it from the layout.
+        /// </summary>
+        /// <param name="block"><see cref="PlaceableBlockBase"/> to get.</param>
+        /// <returns>Getted <see cref="PlaceableBlockBase"/>.</returns>
         public PlaceableBlockBase GetAndRemoveFromHand(PlaceableBlockBase block)
         {
             RemoveFromLayout(block);
             return block;
         }
 
+        /// <summary>
+        /// Removes a <see cref="PlaceableBlockBase"/> from the layout.
+        /// </summary>
+        /// <param name="block"><see cref="PlaceableBlockBase"/> to remove.</param>
         public void RemoveFromLayout(PlaceableBlockBase block)
         {
             block.transform.SetLossyScale(Vector3.one);
         }
 
+        /// <summary>
+        /// Resets the used width for spacing.
+        /// </summary>
         public void ResetRow()
         {
             _usedLayoutWidth = 0;
         }
 
-        public void LerpPositionToHand(PlaceableBlockBase block, float resetTime)
+        /// <summary>
+        /// Starts a block lerp resetting position to the hand.
+        /// </summary>
+        /// <param name="block">Block to reset in hand.</param>
+        /// <param name="resetTime">Reset time duration.</param>
+        public void StartLerpPositionToHand(PlaceableBlockBase block, float resetTime)
         {
             block.transform.SetLossyScale(_layoutblockSize);
             block.StartLerpResettingPosition(resetTime);
         }
 
+        /// <summary>
+        /// Checks if a given <see cref="PlaceableBlockBase"/> is inside this collider bounds.
+        /// </summary>
+        /// <param name="block"><see cref="PlaceableBlockBase"/> to check.</param>
+        /// <returns>True if it is inside, False if not.</returns>
         private bool IsBlockInsideBounds(PlaceableBlockBase block)
         {
             if (block is SinglePlaceableBlock)
@@ -102,6 +121,11 @@
             return true;
         }
 
+        /// <summary>
+        /// Checks if a collider is inside this collider bounds.
+        /// </summary>
+        /// <param name="coll">Collider to check.</param>
+        /// <returns>True if it is inside, False if not.</returns>
         private bool IsColliderInsideBounds(PolygonCollider2D coll)
         {
             foreach (Vector2 point in coll.points)

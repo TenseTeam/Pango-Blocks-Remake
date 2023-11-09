@@ -2,7 +2,7 @@
 {
     using UnityEngine;
 
-    public abstract class BlockData : ScriptableObject
+    public abstract class BlockDataBase : ScriptableObject
     {
     }
 }

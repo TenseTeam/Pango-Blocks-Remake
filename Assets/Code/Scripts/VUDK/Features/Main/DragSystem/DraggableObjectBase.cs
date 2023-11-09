@@ -4,7 +4,7 @@
 
     public abstract class DraggableObjectBase : MonoBehaviour, IDraggable
     {
-        public abstract void OnDragObject();
+        public abstract void OnStartDragObject();
 
         public abstract void OnEndDragObject();
 

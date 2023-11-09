@@ -13,6 +13,7 @@
         {
         }
 
+        /// <inheritdoc/>
         public override void Enter()
         {
 #if DEBUG
@@ -22,19 +23,25 @@
             MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnResetLevel, ChangeToPlacement);
         }
 
+        /// <inheritdoc/>
         public override void Exit()
         {
             MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnResetLevel, ChangeToPlacement);
         }
 
+        /// <inheritdoc/>
         public override void FixedProcess()
         {
         }
 
+        /// <inheritdoc/>
         public override void Process()
         {
         }
 
+        /// <summary>
+        /// Changes to placement phase.
+        /// </summary>
         private void ChangeToPlacement()
         {
             ChangeState(GamePhaseKeys.PlacementPhase);

@@ -20,15 +20,18 @@
 
         private void OnEnable()
         {
-            _button.onClick.AddListener(TryLoadNextLevel);
+            _button.onClick.AddListener(LoadNextLevel);
         }
 
         private void OnDisable()
         {
-            _button.onClick.RemoveListener(TryLoadNextLevel);
+            _button.onClick.RemoveListener(LoadNextLevel);
         }
 
-        private void TryLoadNextLevel()
+        /// <summary>
+        /// Loads the next level or cutscene.
+        /// </summary>
+        private void LoadNextLevel()
         {
             SceneManager.LoadCutsceneOrFirstUnlocked();
         }

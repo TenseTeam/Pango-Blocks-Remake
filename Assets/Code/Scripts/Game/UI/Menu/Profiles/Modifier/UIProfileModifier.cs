@@ -41,6 +41,9 @@
             MainManager.Ins.EventManager.RemoveListener<UIDifficultyButton>(GameConstants.UIEvents.OnSelectedDifficultyButton, ButtonSelectProfileDifficulty);
         }
 
+        /// <summary>
+        /// Confirm the profile modification and modify the selected profile with the new values.
+        /// </summary>
         public void ConfirmModify()
         {
             if (!ProfilesManager.IsProfileNameValid(_profileModifiedName)) return;
@@ -50,6 +53,9 @@
             OnProfileModified?.Invoke();
         }
 
+        /// <summary>
+        /// Deletes the selected profile and selects the first profile in the list.
+        /// </summary>
         public void DeleteOpenProfile()
         {
             ProfileSelector.DeleteAndDeselect();
@@ -58,6 +64,9 @@
             OnDeletedProfile?.Invoke();
         }
 
+        /// <summary>
+        /// Validates the modify button based on the current profile name.
+        /// </summary>
         public void ValidateModifyButton()
         {
             if (ProfilesManager.HasProfile(_profileModifiedName, ProfileSelector.SelectedProfile))
@@ -69,6 +78,9 @@
             _confirmButton.interactable = ProfilesManager.IsProfileNameValid(_profileModifiedName);
         }
 
+        /// <summary>
+        /// Opens the selected profile.
+        /// </summary>
         public void OpenProfile()
         {
             if (ProfileSelector.SelectedProfile == null) return;
@@ -79,11 +91,17 @@
             OnOpenProfile?.Invoke();
         }
 
+        /// <summary>
+        /// Sets the profile name field to the selected profile name.
+        /// </summary>
         private void OpenProfileName()
         {
             _profileModifiedNameField.text = ProfileSelector.SelectedProfile.ProfileName;
         }
 
+        /// <summary>
+        /// Sets the profile difficulty to the selected profile difficulty.
+        /// </summary>
         private void OpenProfileDifficulty()
         {
             DeselectDifficultySprites();
@@ -95,6 +113,10 @@
                 _hardButton.ChangeToSelectedSprite();
         }
 
+        /// <summary>
+        /// Selects the correct difficulty sprite based on the selected difficulty button.
+        /// </summary>
+        /// <param name="btn">Difficulty button to select correctly.</param>
         private void ButtonSelectProfileDifficulty(UIDifficultyButton btn)
         {
             DeselectDifficultySprites();
@@ -102,11 +124,18 @@
             SetProfileDifficulty(btn.Difficulty);
         }
 
+        /// <summary>
+        /// Sets the profile difficulty to the given difficulty.
+        /// </summary>
+        /// <param name="difficulty"></param>
         private void SetProfileDifficulty(GameDifficulty difficulty)
         {
             _profileModifiedDifficulty = difficulty;
         }
 
+        /// <summary>
+        /// Deselects the difficulty buttons sprites.
+        /// </summary>
         private void DeselectDifficultySprites()
         {
             _easyButton.ChangeToDeselectedSprite();

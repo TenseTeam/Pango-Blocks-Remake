@@ -6,6 +6,7 @@
 
     public class UIInfoButton : UIButton
     {
+        /// <inheritdoc/>
         protected override void Press()
         {
             MainManager.Ins.EventManager.TriggerEvent(GameConstants.UIEvents.OnInfoButtonPressed);

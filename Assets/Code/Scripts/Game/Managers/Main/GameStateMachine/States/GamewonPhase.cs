@@ -12,6 +12,7 @@
         {
         }
 
+        /// <inheritdoc/>
         public override void Enter()
         {
 #if DEBUG
@@ -21,14 +22,17 @@
             Context.SceneManager.LoadNextScene();
         }
 
+        /// <inheritdoc/>
         public override void Exit()
         {
         }
 
+        /// <inheritdoc/>
         public override void FixedProcess()
         {
         }
 
+        /// <inheritdoc/>
         public override void Process()
         {
         }

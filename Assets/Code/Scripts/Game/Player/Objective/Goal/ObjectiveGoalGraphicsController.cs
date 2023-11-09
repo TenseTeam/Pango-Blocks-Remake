@@ -26,11 +26,17 @@
             MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnObjectiveGoalTouched, AnimateTouch);
         }
 
+        /// <summary>
+        /// Starts the objective won animation.
+        /// </summary>
         private void AnimateWon()
         {
             _anim.SetTrigger(GameConstants.ObjectiveAnimations.ObjectiveWon);
         }
 
+        /// <summary>
+        /// Starts the objective touched animation.
+        /// </summary>
         private void AnimateTouch()
         {
             _anim.SetTrigger(GameConstants.ObjectiveAnimations.ObjectiveTouched);

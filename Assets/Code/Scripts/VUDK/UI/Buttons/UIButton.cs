@@ -31,10 +31,29 @@
             Button.onClick.RemoveListener(Press);
         }
 
+        /// <summary>
+        /// Triggers the press of this button.
+        /// </summary>
         protected virtual void Press()
         {
             MainManager.Ins.EventManager.TriggerEvent(EventKeys.UIEvents.OnButtonPressed);
             OnButtonPressedSuccess?.Invoke();
+        }
+
+        /// <summary>
+        /// Disables the interaction of this button.
+        /// </summary>
+        protected virtual void Enable()
+        {
+            Button.interactable = true;
+        }
+
+        /// <summary>
+        /// Enables the interaction of this button.
+        /// </summary>
+        protected virtual void Disable()
+        {
+            Button.interactable = false;
         }
     }
 }

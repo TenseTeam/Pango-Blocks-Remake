@@ -38,6 +38,11 @@
             return new Color(color.r, color.g, color.b, color.a);
         }
 
+        /// <summary>
+        /// Serializes a color into a float array of 4 dimension.
+        /// </summary>
+        /// <param name="color">Color to serialize.</param>
+        /// <returns>float array of the color.</returns>
         public static float[] Serialize(this Color color)
         {
             float[] rgba = new float[4];
@@ -50,6 +55,11 @@
             return rgba;
         }
 
+        /// <summary>
+        /// Deserializes a float array of 4 dimension into a color.
+        /// </summary>
+        /// <param name="rgba">float array of 4 dimension.</param>
+        /// <returns>Deserialized color.</returns>
         public static Color Deserialize(float[] rgba)
         {
             return new Color(rgba[0], rgba[1], rgba[2], rgba[3]);

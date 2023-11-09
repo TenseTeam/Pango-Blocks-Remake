@@ -7,6 +7,7 @@
 
     public class PBRGameMachine : GameMachineBase
     {
+        /// <inheritdoc/>
         public override void Init()
         {
             base.Init();

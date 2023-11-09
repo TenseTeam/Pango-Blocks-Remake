@@ -36,11 +36,19 @@
             return PathCalculator.CalculatePath(_grid, _grid.GridTiles[_fromTile.x, _fromTile.y], _grid.GridTiles[_toTile.x, _toTile.y]);
         }
 
+        /// <summary>
+        /// Sets the starting point for path calculation based on the provided world position.
+        /// </summary>
+        /// <param name="worldPosition">The world position used to determine the starting grid tile.</param>
         private void SetFromTile(Vector3 worldPosition)
         {
             _fromTile = _grid.WorldToGridPosition(worldPosition);
         }
 
+        /// <summary>
+        /// Sets the ending point for path calculation based on the provided world position.
+        /// </summary>
+        /// <param name="worldPosition">The world position used to determine the ending grid tile.</param>
         private void SetToTile(Vector3 worldPosition)
         {
             _toTile = _grid.WorldToGridPosition(worldPosition);

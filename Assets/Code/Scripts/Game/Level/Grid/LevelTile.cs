@@ -13,6 +13,10 @@
         public bool IsOccupiedByBlock => Block;
         public bool IsOccupied => IsOccupiedByBlock || IsOccupiedByObjective;
 
+        /// <summary>
+        /// Inserts a block into the tile.
+        /// </summary>
+        /// <param name="block">Placeable block to place into the tile.</param>
         public void Insert(PlaceableBlockBase block)
         {
             block.transform.parent = null;

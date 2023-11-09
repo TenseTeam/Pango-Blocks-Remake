@@ -12,8 +12,14 @@
 
         private void OnDisable() => UnregisterAudioEvents();
 
+        /// <summary>
+        /// Registers audio events.
+        /// </summary>
         protected abstract void RegisterAudioEvents();
 
+        /// <summary>
+        /// Unregisters audio events.
+        /// </summary>
         protected abstract void UnregisterAudioEvents();
     }
 }

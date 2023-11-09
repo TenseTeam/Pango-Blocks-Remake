@@ -16,6 +16,7 @@
             _delayForCheck = new TimeDelay(0.2f);
         }
 
+        /// <inheritdoc/>
         public override void Enter()
         {
 #if DEBUG
@@ -25,16 +26,19 @@
             Context.BlocksManager.EnableBlocksGravity();
         }
 
+        /// <inheritdoc/>
         public override void Exit()
         {
             CheckBlocks();
             Context.BlocksManager.DisableBlocksGravity();
         }
 
+        /// <inheritdoc/>
         public override void FixedProcess()
         {
         }
 
+        /// <inheritdoc/>
         public override void Process()
         {
             _delayForCheck.Process();
@@ -46,6 +50,10 @@
             }
         }
 
+        /// <summary>
+        /// Checks if all blocks are not moving.
+        /// </summary>
+        /// <returns>True if all blocks are not moving, False if not.</returns>
         private bool AreAllBlocksStopped()
         {
             foreach (PlaceableBlockBase block in Context.Grid.BlocksOnGrid)
@@ -56,6 +64,10 @@
             return true;
         }
 
+        /// <summary>
+        /// Returns the invalid blocks to the hand
+        /// and adjust the blocks position in the grid.
+        /// </summary>
         private void CheckBlocks()
         {
             Context.BlocksManager.ReturnInHandInvalidBlocks();

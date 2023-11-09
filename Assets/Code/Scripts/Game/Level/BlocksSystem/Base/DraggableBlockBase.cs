@@ -9,20 +9,26 @@
     {
         public Pool RelatedPool { get; private set; }
 
-        public virtual void OnDragObject()
+        /// <inheritdoc/>
+        public virtual void OnStartDragObject()
         {
         }
 
+        /// <inheritdoc/>
         public virtual void OnEndDragObject()
         {
         }
 
+        /// <inheritdoc/>
         public Transform GetDragTransform() => transform;
 
+        /// <inheritdoc/>
         public void AssociatePool(Pool associatedPool) => RelatedPool = associatedPool;
 
+        /// <inheritdoc/>
         public virtual void Dispose() => RelatedPool.Dispose(gameObject);
 
+        /// <inheritdoc/>
         public virtual void Clear()
         {
         }

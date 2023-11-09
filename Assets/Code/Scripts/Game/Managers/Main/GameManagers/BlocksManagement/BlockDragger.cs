@@ -11,17 +11,23 @@
         public PlaceableBlockBase CurrentDraggedBlock { get; private set; }
         public GameManager GameManager => MainManager.Ins.GameManager as GameManager;
 
+        /// <summary>
+        /// Calculate target position for dragged block based on the current touch position.
+        /// </summary>
+        /// <returns>Target position.</returns>
         protected override Vector3 CalculateTargetPosition()
         {
             return GameManager.MobileInputsManager.ScreenTouchPosition;
         }
 
+        /// <inheritdoc/>
         public void StartDrag(PlaceableBlockBase draggedBlock, Vector3 offset = default)
         {
             base.StartDrag(draggedBlock, offset);
             CurrentDraggedBlock = draggedBlock;
         }
 
+        /// <inheritdoc/>
         public override void StopDrag()
         {
             base.StopDrag();

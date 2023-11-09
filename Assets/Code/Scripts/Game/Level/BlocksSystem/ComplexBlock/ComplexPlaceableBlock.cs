@@ -12,24 +12,30 @@
 
         public List<ComposedBlock> ComposedBlocks { get; private set; } = new List<ComposedBlock>();
 
-        public override void Init(BlockData data)
+        /// <inheritdoc/>
+        public override void Init(BlockDataBase data)
         {
             base.Init(data);
             GenerateComposition();
         }
 
+        /// <inheritdoc/>
         public override void DisableCollider()
         {
             foreach (ComposedBlock block in ComposedBlocks)
                 block.DisableCollider();
         }
 
+        /// <inheritdoc/>
         public override void EnableCollider()
         {
             foreach (ComposedBlock block in ComposedBlocks)
                 block.EnableCollider();
         }
 
+        /// <summary>
+        /// Generates the complex block composition.
+        /// </summary>
         private void GenerateComposition()
         {
             float width = 0;
@@ -43,6 +49,7 @@
             }
         }
 
+        /// <inheritdoc/>
         public override void Dispose()
         {
             base.Dispose();
@@ -50,18 +57,21 @@
                 block.Dispose();
         }
 
+        /// <inheritdoc/>
         public override void IncreaseRender()
         {
             foreach (ComposedBlock block in ComposedBlocks)
                 block.IncreaseRender();
         }
 
+        /// <inheritdoc/>
         public override void DecreaseRender()
         {
             foreach (ComposedBlock block in ComposedBlocks)
                 block.DecreaseRender();
         }
 
+        /// <inheritdoc/>
         public override void SetIsInvalid(bool isInvalid)
         {
             base.SetIsInvalid(isInvalid);
@@ -69,6 +79,7 @@
                 block.SetIsInvalid(isInvalid);
         }
 
+        /// <inheritdoc/>
         public override bool IsInvalid()
         {
             foreach (ComposedBlock block in ComposedBlocks)

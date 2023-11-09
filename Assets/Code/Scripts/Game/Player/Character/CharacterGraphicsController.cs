@@ -45,6 +45,9 @@ namespace ProjectPBR.Player.Character
             _anim.SetInteger(GameConstants.CharacterAnimations.State, GameConstants.CharacterAnimations.Idle);
         }
 
+        /// <summary>
+        /// Triggers the character footstep.
+        /// </summary>
         [CalledByAnimationEvent]
         public void Footstep()
         {
@@ -52,16 +55,25 @@ namespace ProjectPBR.Player.Character
             SpawnCloudVFX();
         }
 
+        /// <summary>
+        /// Sets the start character animation.
+        /// </summary>
         public void SetStartAnimation()
         {
             SetWalkAnimation();
         }
 
+        /// <summary>
+        /// Increases the character render priority.
+        /// </summary>
         public void IncreaseRender()
         {
             _sprite.sortingOrder++;
         }
 
+        /// <summary>
+        /// Decreases the character render priority.
+        /// </summary>
         public void ResetGraphics()
         {
             _sprite.sortingOrder = GameStats.CharacterLayer;
@@ -77,11 +89,18 @@ namespace ProjectPBR.Player.Character
                 vfx.transform.position = transform.position;
         }
 
+        /// <summary>
+        /// Spawns a stars VFX at the character's position.
+        /// </summary>
         private void SpawnStarsVFX()
         {
             MainManager.Ins.PoolsManager.Pools[PoolKeys.StarsVFX].Get().transform.position = transform.position;
         }
 
+        /// <summary>
+        /// Sets the character animation based on the block type.
+        /// </summary>
+        /// <param name="blockType"><see cref="BlockType"/> to check.</param>
         private void SetAnimation(BlockType blockType)
         {
             switch (blockType)
@@ -100,30 +119,46 @@ namespace ProjectPBR.Player.Character
             }
         }
 
+        /// <summary>
+        /// Sets the character animation to idle.
+        /// </summary>
         private void SetIdleAnimation()
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             _anim.SetInteger(GameConstants.CharacterAnimations.State, GameConstants.CharacterAnimations.Idle);
         }
 
+        /// <summary>
+        /// Sets the character animation to walk.
+        /// </summary>
         private void SetWalkAnimation()
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             _anim.SetInteger(GameConstants.CharacterAnimations.State, GameConstants.CharacterAnimations.Walk);
         }
 
+        /// <summary>
+        /// Sets the character animation to climb.
+        /// </summary>
         private void SetClimbAnimation()
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 45f);
             _anim.SetInteger(GameConstants.CharacterAnimations.State, GameConstants.CharacterAnimations.Climb);
         }
 
+        /// <summary>
+        /// Sets the character animation to slide.
+        /// </summary>
         private void SetSlideAnimation()
         {
             transform.rotation = Quaternion.Euler(0f, 0f, -45f);
             _anim.SetInteger(GameConstants.CharacterAnimations.State, GameConstants.CharacterAnimations.Slide);
         }
 
+        /// <summary>
+        /// Sets the end game animation based on the path data.
+        /// </summary>
+        /// <param name="pathData"><see cref="Path"/> to check.</param>
         private void SetEndGameAnimation(Path pathData)
         {
             if (pathData.HasReached)

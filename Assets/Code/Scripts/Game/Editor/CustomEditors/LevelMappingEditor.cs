@@ -26,6 +26,9 @@
             DrawMappingBox();
         }
 
+        /// <summary>
+        /// Draws the GUI Box for mapping levels.
+        /// </summary>
         private void DrawMappingBox()
         {
             EditorGUILayout.BeginVertical("Box");
@@ -39,6 +42,10 @@
             EditorGUILayout.EndVertical();
         }
 
+        /// <summary>
+        /// Maps the levels with the given offset.
+        /// </summary>
+        /// <param name="offset">level index offset.</param>
         private void MapLevels(int offset)
         {
             for (int k = 0; k < _levelMapping.Stages.Count; k++)
@@ -48,6 +55,9 @@
             }
         }
 
+        /// <summary>
+        /// Sets the size of the levels for each stage.
+        /// </summary>
         private void SetLevelsSize()
         {
             int size = _levelMapping.LevelsPerStage;

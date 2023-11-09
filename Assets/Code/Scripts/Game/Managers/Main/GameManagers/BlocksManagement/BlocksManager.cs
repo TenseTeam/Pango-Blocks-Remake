@@ -35,12 +35,16 @@
         /// <param name="block"><see cref="PlaceableBlockBase"/> to reset.</param>
         public void RemoveFromGridAndPlaceInHand(PlaceableBlockBase block)
         {
-            _grid.RemoveBlockFromGrid(block);
+            _grid.RemoveBlock(block);
             block.PlaceableBlockReset();
             //MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBlockStartReset, block);
-            PlayerHand.Layout.LerpPositionToHand(block, _resetBlockTime);
+            PlayerHand.Layout.StartLerpPositionToHand(block, _resetBlockTime);
         }
 
+        /// <summary>
+        /// Tries to place the current dragged block on the grid.
+        /// </summary>
+        /// <returns>True if succeded, False if not.</returns>
         public bool TryToPlaceBlockOnGrid()
         {
             if (GameManager.MobileInputsManager.IsTouchOn2D(out LevelGrid grid, _grid.GridLayerMask))
@@ -51,7 +55,7 @@
                 if(_grid.AreTilesFreeForBlock(closestTile, block))
                 {
                     MainManager.Ins.EventManager.TriggerEvent(GameConstants.Events.OnBlockPlaced);
-                    block.Place();
+                    block.OnPlace();
                     _grid.Insert(closestTile, block);
                     return true;
                 }
@@ -61,6 +65,10 @@
             return false;
         }
 
+        /// <summary>
+        /// Tries to place the current dragged block in the player hand.
+        /// </summary>
+        /// <returns>True if succeded, False if not.</returns>
         public bool TryToPlaceBlockInHand()
         {
             if (GameManager.MobileInputsManager.IsTouchOn2D(out PlayerHandLayout layout, PlayerHand.Layout.LayoutMask))
@@ -73,6 +81,12 @@
             return false;
         }
 
+        /// <summary>
+        /// Tries to get a block from the touch position.
+        /// </summary>
+        /// <param name="block">Touched block to get.</param>
+        /// <param name="touchOffsetPosition">Touch offset position from the block.</param>
+        /// <returns>True if succeded, False if not.</returns>
         public bool TryGetBlockFromTouch(out PlaceableBlockBase block, out Vector2 touchOffsetPosition)
         {
             RaycastHit2D hit = GameManager.MobileInputsManager.RaycastFromTouch2D(_grid.BlocksLayerMask);

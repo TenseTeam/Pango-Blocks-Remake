@@ -42,6 +42,10 @@
             return ScenesMapping.Stages[CurrentStageIndex].CutsceneBuildIndex;
         }
 
+        /// <summary>
+        /// Gets the cutscene build index if all the levels of the current stage are completed, or the first unlocked or completed level of the stage build index. 
+        /// </summary>
+        /// <returns>Cutscene or level build index.</returns>
         public static int GetCutsceneOrFirstUnlockedOrCompletedLevel()
         {
             if (LevelOperation.IsCutsceneUnlocked(CurrentStageIndex))
@@ -50,6 +54,11 @@
             return GetFirstUnlockedLevelBuildIndex();
         }
 
+        /// <summary>
+        /// Gets the next unlocked or first unlocked level build index, or cutscene if all levels of the stage are completed build index.
+        /// </summary>
+        /// <param name="buildIndex"></param>
+        /// <returns>Cutscene or level build index.</returns>
         public static int GetNextUnlockedOrFirstUnlockedLevelOrCutsceneBuildIndexByBuildIndex(int buildIndex)
         {
             int currentLevelIndex = GetLevelIndexByBuildIndex(buildIndex);
@@ -122,7 +131,7 @@
         /// Gets the first level build index of status <see cref="LevelStatus.Unlocked"/> or <see cref="LevelStatus.Completed"/>.
         /// </summary>
         /// <param name="from">Level index to start searching from.</param>
-        /// <returns></returns>
+        /// <returns>Unlocked level build index.</returns>
         public static int GetFirstUnlockedLevelBuildIndex(int from = 0)
         {
             int levelIndex = GetFirstLevelIndexOfStatus(LevelStatus.Unlocked, from);
@@ -130,6 +139,11 @@
             return GetBuildIndexByLevelIndex(levelIndex);
         }
 
+        /// <summary>
+        /// Gets the first level build index of status <see cref="LevelStatus.Completed"/>.
+        /// </summary>
+        /// <param name="from">Level index to start searching from.</param>
+        /// <returns>Completed level build index.</returns>
         public static int GetFirstCompletedLevelBuildIndex(int from = 0)
         {
             int levelIndex = GetFirstLevelIndexOfStatus(LevelStatus.Completed, from);

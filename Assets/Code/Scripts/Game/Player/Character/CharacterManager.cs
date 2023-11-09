@@ -32,6 +32,9 @@
             MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnResetLevel, ResetCharacter);
         }
 
+        /// <summary>
+        /// Starts the character pathing.
+        /// </summary>
         private void StartCharacter()
         {
             _runner.StartPath();
@@ -39,6 +42,9 @@
             _graphics.IncreaseRender();
         }
 
+        /// <summary>
+        /// Resets the character to its start position.
+        /// </summary>
         private void ResetCharacter()
         {
             _runner.ResetPosition();

@@ -36,6 +36,9 @@
             InitDefault();
         }
 
+        /// <summary>
+        /// Initializes the default levels data.
+        /// </summary>
         public void InitDefault()
         {
             List<StageMapData> stages = LevelMapper.ScenesMapping.Stages;
@@ -57,6 +60,9 @@
             UnlockFirstLevels();
         }
 
+        /// <summary>
+        /// Unlocks all the default levels in the game.
+        /// </summary>
         private void UnlockDefaultLevels()
         {
             for (int i = 0; i < LevelMapper.ScenesMapping.LevelsPerStage; i++)
@@ -68,6 +74,9 @@
             }
         }
 
+        /// <summary>
+        /// Unlocks the first level of each stage.
+        /// </summary>
         private void UnlockFirstLevels()
         {
             List<StageMapData> stages = LevelMapper.ScenesMapping.Stages;

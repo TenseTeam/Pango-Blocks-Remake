@@ -7,6 +7,9 @@
 
     public class ResetTrigger : MonoBehaviour
     {
+        /// <summary>
+        /// Triggers the gameover loading screen is covered.
+        /// </summary>
         [CalledByAnimationEvent]
         public void LoadingScreenCovered()
         {

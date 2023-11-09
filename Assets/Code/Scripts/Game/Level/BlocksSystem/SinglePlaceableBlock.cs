@@ -25,7 +25,8 @@
             Collider = collider;
         }
 
-        public override void Init(BlockData data)
+        /// <inheritdoc/>
+        public override void Init(BlockDataBase data)
         {
             base.Init(data);
             _sprite.sprite = Data.Sprite;
@@ -33,16 +34,19 @@
             BlockType = Data.BlockType;
         }
 
+        /// <inheritdoc/>
         public override void EnableCollider()
         {
             Collider.enabled = true;
         }
 
+        /// <inheritdoc/>
         public override void DisableCollider()
         {
             Collider.enabled = false;
         }
 
+        /// <inheritdoc/>
         public override void Clear()
         {
             base.Clear();
@@ -50,11 +54,13 @@
             Collider.points = null;
         }
 
+        /// <inheritdoc/>
         public override void IncreaseRender()
         {
             _sprite.sortingOrder = GameStats.PlacingBlockLayer;
         }
 
+        /// <inheritdoc/>
         public override void DecreaseRender()
         {
             _sprite.sortingOrder = GameStats.PlacedBlockLayer;

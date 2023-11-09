@@ -60,12 +60,19 @@
 
         private void Update() => _waitRandomClose.Process();
 
+        /// <summary>
+        /// Starts the animation for the reset loading screen.
+        /// </summary>
         private void ResetLevelLoadingScreen()
         {
             Enable(_resetAnim);
             _resetAnim.SetTrigger(GameConstants.UIAnimations.ResetScreen);
         }
 
+        /// <summary>
+        /// Waits a delay before starting the close loading screen animation.
+        /// </summary>
+        /// <param name="delayChangeScene">Delay to wait.</param>
         private void WaitRandomClose(float delayChangeScene)
         {
             float duration = delayChangeScene - _minDuration;
@@ -73,6 +80,9 @@
             _waitRandomClose.Start();
         }
 
+        /// <summary>
+        /// Starts a random open animation.
+        /// </summary>
         private void RandomOpen()
         {
             Enable(_openAnim);
@@ -81,6 +91,9 @@
             _openAnim.SetInteger(GameConstants.UIAnimations.ScreenState, GetRandom());
         }
 
+        /// <summary>
+        /// Starts a random close animation.
+        /// </summary>
         private void RandomClose()
         {
             Enable(_closeAnim);
@@ -89,6 +102,10 @@
             _closeAnim.SetInteger(GameConstants.UIAnimations.ScreenState, GetRandom());
         }
 
+        /// <summary>
+        /// Enables the given animator and disables the others.
+        /// </summary>
+        /// <param name="anim">Animator to enable.</param>
         private void Enable(Animator anim)
         {
             _openAnim.gameObject.SetActive(false);
@@ -97,6 +114,10 @@
             anim.gameObject.SetActive(true);
         }
 
+        /// <summary>
+        /// Gets a random number between 0 and <see cref="GameConstants.UIAnimations.MaxAnimations"/>.
+        /// </summary>
+        /// <returns>Random number.</returns>
         private int GetRandom()
         {
             return Random.Range(0, GameConstants.UIAnimations.MaxAnimations);

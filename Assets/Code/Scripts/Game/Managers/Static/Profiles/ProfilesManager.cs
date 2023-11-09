@@ -24,13 +24,18 @@
             s_TagColors = new Color[5] { Color.red, Color.blue, Color.green, Color.yellow, Color.magenta };
         }
 
-        // This method is called before the first scene is loaded, before AfterAssembliesLoaded
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        /// <summary>
+        /// Initializes the profiles manager, loading profiles on runtime.
+        /// </summary>
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)] // Called before FirstSceneIsloaded and AfterAssembliesLoaded
         public static void Init()
         {
             LoadProfiles();
         }
 
+        /// <summary>
+        /// Loads existing profiles from the save system.
+        /// </summary>
         public static void LoadProfiles()
         {
             foreach(string fileName in SaveManager.GetFileNames(GameConstants.ProfileSaving.ProfileExtension))
@@ -42,6 +47,9 @@
             }
         }
 
+        /// <summary>
+        /// Saves all existing profiles using the save system.
+        /// </summary>
         public static void SaveProfiles()
         {
             foreach(var profilePair in s_Profiles)
@@ -50,6 +58,12 @@
             }
         }
 
+        /// <summary>
+        /// Creates a new player profile with the specified name and difficulty.
+        /// </summary>
+        /// <param name="profileName">The name of the new profile.</param>
+        /// <param name="difficulty">The difficulty level of the new profile.</param>
+        /// <returns>True if the profile is successfully created, false otherwise.</returns>
         public static bool CreateProfile(string profileName, GameDifficulty difficulty = GameDifficulty.Easy)
         {
             if (s_Profiles.Count >= GameConstants.ProfileSaving.MaxProfilesCount) return false;
@@ -63,6 +77,12 @@
             return true;
         }
 
+        /// <summary>
+        /// Creates a new player profile with the specified name and difficulty, and selects it.
+        /// </summary>
+        /// <param name="profileName">The name of the new profile.</param>
+        /// <param name="difficulty">The difficulty level of the new profile.</param>
+        /// <returns>True if the profile is successfully created and s
         public static bool CreateAndSelect(string profileName, GameDifficulty difficulty = GameDifficulty.Easy)
         {
             if(CreateProfile(profileName, difficulty))
@@ -73,6 +93,9 @@
             return false;
         }
 
+        /// <summary>
+        /// Creates a random player profile and selects it.
+        /// </summary>
         public static void CreateRandomAndSelect()
         {
             string profileName = StringExtension.Random(GameConstants.ProfileSaving.MaxProfileNameLength);
@@ -80,6 +103,11 @@
             ProfileSelector.SelectProfile(profileName);
         }
 
+        /// <summary>
+        /// Changes the difficulty level of a specific player profile.
+        /// </summary>
+        /// <param name="profileIndex">The index of the profile to modify.</param>
+        /// <param name="difficulty">The new difficulty level for the profile.</param>
         public static void ChangeProfileDifficulty(int profileIndex, GameDifficulty difficulty)
         {
             if (!s_Profiles.ContainsKey(profileIndex)) return;
@@ -89,6 +117,11 @@
             SaveProfile(profile);
         }
 
+        /// <summary>
+        /// Changes the name of a specific player profile.
+        /// </summary>
+        /// <param name="profileIndex">The index of the profile to modify.</param>
+        /// <param name="profileName">The new name for the profile.</param>
         public static void ChangeProfileName(int profileIndex, string profileName)
         {
             if (!s_Profiles.ContainsKey(profileIndex)) return;
@@ -98,6 +131,12 @@
             SaveProfile(profile);
         }
 
+        /// <summary>
+        /// Changes the name and difficulty level of a specific player profile.
+        /// </summary>
+        /// <param name="profileIndex">The index of the profile to modify.</param>
+        /// <param name="profileName">The new name for the profile.</param>
+        /// <param name="difficulty">The new difficulty level for the profile.</param>
         public static void ChangeProfileNameAndDifficulty(int profileIndex, string profileName, GameDifficulty difficulty)
         {
             if (!s_Profiles.ContainsKey(profileIndex)) return;
@@ -108,6 +147,11 @@
             SaveProfile(profile);
         }
 
+        /// <summary>
+        /// Deletes a specific player profile.
+        /// </summary>
+        /// <param name="profileIndex">The index of the profile to delete.</param>
+        /// <returns>True if the profile is successfully deleted, false otherwis
         public static bool DeleteProfile(int profileIndex)
         {
             if (!s_Profiles.ContainsKey(profileIndex)) return false;
@@ -117,6 +161,9 @@
             return true;
         }
 
+        /// <summary>
+        /// Deletes all player profiles.
+        /// </summary>
         public static void DeleteAllProfiles()
         {
             foreach (var profilePair in s_Profiles)
@@ -125,11 +172,20 @@
             s_Profiles.Clear();
         }
 
+        /// <summary>
+        /// Gets the first player profile in the list.
+        /// </summary>
+        /// <returns>The first player profile.</returns>
         public static ProfileData GetFirstProfile()
         {
             return s_Profiles.FirstOrDefault().Value;
         }
 
+        /// <summary>
+        /// Gets a player profile by name.
+        /// </summary>
+        /// <param name="profileName">The name of the profile to retrieve.</param>
+        /// <returns>The player profile with the specified name, or null if not found.</returns>
         public static ProfileData GetProfile(string profileName)
         {
             foreach(var profilePair in s_Profiles)
@@ -141,6 +197,11 @@
             return null;
         }
 
+        /// <summary>
+        /// Gets the next player profile with an index greater than the specified index.
+        /// </summary>
+        /// <param name="profileIndex">The index of the current profile.</param>
+        /// <returns>The next player profile with an index greater than the specified index, or the first profile if none found.</returns>
         public static ProfileData GetNextFirstDifferent(int profileIndex)
         {
             if (!s_Profiles.ContainsKey(profileIndex)) return null;
@@ -156,6 +217,11 @@
             return GetFirstProfile();
         }
 
+        /// <summary>
+        /// Gets a player profile by index.
+        /// </summary>
+        /// <param name="profileIndex">The index of the profile to retrieve.</param>
+        /// <returns>The player profile with the specified index, or null if not found.</returns>
         public static ProfileData GetProfile(int profileIndex)
         {
             try
@@ -168,6 +234,11 @@
             }
         }
 
+        /// <summary>
+        /// Gets a player profile by index, or the first profile if the specified index is not found.
+        /// </summary>
+        /// <param name="index">The index of the profile to retrieve.</param>
+        /// <returns>The player profile with the specified index, or the first profile if not found.</returns>
         public static ProfileData GetProfileOrFirst(int index)
         {
             ProfileData profile = GetProfile(index);
@@ -176,6 +247,11 @@
             return profile;
         }
 
+        /// <summary>
+        /// Checks if a player profile with the specified name exists.
+        /// </summary>
+        /// <param name="profileName">The name of the profile to check for.</param>
+        /// <returns>True if a profile with the specified name exists, false otherwise.</returns>
         public static bool HasProfile(string profileName)
         {
             foreach(var profile in s_Profiles)
@@ -187,6 +263,12 @@
             return false;
         }
 
+        /// <summary>
+        /// Checks if a player profile with the specified name exists, excluding a specific profile.
+        /// </summary>
+        /// <param name="profileName">The name of the profile to check for.</param>
+        /// <param name="excludedProfile">The profile to exclude from the check.</param>
+        /// <returns>True if a profile with the specified name exists (excluding the specified profile), false otherwise.</returns>
         public static bool HasProfile(string profileName, ProfileData excludedProfile)
         {
             foreach (var profile in s_Profiles)
@@ -198,11 +280,20 @@
             return false;
         }
 
+        /// <summary>
+        /// Saves a player profile using the save system.
+        /// </summary>
+        /// <param name="profile">The player profile to save.</param>
         public static void SaveProfile(ProfileData profile)
         {
             SaveManager.Save(profile, profile.Id.ToString(), GameConstants.ProfileSaving.ProfileExtension);
         }
 
+        /// <summary>
+        /// Checks if a given profile name is valid.
+        /// </summary>
+        /// <param name="profileName">The profile name to validate.</param>
+        /// <returns>True if the profile name is valid, false otherwise.</returns>
         public static bool IsProfileNameValid(string profileName)
         {
             return
@@ -211,6 +302,10 @@
                 && !profileName.Contains(" ");
         }
 
+        /// <summary>
+        /// Gets an available color for a new profile, avoiding color duplicates.
+        /// </summary>
+        /// <returns>An available color for a new profile.</returns>
         public static Color GetAvailableColor()
         {
             foreach (Color color in s_TagColors)
@@ -223,6 +318,9 @@
         }
 
 #if DEBUG
+        /// <summary>
+        /// Prints information about all existing profiles to the debug log.
+        /// </summary>
         public static void PrintProfiles()
         {
             foreach (var profilePair in s_Profiles)

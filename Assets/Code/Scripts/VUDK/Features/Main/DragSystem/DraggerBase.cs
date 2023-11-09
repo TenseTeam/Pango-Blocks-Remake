@@ -1,7 +1,6 @@
 ﻿namespace VUDK.Features.Main.DragSystem
 {
     using UnityEngine;
-    using UnityEngine.PlayerLoop;
 
     public abstract class DraggerBase : MonoBehaviour
     {
@@ -15,21 +14,36 @@
 
         protected virtual void Update() => Drag();
 
+        /// <summary>
+        /// Starts dragging object.
+        /// </summary>
+        /// <param name="draggedObject">Draggable object to drag.</param>
+        /// <param name="offset">offset from the draggable object.</param>
         public virtual void StartDrag(IDraggable draggedObject, Vector3 offset = default)
         {
             DraggedObject = draggedObject;
             _dragOffset = offset;
-            draggedObject.OnDragObject();
+            draggedObject.OnStartDragObject();
         }
 
+        /// <summary>
+        /// Stops dragging object.
+        /// </summary>
         public virtual void StopDrag()
         {
             DraggedObject.OnEndDragObject();
             DraggedObject = null;
         }
 
+        /// <summary>
+        /// Calculates the target position for the dragged object.
+        /// </summary>
+        /// <returns>Target Position.</returns>
         protected abstract Vector3 CalculateTargetPosition();
 
+        /// <summary>
+        /// Drags the object.
+        /// </summary>
         private void Drag()
         {
             if(!IsDragging) return;

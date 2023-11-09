@@ -6,6 +6,11 @@
 
     public static class LevelOperation
     {
+        /// <summary>
+        /// Sets the <see cref="LevelStatus"/> of the given <see cref="LevelKey"/> level.
+        /// </summary>
+        /// <param name="levelKey"><see cref="LevelKey"/> of the level.</param>
+        /// <param name="levelStatus"><see cref="LevelStatus"/> of the level.</param>
         public static void SetLevelStatus(LevelKey levelKey, LevelStatus levelStatus)
         {
             ProfileSelector.SelectedProfile.LevelsData[levelKey].Status = levelStatus;
@@ -64,6 +69,12 @@
             return true;
         }
 
+        /// <summary>
+        /// Checks if the level of the given index is of the given status.
+        /// </summary>
+        /// <param name="levelIndex">Level index.</param>
+        /// <param name="status">Level status to check.</param>
+        /// <returns>True if it is of the given status, False if not.</returns>
         public static bool IsLevelOfStatus(int levelIndex, LevelStatus status)
         {
             if (levelIndex < 0 || levelIndex >= LevelMapper.ScenesMapping.Stages[LevelMapper.CurrentStageIndex].Levels.Count)

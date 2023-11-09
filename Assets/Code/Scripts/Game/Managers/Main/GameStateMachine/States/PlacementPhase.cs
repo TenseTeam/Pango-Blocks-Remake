@@ -17,6 +17,7 @@
         {
         }
 
+        /// <inheritdoc/>
         public override void Enter()
         {
 #if DEBUG
@@ -28,16 +29,19 @@
             MainManager.Ins.EventManager.AddListener(GameConstants.Events.OnObjectiveTriggered, ChangeToObjectivePhase);
         }
 
+        /// <inheritdoc/>
         public override void Exit()
         {
             Context.Inputs.Interaction.Interact.canceled -= TryToPlaceBlock;
             MainManager.Ins.EventManager.RemoveListener(GameConstants.Events.OnObjectiveTriggered, ChangeToObjectivePhase);
         }
-        
+
+        /// <inheritdoc/>
         public override void FixedProcess()
         {
         }
 
+        /// <inheritdoc/>
         public override void Process()
         {
             if (Context.Inputs.Interaction.Interact.IsInProgress())
@@ -49,6 +53,9 @@
             }
         }
 
+        /// <summary>
+        /// Checks if the player is touching an objective and triggers it if so.
+        /// </summary>
         private void CheckObjectiveTouch()
         {
             RaycastHit2D hit = (MainManager.Ins.GameManager as GameManager).MobileInputsManager.RaycastFromTouch2D(MainManager.Ins.GameStats.PlayerLayerMask);
@@ -57,6 +64,9 @@
                 objective.Trigger();
         }
 
+        /// <summary>
+        /// Tries to get a block from the touch position.
+        /// </summary>
         private void TryToGetBlock()
         {
             if (Context.BlocksManager.TryGetBlockFromTouch(out PlaceableBlockBase block, out Vector2 offset))
@@ -65,6 +75,9 @@
             }
         }
 
+        /// <summary>
+        /// Tries to place the block in hand or in grid.
+        /// </summary>
         private void TryToPlaceBlock(InputAction.CallbackContext context)
         {
             if (!Context.BlocksManager.Dragger.IsDragging) return;
@@ -80,12 +93,19 @@
             ResetBlockInHand(Context.BlocksManager.Dragger.CurrentDraggedBlock);
         }
 
+        /// <summary>
+        /// Remove the block from the grid, place it in hand and change to fall phase.
+        /// </summary>
+        /// <param name="block">Block to remove.</param>
         private void ResetBlockInHand(PlaceableBlockBase block)
         {
             Context.BlocksManager.RemoveFromGridAndPlaceInHand(block);
             ChangeToFallPhase();
         }
 
+        /// <summary>
+        /// Changes to fall phase.
+        /// </summary>
         private void ChangeToFallPhase()
         {
             Context.BlocksManager.Dragger.StopDrag();
@@ -94,6 +114,9 @@
                 ChangeState(GamePhaseKeys.FallPhase);
         }
 
+        /// <summary>
+        /// Changes to objective phase.
+        /// </summary>
         private void ChangeToObjectivePhase()
         {
             ChangeState(GamePhaseKeys.ObjectivePhase);

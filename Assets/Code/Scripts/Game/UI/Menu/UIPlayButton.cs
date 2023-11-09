@@ -5,9 +5,9 @@
     using ProjectPBR.GameConfig.Constants;
     using ProjectPBR.Managers.Static.Profiles;
 
-
     public class UIPlayButton : UIButton
     {
+        /// <inheritdoc/>
         protected override void Press()
         {
             MainManager.Ins.EventManager.TriggerEvent(GameConstants.UIEvents.OnPlayButtonPressed);

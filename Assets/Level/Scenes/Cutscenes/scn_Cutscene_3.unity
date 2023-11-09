@@ -1117,6 +1117,7 @@ GameObject:
   - component: {fileID: 1865951507}
   - component: {fileID: 1865951506}
   - component: {fileID: 1865951509}
+  - component: {fileID: 1865951511}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -1300,6 +1301,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1865951511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865951504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832a665fd8a88a542b6ac7fc5ea6008f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnButtonPressedSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnButtonPressedFail:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2045111045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,6 +1541,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4136749688841517019, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4136749688841517019, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4229790950732334441, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1540,7 +1567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6380628105059108624, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7669568288478646049, guid: 3676639ec31a18042ae3c079351ff8c4, type: 3}
       propertyPath: m_Enabled
