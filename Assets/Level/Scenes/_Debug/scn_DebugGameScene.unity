@@ -1888,6 +1888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pf_Pango
       objectReference: {fileID: 0}
+    - target: {fileID: 6408400922603740999, guid: 602361a8424d0c044bbc69fc468729ea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2753,7 +2757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1680502142275147513, guid: 750bd6f0accc2e941a4871d553baa608, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5078076780562371015, guid: 750bd6f0accc2e941a4871d553baa608, type: 3}
       propertyPath: m_LocalPosition.x
