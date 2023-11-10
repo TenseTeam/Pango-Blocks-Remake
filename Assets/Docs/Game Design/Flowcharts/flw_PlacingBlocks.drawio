@@ -1,0 +1,209 @@
+<mxfile host="app.diagrams.net" modified="2023-11-09T23:27:51.639Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15" etag="_ZFKqDHHdP0122FGRCW9" version="22.1.0" type="google">
+  <diagram name="Pagina-1" id="3IF7l_DfQqUqJB0pK0Nb">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-1" target="_d3qD-XC7J1kaKYavtSu-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-1" value="Level Start" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="354" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-3" target="_d3qD-XC7J1kaKYavtSu-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="335" />
+              <mxPoint x="530" y="225" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-36" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="_d3qD-XC7J1kaKYavtSu-35">
+          <mxGeometry x="-0.7433" y="-4" relative="1" as="geometry">
+            <mxPoint y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-3" target="_d3qD-XC7J1kaKYavtSu-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-67" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="_d3qD-XC7J1kaKYavtSu-66">
+          <mxGeometry x="-0.0667" relative="1" as="geometry">
+            <mxPoint y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-3" value="Does the player touch any blocks?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="361" y="280" width="106" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-4" target="_d3qD-XC7J1kaKYavtSu-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-4" value="The selected block can be moved" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="354" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-5" target="_d3qD-XC7J1kaKYavtSu-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-33" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="_d3qD-XC7J1kaKYavtSu-32">
+          <mxGeometry x="-0.134" relative="1" as="geometry">
+            <mxPoint x="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-5" target="_d3qD-XC7J1kaKYavtSu-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-38" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="_d3qD-XC7J1kaKYavtSu-37">
+          <mxGeometry x="-0.3441" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-5" value="Does the player releases the touch?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="352" y="560" width="124" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-6" target="_d3qD-XC7J1kaKYavtSu-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-6" value="Idle" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="354" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-8" target="_d3qD-XC7J1kaKYavtSu-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="120" y="680" />
+              <mxPoint x="120" y="225" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-8" value="The block stays still" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="170" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-9" target="_d3qD-XC7J1kaKYavtSu-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-9" value="The block moves around following the player&#39;s finger" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="530" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-10" target="_d3qD-XC7J1kaKYavtSu-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-41" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="_d3qD-XC7J1kaKYavtSu-40">
+          <mxGeometry x="-0.4875" y="-4" relative="1" as="geometry">
+            <mxPoint y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-10" target="_d3qD-XC7J1kaKYavtSu-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-44" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="_d3qD-XC7J1kaKYavtSu-43">
+          <mxGeometry x="-0.4462" y="4" relative="1" as="geometry">
+            <mxPoint y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-10" value="Does the player place the block in the playing area?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="507.5" y="770" width="165" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-12" target="_d3qD-XC7J1kaKYavtSu-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="950" />
+              <mxPoint x="880" y="195" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-12" value="The block returns in the bottom aerea" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="700" y="920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-14" target="_d3qD-XC7J1kaKYavtSu-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-48" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="_d3qD-XC7J1kaKYavtSu-45">
+          <mxGeometry y="2" relative="1" as="geometry">
+            <mxPoint x="-4" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-14" target="_d3qD-XC7J1kaKYavtSu-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-47" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="_d3qD-XC7J1kaKYavtSu-46">
+          <mxGeometry x="-0.7545" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-14" value="Is the block aligned inside the grid??" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="354" y="890" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-19" target="_d3qD-XC7J1kaKYavtSu-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-50" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="_d3qD-XC7J1kaKYavtSu-49">
+          <mxGeometry x="-0.45" relative="1" as="geometry">
+            <mxPoint x="-40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-19" target="_d3qD-XC7J1kaKYavtSu-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-52" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="_d3qD-XC7J1kaKYavtSu-51">
+          <mxGeometry x="-0.3636" y="3" relative="1" as="geometry">
+            <mxPoint y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-19" value="Is the bottom side of the block touching any other block?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="339" y="1080" width="150" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-20" target="_d3qD-XC7J1kaKYavtSu-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-60" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="_d3qD-XC7J1kaKYavtSu-58">
+          <mxGeometry x="-0.0857" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-20" target="_d3qD-XC7J1kaKYavtSu-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-62" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="_d3qD-XC7J1kaKYavtSu-61">
+          <mxGeometry x="-0.8694" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-20" value="Can the block be balanced on top of that block?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="560" y="1300" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-22" value="The block locks in place" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="560" y="1510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-23" target="_d3qD-XC7J1kaKYavtSu-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-23" value="The block will lock inside the grid and fall down" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="170" y="1200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-24" target="_d3qD-XC7J1kaKYavtSu-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-56" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="_d3qD-XC7J1kaKYavtSu-54">
+          <mxGeometry x="-0.7576" y="-5" relative="1" as="geometry">
+            <mxPoint y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-24" target="_d3qD-XC7J1kaKYavtSu-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-57" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="_d3qD-XC7J1kaKYavtSu-55">
+          <mxGeometry x="-0.2" y="3" relative="1" as="geometry">
+            <mxPoint x="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-24" value="Does the block fall on top of another block?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="180" y="1300" width="100" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_d3qD-XC7J1kaKYavtSu-25" target="_d3qD-XC7J1kaKYavtSu-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_d3qD-XC7J1kaKYavtSu-25" value="The block falls on the bottom part of the grid" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="170" y="1510" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
