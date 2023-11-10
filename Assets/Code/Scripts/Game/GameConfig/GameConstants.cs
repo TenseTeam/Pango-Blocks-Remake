@@ -1,6 +1,4 @@
-﻿using System.Data;
-
-namespace ProjectPBR.GameConfig.Constants
+﻿namespace ProjectPBR.GameConfig.Constants
 {
     public static class GameConstants
     {

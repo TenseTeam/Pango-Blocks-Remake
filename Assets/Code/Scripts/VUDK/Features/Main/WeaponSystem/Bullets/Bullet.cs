@@ -1,6 +1,5 @@
 ﻿namespace VUDK.Features.Main.WeaponSystem.Bullets
 {
-    using System;
     using UnityEngine;
     using VUDK.Features.Main.EntitySystem.Interfaces;
     using VUDK.Patterns.Pooling;
